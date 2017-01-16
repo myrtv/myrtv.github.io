@@ -10,7 +10,7 @@ video {
     position:fixed;
     top:0px;
     left:0px;
-    opacity: 0.1;
+    opacity: 0.25;
 }
 #remote:hover {
     opacity: 1;
