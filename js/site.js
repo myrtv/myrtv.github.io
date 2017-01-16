@@ -6,6 +6,12 @@ var rtv = {
         $('#remote').on('change', function() {
             that.init(this.value);
         })
+        
+        $("video")[0].addEventListener('ended', function() {
+            setTimeout(function() {
+                that.spawn();
+            }, 2500);
+        }, false);
 
         this.init();
     },
@@ -58,7 +64,7 @@ var rtv = {
     spawn: function() {
         var current = this.getCurrentVideo();
 
-        $("video").attr({controls: "", autoplay: "", src: this.json_cache.info.url_prefix + current.qualities[0].src});
+        $("video").attr({preload: "none", controls: "", autoplay: "", src: this.json_cache.info.url_prefix + current.qualities[0].src});
         this.seekTo(current.seek_to);
     },
     seekTo: function(to) {
