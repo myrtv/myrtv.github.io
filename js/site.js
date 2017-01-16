@@ -1,9 +1,18 @@
 var rtv = {
     json_cache: {},
-    init: function() {
+    preinit: function() {
         var that = this;
 
-        $.getJSON('playlists/gdq/agdq2013.min.json')
+        $('#remote').on('change', function() {
+            that.init(this.value);
+        })
+
+        this.init();
+    },
+    init: function(path) {
+        var that = this;
+
+        $.getJSON((path || 'playlists/gdq/agdq2013.min.json'))
         .complete(function(data) {
             //Offline testing and not using a virtual server is weird, don't judge me.
             that.json_cache = JSON.parse(data.responseText);
@@ -50,7 +59,7 @@ var rtv = {
     spawn: function() {
         var current = this.getCurrentVideo();
 
-        $("<video />", {controls: "", autoplay: "", src: this.json_cache.info.url_prefix + current.qualities[0].src}).appendTo("body");
+        $("video").attr({controls: "", autoplay: "", src: this.json_cache.info.url_prefix + current.qualities[0].src});
         this.seekTo(current.seek_to);
     },
     seekTo: function(to) {
@@ -60,5 +69,5 @@ var rtv = {
 
 $(document).ready(function() {
     //Do this proper
-    rtv.init();
+    rtv.preinit();
 });

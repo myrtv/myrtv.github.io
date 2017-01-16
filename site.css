@@ -6,3 +6,12 @@ video {
     width: 100%;
     height: 100%;
 }
+#remote {
+    position:fixed;
+    top:0px;
+    left:0px;
+    opacity: 0.1;
+}
+#remote:hover {
+    opacity: 1;
+}
