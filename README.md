@@ -31,8 +31,11 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
  - Correct/improve playlists (notably epoch times, GDQs are missing file sizes)
 
 #Planned Features
- - Playlist switching
+ - ~~Playlist switching~~ Temporarily done, want to improve.
+ - Playlist viewing
+   - Maybe browser desktop notification support to get alerted for desired runs? 
  - Custom playlist URLs
+   - Current sloppy implementation kinda does this, but won't stick.
  - Quality selector
  - Manual sync adjustment for closer viewing with others
  - Automatic resync (on button click)
