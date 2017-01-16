@@ -1,6 +1,8 @@
 # rtv
 A pseudo-live TV implementation to save bandwidth but still function normally.
 
+**[See it in action, pseudo-live!](https://repod.github.io/rtv)**
+
 ----
 
 **What does pseudo-live TV mean?**    
