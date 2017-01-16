@@ -38,6 +38,7 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
      - Receive run alerts. "first time only", "every time"?
  - Custom playlist URLs
    - Current sloppy implementation kinda does this, but won't stick.
+ - Picture in Picture
  - Quality selector
  - Audio track selector
    - The technology is simultaneously there and not there. *Send help.*
