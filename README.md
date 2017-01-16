@@ -34,7 +34,7 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
    - Possibly determine regular desync as well? (i.e. caused by buffering/connection loss)
  
 #Unplanned Features
- - Chat
+ - Chat (*actually live real time chat*, not chat replay)
    - Maybe, using a javascript client and IRC or a customizable iframe. But don't hold your breath.
    
 ---
