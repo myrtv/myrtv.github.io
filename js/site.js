@@ -12,10 +12,9 @@ var rtv = {
     init: function(path) {
         var that = this;
 
-        $.getJSON((path || 'playlists/gdq/agdq2013.min.json'))
-        .complete(function(data) {
+        $.getJSON((path || 'playlists/gdq/agdq2013.min.json'), function (data) {
             //Offline testing and not using a virtual server is weird, don't judge me.
-            that.json_cache = JSON.parse(data.responseText);
+            that.json_cache = (data.playlist) ? data : JSON.parse(data.responseText);
 
             //Determine total length
             that.json_cache.info.total_duration = 0;
