@@ -23,7 +23,7 @@ prompt('', JSON.stringify(temp));
 
 function itemParse(val) {
   return {
-    name: val.title.match(/^\d+\. AwesomeGamesDoneQuick\d+ part\d+ (.*?) \d+[KMG]$/i)[1],
+    name: val.title.match(/^\d+\. (?:Awesome|Summer)GamesDoneQuick\d+ (?:part\d+ )?(.*?) \d+[KMG]$/i)[1],
     duration: Math.round(val.duration),
     qualities: [
       {
