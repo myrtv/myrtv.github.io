@@ -5,7 +5,8 @@
         "end_epoch_gtm" : 1358057220,
         "url_prefix" : "https://archive.org"
     },
-    "playlist" : [{
+    "playlist" :
+    [{
             "name" : "ApeEscape",
             "duration" : 3509,
             "qualities" : [{
@@ -3762,6 +3763,32 @@
                     "width" : "1280",
                     "height" : "720",
                     "src" : "/download/AwesomeGamesDoneQuick2013/AwesomeGamesDoneQuick2013_part129_FinalFantasyIxPart2_4M.mp4"
+                }
+            ]
+        }, {
+            "name" : "Bloopers",
+            "duration" : 2429,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2013/AwesomeGamesDoneQuick2013.thumbs%2FAwesomeGamesDoneQuick2013_Bloopers_4M_002066.jpg",
+                    "bitrate" : "4M",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2013/AwesomeGamesDoneQuick2013_Bloopers_4M.mp4"
+                }
+            ]
+        }, {
+            "name" : "Highlights",
+            "duration" : 6514,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2013/AwesomeGamesDoneQuick2013.thumbs%2FAwesomeGamesDoneQuick2013_Highlights_4M_005374.jpg",
+                    "bitrate" : "4M",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2013/AwesomeGamesDoneQuick2013_Highlights_4M.mp4"
                 }
             ]
         }

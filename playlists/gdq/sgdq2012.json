@@ -1,0 +1,1779 @@
+{
+    "info" : {
+        "name" : "Summer Games Done Quick 2012",
+        "start_epoch_gtm" : 1337864400,
+        "end_epoch_gtm" : 1338229800,
+        "url_prefix" : "https://archive.org"
+    },
+    "playlist" :
+    [{
+            "name" : "Startropics",
+            "duration" : 5401,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part001_Startropics_000789.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part001_Startropics.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part001_Startropics_HQ_005131.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part001_Startropics_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Startropics2",
+            "duration" : 5413,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part002_Startropics2_000791.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part002_Startropics2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part002_Startropics2_HQ_005143.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part002_Startropics2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbysAdventure",
+            "duration" : 3218,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part003_KirbysAdventure_001529.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part003_KirbysAdventure.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part003_KirbysAdventure_HQ_003057.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part003_KirbysAdventure_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbysDreamLand3",
+            "duration" : 7504,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part004_KirbysDreamLand3_001097.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part004_KirbysDreamLand3.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part004_KirbysDreamLand3_HQ_007129.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part004_KirbysDreamLand3_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Portal",
+            "duration" : 1414,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part005_Portal_001343.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part005_Portal.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part005_Portal_HQ_001343.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part005_Portal_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetalSlug3",
+            "duration" : 2120,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part006_MetalSlug3_002014.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part006_MetalSlug3.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part006_MetalSlug3_HQ_002014.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part006_MetalSlug3_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Contra3",
+            "duration" : 2154,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part007_Contra3_000315.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part007_Contra3.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part007_Contra3_HQ_002047.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part007_Contra3_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Contra4",
+            "duration" : 1821,
+            "qualities" : [{
+                    "label" : "256p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part008_Contra4_000865.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "344",
+                    "height" : "256",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part008_Contra4.mp4"
+                }, {
+                    "label" : "512p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part008_Contra4_HQ_001730.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "684",
+                    "height" : "512",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part008_Contra4_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "ResidentEvil",
+            "duration" : 6050,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part009_ResidentEvil_000884.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part009_ResidentEvil.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part009_ResidentEvil_HQ_005747.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part009_ResidentEvil_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "ResidentEvil2",
+            "duration" : 5855,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part010_ResidentEvil2_000856.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part010_ResidentEvil2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part010_ResidentEvil2_HQ_005563.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part010_ResidentEvil2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "HitmanBloodMoney",
+            "duration" : 4146,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part011_HitmanBloodMoney_003938.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part011_HitmanBloodMoney.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part011_HitmanBloodMoney_HQ_003938.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part011_HitmanBloodMoney_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "AliceMadnessReturns",
+            "duration" : 11030,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part012_AliceMadnessReturns_001612.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part012_AliceMadnessReturns.mp4"
+                }, {
+                    "label" : "480p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part012_AliceMadnessReturns_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MortTheChicken",
+            "duration" : 2866,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part013_MortTheChicken_000419.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part013_MortTheChicken.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part013_MortTheChicken_HQ_002723.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part013_MortTheChicken_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Spelunker",
+            "duration" : 993,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part014_Spelunker_000145.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part014_Spelunker.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part014_Spelunker_HQ_000943.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part014_Spelunker_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "DoubleDragon3",
+            "duration" : 1676,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part015_DoubleDragon3_000245.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part015_DoubleDragon3.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part015_DoubleDragon3_HQ_001592.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part015_DoubleDragon3_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Athena",
+            "duration" : 2408,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part016_Athena_000352.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part016_Athena.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part016_Athena_HQ_002288.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part016_Athena_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Paperboy",
+            "duration" : 1045,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part017_Paperboy_000153.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part017_Paperboy.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part017_Paperboy_HQ_000993.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part017_Paperboy_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Shatterhand",
+            "duration" : 1904,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part018_Shatterhand_000278.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part018_Shatterhand.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part018_Shatterhand_HQ_001809.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part018_Shatterhand_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "LegacyOfTheWizard",
+            "duration" : 2363,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part019_LegacyOfTheWizard_000345.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part019_LegacyOfTheWizard.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part019_LegacyOfTheWizard_HQ_002245.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part019_LegacyOfTheWizard_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "JumpingFlash",
+            "duration" : 2315,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part020_JumpingFlash_000629.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part020_JumpingFlash.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part020_JumpingFlash_HQ_002200.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part020_JumpingFlash_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "TenchuStealthAssassins",
+            "duration" : 2574,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part021_TenchuStealthAssassins_000376.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part021_TenchuStealthAssassins.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part021_TenchuStealthAssassins_HQ_002446.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part021_TenchuStealthAssassins_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "FinalFantasyVIIIPart1",
+            "duration" : 22472,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part022_FinalFantasyVIIIPart1_004744.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part022_FinalFantasyVIIIPart1.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part022_FinalFantasyVIIIPart1_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "PrinceofPersiaSandsofTime",
+            "duration" : 6978,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime_001894.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime_HQ_006629.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime_IQ_006629.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part023_PrinceofPersiaSandsofTime_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "RatchetAndClankGoingCommando",
+            "duration" : 3942,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando_001872.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando_HQ_003745.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando_IQ_003745.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part024_RatchetAndClankGoingCommando_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Doom",
+            "duration" : 2726,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part025_Doom_002590.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part025_Doom.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part025_Doom_HQ_002590.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part025_Doom_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "TypingOfTheDead",
+            "duration" : 3315,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part026_TypingOfTheDead_003149.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part026_TypingOfTheDead.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part026_TypingOfTheDead_HQ_003149.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part026_TypingOfTheDead_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "VVVVVV",
+            "duration" : 3727,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part027_VVVVVV_003540.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part027_VVVVVV.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part027_VVVVVV_HQ_003540.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part027_VVVVVV_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "CaveStory",
+            "duration" : 5334,
+            "qualities" : [{
+                    "label" : "240p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part028_CaveStory_005068.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part028_CaveStory.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part028_CaveStory_HQ_005068.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part028_CaveStory_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Aquaria",
+            "duration" : 8990,
+            "qualities" : [{
+                    "label" : "240p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "320",
+                    "height" : "240",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part029_Aquaria.mp4"
+                }, {
+                    "label" : "480p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part029_Aquaria_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "NoMoreHeroes",
+            "duration" : 9947,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part030_NoMoreHeroes_004725.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part030_NoMoreHeroes.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part030_NoMoreHeroes_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part030_NoMoreHeroes_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SoulBlazer",
+            "duration" : 7206,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part031_SoulBlazer_001521.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part031_SoulBlazer.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part031_SoulBlazer_HQ_006846.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part031_SoulBlazer_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "IllusionOfGaia",
+            "duration" : 9226,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part032_IllusionOfGaia_001348.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part032_IllusionOfGaia.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part032_IllusionOfGaia_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetalGear",
+            "duration" : 2099,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part033_MetalGear_000997.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part033_MetalGear.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part033_MetalGear_HQ_001994.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part033_MetalGear_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan",
+            "duration" : 2156,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part034_MegaMan_002048.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part034_MegaMan.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part034_MegaMan_HQ_002048.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part034_MegaMan_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan4",
+            "duration" : 3171,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part035_MegaMan4_003012.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part035_MegaMan4.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part035_MegaMan4_HQ_003012.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part035_MegaMan4_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan9",
+            "duration" : 2707,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part036_MegaMan9_002572.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part036_MegaMan9.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part036_MegaMan9_HQ_002572.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part036_MegaMan9_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan10",
+            "duration" : 2892,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part037_MegaMan10_002748.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part037_MegaMan10.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part037_MegaMan10_HQ_002748.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part037_MegaMan10_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "RockmanAndForte",
+            "duration" : 3231,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part038_RockmanAndForte_003070.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part038_RockmanAndForte.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part038_RockmanAndForte_HQ_003070.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part038_RockmanAndForte_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry2",
+            "duration" : 3597,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part039_DonkeyKongCountry2_000526.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part039_DonkeyKongCountry2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part039_DonkeyKongCountry2_HQ_003417.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part039_DonkeyKongCountry2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicTheHedgehog",
+            "duration" : 1657,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part040_SonicTheHedgehog_000242.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part040_SonicTheHedgehog.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part040_SonicTheHedgehog_HQ_001574.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part040_SonicTheHedgehog_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicTheHedgehog2",
+            "duration" : 2682,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part041_SonicTheHedgehog2_000392.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part041_SonicTheHedgehog2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part041_SonicTheHedgehog2_HQ_002548.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part041_SonicTheHedgehog2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdventureDX",
+            "duration" : 2690,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part042_SonicAdventureDX_002556.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part042_SonicAdventureDX.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part042_SonicAdventureDX_HQ_002556.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part042_SonicAdventureDX_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part042_SonicAdventureDX_IQ_002556.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part042_SonicAdventureDX_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaAriaofSorrow",
+            "duration" : 1644,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part043_CastlevaniaAriaofSorrow_000347.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part043_CastlevaniaAriaofSorrow.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part043_CastlevaniaAriaofSorrow_HQ_001562.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part043_CastlevaniaAriaofSorrow_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaSymphonyoftheNight",
+            "duration" : 3447,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part044_CastlevaniaSymphonyoftheNight_003275.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part044_CastlevaniaSymphonyoftheNight.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part044_CastlevaniaSymphonyoftheNight_HQ_003275.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part044_CastlevaniaSymphonyoftheNight_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SimCityManiacMansion",
+            "duration" : 3370,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part045_SimCityManiacMansion_001601.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part045_SimCityManiacMansion.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part045_SimCityManiacMansion_HQ_003202.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part045_SimCityManiacMansion_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioLand",
+            "duration" : 1332,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part046_SuperMarioLand_001264.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part046_SuperMarioLand.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part046_SuperMarioLand_HQ_001264.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part046_SuperMarioLand_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioWorld",
+            "duration" : 3111,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part047_SuperMarioWorld_001478.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part047_SuperMarioWorld.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part047_SuperMarioWorld_HQ_002955.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part047_SuperMarioWorld_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMetroid",
+            "duration" : 6254,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part048_SuperMetroid_001320.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part048_SuperMetroid.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part048_SuperMetroid_HQ_005942.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part048_SuperMetroid_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetroidFusion",
+            "duration" : 8041,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part049_MetroidFusion_002183.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part049_MetroidFusion.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part049_MetroidFusion_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "GearsOfWar",
+            "duration" : 8482,
+            "qualities" : [{
+                    "label" : "320p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "428",
+                    "height" : "320",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part050_GearsOfWar.mp4"
+                }, {
+                    "label" : "320p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "428",
+                    "height" : "320",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part050_GearsOfWar_HQ.mp4"
+                }, {
+                    "label" : "640p",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "852",
+                    "height" : "640",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part050_GearsOfWar_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "MuramasaTheDemonBlade",
+            "duration" : 7388,
+            "qualities" : [{
+                    "label" : "320p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade_007018.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "428",
+                    "height" : "320",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade.mp4"
+                }, {
+                    "label" : "320p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade_HQ_007018.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "428",
+                    "height" : "320",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade_HQ.mp4"
+                }, {
+                    "label" : "640p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade_IQ_007018.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "852",
+                    "height" : "640",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part051_MuramasaTheDemonBlade_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShinobiPS2",
+            "duration" : 5488,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part052_ShinobiPS2_005214.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part052_ShinobiPS2.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part052_ShinobiPS2_HQ_005214.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part052_ShinobiPS2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "BombermanHero",
+            "duration" : 3786,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part053_BombermanHero_001028.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part053_BombermanHero.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part053_BombermanHero_HQ_003596.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part053_BombermanHero_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "BombermanSecondAttack",
+            "duration" : 5245,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part054_BombermanSecondAttack_001661.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part054_BombermanSecondAttack.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part054_BombermanSecondAttack_HQ_004983.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part054_BombermanSecondAttack_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "FinalFantasyVIIIPart2",
+            "duration" : 19016,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part055_FinalFantasyVIIIPart2_006022.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part055_FinalFantasyVIIIPart2.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part055_FinalFantasyVIIIPart2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "TMNT4",
+            "duration" : 1359,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part056_TMNT4_001292.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part056_TMNT4.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part056_TMNT4_HQ_001292.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part056_TMNT4_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "BlastCorps",
+            "duration" : 7088,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part057_BlastCorps_006733.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part057_BlastCorps.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part057_BlastCorps_HQ_006733.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part057_BlastCorps_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "DieHard",
+            "duration" : 536,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part058_DieHard_000255.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part058_DieHard.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part058_DieHard_HQ_000509.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part058_DieHard_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMario64",
+            "duration" : 7453,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part059_SuperMario64_003540.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part059_SuperMario64.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part059_SuperMario64_HQ_007080.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part059_SuperMario64_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "BlasterMaster",
+            "duration" : 2942,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part060_BlasterMaster_000799.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part060_BlasterMaster.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part060_BlasterMaster_HQ_002795.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part060_BlasterMaster_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZelda",
+            "duration" : 5697,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part061_TheLegendofZelda_000833.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part061_TheLegendofZelda.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part061_TheLegendofZelda_HQ_005412.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part061_TheLegendofZelda_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Zelda2TheAdventureofLink",
+            "duration" : 4968,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part062_Zelda2TheAdventureofLink_004719.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part062_Zelda2TheAdventureofLink.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part062_Zelda2TheAdventureofLink_HQ_004719.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part062_Zelda2TheAdventureofLink_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaALinkToThePast",
+            "duration" : 698,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part063_TheLegendofZeldaALinkToThePast_000331.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part063_TheLegendofZeldaALinkToThePast.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part063_TheLegendofZeldaALinkToThePast_HQ_000663.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part063_TheLegendofZeldaALinkToThePast_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Rygar",
+            "duration" : 2688,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part064_Rygar_002554.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part064_Rygar.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part064_Rygar_HQ_002554.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part064_Rygar_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbyReturnToDreamland",
+            "duration" : 16051,
+            "qualities" : [{
+                    "label" : "360p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part065_KirbyReturnToDreamland.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part065_KirbyReturnToDreamland_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part065_KirbyReturnToDreamland_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Castlevania2SimonsQuest",
+            "duration" : 3510,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part066_Castlevania2SimonsQuest_000741.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part066_Castlevania2SimonsQuest.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part066_Castlevania2SimonsQuest_HQ_003334.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part066_Castlevania2SimonsQuest_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaDraculaXChronicles",
+            "duration" : 2213,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part067_CastlevaniaDraculaXChronicles_001051.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part067_CastlevaniaDraculaXChronicles.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part067_CastlevaniaDraculaXChronicles_HQ_002102.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part067_CastlevaniaDraculaXChronicles_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaLamentofInnocence",
+            "duration" : 4963,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence_002357.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence_HQ_004715.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence_HQ.mp4"
+                }, {
+                    "label" : "960p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence_IQ_004715.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "960",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part068_CastlevaniaLamentofInnocence_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "GooniesII",
+            "duration" : 1767,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part069_GooniesII_000839.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part069_GooniesII.mp4"
+                }, {
+                    "label" : "480p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part069_GooniesII_HQ_001678.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part069_GooniesII_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "EarthwormJim2",
+            "duration" : 2405,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part070_EarthwormJim2_000653.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part070_EarthwormJim2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part070_EarthwormJim2_HQ_002285.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part070_EarthwormJim2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "DuckTales",
+            "duration" : 782,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part071_DuckTales_000372.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part071_DuckTales.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part071_DuckTales_HQ_000743.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part071_DuckTales_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "DuckTales2",
+            "duration" : 866,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part072_DuckTales2_000235.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part072_DuckTales2.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part072_DuckTales2_HQ_000823.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part072_DuckTales2_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "SunsetRiders",
+            "duration" : 1488,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part073_SunsetRiders_000471.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part073_SunsetRiders.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part073_SunsetRiders_HQ_001413.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part073_SunsetRiders_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "KatamariForever",
+            "duration" : 5607,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part074_KatamariForever_001522.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part074_KatamariForever.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part074_KatamariForever_HQ_005327.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part074_KatamariForever_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part074_KatamariForever_IQ_005327.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part074_KatamariForever_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "LittleBigPlanet",
+            "duration" : 5633,
+            "qualities" : [{
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part075_LittleBigPlanet_001529.jpg",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part075_LittleBigPlanet.mp4"
+                }, {
+                    "label" : "360p",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part075_LittleBigPlanet_HQ_005352.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part075_LittleBigPlanet_HQ.mp4"
+                }, {
+                    "label" : "720p HD",
+                    "thumbnail" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012.thumbs%2FSummerGamesDoneQuick2012_part075_LittleBigPlanet_IQ_005352.jpg",
+                    "bitrate" : "IQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part075_LittleBigPlanet_IQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "FinalFantasyVI",
+            "duration" : 28722,
+            "qualities" : [{
+                    "label" : "360p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part076_FinalFantasyVI.mp4"
+                }, {
+                    "label" : "360p",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "480",
+                    "height" : "360",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_part076_FinalFantasyVI_HQ.mp4"
+                }
+            ]
+        },
+        {
+            "name" : "Bloopers",
+            "duration" : 1196,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_Bloopers_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream1",
+            "duration" : 35390,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream1.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream2",
+            "duration" : 12638,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream2.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream3",
+            "duration" : 2672,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream3.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream4",
+            "duration" : 8079,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream4.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream5",
+            "duration" : 342,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream5.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream6",
+            "duration" : 30926,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream6.mp4"
+                }
+            ]
+        }, {
+            "name" : "BonusStream7",
+            "duration" : 11197,
+            "qualities" : [{
+                    "label" : "480p",
+                    "bitrate" : "LQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_BonusStream7.mp4"
+                }
+            ]
+        }, {
+            "name" : "Highlights",
+            "duration" : 3062,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "960",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2012/SummerGamesDoneQuick2012_Highlights_HQ.mp4"
+                }
+            ]
+        }
+    ]
+}

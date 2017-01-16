@@ -2474,6 +2474,33 @@
                     "src" : "/download/AwesomeGamesDoneQuick2012/AwesomeGamesDoneQuick2012_part108_FinalFantasyVIIPart2_HQ.mp4"
                 }
             ]
+        },
+        {
+            "name" : "Bloopers",
+            "duration" : 4199,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2012/AwesomeGamesDoneQuick2012.thumbs%2FAwesomeGamesDoneQuick2012_Bloopers_HQ_003149.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/AwesomeGamesDoneQuick2012/AwesomeGamesDoneQuick2012_Bloopers_HQ.mp4"
+                }
+            ]
+        }, {
+            "name" : "Highlights",
+            "duration" : 8609,
+            "qualities" : [{
+                    "label" : "480p",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2012/AwesomeGamesDoneQuick2012.thumbs%2FAwesomeGamesDoneQuick2012_Highlights_HQ_006456.jpg",
+                    "bitrate" : "HQ",
+                    "size" : 0,
+                    "width" : "640",
+                    "height" : "480",
+                    "src" : "/download/AwesomeGamesDoneQuick2012/AwesomeGamesDoneQuick2012_Highlights_HQ.mp4"
+                }
+            ]
         }
     ]
 }

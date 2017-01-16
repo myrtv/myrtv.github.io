@@ -1,0 +1,2266 @@
+{
+    "info" : {
+        "name" : "Awesome Games Done Quick 2016",
+        "start_epoch_gtm" : 1451838600,
+        "end_epoch_gtm" : 1452412934,
+        "url_prefix" : "https://archive.org"
+    },
+    "playlist" : [{
+            "name" : "Preshow",
+            "duration" : 1471,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part001_Preshow_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Splatoon",
+            "duration" : 4087,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part002_Splatoon_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMonkeyBallBananaBlitz",
+            "duration" : 3406,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part003_SuperMonkeyBallBananaBlitz_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMonkeyBall",
+            "duration" : 1628,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part004_SuperMonkeyBall_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "RaymanLegends",
+            "duration" : 6792,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part005_RaymanLegends_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Kirby64TheCrystalShards",
+            "duration" : 5101,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part006_Kirby64TheCrystalShards_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbySqueakSquad",
+            "duration" : 4163,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part007_KirbySqueakSquad_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DiddyKongRacing",
+            "duration" : 2792,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part008_DiddyKongRacing_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioKart",
+            "duration" : 3372,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part009_SuperMarioKart_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMario64",
+            "duration" : 8624,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part010_SuperMario64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMario64Multiplayer",
+            "duration" : 1835,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part011_SuperMario64Multiplayer_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "FireEmblemPathofRadiance",
+            "duration" : 8233,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part012_FireEmblemPathofRadiance_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaOracleofAges",
+            "duration" : 8053,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part013_TheLegendofZeldaOracleofAges_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PrinnyCanIReallyBetheHero",
+            "duration" : 2391,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part014_PrinnyCanIReallyBetheHero_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Strider2",
+            "duration" : 2621,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part015_Strider2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GunstarSuperHeroes",
+            "duration" : 2072,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part016_GunstarSuperHeroes_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Left4Dead2",
+            "duration" : 4611,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part017_Left4Dead2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DarksidersII",
+            "duration" : 5031,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part018_DarksidersII_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DevilMayCry4SpecialEdition",
+            "duration" : 5165,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part019_DevilMayCry4SpecialEdition_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TransformersDevastation",
+            "duration" : 4533,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part020_TransformersDevastation_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ResidentEvilHDRemaster",
+            "duration" : 7047,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part021_ResidentEvilHDRemaster_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperStarWars",
+            "duration" : 3231,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part022_SuperStarWars_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MagicalQuestwMickeyMouse",
+            "duration" : 2116,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part023_MagicalQuestwMickeyMouse_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheMagicalQuestStarringMickeyMouse",
+            "duration" : 2116,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part023_TheMagicalQuestStarringMickeyMouse_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DisneysAladdin",
+            "duration" : 1537,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part024_DisneysAladdin_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLionKing",
+            "duration" : 2137,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part025_TheLionKing_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GoofTroop",
+            "duration" : 2547,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part026_GoofTroop_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KingdomHeartsHD15ReMIX",
+            "duration" : 13668,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part027_KingdomHeartsHD15ReMIX_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BattleBlockTheater",
+            "duration" : 7551,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part028_BattleBlockTheater_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part028_BattleBlockTheater_1080p_002049.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part028_BattleBlockTheater_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part028_BattleBlockTheater_1440p_002049.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part028_BattleBlockTheater_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "OriandtheBlindForest",
+            "duration" : 4174,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part029_OriandtheBlindForest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Velocity2X",
+            "duration" : 5694,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part030_Velocity2X_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part030_Velocity2X_1080p_001545.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part030_Velocity2X_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperTimeForceUltra",
+            "duration" : 2783,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part031_SuperTimeForceUltra_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part031_SuperTimeForceUltra_1080p_000755.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part031_SuperTimeForceUltra_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Fez",
+            "duration" : 2234,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part032_Fez_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part032_Fez_1080p_000606.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part032_Fez_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AxiomVerge",
+            "duration" : 4089,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part033_AxiomVerge_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part033_AxiomVerge_1080p_001109.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part033_AxiomVerge_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HotlineMiami",
+            "duration" : 2366,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part034_HotlineMiami_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part034_HotlineMiami_1080p_000642.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part034_HotlineMiami_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part034_HotlineMiami_1440p_000642.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part034_HotlineMiami_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Iji",
+            "duration" : 4337,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part035_Iji_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HeroCore",
+            "duration" : 2058,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part036_HeroCore_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Teslagrad",
+            "duration" : 1749,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part037_Teslagrad_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part037_Teslagrad_1080p_000474.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part037_Teslagrad_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part037_Teslagrad_1440p_000474.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part037_Teslagrad_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AHatInTimeBeta",
+            "duration" : 2107,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part038_AHatInTimeBeta_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part038_AHatInTimeBeta_1080p_000571.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part038_AHatInTimeBeta_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Cloudbuilt",
+            "duration" : 2469,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part039_Cloudbuilt_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KeroBlaster",
+            "duration" : 2248,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part040_KeroBlaster_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part040_KeroBlaster_1080p_000610.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part040_KeroBlaster_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Snapshot",
+            "duration" : 2180,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part041_Snapshot_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part041_Snapshot_1080p_000591.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part041_Snapshot_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Spelunky",
+            "duration" : 3144,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part042_Spelunky_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part042_Spelunky_1080p_000853.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part042_Spelunky_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CryptoftheNecrodancer",
+            "duration" : 2427,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part043_CryptoftheNecrodancer_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part043_CryptoftheNecrodancer_1080p_000658.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part043_CryptoftheNecrodancer_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part043_CryptoftheNecrodancer_1440p_000658.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part043_CryptoftheNecrodancer_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LaraCroftGuardianofLight",
+            "duration" : 2236,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part044_LaraCroftGuardianofLight_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part044_LaraCroftGuardianofLight_1080p_000606.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part044_LaraCroftGuardianofLight_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part044_LaraCroftGuardianofLight_1440p_000606.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part044_LaraCroftGuardianofLight_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LaraCroftandtheGuardianofLight",
+            "duration" : 2236,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part044_LaraCroftandtheGuardianofLight_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Vendetta",
+            "duration" : 2001,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part045_Vendetta_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheSimpsonsArcadeGame",
+            "duration" : 1327,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part046_TheSimpsonsArcadeGame_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DDShadowOverMystara",
+            "duration" : 2531,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part047_DDShadowOverMystara_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetroidFusion",
+            "duration" : 6514,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part048_MetroidFusion_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetroidPrime",
+            "duration" : 6444,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part049_MetroidPrime_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZelda",
+            "duration" : 2506,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part050_TheLegendofZelda_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMetroid2p1c",
+            "duration" : 4144,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part051_SuperMetroid2p1c_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HalfLife2",
+            "duration" : 8428,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part052_HalfLife2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Portal2",
+            "duration" : 6205,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part053_Portal2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AlienSwarm",
+            "duration" : 1761,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part054_AlienSwarm_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheTalosPrinciple",
+            "duration" : 3962,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part055_TheTalosPrinciple_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheTalosPrincipleDLC",
+            "duration" : 1686,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part056_TheTalosPrincipleDLC_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Wrack",
+            "duration" : 2133,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part057_Wrack_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part057_Wrack_1080p_000579.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part057_Wrack_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "WolfensteinTheOldBlood",
+            "duration" : 4554,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part058_WolfensteinTheOldBlood_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part058_WolfensteinTheOldBlood_1080p_001236.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part058_WolfensteinTheOldBlood_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part058_WolfensteinTheOldBlood_1440p_001236.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part058_WolfensteinTheOldBlood_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TagThePowerofPaint",
+            "duration" : 808,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part059_TagThePowerofPaint_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part059_TagThePowerofPaint_1080p_000219.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part059_TagThePowerofPaint_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SOMA",
+            "duration" : 7513,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part060_SOMA_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part060_SOMA_1080p_001259.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part060_SOMA_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part060_SOMA_1440p_001259.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part060_SOMA_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AmnesiaAMachineforPigs",
+            "duration" : 2217,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part061_AmnesiaAMachineforPigs_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part061_AmnesiaAMachineforPigs_1080p_000601.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part061_AmnesiaAMachineforPigs_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part061_AmnesiaAMachineforPigs_1440p_000601.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part061_AmnesiaAMachineforPigs_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Outlast",
+            "duration" : 2052,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part062_Outlast_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part062_Outlast_1080p_000556.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part062_Outlast_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part062_Outlast_1440p_000556.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part062_Outlast_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Ink",
+            "duration" : 912,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part063_Ink_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part063_Ink_1080p_000247.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part063_Ink_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part063_Ink_1440p_000247.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part063_Ink_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PrinceofPersia",
+            "duration" : 1187,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part064_PrinceofPersia_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TonyHawksUnderground2",
+            "duration" : 1459,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part065_TonyHawksUnderground2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TonyHawksProSkater",
+            "duration" : 993,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part066_TonyHawksProSkater_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CrazyTaxi2",
+            "duration" : 1509,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part067_CrazyTaxi2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdvance",
+            "duration" : 1353,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part068_SonicAdvance_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdvance3",
+            "duration" : 2809,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part069_SonicAdvance3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicLostWorld",
+            "duration" : 5843,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part070_SonicLostWorld_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part070_SonicLostWorld_1080p_001585.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part070_SonicLostWorld_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Strider",
+            "duration" : 1490,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part071_Strider_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BattleKid2MountainofTorment",
+            "duration" : 4950,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part072_BattleKid2MountainofTorment_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Gimmick",
+            "duration" : 934,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part073_Gimmick_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TeenageMutantNinjaTurtles",
+            "duration" : 1763,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part074_TeenageMutantNinjaTurtles_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "NinjaGaidenIITheDarkSwordofChaos",
+            "duration" : 1157,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part075_NinjaGaidenIITheDarkSwordofChaos_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "NinjaGaidenIIITheAncientShipofDoom",
+            "duration" : 1597,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part076_NinjaGaidenIIITheAncientShipofDoom_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BatmanTheVideoGame",
+            "duration" : 3151,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part077_BatmanTheVideoGame_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BlasterMaster",
+            "duration" : 2280,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part078_BlasterMaster_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Battletoads",
+            "duration" : 3708,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part079_Battletoads_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry",
+            "duration" : 2512,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part080_DonkeyKongCountry_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry2DiddysKongQuest",
+            "duration" : 6322,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part081_DonkeyKongCountry2DiddysKongQuest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KaizoMarioBros3",
+            "duration" : 2663,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part082_KaizoMarioBros3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioBros3",
+            "duration" : 887,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part083_SuperMarioBros3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioMakerBlindRace",
+            "duration" : 5704,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part084_SuperMarioMakerBlindRace_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioMakerHardRace",
+            "duration" : 2751,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part085_SuperMarioMakerHardRace_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioWorld0ExitRace",
+            "duration" : 1684,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part086_SuperMarioWorld0ExitRace_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioWorld96ExitRace",
+            "duration" : 5820,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part087_SuperMarioWorld96ExitRace_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "YoshisIsland",
+            "duration" : 750,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part088_YoshisIsland_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Lagoon",
+            "duration" : 5948,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part089_Lagoon_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LestertheUnlikely",
+            "duration" : 1520,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part090_LestertheUnlikely_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LowGManTheLowGravityMan",
+            "duration" : 1241,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part091_LowGManTheLowGravityMan_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "RockyBullwinkle",
+            "duration" : 744,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part092_RockyBullwinkle_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Shinobi",
+            "duration" : 1063,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part093_Shinobi_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KingofKingsTheEarlyYears",
+            "duration" : 1249,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part094_KingofKingsTheEarlyYears_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "IndianaJonesandtheTempleofDoom",
+            "duration" : 1175,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part095_IndianaJonesandtheTempleofDoom_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HudsonHawk",
+            "duration" : 798,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part096_HudsonHawk_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "EscapefromAtlantis",
+            "duration" : 575,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part097_EscapefromAtlantis_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "UtsurunDesuKawausoHawaiieIku",
+            "duration" : 1435,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part098_UtsurunDesuKawausoHawaiieIku_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "JohnnyBazookatone",
+            "duration" : 1657,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part099_JohnnyBazookatone_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AlphaZylon",
+            "duration" : 1559,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part100_AlphaZylon_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Animorphs",
+            "duration" : 3043,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part101_Animorphs_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AgeofEmpires",
+            "duration" : 5480,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part102_AgeofEmpires_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DragonAgeOrigins",
+            "duration" : 3525,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part103_DragonAgeOrigins_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GrandTheftAutoIII",
+            "duration" : 5029,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part104_GrandTheftAutoIII_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Castlevania",
+            "duration" : 2049,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part105_Castlevania_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaIIIDraculasCurse",
+            "duration" : 2983,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part106_CastlevaniaIIIDraculasCurse_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperCastlevaniaIV",
+            "duration" : 2736,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part107_SuperCastlevaniaIV_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaBloodlines",
+            "duration" : 2099,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part108_CastlevaniaBloodlines_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaSymphonyoftheNight",
+            "duration" : 2026,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part109_CastlevaniaSymphonyoftheNight_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperPunchOut",
+            "duration" : 1356,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part110_SuperPunchOut_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MikeTysonsPunchOut",
+            "duration" : 3516,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part111_MikeTysonsPunchOut_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MirrorsEdge",
+            "duration" : 3897,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part112_MirrorsEdge_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part112_MirrorsEdge_1080p_001057.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part112_MirrorsEdge_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part112_MirrorsEdge_1440p_001057.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part112_MirrorsEdge_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "StepMania",
+            "duration" : 2750,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part113_StepMania_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManX",
+            "duration" : 3277,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part114_MegaManX_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManZero",
+            "duration" : 3090,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part115_MegaManZero_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManZX",
+            "duration" : 4161,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part116_MegaManZX_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AzureStrikerGunvolt",
+            "duration" : 4753,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part117_AzureStrikerGunvolt_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "AzureStrikerGunvoltSpecialStage5",
+            "duration" : 931,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part118_AzureStrikerGunvoltSpecialStage5_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part118_AzureStrikerGunvoltSpecialStage5_1080p_000252.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part118_AzureStrikerGunvoltSpecialStage5_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Halo4",
+            "duration" : 6510,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part119_Halo4_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part119_Halo4_1080p_001767.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part119_Halo4_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShadowComplex",
+            "duration" : 2107,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part120_ShadowComplex_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part120_ShadowComplex_1080p_000571.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part120_ShadowComplex_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PaperMario",
+            "duration" : 11989,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part121_PaperMario_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BlastCorps",
+            "duration" : 6653,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part122_BlastCorps_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "StarFox64",
+            "duration" : 1925,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part123_StarFox64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BanjoKazooie",
+            "duration" : 5728,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part124_BanjoKazooie_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SecretofMana",
+            "duration" : 9015,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part125_SecretofMana_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TeenageMutantNinjaTurtlesIVTurtlesinTime",
+            "duration" : 1659,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part126_TeenageMutantNinjaTurtlesIVTurtlesinTime_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Diablo",
+            "duration" : 2689,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part127_Diablo_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DiabloIILordofDestruction",
+            "duration" : 7335,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part128_DiabloIILordofDestruction_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonYellowSpecialPikachuEdition",
+            "duration" : 8043,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part129_PokemonYellowSpecialPikachuEdition_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonGlitchExhibition",
+            "duration" : 1586,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part130_PokemonGlitchExhibition_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "FinalFantasy",
+            "duration" : 1334,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part131_FinalFantasy_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Buster",
+            "duration" : 1366,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part132_Buster_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Rockman4BCAS",
+            "duration" : 2671,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part133_Rockman4BCAS_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan10",
+            "duration" : 2651,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part134_MegaMan10_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan9",
+            "duration" : 2838,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part135_MegaMan9_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan6",
+            "duration" : 2639,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part136_MegaMan6_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan2",
+            "duration" : 3002,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part137_MegaMan2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioBros",
+            "duration" : 910,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part138_SuperMarioBros_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioBros2",
+            "duration" : 1322,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part139_SuperMarioBros2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Interview",
+            "duration" : 600,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part140_Interview_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaOcarinaofTimeMasterQuest",
+            "duration" : 7897,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part141_TheLegendofZeldaOcarinaofTimeMasterQuest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaMajorasMask",
+            "duration" : 19879,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part142_TheLegendofZeldaMajorasMask_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioGalaxy",
+            "duration" : 10919,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part143_SuperMarioGalaxy_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "RatchetClankUpYourArsenal",
+            "duration" : 3041,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part144_RatchetClankUpYourArsenal_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Jak3",
+            "duration" : 4058,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part145_Jak3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CrashBandicoot",
+            "duration" : 6674,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part146_CrashBandicoot_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SpyrotheDragon",
+            "duration" : 2729,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part147_SpyrotheDragon_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShovelKnight",
+            "duration" : 3320,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part148_ShovelKnight_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MarioKart8",
+            "duration" : 5590,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part149_MarioKart8_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part149_MarioKart8_1080p_001517.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part149_MarioKart8_1080p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MarioKart64",
+            "duration" : 2933,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part150_MarioKart64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBOTPlaysMarioKart64",
+            "duration" : 984,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part151_TASBOTPlaysMarioKart64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotvsHumansPwnAdventureZ",
+            "duration" : 1351,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part152_TASBotvsHumansPwnAdventureZ_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBOTPlaysZeldaII",
+            "duration" : 735,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part153_TASBOTPlaysZeldaII_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysBrainAge",
+            "duration" : 2200,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part154_TASBotplaysBrainAge_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysSuperMarioBros3",
+            "duration" : 1146,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part155_TASBotplaysSuperMarioBros3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysSuperMarioAllStarsWorldMaker",
+            "duration" : 1984,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part156_TASBotplaysSuperMarioAllStarsWorldMaker_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaALinktothePast",
+            "duration" : 7356,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part157_TheLegendofZeldaALinktothePast_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Bloodborne",
+            "duration" : 3497,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part158_Bloodborne_720p.mp4"
+                }, {
+                    "label" : "1080p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part158_Bloodborne_1080p_000949.jpg",
+                    "bitrate" : "1080p",
+                    "size" : 0,
+                    "width" : "1920",
+                    "height" : "1080",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part158_Bloodborne_1080p.mp4"
+                }, {
+                    "label" : "1440p HD",
+                    "thumbnail" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016.thumbs%2FAwesomeGamesDoneQuick2016_part158_Bloodborne_1440p_000949.jpg",
+                    "bitrate" : "1440p",
+                    "size" : 0,
+                    "width" : "2560",
+                    "height" : "1440",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part158_Bloodborne_1440p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMetroid",
+            "duration" : 5546,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part159_SuperMetroid_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "FinalFantasyIV",
+            "duration" : 15082,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/AwesomeGamesDoneQuick2016/AwesomeGamesDoneQuick2016_part160_FinalFantasyIV_720p.mp4"
+                }
+            ]
+        }
+    ]
+}

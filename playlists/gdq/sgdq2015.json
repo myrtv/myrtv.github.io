@@ -1,0 +1,1979 @@
+{
+    "info" : {
+        "name" : "Summer Games Done Quick 2015",
+        "start_epoch_gtm" : 1435334400,
+        "end_epoch_gtm" : 1438499040,
+        "url_prefix" : "https://archive.org"
+    },
+    "playlist" :
+    [{
+            "name" : "SuperMarioWorld2YoshisIsland",
+            "duration" : 11075,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part001_SuperMarioWorld2YoshisIsland_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicBoomRiseofLyric",
+            "duration" : 2731,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part002_SonicBoomRiseofLyric_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShadowtheHedgehog",
+            "duration" : 2623,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part003_ShadowtheHedgehog_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdventureDXDirectorsCut",
+            "duration" : 2879,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part004_SonicAdventureDXDirectorsCut_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdventureDXBigtheCatsStory",
+            "duration" : 857,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part005_SonicAdventureDXBigtheCatsStory_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry",
+            "duration" : 3244,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part006_DonkeyKongCountry_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountryGlitchedAnyP",
+            "duration" : 1599,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part007_DonkeyKongCountryGlitchedAnyP_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry3",
+            "duration" : 3604,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part008_DonkeyKongCountry3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKongCountry3LostWorld",
+            "duration" : 1651,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part009_DonkeyKongCountry3LostWorld_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CrashBandicootWarped",
+            "duration" : 4074,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part010_CrashBandicootWarped_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ResidentEvil3",
+            "duration" : 5549,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part011_ResidentEvil3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ResidentEvil4",
+            "duration" : 7023,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part012_ResidentEvil4_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SilentHill2",
+            "duration" : 4674,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part013_SilentHill2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Stranglehold",
+            "duration" : 5161,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part014_Stranglehold_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShenmueII",
+            "duration" : 8357,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part015_ShenmueII_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TRAGMissionofMercy",
+            "duration" : 3639,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part016_TRAGMissionofMercy_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TonyHawksAmericanWasteland",
+            "duration" : 1144,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part017_TonyHawksAmericanWasteland_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DisneyExtremeSkateAdventure",
+            "duration" : 1679,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part018_DisneyExtremeSkateAdventure_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DisneysTheLittleMermaid",
+            "duration" : 1392,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part019_DisneysTheLittleMermaid_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ChipNDaleRescueRangers",
+            "duration" : 1449,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part020_ChipNDaleRescueRangers_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DuckTales",
+            "duration" : 1065,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part021_DuckTales_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MauiMallardinColdShadow",
+            "duration" : 2628,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part022_MauiMallardinColdShadow_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MickeyMania",
+            "duration" : 1844,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part023_MickeyMania_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastleofIllusionHD",
+            "duration" : 3369,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part024_CastleofIllusionHD_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastleofIllusionStarringMickeyMouseHD",
+            "duration" : 3369,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part024_CastleofIllusionStarringMickeyMouseHD_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GhostsNGoblins",
+            "duration" : 2101,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part025_GhostsNGoblins_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GhoulsNGhosts",
+            "duration" : 1939,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part026_GhoulsNGhosts_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MalditaCastilla",
+            "duration" : 3485,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part027_MalditaCastilla_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GauntletNES",
+            "duration" : 1381,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part028_GauntletNES_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GauntletPC",
+            "duration" : 4169,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part029_GauntletPC_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ToejamandEarl",
+            "duration" : 2360,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part030_ToejamandEarl_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DungeonMagic",
+            "duration" : 1207,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part031_DungeonMagic_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMonkeyBallDeluxe",
+            "duration" : 3018,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part032_SuperMonkeyBallDeluxe_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "OctodadDadliestCatchCoop",
+            "duration" : 1840,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part033_OctodadDadliestCatchCoop_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "NinjaBaseballBatman",
+            "duration" : 2224,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part034_NinjaBaseballBatman_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SpicaAdventure",
+            "duration" : 638,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part035_SpicaAdventure_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TetrisBlock",
+            "duration" : 8273,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part036_TetrisBlock_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaTwilightPrincess",
+            "duration" : 12872,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part037_TheLegendofZeldaTwilightPrincess_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ZeldaTwilightPrincess",
+            "duration" : 12872,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part037_ZeldaTwilightPrincess_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BioshockInfinite",
+            "duration" : 8039,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part038_BioshockInfinite_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BorderlandsThePreSequel",
+            "duration" : 9331,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part039_BorderlandsThePreSequel_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LovelyPlanet",
+            "duration" : 1853,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part040_LovelyPlanet_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DigimonWorld",
+            "duration" : 6237,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part041_DigimonWorld_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "StarTropics",
+            "duration" : 4649,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part042_StarTropics_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Rygar",
+            "duration" : 1046,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part043_Rygar_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MonsterParty",
+            "duration" : 1362,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part044_MonsterParty_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetalStorm",
+            "duration" : 1412,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part045_MetalStorm_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "StarWarsNES",
+            "duration" : 1347,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part046_StarWarsNES_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "WizardsWarriors",
+            "duration" : 1764,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part047_WizardsWarriors_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetalGearMSX",
+            "duration" : 2667,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part048_MetalGearMSX_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Rayman",
+            "duration" : 5725,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part049_Rayman_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetroidPrimeHunters",
+            "duration" : 6608,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part050_MetroidPrimeHunters_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MetroidPrime2Echoes100P",
+            "duration" : 9546,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part051_MetroidPrime2Echoes100P_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManX8",
+            "duration" : 4871,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part052_MegaManX8_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManX2",
+            "duration" : 4118,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part053_MegaManX2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManX3",
+            "duration" : 1956,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part054_MegaManX3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManX4",
+            "duration" : 3243,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part055_MegaManX4_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaSymphonyoftheNight",
+            "duration" : 3263,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part056_CastlevaniaSymphonyoftheNight_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SymphonyoftheNight",
+            "duration" : 3263,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part056_SymphonyoftheNight_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaAriaofSorrow",
+            "duration" : 1356,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part057_CastlevaniaAriaofSorrow_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaDawnofSorrow",
+            "duration" : 3284,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part058_CastlevaniaDawnofSorrow_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PortraitofRuin",
+            "duration" : 1432,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part059_PortraitofRuin_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "OriandtheBlindForest",
+            "duration" : 3805,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part060_OriandtheBlindForest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShantaeandthePiratesCurse",
+            "duration" : 4427,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part061_ShantaeandthePiratesCurse_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MightySwitchForce2",
+            "duration" : 2061,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part062_MightySwitchForce2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HotlineMiami2WrongNumber",
+            "duration" : 3959,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part063_HotlineMiami2WrongNumber_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Bastion",
+            "duration" : 3788,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part064_Bastion_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HalfMinuteHeroHero30",
+            "duration" : 2203,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part065_HalfMinuteHeroHero30_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HalfMinuteHeroHero300",
+            "duration" : 540,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part066_HalfMinuteHeroHero300_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HalfMinuteHeroHero3",
+            "duration" : 192,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part067_HalfMinuteHeroHero3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KingdomHeartsBirthbySleepFMHD",
+            "duration" : 5666,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part068_KingdomHeartsBirthbySleepFMHD_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GargoylesQuest",
+            "duration" : 2484,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part069_GargoylesQuest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbysDreamLand2",
+            "duration" : 2792,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part070_KirbysDreamLand2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbyTiltNTumble",
+            "duration" : 1419,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part071_KirbyTiltNTumble_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbySuperStar",
+            "duration" : 5133,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part072_KirbySuperStar_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KirbysAvalanche",
+            "duration" : 1173,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part073_KirbysAvalanche_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "EarthwormJim",
+            "duration" : 2492,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part074_EarthwormJim_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "EccoTheTidesofTime",
+            "duration" : 3191,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part075_EccoTheTidesofTime_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GunstarHeroes",
+            "duration" : 3311,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part076_GunstarHeroes_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "GunstarHeroescoop",
+            "duration" : 3311,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part076_GunstarHeroescoop_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "FreedomPlanet",
+            "duration" : 3670,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part077_FreedomPlanet_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonictheHedgehogTripleTrouble",
+            "duration" : 2144,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part078_SonictheHedgehogTripleTrouble_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonicAdvance",
+            "duration" : 1879,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part079_SonicAdvance_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SonictheHedgehog2",
+            "duration" : 2854,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part080_SonictheHedgehog2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LegendofZeldaMajorasMask3D",
+            "duration" : 9220,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part081_LegendofZeldaMajorasMask3D_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaSwordless",
+            "duration" : 4207,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part082_TheLegendofZeldaSwordless_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheLegendofZeldaGlitched",
+            "duration" : 1116,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part083_TheLegendofZeldaGlitched_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Earthbound",
+            "duration" : 6437,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part084_Earthbound_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PrinceofPersiaSandsofTime",
+            "duration" : 6135,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part085_PrinceofPersiaSandsofTime_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DeusExHumanRevolution",
+            "duration" : 3405,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part086_DeusExHumanRevolution_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "HelloKittyRollerRescue",
+            "duration" : 2699,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part087_HelloKittyRollerRescue_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SamuraiPizzaCats",
+            "duration" : 1642,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part088_SamuraiPizzaCats_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PanicRestaurant",
+            "duration" : 1207,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part089_PanicRestaurant_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KidNiki2",
+            "duration" : 799,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part090_KidNiki2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ChesterCheetahWildWildQuest",
+            "duration" : 1234,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part091_ChesterCheetahWildWildQuest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SpaceStationSiliconValley",
+            "duration" : 5391,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part092_SpaceStationSiliconValley_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "StretchPanic",
+            "duration" : 2392,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part093_StretchPanic_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Roundabout",
+            "duration" : 3664,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part094_Roundabout_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "OregonTrail",
+            "duration" : 1482,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part095_OregonTrail_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TouhouMarisaandAlicesTrapTower",
+            "duration" : 2766,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part096_TouhouMarisaandAlicesTrapTower_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TouhouTrapTower",
+            "duration" : 2766,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part096_TouhouTrapTower_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TouhouYouyouKengekiMusou",
+            "duration" : 1191,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part097_TouhouYouyouKengekiMusou_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "FEAR",
+            "duration" : 3906,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part098_FEAR_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TheWheelofTIme",
+            "duration" : 1905,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part099_TheWheelofTIme_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Unreal",
+            "duration" : 3032,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part100_Unreal_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DoomScythe",
+            "duration" : 1782,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part101_DoomScythe_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SpearofDestiny",
+            "duration" : 1962,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part102_SpearofDestiny_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperNoahsArk3D",
+            "duration" : 563,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part103_SuperNoahsArk3D_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "QuantumConundrum",
+            "duration" : 3377,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part104_QuantumConundrum_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaIISimonsQuest",
+            "duration" : 3640,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part105_CastlevaniaIISimonsQuest_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperCastlevaniaIV",
+            "duration" : 2728,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part106_SuperCastlevaniaIV_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CastlevaniaRondoofBlood",
+            "duration" : 2083,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part107_CastlevaniaRondoofBlood_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShovelKnightshovelonly",
+            "duration" : 3718,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part108_ShovelKnightshovelonly_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Rockman3BurstChaser",
+            "duration" : 2624,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part109_Rockman3BurstChaser_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaManTheWilyWars",
+            "duration" : 1547,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part110_MegaManTheWilyWars_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan4",
+            "duration" : 3502,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part111_MegaMan4_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MegaMan10",
+            "duration" : 2676,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part112_MegaMan10_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "RockmanForte",
+            "duration" : 3224,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part113_RockmanForte_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Halo3",
+            "duration" : 7865,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part114_Halo3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LegendofZeldaOcarinaofTime",
+            "duration" : 2830,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part115_LegendofZeldaOcarinaofTime_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MarioKart64",
+            "duration" : 2448,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part116_MarioKart64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Doom64",
+            "duration" : 3021,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part117_Doom64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BanjoTooie",
+            "duration" : 3344,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part118_BanjoTooie_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DonkeyKong64",
+            "duration" : 9229,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part119_DonkeyKong64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "MarioLuigiSuperstarSaga",
+            "duration" : 6373,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part120_MarioLuigiSuperstarSaga_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SaintsRowGatoutofHell",
+            "duration" : 3539,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part121_SaintsRowGatoutofHell_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperTurrican",
+            "duration" : 1555,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part122_SuperTurrican_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ZombiesAteMyNeighbors",
+            "duration" : 2488,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part123_ZombiesAteMyNeighbors_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "CaveStory",
+            "duration" : 4089,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part124_CaveStory_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BionicCommandoRearmed2",
+            "duration" : 6265,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part125_BionicCommandoRearmed2_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Fallout",
+            "duration" : 1128,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part126_Fallout_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Fallout3",
+            "duration" : 2311,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part127_Fallout3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Fallout3BadEnding",
+            "duration" : 415,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part128_Fallout3BadEnding_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ElderScrollsIVOblivion",
+            "duration" : 3445,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part129_ElderScrollsIVOblivion_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ElderScrollsIVOblivionOOB",
+            "duration" : 714,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part130_ElderScrollsIVOblivionOOB_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DustforceDX",
+            "duration" : 3669,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part131_DustforceDX_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "WingsofVi",
+            "duration" : 3166,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part132_WingsofVi_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "IWannabetheBoshy",
+            "duration" : 3596,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part133_IWannabetheBoshy_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BindingofIsaacRebirthAzazel",
+            "duration" : 1288,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part134_BindingofIsaacRebirthAzazel_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BindingofIsaacRebirthEden",
+            "duration" : 1033,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part135_BindingofIsaacRebirthEden_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "KidIcarus",
+            "duration" : 2069,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part136_KidIcarus_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioBrosTheLostLevels",
+            "duration" : 3118,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part137_SuperMarioBrosTheLostLevels_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioBros3",
+            "duration" : 5360,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part138_SuperMarioBros3_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMarioSunshine",
+            "duration" : 7477,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part139_SuperMarioSunshine_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LuigisMansion",
+            "duration" : 5656,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part140_LuigisMansion_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonBlue",
+            "duration" : 8252,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part141_PokemonBlue_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonBlueBlindfoldedRace",
+            "duration" : 2476,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part142_PokemonBlueBlindfoldedRace_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonPuzzleLeague",
+            "duration" : 2970,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part143_PokemonPuzzleLeague_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "PokemonPuzzleLeagueSpaService",
+            "duration" : 1818,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part144_PokemonPuzzleLeagueSpaService_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LegendofZeldaTheWindWaker",
+            "duration" : 16022,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part145_LegendofZeldaTheWindWaker_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ShadowoftheColossus",
+            "duration" : 4081,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part146_ShadowoftheColossus_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "BatmanArkhamOrigins",
+            "duration" : 3953,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part147_BatmanArkhamOrigins_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Minecraft",
+            "duration" : 5122,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part148_Minecraft_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "Portal",
+            "duration" : 1877,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part149_Portal_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "DarkSoulsII",
+            "duration" : 5745,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part150_DarkSoulsII_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysMegaMan",
+            "duration" : 1945,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part151_TASBotplaysMegaMan_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysSonicAdvance",
+            "duration" : 1180,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part152_TASBotplaysSonicAdvance_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASBotplaysIkaruga",
+            "duration" : 1800,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part153_TASBotplaysIkaruga_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "LegendofZeldaALinkToThePast",
+            "duration" : 6779,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part154_LegendofZeldaALinkToThePast_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMario6401Star",
+            "duration" : 1155,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part155_SuperMario6401Star_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMario64",
+            "duration" : 8306,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part156_SuperMario64_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "SuperMetroid",
+            "duration" : 4078,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part157_SuperMetroid_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "TASStreemerzCompetition",
+            "duration" : 597,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part158_TASStreemerzCompetition_720p.mp4"
+                }
+            ]
+        }, {
+            "name" : "ChronoTrigger",
+            "duration" : 19564,
+            "qualities" : [{
+                    "label" : "720p HD",
+                    "bitrate" : "720p",
+                    "size" : 0,
+                    "width" : "1280",
+                    "height" : "720",
+                    "src" : "/download/SummerGamesDoneQuick2015/SummerGamesDoneQuick2015_part159_ChronoTrigger_720p.mp4"
+                }
+            ]
+        }
+    ]
+}

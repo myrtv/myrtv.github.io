@@ -3,7 +3,7 @@ var rtv = {
     init: function() {
         var that = this;
 
-        $.getJSON('playlists/agdq2013.min.json')
+        $.getJSON('playlists/gdq/agdq2013.min.json')
         .complete(function(data) {
             //Offline testing and not using a virtual server is weird, don't judge me.
             that.json_cache = JSON.parse(data.responseText);
