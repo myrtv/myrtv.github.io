@@ -3,8 +3,9 @@ var rtv = {
     init: function() {
         var that = this;
 
-        $.getJSON('profiles/agdq2013.json')
+        $.getJSON('playlists/agdq2013.min.json')
         .complete(function(data) {
+            //Offline testing and not using a virtual server is weird, don't judge me.
             that.json_cache = JSON.parse(data.responseText);
 
             //Determine total length
@@ -12,11 +13,10 @@ var rtv = {
             $.each(that.json_cache.playlist, function (index, key) {
                 that.json_cache.info.total_duration += key.duration;
             })
+
             that.getCurrentTime();
             that.spawn();
         });
-
-
     },
     getCurrentTime: function() {
         //It's close, but not enough.
