@@ -33,7 +33,9 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
 #Planned Features
  - ~~Playlist switching~~ Temporarily done, want to improve.
  - Playlist viewing
-   - Maybe browser desktop notification support to get alerted for desired runs? 
+   - Maybe browser desktop notification support
+     - [Service workers](https://github.com/w3c/ServiceWorker/blob/master/explainer.md) (background task)
+     - Receive run alerts. "first time only", "every time"?
  - Custom playlist URLs
    - Current sloppy implementation kinda does this, but won't stick.
  - Quality selector
