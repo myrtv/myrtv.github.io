@@ -102,7 +102,7 @@ var rtv = {
                         'rel': 0,
                         'start': current.seek_to,
                         'modestbranding': 0,
-                        'showinfo': 0
+                        'showinfo': 1
                     },
                     videoId: current.qualities[0].src,
                     events: {
@@ -110,9 +110,14 @@ var rtv = {
                         'onStateChange': rtv.youtube.playerOnStateChange
                     }
                 });
-            }            
-            rtv.player.instance.seekTo(current.seek_to);
+            } else {
+                rtv.player.instance.loadVideoById({
+                    'videoId': current.qualities[0].src,
+                    'startSeconds': current.seek_to
+                });
+            }
             
+
         }
     },
     seekTo: function(to, player) {
@@ -142,7 +147,7 @@ var rtv = {
             console.log("yt state", event.data);
             if (event.data == YT.PlayerState.ENDED) {
                 setTimeout(function() {
-                    that.spawn.main();
+                    rtv.spawn.main();
                 }, 2000);
             }
         }
