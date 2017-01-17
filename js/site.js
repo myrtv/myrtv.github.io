@@ -14,7 +14,7 @@ var rtv = {
     init: function(path) {
         var that = this;
 
-        $.getJSON((path || 'playlists/gdq/agdq2013.min.json'), function (data) {
+        $.getJSON((path || 'playlists/initiald.min.json'), function (data) {
             //Offline testing and not using a virtual server is weird, don't judge me.
             that.json_cache = (data.playlist) ? data : JSON.parse(data.responseText);
 
