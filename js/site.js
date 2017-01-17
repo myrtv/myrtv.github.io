@@ -12,8 +12,11 @@ var rtv = {
     },
     init: function(path) {
         var that = this;
+        var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
 
-        $.getJSON((path || 'playlists/initiald.min.json'), function (data) {
+        $.getJSON(list, function (data) {
+            localStorage['rtv-last'] = list; //Save.
+
             //Offline testing and not using a virtual server is weird, don't judge me.
             that.json_cache = (data.playlist) ? data : JSON.parse(data.responseText);
 
