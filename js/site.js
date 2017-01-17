@@ -85,7 +85,7 @@ var rtv = {
             instance.addEventListener('ended', function() {
                 setTimeout(function() {
                     that.spawn.main();
-                }, 2500);
+                }, 2000);
             }, false);
 
             rtv.seekTo(current.seek_to);
@@ -141,7 +141,9 @@ var rtv = {
         playerOnStateChange: function(event) {
             console.log("yt state", event.data);
             if (event.data == YT.PlayerState.ENDED) {
-                rtv.spawn.main();
+                setTimeout(function() {
+                    that.spawn.main();
+                }, 2000);
             }
         }
     }
