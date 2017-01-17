@@ -32,7 +32,7 @@ var rtv = {
         var start_epoch = new Date(this.json_cache.info.start_epoch_gtm * 1000);
         var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
         var total_duration = this.json_cache.info.total_duration;
-        var loops = 0;
+        var loops = 1;
 
         while (start >= total_duration) {
             start -= total_duration;
