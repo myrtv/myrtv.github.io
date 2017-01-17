@@ -63,8 +63,11 @@ var rtv = {
 
             switch (rtv.json_cache.info.service) {
                 case "youtube":
-                    rtv.youtube.init();
-                    setTimeout(function () { that.youtube(current); }, 1000);
+                        if (typeof YT !== "undefined") {
+                            this.youtube(current);
+                        } else {
+                            rtv.youtube.init();
+                        }
                     break;
                 default:
                     this.html5(current);
@@ -138,11 +141,9 @@ var rtv = {
         onAPIReady: function() {
             var that = this;
             console.log("hey look it's youtube");
+            rtv.spawn.main();
         },
-        playerOnReady: function(event) {
-            //rtv.player.instance.seekTo(rtv.getCurrentVideo().seek_to, true);
-            //event.target.playVideo();
-        },
+        playerOnReady: function(event) {},
         playerOnStateChange: function(event) {
             console.log("yt state", event.data);
             if (event.data == YT.PlayerState.ENDED) {
