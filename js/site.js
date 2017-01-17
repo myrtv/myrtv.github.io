@@ -8,7 +8,6 @@ var rtv = {
             that.init(this.value);
         })
 
-
         this.init();
     },
     init: function(path) {
@@ -22,13 +21,15 @@ var rtv = {
             that.json_cache.info.total_duration = 0;
             $.each(that.json_cache.playlist, function (index, key) {
                 that.json_cache.info.total_duration += key.duration;
+
+                //Should help with future visual playlist navigation. No need to have it on the source though.
+                that.json_cache.playlist[index].index = index;
             })
 
             that.spawn.main();
         });
     },
     getCurrentTime: function() {
-        //It's close, but not enough.
         var start_epoch = new Date(this.json_cache.info.start_epoch_gtm * 1000);
         var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
         var total_duration = this.json_cache.info.total_duration;
@@ -124,8 +125,6 @@ var rtv = {
                     'startSeconds': current.seek_to
                 });
             }
-
-
         }
     },
     seekTo: function(to, player) {
