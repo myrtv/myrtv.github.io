@@ -97,7 +97,13 @@ var rtv = {
                 rtv.player.instance = new YT.Player('ytfodder', {
                     height: '100%',
                     width: '100%',
-                    playerVars: { 'autoplay': 1, 'rel': 0 },
+                    playerVars: {
+                        'autoplay': 1,
+                        'rel': 0,
+                        'start': current.seek_to,
+                        'modestbranding': 0,
+                        'showinfo': 0
+                    },
                     videoId: current.qualities[0].src,
                     events: {
                         'onReady': rtv.youtube.playerOnReady,
@@ -129,7 +135,7 @@ var rtv = {
             console.log("hey look it's youtube");
         },
         playerOnReady: function(event) {
-            rtv.player.instance.seekTo(rtv.getCurrentVideo().seek_to, true);
+            //rtv.player.instance.seekTo(rtv.getCurrentVideo().seek_to, true);
             //event.target.playVideo();
         },
         playerOnStateChange: function(event) {
