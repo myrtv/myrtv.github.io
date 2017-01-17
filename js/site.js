@@ -26,7 +26,7 @@ var rtv = {
 
             that.spawn.main();
         });
-    }
+    },
     getCurrentTime: function() {
         //It's close, but not enough.
         var start_epoch = new Date(this.json_cache.info.start_epoch_gtm * 1000);
