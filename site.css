@@ -11,6 +11,7 @@ video {
     top:0px;
     left:0px;
     opacity: 0.25;
+    z-index: 9001;
 }
 #remote:hover {
     opacity: 1;
