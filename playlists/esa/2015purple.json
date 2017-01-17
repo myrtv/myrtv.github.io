@@ -1,0 +1,17 @@
+{
+    "info" : {
+        "name" : "European Speedrunner Assembly 2015 (Purple)",
+        "start_epoch_gtm" : 1435514400,
+        "end_epoch_gtm" : 1294785705,
+        "service" : "youtube"
+    },
+    "playlist" : [{
+            "name" : "Sly Cooper and the Thievius Racconus [ Any% ] Speedrun by tHmCS",
+            "duration" : 4302,
+            "qualities" : [{
+                    "src" : "pcFS4zj-SBA"
+                }
+            ]
+        }
+    ]
+}

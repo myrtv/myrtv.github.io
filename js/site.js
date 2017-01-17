@@ -1,17 +1,13 @@
 var rtv = {
     json_cache: {},
+    player: {type: "", instance: {}},
     preinit: function() {
         var that = this;
 
         $('#remote').on('change', function() {
             that.init(this.value);
         })
-        
-        $("video")[0].addEventListener('ended', function() {
-            setTimeout(function() {
-                that.spawn();
-            }, 2500);
-        }, false);
+
 
         this.init();
     },
@@ -29,7 +25,7 @@ var rtv = {
             })
 
             that.getCurrentTime();
-            that.spawn();
+            that.spawn.main();
         });
     },
     getCurrentTime: function() {
@@ -55,24 +51,98 @@ var rtv = {
                 return false;
             } else {
                 current_total += key.duration;
-                console.log('no not here');
             }
         });
 
         return the_key;
     },
-    spawn: function() {
-        var current = this.getCurrentVideo();
+    spawn: {
+        main: function() {
+            var current = rtv.getCurrentVideo();
+            var that = this;
 
-        $("video").attr({preload: "none", controls: "", autoplay: "", src: this.json_cache.info.url_prefix + current.qualities[0].src});
-        this.seekTo(current.seek_to);
+            switch (rtv.json_cache.info.service) {
+                case "youtube":
+                    rtv.youtube.init();
+                    setTimeout(function () { that.youtube(current); }, 1000);
+                    break;
+                default:
+                    this.html5(current);
+            }
+        },
+        html5: function(current) {
+            if ($("video").length == 0) { $("#container").html($("<video />")); }
+
+            var instance = $("video")[0];
+            rtv.player.instance = instance;
+
+            $(instance).attr({
+                preload: "none",
+                controls: "",
+                autoplay: "",
+                src: rtv.json_cache.info.url_prefix + current.qualities[0].src
+            });
+            instance.addEventListener('ended', function() {
+                setTimeout(function() {
+                    that.spawn.main();
+                }, 2500);
+            }, false);
+
+            rtv.seekTo(current.seek_to);
+        },
+        youtube: function(current) {
+            if ($("#ytfodder").length == 0) {
+                $("#container").html($("<div />", {id: 'ytfodder'}));
+
+                rtv.player.instance = new YT.Player('ytfodder', {
+                    height: '100%',
+                    width: '100%',
+                    playerVars: { 'autoplay': 1, 'rel': 0 },
+                    videoId: current.qualities[0].src,
+                    events: {
+                        'onReady': rtv.youtube.playerOnReady,
+                        'onStateChange': rtv.youtube.playerOnStateChange
+                    }
+                });
+            }            
+            rtv.player.instance.seekTo(current.seek_to);
+            
+        }
     },
-    seekTo: function(to) {
-        $("video")[0].currentTime = (to || 0);
+    seekTo: function(to, player) {
+        (player || rtv.player.instance).currentTime = (to || 0);
+    },
+    youtube: {
+        done: false,
+        init: function() {
+            if (this.done == true) return;
+            this.done = 1;
+
+            //Spooky.
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/player_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        },
+        onAPIReady: function() {
+            var that = this;
+            console.log("hey look it's youtube");
+        },
+        playerOnReady: function(event) {
+            rtv.player.instance.seekTo(rtv.getCurrentVideo().seek_to, true);
+            //event.target.playVideo();
+        },
+        playerOnStateChange: function(event) {
+            console.log("yt state", event.data);
+            if (event.data == YT.PlayerState.ENDED) {
+                rtv.spawn.main();
+            }
+        }
     }
 }
 
+function onYouTubePlayerAPIReady() { rtv.youtube.onAPIReady(); }
+
 $(document).ready(function() {
-    //Do this proper
-    rtv.preinit();
+    rtv.preinit(); //Do this proper
 });
