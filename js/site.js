@@ -24,18 +24,23 @@ var rtv = {
                 that.json_cache.info.total_duration += key.duration;
             })
 
-            that.getCurrentTime();
             that.spawn.main();
         });
-    },
+    }
     getCurrentTime: function() {
         //It's close, but not enough.
-        var start = Math.round(new Date() / 1000) - Math.round(new Date(this.json_cache.info.start_epoch_gtm * 1000) / 1000);
+        var start_epoch = new Date(this.json_cache.info.start_epoch_gtm * 1000);
+        var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
         var total_duration = this.json_cache.info.total_duration;
+        var loops = 0;
 
         while (start >= total_duration) {
             start -= total_duration;
+            loops++;
         }
+
+        console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
+                    "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
 
         return start;
     },
@@ -119,7 +124,7 @@ var rtv = {
                     'startSeconds': current.seek_to
                 });
             }
-            
+
 
         }
     },
@@ -139,8 +144,6 @@ var rtv = {
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         },
         onAPIReady: function() {
-            var that = this;
-            console.log("hey look it's youtube");
             rtv.spawn.main();
         },
         playerOnReady: function(event) {},
