@@ -73,17 +73,24 @@ var rtv = {
             switch (rtv.json_cache.info.service) {
                 case "youtube":
                         if (typeof YT !== "undefined") {
+                            rtv.player.type = "youtube";
                             this.youtube(current);
                         } else {
                             rtv.youtube.init();
                         }
                     break;
                 default:
+                    rtv.player.type = "html5";
                     this.html5(current);
             }
         },
         html5: function(current) {
-            if ($("video").length == 0) { $("#container").html($("<video />")); }
+            if ($("video").length == 0) {
+                if (rtv.player.type == "youtube") {
+                    rtv.player.instance.destroy();
+                }
+                $("#container").html($("<video />"));
+            }
 
             var instance = $("video")[0];
             rtv.player.instance = instance;
