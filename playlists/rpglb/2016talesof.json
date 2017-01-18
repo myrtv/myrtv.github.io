@@ -1,0 +1,10 @@
+{
+    "info" : {
+        "name" : "RPG Limit Break - Tales of Marathon 2016",
+        "start_epoch_gtm" : 1455303600,
+        "end_epoch_gtm" : 0,
+        "service" : "youtube"
+    },
+    "playlist" :
+    [{"name":"Tales of Marathon 2016: Phantasia (SNES) in 4:38:59 by Yagamoth","duration":17489,"qualities":[{"src":"PlWULv2wguM"}]},{"name":"Tales of Marathon 2016: Eternia (PS1) in 5:04:39 by Bertin","duration":19385,"qualities":[{"src":"8XsBGDN3w-U"}]},{"name":"Tales of Marathon 2016: Vesperia (PS3) in 5:43:43 by Eclipse1224","duration":21221,"qualities":[{"src":"N2KjjzDtBrU"}]},{"name":"Tales of Marathon 2016: Symphonia (GC) in 7:13:49 by JayMota16 (Part 1/2)","duration":10911,"qualities":[{"src":"qHTFJ7gLfdY"}]},{"name":"Tales of Marathon 2016: Symphonia (GC) in 7:13:49 by JayMota16 (Part 2/2)","duration":16075,"qualities":[{"src":"xryAoFHxra0"}]},{"name":"Tales of Marathon 2016: Graces F (PS3 JP) in 4h22 by Shineeyo","duration":15856,"qualities":[{"src":"j9-iblfIQT8"}]},{"name":"Tales of Marathon 2016: Xillia race in 3:50:20 by Eclipse, Freddeh and WanderingMind","duration":13875,"qualities":[{"src":"2d_6-oLj6eQ"}]},{"name":"Tales of Marathon 2016: Xillia 2 (PS3) in 3:53:58 by Itoshira","duration":14601,"qualities":[{"src":"7lbh-bSAMGA"}]},{"name":"Tales of Marathon 2016: Destiny in 3:47:38 by Bertin","duration":15379,"qualities":[{"src":"4_KBaYwJ9Bw"}]},{"name":"Tales of Marathon 2016: Zestiria in 7:05:31 by FellVisage","duration":26042,"qualities":[{"src":"kybAjkTOGmI"}]}]
+}
