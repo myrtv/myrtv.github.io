@@ -1,170 +1,251 @@
 var rtv = {
-    json_cache: {},
-    player: {type: "", instance: {}},
     preinit: function() {
         var that = this;
 
         $(document).on('change', '#remote', function() {
-            that.init(this.value);
+            that.player.destroy.all();
+            that.player.create(this.value);
         })
 
+        $("body").append($("<div />", {id: 'container'}));
         this.menu.spawn();
         this.init();
     },
     init: function(path) {
         var that = this;
-        var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
-        
 
-        $.getJSON(list, function (data) {
-            localStorage['rtv-last'] = list; //Save.
-
-            //Offline testing and not using a virtual server is weird, don't judge me.
-            that.json_cache = (data.playlist) ? data : JSON.parse(data.responseText);
-
-            //Determine total length
-            that.json_cache.info.total_duration = 0;
-            $.each(that.json_cache.playlist, function (index, key) {
-                that.json_cache.info.total_duration += key.duration;
-
-                //Should help with future visual playlist navigation. No need to have it on the source though.
-                that.json_cache.playlist[index].index = index;
-            })
-
-            that.spawn.main();
-        });
+        this.player.create();
     },
-    getCurrentTime: function() {
-        var start_epoch = new Date(this.json_cache.info.start_epoch_gtm * 1000);
-        var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
-        var total_duration = this.json_cache.info.total_duration;
-        var loops = 1;
-
-        while (start >= total_duration) {
-            start -= total_duration;
-            loops++;
-        }
-
-        console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
-                    "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
-
-        return start;
-    },
-    getCurrentVideo: function() {
-        var current_total = 0;
-        var current_time = this.getCurrentTime();
-        var the_key = {};
-
-        $.each(this.json_cache.playlist, function (index, key) {
-            if (current_time < current_total + key.duration) {
-                the_key = key;
-                the_key.seek_to = current_time - current_total;
-                return false;
-            } else {
-                current_total += key.duration;
-            }
-        });
-
-        return the_key;
-    },
-    spawn: {
-        main: function() {
-            var current = rtv.getCurrentVideo();
+    player: {
+        players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
+        create: function(path) {
+            var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
             var that = this;
 
-            switch (rtv.json_cache.info.service) {
+            //Fetch playlist
+            $.getJSON(list, function (data) {
+                localStorage['rtv-last'] = list; //Save.
+
+                //Offline testing and not using a virtual server is weird, don't judge me.
+                var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
+
+                //Determine total length
+                playlist.info.total_duration = 0;
+                $.each(playlist.playlist, function (index, key) {
+                    playlist.info.total_duration += key.duration;
+                    playlist.playlist[index].index = index;
+                });
+
+                return that.spawn(playlist);
+            });
+        },
+        spawn: function(playlist) {
+            var i = this.players.length;
+            var name = "player-"+i;
+
+            //Initialize the new player
+            var player = {
+                "index": i,
+                "name": name,
+                "cache": playlist,
+                "instance": {}
+            }
+
+            this.players.push(player);
+
+            //Create parent container (especially for YouTube, but we'll need it later anyway even for HTML5)
+            $("<div />", {id: "window-"+name}).append($("<div />", {id: name})).appendTo("#container");
+
+            switch (playlist.info.service) {
                 case "youtube":
-                        if (typeof YT !== "undefined") {
-                            rtv.player.type = "youtube";
-                            this.youtube(current);
-                        } else {
-                            rtv.youtube.init();
-                        }
+                    this.instance.youtube.init(player,  name);
                     break;
                 default:
-                    rtv.player.type = "html5";
-                    this.html5(current);
+                    this.instance.html5.spawn(player, name);
             }
+
+            return i;
         },
-        html5: function(current) {
-            if ($("video").length == 0) {
-                if (rtv.player.type == "youtube") {
-                    rtv.player.instance.destroy();
+        destroy: {
+            all: function() {
+                var that = this;
+
+                $.each(rtv.player.players, function (i, player) {
+                    that.player(player);
+                });
+            },
+            player: function(player) {
+                if (typeof player == "number") {
+                    if (!rtv.player.players[player]) return -1;
+                    player = rtv.player.players[player];
+                } //Wew.
+                if (player == null) return -1;
+
+                switch (player.type) {
+                    case "youtube":
+                        this.youtube(player);
+                        break;
+                    case "html5":
+                    default:
+                        this.html5();
                 }
-                $("#container").html($("<video />"));
+
+                $("#"+player.name).parent().remove(); //Remove parent container element (and child self)
+                rtv.player.players[player.index] = null; //Remove its data
+                //Cannot splice, other indexes are changed.
+                //Delete, null, undef index or equivalent (preserves index)
+                //If we utilize the players list in a batch we'll need to acknowledge the empty slots
+            },
+            youtube: function(player) {
+                player.instance.destroy();
+            },
+            html5: function() {
+
             }
-
-            var instance = $("video")[0];
-            rtv.player.instance = instance;
-
-            $(instance).attr({
-                preload: "none",
-                controls: "",
-                autoplay: "",
-                src: rtv.json_cache.info.url_prefix + current.qualities[0].src
-            });
-            instance.addEventListener('ended', function() {
-                setTimeout(function() {
-                    that.spawn.main();
-                }, 2000);
-            }, false);
-
-            rtv.seekTo(current.seek_to);
         },
-        youtube: function(current) {
-            if ($("#ytfodder").length == 0) {
-                $("#container").html($("<div />", {id: 'ytfodder'}));
+        instance: {
+            youtube: {
+                done: false,
+                spawnQueue: [], //See below, might not need this in the long run but trying to be safe
+                init: function(player, target) {
+                    if (this.done == true) return;
+                    //this.done = 1;
 
-                rtv.player.instance = new YT.Player('ytfodder', {
-                    height: '100%',
-                    width: '100%',
-                    playerVars: {
-                        'autoplay': 1,
-                        'rel': 0,
-                        'start': current.seek_to,
-                        'modestbranding': 0,
-                        'showinfo': 1
-                    },
-                    videoId: current.qualities[0].src,
-                    events: {
-                        'onReady': rtv.youtube.playerOnReady,
-                        'onStateChange': rtv.youtube.playerOnStateChange
+                    if (typeof YT == "undefined") {
+                        this.loadAPI();
+                        //We need to wait for the API to load and throw onYouTubePlayerAPIReady()
+                        //In the global namespace we point it back towards this.processQueue();
+                        this.spawnQueue.push({"player": player, "target": target});
+                    } else {
+                        this.spawn(player, target);
                     }
-                });
-            } else {
-                rtv.player.instance.loadVideoById({
-                    'videoId': current.qualities[0].src,
-                    'startSeconds': current.seek_to
-                });
-            }
-        }
-    },
-    seekTo: function(to, player) {
-        (player || rtv.player.instance).currentTime = (to || 0);
-    },
-    youtube: {
-        done: false,
-        init: function() {
-            if (this.done == true) return;
-            this.done = 1;
+                },
+                processQueue: function() {
+                    while (this.spawnQueue.length > 0) {
+                        var item = this.spawnQueue.splice(0, 1)[0];
+                        this.spawn(item.player, item.target);
+                    }
+                    console.log('processed queue because YT API loaded?');
+                },
+                loadAPI: function() {
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/player_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                },
+                spawn: function(player, target) {
+                    var current = rtv.player.getCurrentVideo(player);
+                    var that = this;
 
-            //Spooky.
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/player_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        },
-        onAPIReady: function() {
-            rtv.spawn.main();
-        },
-        playerOnReady: function(event) {},
-        playerOnStateChange: function(event) {
-            console.log("yt state", event.data);
-            if (event.data == YT.PlayerState.ENDED) {
-                setTimeout(function() {
-                    rtv.spawn.main();
-                }, 2000);
+                    var instance = new YT.Player(target, {
+                        height: '100%',
+                        width: '100%',
+                        playerVars: {
+                            'autoplay': 1,
+                            'rel': 0,
+                            'start': current.seek_to,
+                            'modestbranding': 0,
+                            'showinfo': 1
+                        },
+                        videoId: current.qualities[0].src,
+                        events: {
+                            'onReady': that.playerOnReady,
+                            'onStateChange': that.playerOnStateChange
+                        }
+                    });
+
+                    rtv.player.players[player.index].instance = instance;
+                    rtv.player.players[player.index].type = "youtube";
+
+                    return instance;
+                },
+                playerOnReady: function(event) {},
+                playerOnStateChange: function(event) {
+                    var target = event.target.a.id.split("-").pop();
+                    var player = rtv.player.players[target];
+
+                    console.log("player #"+target+" (youtube) state change", event, player);
+
+                    if (event.data == YT.PlayerState.ENDED) {
+                        rtv.player.instance.youtube.syncPlayer(player);
+                    }
+                },
+                syncPlayer: function(player) {
+                    console.log('sync?',player);
+                    var current = rtv.player.getCurrentVideo(player);
+
+                    setTimeout(function() {
+                        player.instance.loadVideoById({
+                            'videoId': current.qualities[0].src,
+                            'startSeconds': current.seek_to
+                        });
+                    }, 1500);
+                }
+            },
+            html5: {
+                spawn: function(player, target) {
+                    var current = rtv.player.getCurrentVideo(player);
+                    var that = this;
+
+                    var instance = $("<video />", {
+                        preload: "metadata",
+                        controls: "",
+                        autoplay: "",
+                        src: player.cache.info.url_prefix + current.qualities[0].src
+                    });
+                    instance[0].addEventListener('ended', function() {
+                        that.syncPlayer(rtv.player.players[player.index]);
+                    }, false);
+
+                    $("#"+target).html(instance);
+                    rtv.player.players[player.index].instance = instance[0];
+                    rtv.player.players[player.index].type = "html5";
+
+                    this.syncPlayer(rtv.player.players[player.index]);
+                },
+                syncPlayer: function(player) {
+                    var current = rtv.player.getCurrentVideo(player);
+
+                    setTimeout(function() {
+                        //player.instance.src = player.cache.info.url_prefix + current.qualities[0].src;
+                        player.instance.currentTime = current.seek_to;
+                        player.instance.play();
+                    }, 1500);
+                }
             }
+        },
+        getCurrentTime: function(player) {
+            var start_epoch = new Date(player.cache.info.start_epoch_gtm * 1000);
+            var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
+            var total_duration = player.cache.info.total_duration;
+            var loops = 1;
+
+            while (start >= total_duration) {
+                start -= total_duration;
+                loops++;
+            }
+
+            console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
+                        "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
+
+            return start;
+        },
+        getCurrentVideo: function(player) {
+            var current_total = 0;
+            var current_time = this.getCurrentTime(player);
+            var the_key = {};
+
+            $.each(player.cache.playlist, function (index, key) {
+                if (current_time < current_total + key.duration) {
+                    the_key = key;
+                    the_key.seek_to = current_time - current_total;
+                    return false;
+                } else {
+                    current_total += key.duration;
+                }
+            });
+
+            return the_key;
         }
     },
     menu: {
@@ -194,21 +275,25 @@ var rtv = {
             $.each(streams, function (i, stream) {
                 var option  = $("<option />", {
                     value: stream.path,
-                    text: stream.name, 
+                    text: stream.name,
                 });
                 if (stream.path == localStorage['rtv-last']) {
                     option.attr({"selected":""});
                 }
-                
+
                 option.appendTo(select);
             });
 
-            $("body").append(select);
+            var head = $("<div />", {id: "head"}).append(select);
+
+            $("body").prepend(head);
+
+            //setTimeout(function() { $("#head").slideUp(); }, 5000);
         }
     }
 }
 
-function onYouTubePlayerAPIReady() { rtv.youtube.onAPIReady(); }
+function onYouTubePlayerAPIReady() { rtv.player.instance.youtube.processQueue(); }
 
 $(document).ready(function() {
     rtv.preinit(); //Do this proper
