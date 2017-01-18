@@ -4,15 +4,17 @@ var rtv = {
     preinit: function() {
         var that = this;
 
-        $('#remote').on('change', function() {
+        $(document).on('change', '#remote', function() {
             that.init(this.value);
         })
 
+        this.menu.spawn();
         this.init();
     },
     init: function(path) {
         var that = this;
         var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
+        
 
         $.getJSON(list, function (data) {
             localStorage['rtv-last'] = list; //Save.
@@ -163,6 +165,45 @@ var rtv = {
                     rtv.spawn.main();
                 }, 2000);
             }
+        }
+    },
+    menu: {
+        spawn: function() {
+            //Eventually pipe in a "directory list" then defer population.
+            var streams = [
+                {name: "InitialD 1/2/4", path: "playlists/initiald.min.json"},
+                {name: "AGDQ2011", path: "playlists/gdq/agdq2011.min.json"},
+                {name: "AGDQ2012", path: "playlists/gdq/agdq2012.min.json"},
+                {name: "SGDQ2012", path: "playlists/gdq/sgdq2012.min.json"},
+                {name: "AGDQ2013", path: "playlists/gdq/agdq2013.min.json"},
+                {name: "SGDQ2013", path: "playlists/gdq/sgdq2013.min.json"},
+                {name: "AGDQ2014", path: "playlists/gdq/agdq2014.min.json"},
+                {name: "SGDQ2014", path: "playlists/gdq/sgdq2014.min.json"},
+                {name: "AGDQ2015", path: "playlists/gdq/agdq2015.min.json"},
+                {name: "SGDQ2015", path: "playlists/gdq/sgdq2015.min.json"},
+                {name: "AGDQ2016", path: "playlists/gdq/agdq2016.min.json"},
+                {name: "SGDQ2016", path: "playlists/gdq/sgdq2016.min.json"},
+                {name: "AllGDQ", path: "playlists/gdq/allgdq.min.json"},
+                {name: "RPGLB2015", path: "playlists/rpglb/2015.json"},
+                {name: "RPGLB2016", path: "playlists/rpglb/2016.json"},
+                {name: "RPGLB2016TalesOf", path: "playlists/rpglb/2016talesof.json"},
+                {name: "ESA2015 Purple", path: "playlists/esa/2015purple.min.json"}
+            ];
+
+            var select = $("<select />", {id: "remote"});
+            $.each(streams, function (i, stream) {
+                var option  = $("<option />", {
+                    value: stream.path,
+                    text: stream.name, 
+                });
+                if (stream.path == localStorage['rtv-last']) {
+                    option.attr({"selected":""});
+                }
+                
+                option.appendTo(select);
+            });
+
+            $("body").append(select);
         }
     }
 }
