@@ -200,7 +200,7 @@ var rtv = {
                                 'startSeconds': current.seek_to
                             });
                         }
-                    }, 1000);
+                    }, 200);
                 }
             },
             html5: {
@@ -235,7 +235,7 @@ var rtv = {
                         }
                         player.instance.currentTime = current.seek_to;
                         player.instance.play();
-                    }, 1000);
+                    }, 200);
                 }
             }
         },
