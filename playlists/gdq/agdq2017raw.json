@@ -1,0 +1,1216 @@
+{
+    "info" : {
+        "name" : "Awesome Games Done Quick (Raw Stream)",
+        "start_epoch_gtm" : 1483893000,
+        "end_epoch_gtm" : 1484464032,
+        "service" : "youtube",
+        "notes": "Out of order, misnumbered (16-20 is a mess then the rest is off by 1) and again later in the 50s. Missing: OriBlindForest (87.5), StarWarsSotE/RotJ (141/2). FO:NV dupe"
+    },
+    "playlist" :
+    [{
+            "name" : "Intro to Awesome Games Done Quick 2017 - Part 0",
+            "duration" : 2871,
+            "qualities" : [{
+                    "src" : "fX0swfbrK4s"
+                }
+            ]
+        }, {
+            "name" : "Ape Escape 2 by iongravirei in 0:55:30 - Awesome Games Done Quick 2017 - Part 1",
+            "duration" : 3696,
+            "qualities" : [{
+                    "src" : "qmFeCM6ug9o"
+                }
+            ]
+        }, {
+            "name" : "LoZ: Ocarina of Time 3D by Benstephens56 in 1:57:23 - Awesome Games Done Quick 2017 - Part 2",
+            "duration" : 7618,
+            "qualities" : [{
+                    "src" : "-zHhOJbVVnU"
+                }
+            ]
+        }, {
+            "name" : "Borderlands 2 Co-Op by Shockwve and Amyrlinn in 1:44:50 - Awesome Games Done Quick 2017 - Part 3",
+            "duration" : 8002,
+            "qualities" : [{
+                    "src" : "t6LypnJJc3k"
+                }
+            ]
+        }, {
+            "name" : "Psychonauts by demoli in 53:32 - Awesome Games Done Quick 2017 - Part 4",
+            "duration" : 3829,
+            "qualities" : [{
+                    "src" : "1W_SBAD8udo"
+                }
+            ]
+        }, {
+            "name" : "Shovel Knight by Smaugy and Munchakoopas in 46:16 - Awesome Games Done Quick 2017 - Part 5",
+            "duration" : 4205,
+            "qualities" : [{
+                    "src" : "vgg7TS3MWwk"
+                }
+            ]
+        }, {
+            "name" : "Mega Man by Coolkid, Endy, Dxtr and Whitehat94 in 24:01 - Awesome Games Done Quick 2017 - Part 6",
+            "duration" : 3796,
+            "qualities" : [{
+                    "src" : "i8sk11p1bDw"
+                }
+            ]
+        }, {
+            "name" : "Super Mario Kart by Sami Cetin and KVD in 30:24 - Awesome Games Done Quick 2017 - Part 7",
+            "duration" : 2422,
+            "qualities" : [{
+                    "src" : "xFXIJnglotA"
+                }
+            ]
+        }, {
+            "name" : "Quake - Awesome Games Done Quick 2017 - Part 8",
+            "duration" : 1162,
+            "qualities" : [{
+                    "src" : "MuNTGEpdRRI"
+                }
+            ]
+        }, {
+            "name" : "Metal Gear Solid 2 by Jaguar King in 1:32:27 - Awesome Games Done Quick 2017 - Part 9",
+            "duration" : 7063,
+            "qualities" : [{
+                    "src" : "hBfs4QW03DM"
+                }
+            ]
+        }, {
+            "name" : "Devil May Cry by Maxylobes in 51:29 - Awesome Games Done Quick 2017 - Part 10",
+            "duration" : 4053,
+            "qualities" : [{
+                    "src" : "Qod9rEoPN8Q"
+                }
+            ]
+        }, {
+            "name" : "Resident Evil Zero HD Remaster by pessimism in 1:16:17 - Awesome Games Done Quick 2017 - Part 11",
+            "duration" : 5477,
+            "qualities" : [{
+                    "src" : "GZPxtrowUEk"
+                }
+            ]
+        }, {
+            "name" : "Silent Hill 4: The Room by aneternalenigma in 1:11:21 - Awesome Games Done Quick 2017 - Part 12",
+            "duration" : 5052,
+            "qualities" : [{
+                    "src" : "v_QJaGG7O2M"
+                }
+            ]
+        }, {
+            "name" : "F.E.A.R Extraction Point by overfiendvip in 40:12 - Awesome Games Done Quick 2017 - Part 13",
+            "duration" : 4269,
+            "qualities" : [{
+                    "src" : "Ika16dFp5x8"
+                }
+            ]
+        }, {
+            "name" : "Hitman: Blood Money by saintmillion in 36:52 - Awesome Games Done Quick 2017 - Part 14",
+            "duration" : 3181,
+            "qualities" : [{
+                    "src" : "IFFvUlCQ8Rw"
+                }
+            ]
+        }, {
+            "name" : "The Turing Test by azorae in 38:38 - Awesome Games Done Quick 2017 - Part 15",
+            "duration" : 2992,
+            "qualities" : [{
+                    "src" : "s7fFWjnUt8A"
+                }
+            ]
+        }, {
+            "name" : "Hyper Princess Pitch by thewanderingmind in 14:08 - Awesome Games Done Quick 2017 - Part 16",
+            "duration" : 1567,
+            "qualities" : [{
+                    "src" : "edTGEWKIPHQ"
+                }
+            ]
+        }, {
+            "name" : "Hydra Castle Labyrinth by forohfor in 32:26 - Awesome Games Done Quick 2017 - Part 18",
+            "duration" : 2311,
+            "qualities" : [{
+                    "src" : "kWt1p27K4yo"
+                }
+            ]
+        }, {
+            "name" : "Kalimba by devilsquirrel in 18:05 - Awesome Games Done Quick 2017 - Part 18",
+            "duration" : 2239,
+            "qualities" : [{
+                    "src" : "CPHKJ2z-ivY"
+                }
+            ]
+        }, {
+            "name" : "New Super Hook Girl by bjw in 5:57 - Awesome Games Done Quick 2017 - Part 19",
+            "duration" : 1447,
+            "qualities" : [{
+                    "src" : "2DKQP-ia7UU"
+                }
+            ]
+        }, {
+            "name" : "Valdis Story: Abyssal City by riskycb in 37:48 - Awesome Games Done Quick 2017 - Part 21",
+            "duration" : 3174,
+            "qualities" : [{
+                    "src" : "az0HcX0V71c"
+                }
+            ]
+        }, {
+            "name" : "Salt and Sanctuary by Grimelios in 39:02 and 9:57  - Awesome Games Done Quick 2017 - Part 22 and 23",
+            "duration" : 4410,
+            "qualities" : [{
+                    "src" : "1aP6CModdW8"
+                }
+            ]
+        }, {
+            "name" : "Magic Sword by yelsraek and pro_jn in 23:38 - Awesome Games Done Quick 2017 - Part 24",
+            "duration" : 1742,
+            "qualities" : [{
+                    "src" : "Di9MP_cZddw"
+                }
+            ]
+        }, {
+            "name" : "Joe and Mac 2 by dram55 in 21:36 - Awesome Games Done Quick 2017 - Part 25",
+            "duration" : 1850,
+            "qualities" : [{
+                    "src" : "M79LgZtMddc"
+                }
+            ]
+        }, {
+            "name" : "Congo's Caper by Omnigamer in 21:56 - Awesome Games Done Quick 2017 - Part 26",
+            "duration" : 1759,
+            "qualities" : [{
+                    "src" : "blQgdB4YZs8"
+                }
+            ]
+        }, {
+            "name" : "Batman: Return of the Joker by toad22484 in 13:57 - Awesome Games Done Quick 2017 - Part 26",
+            "duration" : 1340,
+            "qualities" : [{
+                    "src" : "4WLVksTU_fE"
+                }
+            ]
+        }, {
+            "name" : "Sunset Riders by gusmancini in 20:59 - Awesome Games Done Quick 2017 - Part 27",
+            "duration" : 2017,
+            "qualities" : [{
+                    "src" : "eVQ2UDGVJIE"
+                }
+            ]
+        }, {
+            "name" : "Super Bomberman by crak atak in 15:13 - Awesome Games Done Quick 2017 - Part 28",
+            "duration" : 1450,
+            "qualities" : [{
+                    "src" : "D9-CyYDvSMA"
+                }
+            ]
+        }, {
+            "name" : "Smart Ball by giygasblues in 18:00 - Awesome Games Done Quick 2017 - Part 29",
+            "duration" : 1525,
+            "qualities" : [{
+                    "src" : "45WZdrZh6CA"
+                }
+            ]
+        }, {
+            "name" : "Mario Paint by dodechehedron in 4:28 - Awesome Games Done Quick 2017 - Part 30",
+            "duration" : 694,
+            "qualities" : [{
+                    "src" : "VnXDPHAfeCM"
+                }
+            ]
+        }, {
+            "name" : "Battle Clash by scxcr in 13:58 - Awesome Games Done Quick 2017 - Part 31",
+            "duration" : 1419,
+            "qualities" : [{
+                    "src" : "aM_kixNMooc"
+                }
+            ]
+        }, {
+            "name" : "Sega Bass Fishing by fuzzyness in 7:12 - Awesome Games Done Quick 2017 - Part 32",
+            "duration" : 1851,
+            "qualities" : [{
+                    "src" : "o0Bbd8UQL_k"
+                }
+            ]
+        }, {
+            "name" : "Kirby Tilt 'N' Tumble by theguesst in 15:10 - Awesome Games Done Quick 2017 - Part 33",
+            "duration" : 2096,
+            "qualities" : [{
+                    "src" : "IujZ5bcwiwA"
+                }
+            ]
+        }, {
+            "name" : "Rocket: Robot on Wheels by mashystrr in 58:48 - Awesome Games Done Quick 2017 - Part 34",
+            "duration" : 4094,
+            "qualities" : [{
+                    "src" : "Q5TwizbJ43I"
+                }
+            ]
+        }, {
+            "name" : "Super Monkey Ball 2 by peanut in 34:34 - Awesome Games Done Quick 2017 - Part 35",
+            "duration" : 2818,
+            "qualities" : [{
+                    "src" : "nEtlluVrlQg"
+                }
+            ]
+        }, {
+            "name" : "Super Monkey Ball Adventure by pokehero in 18:13 - Awesome Games Done Quick 2017 - Part 36",
+            "duration" : 1771,
+            "qualities" : [{
+                    "src" : "sn2gXo3pSQc"
+                }
+            ]
+        }, {
+            "name" : "Pokemon Emerald by thetyrant14 in 2:56:16 - Awesome Games Done Quick 2017 - Part 37",
+            "duration" : 11369,
+            "qualities" : [{
+                    "src" : "5NCfx4Zr0i8"
+                }
+            ]
+        }, {
+            "name" : "Tetris with Cardcaptor Sakura by kevinddr and EoN in 24:32 - Awesome Games Done Quick 2017 - Part 38",
+            "duration" : 3168,
+            "qualities" : [{
+                    "src" : "VHv_rocdxmQ"
+                }
+            ]
+        }, {
+            "name" : "Blaster Master by skavenger216 and shiningdragoon in 39:21 - Awesome Games Done Quick 2017 - Part 39",
+            "duration" : 3923,
+            "qualities" : [{
+                    "src" : "g5Hq2eASg74"
+                }
+            ]
+        }, {
+            "name" : "Ninja Gaiden by gusmancini and dxtr in 17:31 - Awesome Games Done Quick 2017 - Part 40",
+            "duration" : 1602,
+            "qualities" : [{
+                    "src" : "vluA13Rcj78"
+                }
+            ]
+        }, {
+            "name" : "Ninja Gaiden 2 by gusmancini in 16:54 - Awesome Games Done Quick 2017 - Part 41",
+            "duration" : 1371,
+            "qualities" : [{
+                    "src" : "3mgzvnjC3pE"
+                }
+            ]
+        }, {
+            "name" : "Sparkster by drakodan in 20:34 - Awesome Games Done Quick 2017 - Part 42",
+            "duration" : 2228,
+            "qualities" : [{
+                    "src" : "7lHRLRvQ5-I"
+                }
+            ]
+        }, {
+            "name" : "Decap Attack by cook in 25:06 - Awesome Games Done Quick 2017 - Part 43",
+            "duration" : 1950,
+            "qualities" : [{
+                    "src" : "mZaeOlkX5t4"
+                }
+            ]
+        }, {
+            "name" : "Adventure Island 4 by puchiedarcy in 25:16 - Awesome Games Done Quick 2017 - Part 44",
+            "duration" : 2459,
+            "qualities" : [{
+                    "src" : "TvN_uGKWVJ4"
+                }
+            ]
+        }, {
+            "name" : "Shippuu! Iron Leaguer by neerrm in 15:59 - Awesome Games Done Quick 2017 - Part 45",
+            "duration" : 1565,
+            "qualities" : [{
+                    "src" : "W7gjSuUfxWk"
+                }
+            ]
+        }, {
+            "name" : "Mickey's Dangerous Chase by adefgames in 13:23 - Awesome Games Done Quick 2017 - Part 46",
+            "duration" : 1457,
+            "qualities" : [{
+                    "src" : "2w1dxDhAW0Y"
+                }
+            ]
+        }, {
+            "name" : "Jazz Jackrabbit by capnclever in 30:29 - Awesome Games Done Quick 2017 - Part 47",
+            "duration" : 2520,
+            "qualities" : [{
+                    "src" : "_u1gEQxq24g"
+                }
+            ]
+        }, {
+            "name" : "Jumping Flash! 2 by tonyogbot in 24:12 - Awesome Games Done Quick 2017 - Part 48",
+            "duration" : 2219,
+            "qualities" : [{
+                    "src" : "kIWaOu-Ay1o"
+                }
+            ]
+        }, {
+            "name" : "Intelligent Qube by caneofpacci in 26:04 - Awesome Games Done Quick 2017 - Part 49",
+            "duration" : 2743,
+            "qualities" : [{
+                    "src" : "QFhH8B8139c"
+                }
+            ]
+        }, {
+            "name" : "LittleBigPlanet 3 by rbdjellyfish in 36:42 - Awesome Games Done Quick 2017 - Part 50",
+            "duration" : 3525,
+            "qualities" : [{
+                    "src" : "pLgBCe3VkAg"
+                }
+            ]
+        }, {
+            "name" : "Road Trip Adventure by konasumi in 18:36 - Awesome Games Done Quick 2017 - Part 51",
+            "duration" : 2564,
+            "qualities" : [{
+                    "src" : "MZtTsjp7Ik0"
+                }
+            ]
+        }, {
+            "name" : "Pac-Man World by joester98 in 39:11 - Awesome Games Done Quick 2017 - Part 52",
+            "duration" : 2913,
+            "qualities" : [{
+                    "src" : "x6asO4MN_Nk"
+                }
+            ]
+        }, {
+            "name" : "Mega Man Legends by bluemetal in 51:57 - Awesome Games Done Quick 2017 - Part 53",
+            "duration" : 3972,
+            "qualities" : [{
+                    "src" : "b-HG9TFNDeY"
+                }
+            ]
+        }, {
+            "name" : "Katamari Damacy by sunkir in 31:53 - Awesome Games Done Quick 2017 - Part 56",
+            "duration" : 3185,
+            "qualities" : [{
+                    "src" : "PH7Tr6eF8s8"
+                }
+            ]
+        }, {
+            "name" : "Super Smash Bros. Melee by fuzzyness in 37:42 - Awesome Games Done Quick 2017 - Part 57",
+            "duration" : 2814,
+            "qualities" : [{
+                    "src" : "fw7whjer5lA"
+                }
+            ]
+        }, {
+            "name" : "Metroid Prime 2: Echoes by milessmb in 1:40:38 - Awesome Games Done Quick 2017 - Part 58",
+            "duration" : 6363,
+            "qualities" : [{
+                    "src" : "qdZYMJnGkkc"
+                }
+            ]
+        }, {
+            "name" : "Super Metroid Rotation by feral5x in 44:33 - Awesome Games Done Quick 2017 - Part 57",
+            "duration" : 4423,
+            "qualities" : [{
+                    "src" : "y5S3gREX5TI"
+                }
+            ]
+        }, {
+            "name" : "Dark Messiah of Might and Magic by razgrillz in 34:23 - Awesome Games Done Quick 2017 - Part 58",
+            "duration" : 2334,
+            "qualities" : [{
+                    "src" : "4gDPiIODlw4"
+                }
+            ]
+        }, {
+            "name" : "Fallout: New Vegas by progamingwithed in 24:00 - Awesome Games Done Quick 2017 - Part 59",
+            "duration" : 2338,
+            "qualities" : [{
+                    "src" : "nuzDif16_nc"
+                }
+            ]
+        }, {
+            "name" : "System Shock 2 by m1_account in 17:04 - Awesome Games Done Quick 2017 - Part 60",
+            "duration" : 1917,
+            "qualities" : [{
+                    "src" : "K4j9YuAERDA"
+                }
+            ]
+        }, {
+            "name" : "Descent II by spootybiscuit in 40:03 - Awesome Games Done Quick 2017 - Part 61",
+            "duration" : 2738,
+            "qualities" : [{
+                    "src" : "U1xC0y4DjvQ"
+                }
+            ]
+        }, {
+            "name" : "Daikatana by cubeface in 51:36 - Awesome Games Done Quick 2017 - Part 62",
+            "duration" : 3978,
+            "qualities" : [{
+                    "src" : "2ShiB1nchRI"
+                }
+            ]
+        }, {
+            "name" : "Half-Life: Blue Shift by cubeface in 30:31 - Awesome Games Done Quick 2017 - Part 63",
+            "duration" : 2191,
+            "qualities" : [{
+                    "src" : "Q6B6XMduSPk"
+                }
+            ]
+        }, {
+            "name" : "DOOM (2016) by blood_thunder in 54:10 - Awesome Games Done Quick 2017 - Part 64",
+            "duration" : 4670,
+            "qualities" : [{
+                    "src" : "ZDU7Lu6bbkE"
+                }
+            ]
+        }, {
+            "name" : "Mario Bros by darbian, kosmicd12, and andrewg in 20:47 - Awesome Games Done Quick 2017 - Part 65",
+            "duration" : 2567,
+            "qualities" : [{
+                    "src" : "w30Pbe-B0lo"
+                }
+            ]
+        }, {
+            "name" : "Lost Levels by darbian, kosmicd12, and andrewg in 11:50 - Awesome Games Done Quick 2017 - Part 67",
+            "duration" : 1543,
+            "qualities" : [{
+                    "src" : "kOunTCq1sVY"
+                }
+            ]
+        }, {
+            "name" : "Super Mario Sunshine in 1:19:12 - Awesome Games Done Quick 2017 - Part 68",
+            "duration" : 6238,
+            "qualities" : [{
+                    "src" : "bEj_XDvDHks"
+                }
+            ]
+        }, {
+            "name" : "Final Fantasy by Gyre and Feasel in 3:54:27 - Awesome Games Done Quick 2017 - Part 69",
+            "duration" : 15600,
+            "qualities" : [{
+                    "src" : "NexyGZCZ9KM"
+                }
+            ]
+        }, {
+            "name" : "Gauntlet by feasel and mithical9 in 25:11 - Awesome Games Done Quick 2017 - Part 70",
+            "duration" : 2020,
+            "qualities" : [{
+                    "src" : "5qDkiDIYA_E"
+                }
+            ]
+        }, {
+            "name" : "Kabuki Quantum Fighter by mithical9 in 10:44 - Awesome Games Done Quick 2017 - Part 71",
+            "duration" : 933,
+            "qualities" : [{
+                    "src" : "LkiRhH5dUlo"
+                }
+            ]
+        }, {
+            "name" : "Cobra Triangle by shiningdragoon in 19:06 - Awesome Games Done Quick 2017 - Part 72",
+            "duration" : 1714,
+            "qualities" : [{
+                    "src" : "1On7UjvHQwc"
+                }
+            ]
+        }, {
+            "name" : "The Krion Conquest by badbrakes in 19:12 - Awesome Games Done Quick 2017 - Part 73",
+            "duration" : 1623,
+            "qualities" : [{
+                    "src" : "PX9apcOrO3g"
+                }
+            ]
+        }, {
+            "name" : "Street Fighter 2010: The Final Fight by spiriax in 19:01 - Awesome Games Done Quick 2017 - Part 74",
+            "duration" : 1452,
+            "qualities" : [{
+                    "src" : "rRQ14hKvUA0"
+                }
+            ]
+        }, {
+            "name" : "River city Ransom by yelsraek in 7:44 - Awesome Games Done Quick 2017 - Part 75",
+            "duration" : 1020,
+            "qualities" : [{
+                    "src" : "mxKhYqnIEhU"
+                }
+            ]
+        }, {
+            "name" : "Moon Crystal by jimmypoopins in 18:47 - Awesome Games Done Quick 2017 - Part 76",
+            "duration" : 1673,
+            "qualities" : [{
+                    "src" : "4i5Tzm0Reks"
+                }
+            ]
+        }, {
+            "name" : "Little Samson by xdragon95 in 20:41 - Awesome Games Done Quick 2017 - Part 77",
+            "duration" : 1670,
+            "qualities" : [{
+                    "src" : "IVH2B22PZKU"
+                }
+            ]
+        }, {
+            "name" : "The Addams Family by garbanzoguy in 5:22 - Awesome Games Done Quick 2017 - Part 78",
+            "duration" : 732,
+            "qualities" : [{
+                    "src" : "P4RLEZonx0s"
+                }
+            ]
+        }, {
+            "name" : "Yume Penguin Monogatari by endy in 10:06 - Awesome Games Done Quick 2017 - Part 79",
+            "duration" : 1049,
+            "qualities" : [{
+                    "src" : "fR59ejVN3Lo"
+                }
+            ]
+        }, {
+            "name" : "Gremlins 2 by endy in 8:10 - Awesome Games Done Quick 2017 - Part 80",
+            "duration" : 1028,
+            "qualities" : [{
+                    "src" : "WAg9H7LGN44"
+                }
+            ]
+        }, {
+            "name" : "Trojan by infestedriche in 7:04 - Awesome Games Done Quick 2017 - Part 81",
+            "duration" : 693,
+            "qualities" : [{
+                    "src" : "4nAcTQEmSbk"
+                }
+            ]
+        }, {
+            "name" : "Shinobi III by keaur in 25:51 - Awesome Games Done Quick 2017 - Part 82",
+            "duration" : 2310,
+            "qualities" : [{
+                    "src" : "j2uUqfley0g"
+                }
+            ]
+        }, {
+            "name" : "Bishi Bashi Special by t3tsuya in 13:33 - Awesome Games Done Quick 2017 - Part 83",
+            "duration" : 1493,
+            "qualities" : [{
+                    "src" : "5W8T2FI-Ie8"
+                }
+            ]
+        }, {
+            "name" : "Crowtel by theboyks in 12:41 - Awesome Games Done Quick 2017 - Part 84",
+            "duration" : 1278,
+            "qualities" : [{
+                    "src" : "3hAPnXVwThc"
+                }
+            ]
+        }, {
+            "name" : "[Deleted video] (SEUM: Speedrunners from Hell?) 84.5",
+            "duration" : 0,
+            "qualities" : [{
+                    "src" : "6Pf5DSORF0A"
+                }
+            ]
+        }, {
+            "name" : "SEUM: Speedrunners From Hell by mattyice3131 in 17:51 - Awesome Games Done Quick 2017 - Part 84",
+            "duration" : 1526,
+            "qualities" : [{
+                    "src" : "fKft-HuXLPM"
+                }
+            ]
+        }, {
+            "name" : "Blitz Breaker by giygasblues in 24:47 - Awesome Games Done Quick 2017 - Part 85",
+            "duration" : 2160,
+            "qualities" : [{
+                    "src" : "G-L6rWg-Ldo"
+                }
+            ]
+        }, {
+            "name" : "Secrets of Grindea by Mr_Weables and Ivan in 20:29 - Awesome Games Done Quick 2017 - Part 86",
+            "duration" : 2553,
+            "qualities" : [{
+                    "src" : "hvomswrfhjU"
+                }
+            ]
+        }, {
+            "name" : "Hyper Light Drifter by Munchakoopas in 33:16 - Awesome Games Done Quick 2017 - Part 87",
+            "duration" : 3970,
+            "qualities" : [{
+                    "src" : "v7eig-NVkFs"
+                }
+            ]
+        }, {
+            "name" : "Castlevania: Symphony of the Night in 27:26 - Awesome Games Done Quick 2017 - Part 88",
+            "duration" : 2654,
+            "qualities" : [{
+                    "src" : "nV5W5MGWzJk"
+                }
+            ]
+        }, {
+            "name" : "Castlevania by cantaloupeme and komrade in 14:11 - Awesome Games Done Quick 2017 - Part 94",
+            "duration" : 1776,
+            "qualities" : [{
+                    "src" : "Ir8oorMJt1E"
+                }
+            ]
+        }, {
+            "name" : "Super Castlevania IV in 34:03 - Awesome Games Done Quick 2017 - Part 95",
+            "duration" : 3537,
+            "qualities" : [{
+                    "src" : "TVbuaHTT1zI"
+                }
+            ]
+        }, {
+            "name" : "Castlevania: Rondo of Blood in 16:17 - Awesome Games Done Quick 2017 - Part 96",
+            "duration" : 1276,
+            "qualities" : [{
+                    "src" : "WOKkDRx30rk"
+                }
+            ]
+        }, {
+            "name" : "Mega Man 6 by ppotdot1 in 36:20 - Awesome Games Done Quick 2017 - Part 92",
+            "duration" : 3352,
+            "qualities" : [{
+                    "src" : "9giqz92SqNU"
+                }
+            ]
+        }, {
+            "name" : "Mega Man Network Transmission by plum in 1:05:02 - Awesome Games Done Quick 2017 - Part 93",
+            "duration" : 5161,
+            "qualities" : [{
+                    "src" : "uMexwUD5BW0"
+                }
+            ]
+        }, {
+            "name" : "Mega Man X in 37:05 - Awesome Games Done Quick 2017 - Part 94",
+            "duration" : 2780,
+            "qualities" : [{
+                    "src" : "j_2oSl_PYZU"
+                }
+            ]
+        }, {
+            "name" : "Mighty No. 9 by greenzsaber in 46:58 - Awesome Games Done Quick 2017 - Part 95",
+            "duration" : 4455,
+            "qualities" : [{
+                    "src" : "QBGO9dQAdPM"
+                }
+            ]
+        }, {
+            "name" : "Halo 2 by cryphon in 1:42:53 - Awesome Games Done Quick 2017 - Part 96",
+            "duration" : 7875,
+            "qualities" : [{
+                    "src" : "5pG3JoziAg8"
+                }
+            ]
+        }, {
+            "name" : "Batman: Arkham City by bubblesdelfuego in 1:32:54 - Awesome Games Done Quick 2017 - Part 97",
+            "duration" : 5993,
+            "qualities" : [{
+                    "src" : "v8daaCf4KWs"
+                }
+            ]
+        }, {
+            "name" : "Batman Forever by PJ and klaige in 43:09 - Awesome Games Done Quick 2017 - Part 98",
+            "duration" : 3422,
+            "qualities" : [{
+                    "src" : "bJDMRdy56ek"
+                }
+            ]
+        }, {
+            "name" : "Timecop by omnigamer in 26:30 - Awesome Games Done Quick 2017 - Part 99",
+            "duration" : 2094,
+            "qualities" : [{
+                    "src" : "HV5Sm1JyfLQ"
+                }
+            ]
+        }, {
+            "name" : "Cool World by Mecha Richter in 10:00 - Awesome Games Done Quick 2017 - Part 100",
+            "duration" : 1196,
+            "qualities" : [{
+                    "src" : "-fbSjFGWQpk"
+                }
+            ]
+        }, {
+            "name" : "Rocky and Bullwinkle by authorblues in 17:50 - Awesome Games Done Quick 2017 - Part 101",
+            "duration" : 1554,
+            "qualities" : [{
+                    "src" : "Gwm27G5oYGA"
+                }
+            ]
+        }, {
+            "name" : "Dragon's Lair by scxcr in 13:26 - Awesome Games Done Quick 2017 - Part 102",
+            "duration" : 1130,
+            "qualities" : [{
+                    "src" : "XGBowIE4tGQ"
+                }
+            ]
+        }, {
+            "name" : "A Nightmare on Elm Street in 25:23 - Awesome Games Done Quick 2017 - Part 103",
+            "duration" : 2363,
+            "qualities" : [{
+                    "src" : "CBYlRcf_7cY"
+                }
+            ]
+        }, {
+            "name" : "The Cheetahmen by huey in 4:27 - Awesome Games Done Quick 2017 - Part 104",
+            "duration" : 757,
+            "qualities" : [{
+                    "src" : "y3XOd3oSsjk"
+                }
+            ]
+        }, {
+            "name" : "King of Kings: The Early Years by linkums in 4:26 - Awesome Games Done Quick 2017 - Part 105",
+            "duration" : 715,
+            "qualities" : [{
+                    "src" : "naaGYu1SKno"
+                }
+            ]
+        }, {
+            "name" : "T&C 2: Thrilla Surfari by whitehat94 in 15:04 - Awesome Games Done Quick 2017 - Part 106",
+            "duration" : 1303,
+            "qualities" : [{
+                    "src" : "dGFo_b5yCn8"
+                }
+            ]
+        }, {
+            "name" : "Wayne's World by whitehat94 in 7:16 - Awesome Games Done Quick 2017 - Part 107",
+            "duration" : 765,
+            "qualities" : [{
+                    "src" : "ouh4JLjIu14"
+                }
+            ]
+        }, {
+            "name" : "Big Nose The Caveman by lackattack24 in 21:48 - Awesome Games Done Quick 2017 - Part 108",
+            "duration" : 1912,
+            "qualities" : [{
+                    "src" : "WilgcG9c1hs"
+                }
+            ]
+        }, {
+            "name" : "Donkey Kong 5 by theboyks in 9:36 - Awesome Games Done Quick 2017 - Part 109",
+            "duration" : 1583,
+            "qualities" : [{
+                    "src" : "WmeyBvzyTOA"
+                }
+            ]
+        }, {
+            "name" : "Catechumen by peaches_ in 24:07 - Awesome Games Done Quick 2017 - Part 110",
+            "duration" : 3817,
+            "qualities" : [{
+                    "src" : "QUI-8cAFjS8"
+                }
+            ]
+        }, {
+            "name" : "Wolfquest by brossentia in 18:25 - Awesome Games Done Quick 2017 - Part 111",
+            "duration" : 1565,
+            "qualities" : [{
+                    "src" : "vCbwTRPNrJA"
+                }
+            ]
+        }, {
+            "name" : "Cornerstone: The Song of Tyrim by drtchops in 33:00 - Awesome Games Done Quick 2017 - Part 112",
+            "duration" : 2770,
+            "qualities" : [{
+                    "src" : "c_PgpHkLPxA"
+                }
+            ]
+        }, {
+            "name" : "Adventure Island 2 (GB) by ppotdot1 in 21:32 - Awesome Games Done Quick 2017",
+            "duration" : 1918,
+            "qualities" : [{
+                    "src" : "kvKJOtBKoaI"
+                }
+            ]
+        }, {
+            "name" : "Fortified Zone by cutefluffybunny in 12:14 - Awesome Games Done Quick 2017 - Part 114",
+            "duration" : 1243,
+            "qualities" : [{
+                    "src" : "sWKcrYEC4wk"
+                }
+            ]
+        }, {
+            "name" : "Turok: Dinosaur Hunter by bawkbasoup in 37:09 - Awesome Games Done Quick 2017 - Part 115",
+            "duration" : 2950,
+            "qualities" : [{
+                    "src" : "1Z5omlBpDqQ"
+                }
+            ]
+        }, {
+            "name" : "Left 4 Dead by The Master and Mr. Deagle in 1:02:58 - Awesome Games Done Quick 2017 - Part 116",
+            "duration" : 4800,
+            "qualities" : [{
+                    "src" : "BCbPVdOkWJ0"
+                }
+            ]
+        }, {
+            "name" : "007: Nightfire by Keysstonelight in 39:47 - Awesome Games Done Quick 2017 - Part 117",
+            "duration" : 3374,
+            "qualities" : [{
+                    "src" : "YsV2IZpQ5CQ"
+                }
+            ]
+        }, {
+            "name" : "Trauma Center: New Blood in 1:34:44 - Awesome Games Done Quick 2017 - Part 118",
+            "duration" : 6665,
+            "qualities" : [{
+                    "src" : "8g_7Hx42P1Y"
+                }
+            ]
+        }, {
+            "name" : "The Legend of Korra by dolphindasher in 40:25 - Awesome Games Done Quick 2017 - Part 119",
+            "duration" : 3556,
+            "qualities" : [{
+                    "src" : "BD-_n0lOgk8"
+                }
+            ]
+        }, {
+            "name" : "Sonic Advance 2 by kirbymastah in 27:53 - Awesome Games Done Quick 2017 - Part 120",
+            "duration" : 2409,
+            "qualities" : [{
+                    "src" : "FySAL3N8vIw"
+                }
+            ]
+        }, {
+            "name" : "Sonic R by keverage in 14:51 - Awesome Games Done Quick 2017 - Part 121",
+            "duration" : 1478,
+            "qualities" : [{
+                    "src" : "OMWFPgfwawg"
+                }
+            ]
+        }, {
+            "name" : "Sonic Adventure 2: Battle by seraphim1313 in 38:50 - Awesome Games Done Quick 2017 - Part 122",
+            "duration" : 2809,
+            "qualities" : [{
+                    "src" : "q-qD3LIFtMU"
+                }
+            ]
+        }, {
+            "name" : "Sonic Adventure DX: Director's Cut by jerkro in 7:03 - Awesome Games Done Quick 2017 - Part 123",
+            "duration" : 840,
+            "qualities" : [{
+                    "src" : "vkcd7i5HRLA"
+                }
+            ]
+        }, {
+            "name" : "Mystery Game Tournament - Awesome Games Done Quick 2017 - Part 124",
+            "duration" : 4113,
+            "qualities" : [{
+                    "src" : "Ia8FevqD85Y"
+                }
+            ]
+        }, {
+            "name" : "Kirby's Dream Land 3 in 1:27:23 - Awesome Games Done Quick 2017 - Part 125",
+            "duration" : 6357,
+            "qualities" : [{
+                    "src" : "DoaZD_xUy8M"
+                }
+            ]
+        }, {
+            "name" : "Zelda: A Link to the Past in 1:32:35 - Awesome Games Done Quick 2017 - Part 126",
+            "duration" : 7178,
+            "qualities" : [{
+                    "src" : "sKciChb9Q-s"
+                }
+            ]
+        }, {
+            "name" : "Paper Mario: The Thousand Year Door in 3:25:26 - Awesome Games Done Quick 2017 - Part 127",
+            "duration" : 12820,
+            "qualities" : [{
+                    "src" : "f6zMZ9UozYo"
+                }
+            ]
+        }, {
+            "name" : "The Legend of Dark Witch: Episode 2 by Crippe123 in 22:43 - Awesome Games Done Quick 2017 - Part 128",
+            "duration" : 2680,
+            "qualities" : [{
+                    "src" : "K94amDuspT8"
+                }
+            ]
+        }, {
+            "name" : "Grief Syndrome by PX_ in 19:11 - Awesome Games Done Quick 2017 - Part 129",
+            "duration" : 1511,
+            "qualities" : [{
+                    "src" : "eCJk1r3QuSs"
+                }
+            ]
+        }, {
+            "name" : "Refunct by 097aceofspades in 2:57 - Awesome Games Done Quick 2017 - Part 130",
+            "duration" : 828,
+            "qualities" : [{
+                    "src" : "9tW91vTOudQ"
+                }
+            ]
+        }, {
+            "name" : "La-Mulana Remake in 1:31:38 - Awesome Games Done Quick 2017 - Part 138",
+            "duration" : 6550,
+            "qualities" : [{
+                    "src" : "x-H1Ghpxlls"
+                }
+            ]
+        }, {
+            "name" : "Titan Souls in 19:59 - Awesome Games Done Quick 2017 - Part 139",
+            "duration" : 1517,
+            "qualities" : [{
+                    "src" : "fOPDeuLFQmo"
+                }
+            ]
+        }, {
+            "name" : "Bleed by studio in 18:19 - Awesome Games Done Quick 2017 - Part 133",
+            "duration" : 1773,
+            "qualities" : [{
+                    "src" : "rkTTqWxX0oM"
+                }
+            ]
+        }, {
+            "name" : "Furi by studio in 40:12 - Awesome Games Done Quick 2017 - Part 134",
+            "duration" : 2756,
+            "qualities" : [{
+                    "src" : "HOJOYySikwk"
+                }
+            ]
+        }, {
+            "name" : "Flywrench by killingpepsi and ssupnerds in 26:10 - Awesome Games Done Quick 2017 - Part 135",
+            "duration" : 2533,
+            "qualities" : [{
+                    "src" : "o8MLhNPD-FM"
+                }
+            ]
+        }, {
+            "name" : "Snailiad by bismuth in 7:17 - Awesome Games Done Quick 2017 - Part 136",
+            "duration" : 1029,
+            "qualities" : [{
+                    "src" : "FeGSXuXbOVU"
+                }
+            ]
+        }, {
+            "name" : "Human: Fall Flat by bullets in 8:44 - Awesome Games Done Quick 2017 - Part 137",
+            "duration" : 993,
+            "qualities" : [{
+                    "src" : "gmgYFEgRpkU"
+                }
+            ]
+        }, {
+            "name" : "Action Henk by badblackshark in 15:39 - Awesome Games Done Quick 2017 - Part 138",
+            "duration" : 1327,
+            "qualities" : [{
+                    "src" : "TSECK5kb-Qo"
+                }
+            ]
+        }, {
+            "name" : "Woolfe: The Red Hood Diaries by randompinkbunny in 17:19 - Awesome Games Done Quick 2017 - Part 139",
+            "duration" : 1615,
+            "qualities" : [{
+                    "src" : "mEJ0yBjtvuE"
+                }
+            ]
+        }, {
+            "name" : "Ducktales by endy and garadas21 in 7:20 - Awesome Games Done Quick 2017 - Part 140",
+            "duration" : 1372,
+            "qualities" : [{
+                    "src" : "QI4-qygo9Fk"
+                }
+            ]
+        }, {
+            "name" : "Metal Slug 3 by jackafur in 31:54 - Awesome Games Done Quick 2017 - Part 143",
+            "duration" : 3189,
+            "qualities" : [{
+                    "src" : "lZSSNM7YLh0"
+                }
+            ]
+        }, {
+            "name" : "Contra by themexicanrunner and toad22484 in 10:40 - Awesome Games Done Quick 2017 - Part 144",
+            "duration" : 1474,
+            "qualities" : [{
+                    "src" : "u9WsLufaigE"
+                }
+            ]
+        }, {
+            "name" : "Super C by toad22484 in 14:26 - Awesome Games Done Quick 2017 - Part 145",
+            "duration" : 1154,
+            "qualities" : [{
+                    "src" : "eWgGwpSmgCw"
+                }
+            ]
+        }, {
+            "name" : "Contra 4 by Mr. K in 24:58 - Awesome Games Done Quick 2017 - Part 146",
+            "duration" : 2651,
+            "qualities" : [{
+                    "src" : "IuqWOqCac6U"
+                }
+            ]
+        }, {
+            "name" : "Contra III: The Alien Wars by Mr. K in 6:54 - Awesome Games Done Quick 2017 - Part 147",
+            "duration" : 1052,
+            "qualities" : [{
+                    "src" : "-2GO23RxM1M"
+                }
+            ]
+        }, {
+            "name" : "Crash Bandicoot 2 by swordofseals in 1:20:57 - Awesome Games Done Quick 2017 - Part 148",
+            "duration" : 5622,
+            "qualities" : [{
+                    "src" : "TvTbScUoQfo"
+                }
+            ]
+        }, {
+            "name" : "Crash Team Racing by nattyone720 in 52:19 - Awesome Games Done Quick 2017 - Part 149",
+            "duration" : 3581,
+            "qualities" : [{
+                    "src" : "EHEWuYNjXVI"
+                }
+            ]
+        }, {
+            "name" : "Sly Cooper and the Thievius Raccoonus in 1:01:04 - Awesome Games Done Quick 2017 - Part 150",
+            "duration" : 4986,
+            "qualities" : [{
+                    "src" : "OY2rQTZScjw"
+                }
+            ]
+        }, {
+            "name" : "Jak and Daxter: The Precursor Legacy in 25:35 - Awesome Games Done Quick 2017 - Part 151",
+            "duration" : 2200,
+            "qualities" : [{
+                    "src" : "7U1SHhtD2ak"
+                }
+            ]
+        }, {
+            "name" : "Ratchet & Clank: Going Commando by Xem and Skitz in 25:35 - Awesome Games Done Quick 2017 - Part 152",
+            "duration" : 2450,
+            "qualities" : [{
+                    "src" : "cmlLxrDFFic"
+                }
+            ]
+        }, {
+            "name" : "Kirby Super Star in 1:18:17 - Awesome Games Done Quick 2017 - Part 153",
+            "duration" : 6270,
+            "qualities" : [{
+                    "src" : "jxGLe3s_GQg"
+                }
+            ]
+        }, {
+            "name" : "Not Another Needle Game by stinkycheeseone890 in 38:15 - Awesome Games Done Quick 2017 - Part 154",
+            "duration" : 3043,
+            "qualities" : [{
+                    "src" : "QdrEnh_X7Yk"
+                }
+            ]
+        }, {
+            "name" : "Donkey Kong Country Trilogy Relay in 2:12:16 - Awesome Games Done Quick 2017 - Part 155",
+            "duration" : 10225,
+            "qualities" : [{
+                    "src" : "Up8f76DiL7U"
+                }
+            ]
+        }, {
+            "name" : "Grand Theft Auto: Vice City by kz_frew in 56:11 - Awesome Games Done Quick 2017 - Part 156",
+            "duration" : 5108,
+            "qualities" : [{
+                    "src" : "aTmrQHGVCC8"
+                }
+            ]
+        }, {
+            "name" : "Super Mario 3D Land by kosmicd12 in 56:20 - Awesome Games Done Quick 2017 - Part 157",
+            "duration" : 4264,
+            "qualities" : [{
+                    "src" : "vj0pL91H1bI"
+                }
+            ]
+        }, {
+            "name" : "The Legend of Zelda: The Minish Cap by dbx in 1:54:48 - Awesome Games Done Quick 2017 - Part 158",
+            "duration" : 7813,
+            "qualities" : [{
+                    "src" : "dStlyCDcoqM"
+                }
+            ]
+        }, {
+            "name" : "Fire Emblem: Blazing Sword by kirbymastah in 1:21:28 - Awesome Games Done Quick 2017 - Part 159",
+            "duration" : 5658,
+            "qualities" : [{
+                    "src" : "if2q5FL2u4Y"
+                }
+            ]
+        }, {
+            "name" : "Disney's Extreme Skate Adventure by six in 16:31 - Awesome Games Done Quick 2017 - Part 160",
+            "duration" : 1508,
+            "qualities" : [{
+                    "src" : "BZS96IasIT4"
+                }
+            ]
+        }, {
+            "name" : "Pitfall: The Mayan Adventure by le_hulk in 10:59 - Awesome Games Done Quick 2017 - Part 161",
+            "duration" : 1418,
+            "qualities" : [{
+                    "src" : "stlqgC5t-oY"
+                }
+            ]
+        }, {
+            "name" : "Tiny Toon Adventures by garadas21 in 13:35 - Awesome Games Done Quick 2017 - Part 162",
+            "duration" : 1377,
+            "qualities" : [{
+                    "src" : "MTRy-5fWd2I"
+                }
+            ]
+        }, {
+            "name" : "Tom and Jerry by r3dninjajosh in 14:27 - Awesome Games Done Quick 2017 - Part 163",
+            "duration" : 1426,
+            "qualities" : [{
+                    "src" : "NMbIVy5yQB8"
+                }
+            ]
+        }, {
+            "name" : "Darkwing Duck by themexicanrunner in 13:42 - Awesome Games Done Quick 2017 - Part 164",
+            "duration" : 1553,
+            "qualities" : [{
+                    "src" : "M_p258PTr30"
+                }
+            ]
+        }, {
+            "name" : "Spongebob Squarepants by shift in 1:02:22 - Awesome Games Done Quick 2017 - Part 165",
+            "duration" : 4848,
+            "qualities" : [{
+                    "src" : "eJhvSjMH-zY"
+                }
+            ]
+        }, {
+            "name" : "Super Mario Galaxy 2 by vallu111 in 3:08:12 - Awesome Games Done Quick 2017 - Part 166",
+            "duration" : 12577,
+            "qualities" : [{
+                    "src" : "J-nXa0MbWK4"
+                }
+            ]
+        }, {
+            "name" : "Super Dram World in 33:03 and 9:44 - Awesome Games Done Quick 2017 - Part 167 and 168",
+            "duration" : 4011,
+            "qualities" : [{
+                    "src" : "CZU_Jksw8WE"
+                }
+            ]
+        }, {
+            "name" : "Super Mario Bros: The Lost Levels in 23:52 - Awesome Games Done Quick 2017 - Part 169",
+            "duration" : 2519,
+            "qualities" : [{
+                    "src" : "H7NYJqCeOtY"
+                }
+            ]
+        }, {
+            "name" : "Tasbot does Tasblock - Awesome Games Done Quick 2017 - Part 170",
+            "duration" : 5597,
+            "qualities" : [{
+                    "src" : "Ukq29ePnTqI"
+                }
+            ]
+        }, {
+            "name" : "Dark Souls III by bubblesdelfuego in 58:50 - Awesome Games Done Quick 2017 - Part 171",
+            "duration" : 5595,
+            "qualities" : [{
+                    "src" : "RJ07UO0dubg"
+                }
+            ]
+        }, {
+            "name" : "The Legend Of Zelda: The Wind Waker HD in 3:49:19 - Awesome Games Done Quick 2017 - Part 172",
+            "duration" : 15023,
+            "qualities" : [{
+                    "src" : "dT-0Va0lWqE"
+                }
+            ]
+        }, {
+            "name" : "Super Metroid in 1:22:30 - Awesome Games Done Quick 2017 - Part 173",
+            "duration" : 6965,
+            "qualities" : [{
+                    "src" : "VEBbCQ0D1cA"
+                }
+            ]
+        }, {
+            "name" : "Undertale in 1:28:27 and Finale - Awesome Games Done Quick 2017 - Part 174",
+            "duration" : 9371,
+            "qualities" : [{
+                    "src" : "k7Niwt_Y4ME"
+                }
+            ]
+        }
+    ]
+}

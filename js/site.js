@@ -289,6 +289,7 @@ var rtv = {
                 {name: "SGDQ2015", path: "playlists/gdq/sgdq2015.min.json"},
                 {name: "AGDQ2016", path: "playlists/gdq/agdq2016.min.json"},
                 {name: "SGDQ2016", path: "playlists/gdq/sgdq2016.min.json"},
+                {name: "AGDQ2017 (Raw)", path: "playlists/gdq/agdq2017raw.min.json"},
                 {name: "AllGDQ", path: "playlists/gdq/allgdq.min.json"},
                 {name: "RPGLB2015", path: "playlists/rpglb/2015.json"},
                 {name: "RPGLB2016", path: "playlists/rpglb/2016.json"},
