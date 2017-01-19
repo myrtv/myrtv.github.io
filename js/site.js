@@ -17,6 +17,23 @@ var rtv = {
         this.player.create();
     },
     player: {
+        all: {
+            destroy: function() { rtv.player.destroy.all() },
+            sync: function() {
+                var that = this;
+
+                $.each(rtv.player.players, function (i, player) {
+                    switch (player.type) {
+                        case "youtube":
+                            rtv.player.instance.youtube.syncPlayer(player);
+                            break;
+                        case "html5":
+                        default:
+                            rtv.player.instance.html5.syncPlayer(player);
+                    }
+                });
+            }
+        },
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
             var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
@@ -125,7 +142,6 @@ var rtv = {
                         var item = this.spawnQueue.splice(0, 1)[0];
                         this.spawn(item.player, item.target);
                     }
-                    console.log('processed queue because YT API loaded?');
                 },
                 loadAPI: function() {
                     var tag = document.createElement('script');
@@ -144,7 +160,7 @@ var rtv = {
                             'autoplay': 1,
                             'rel': 0,
                             'start': current.seek_to,
-                            'modestbranding': 0,
+                            'modestbranding': 1,
                             'showinfo': 1
                         },
                         videoId: current.qualities[0].src,
@@ -164,7 +180,7 @@ var rtv = {
                     var target = event.target.a.id.split("-").pop();
                     var player = rtv.player.players[target];
 
-                    console.log("player #"+target+" (youtube) state change", event, player);
+                    //console.log("player #"+target+" (youtube) state change", event, player);
 
                     if (event.data == YT.PlayerState.ENDED) {
                         rtv.player.instance.youtube.syncPlayer(player);
@@ -175,11 +191,16 @@ var rtv = {
                     var current = rtv.player.getCurrentVideo(player);
 
                     setTimeout(function() {
-                        player.instance.loadVideoById({
-                            'videoId': current.qualities[0].src,
-                            'startSeconds': current.seek_to
-                        });
-                    }, 1500);
+                        if (player.instance.getVideoData()['video_id'] == current.qualities[0].src) {
+                            player.instance.seekTo(current.seek_to, true);
+                            player.instance.playVideo();
+                        } else {
+                            player.instance.loadVideoById({
+                                'videoId': current.qualities[0].src,
+                                'startSeconds': current.seek_to
+                            });
+                        }
+                    }, 1000);
                 }
             },
             html5: {
@@ -207,10 +228,14 @@ var rtv = {
                     var current = rtv.player.getCurrentVideo(player);
 
                     setTimeout(function() {
-                        //player.instance.src = player.cache.info.url_prefix + current.qualities[0].src;
+                        var src = player.cache.info.url_prefix + current.qualities[0].src;
+
+                        if (src !== player.instance.src) {
+                            player.instance.src = src;
+                        }
                         player.instance.currentTime = current.seek_to;
                         player.instance.play();
-                    }, 1500);
+                    }, 1000);
                 }
             }
         },
