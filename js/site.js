@@ -209,7 +209,7 @@ var rtv = {
                     var that = this;
 
                     var instance = $("<video />", {
-                        preload: "",
+                        preload: "none",
                         controls: "",
                         autoplay: "",
                         src: player.cache.info.url_prefix + current.qualities[0].src
