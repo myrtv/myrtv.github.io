@@ -21,3 +21,6 @@ video {
 #head:hover {
     opacity: 1;
 }
+#container {
+    z-index: -1;
+}
