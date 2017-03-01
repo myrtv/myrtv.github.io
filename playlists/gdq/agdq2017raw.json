@@ -1,10 +1,9 @@
 {
     "info" : {
-        "name" : "Awesome Games Done Quick (Raw Stream)",
+        "name" : "Awesome Games Done Quick 2017 (Raw Stream)",
         "start_epoch_gtm" : 1483893000,
         "end_epoch_gtm" : 1484464032,
-        "service" : "youtube",
-        "notes": "Out of order, misnumbered (16-20 is a mess then the rest is off by 1) and again later in the 50s. Missing: OriBlindForest (87.5), StarWarsSotE/RotJ (141/2). FO:NV dupe"
+        "service" : "youtube"
     },
     "playlist" :
     [{
@@ -624,6 +623,13 @@
                 }
             ]
         }, {
+            "name" : "Ori and the Blind Forest by sigma in 0:55:35 - AGDQ2017 - Part 92",
+            "duration" : 4020,
+            "qualities" : [{
+                    "src" : "ZZX0G0Q-Sp0"
+                }
+            ]
+        }, {
             "name" : "Castlevania: Symphony of the Night in 27:26 - Awesome Games Done Quick 2017 - Part 88",
             "duration" : 2654,
             "qualities" : [{
@@ -992,6 +998,20 @@
             "duration" : 1372,
             "qualities" : [{
                     "src" : "QI4-qygo9Fk"
+                }
+            ]
+        }, {
+            "name" : "Star Wars: Shadows of the Empire by glasnonck in 0:52:05 - AGDQ2017 - Part 148",
+            "duration" : 4111,
+            "qualities" : [{
+                    "src" : "A187vyi-2L8"
+                }
+            ]
+        }, {
+            "name" : "Super Star Wars: Return of the Jedi by Striker in 0:39:59 - AGDQ2017 - Part 149 ",
+            "duration" : 3244,
+            "qualities" : [{
+                    "src" : "m6Y2MfDNEy8"
                 }
             ]
         }, {
