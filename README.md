@@ -26,9 +26,11 @@ This is no different than streaming (or downloading) from the Internet Archive d
 To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality) is 41.4GB total. However, unless you leave the stream running 24/7 you should never come near that amount within a given loop of it (which is 156 hours).
 
 #How you can help RTV
+
  - The *Planned Features* section below
- - Submit playlists
+ - [Submit playlists](https://github.com/RePod/rtv/wiki/Playlist-Format)
  - Correct/improve playlists (notably epoch times, GDQs are missing file sizes)
+ 
  
  **Supported video providers:**
  
