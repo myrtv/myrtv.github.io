@@ -1,14 +1,15 @@
 var rtv = {
+    offset: 0, //Global sync offset. Tempted to make per-player offsets.
     preinit: function() {
         var that = this;
 
-        $(document).on('change', '#remote', function() {
-            that.player.destroy.all();
-            that.player.create(this.value);
+        $(document).on('change', '.remote', function() {
+            var next = this.value;
+            rtv.player.players[$(this).parent().parent().data("player-index")].destroy();
+            rtv.player.create(next);
         })
 
         $("body").append($("<div />", {id: 'container'}));
-        this.menu.spawn();
         this.init();
     },
     init: function(path) {
@@ -39,25 +40,65 @@ var rtv = {
             var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
             var that = this;
 
-            //Fetch playlist
-            $.getJSON(list, function (data) {
-                localStorage['rtv-last'] = list; //Save.
+            this.playlist.generate(list, this.spawn);
+        },
+        playlist: {
+            generate: function(list, callback) {
+                $.getJSON(list, function (data) {
+                    localStorage['rtv-last'] = list; //Save.
 
-                //Offline testing and not using a virtual server is weird, don't judge me.
-                var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
+                    //Offline testing and not using a virtual server is weird, don't judge me.
+                    var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
 
-                //Determine total length
-                playlist.info.total_duration = 0;
-                $.each(playlist.playlist, function (index, key) {
-                    playlist.info.total_duration += key.duration;
-                    playlist.playlist[index].index = index;
+                    //Determine total length
+                    playlist.info.total_duration = 0;
+                    $.each(playlist.playlist, function (index, key) {
+                        playlist.info.total_duration += key.duration;
+                        playlist.playlist[index].index = index;
+                    });
+
+                    callback(playlist);
                 });
+            },
+            utilities: {
+                getCurrentTime: function() {
+                    var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
+                    var start = (Math.round(new Date() / 1000) + rtv.offset) - Math.round(start_epoch / 1000);
+                    var total_duration = this.cache.info.total_duration;
+                    var loops = 1;
 
-                return that.spawn(playlist);
-            });
+                    while (start >= total_duration) {
+                        start -= total_duration;
+                        loops++;
+                    }
+
+                    console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
+                                "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
+
+                    return start;
+                },
+                getCurrentVideo: function() {
+                    var current_total = 0;
+                    var current_time = this.getCurrentTime();
+                    var the_key = {};
+
+                    $.each(this.cache.playlist, function (index, key) {
+                        if (current_time < current_total + key.duration) {
+                            the_key = key;
+                            the_key.seek_to = current_time - current_total;
+                            return false;
+                        } else {
+                            current_total += key.duration;
+                        }
+                    });
+
+                    return the_key;
+                }
+            }
         },
         spawn: function(playlist) {
-            var i = this.players.length;
+            var that = rtv.player;
+            var i = that.players.length;
             var name = "player-"+i;
 
             //Initialize the new player
@@ -67,19 +108,24 @@ var rtv = {
                 "cache": playlist,
                 "instance": {}
             }
+            player.test = function () {
+                console.log('it\'s a mystery');
+            }
 
-            this.players.push(player);
 
             //Create parent container (especially for YouTube, but we'll need it later anyway even for HTML5)
-            $("<div />", {id: "window-"+name}).append($("<div />", {id: name})).appendTo("#container");
+            $("<div />", {id: "window-"+name}).data({"player-index": i}).append(rtv.menu.spawn()).append($("<div />", {id: name})).appendTo("#container");
 
             switch (playlist.info.service) {
                 case "youtube":
-                    this.instance.youtube.init(player,  name);
+                    $.extend(player, that.playlist.utilities, that.instance.youtube);
                     break;
                 default:
-                    this.instance.html5.spawn(player, name);
+                    $.extend(player, that.playlist.utilities, that.instance.html5);
             }
+
+            player.init(name);
+            rtv.player.players.push(player);
 
             return i;
         },
@@ -123,24 +169,30 @@ var rtv = {
         instance: {
             youtube: {
                 done: false,
+                destroy: function() {
+                    this.instance.destroy();
+                    $("#window-"+this.name).remove();
+                },
                 spawnQueue: [], //See below, might not need this in the long run but trying to be safe
-                init: function(player, target) {
+                init: function(target) {
                     if (this.done == true) return;
+                    var that = this;
                     //this.done = 1;
 
                     if (typeof YT == "undefined") {
                         this.loadAPI();
                         //We need to wait for the API to load and throw onYouTubePlayerAPIReady()
                         //In the global namespace we point it back towards this.processQueue();
-                        this.spawnQueue.push({"player": player, "target": target});
+                        this.spawnQueue.push(function() {
+                            that.spawn(target);
+                        });
                     } else {
-                        this.spawn(player, target);
+                        this.spawn(target);
                     }
                 },
                 processQueue: function() {
                     while (this.spawnQueue.length > 0) {
-                        var item = this.spawnQueue.splice(0, 1)[0];
-                        this.spawn(item.player, item.target);
+                        var item = this.spawnQueue.splice(0, 1)[0]();
                     }
                 },
                 loadAPI: function() {
@@ -149,8 +201,8 @@ var rtv = {
                     var firstScriptTag = document.getElementsByTagName('script')[0];
                     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
                 },
-                spawn: function(player, target) {
-                    var current = rtv.player.getCurrentVideo(player);
+                spawn: function(target) {
+                    var current = this.getCurrentVideo();
                     var that = this;
 
                     var instance = new YT.Player(target, {
@@ -170,32 +222,29 @@ var rtv = {
                         }
                     });
 
-                    rtv.player.players[player.index].instance = instance;
-                    rtv.player.players[player.index].type = "youtube";
+                    this.instance = instance;
+                    this.type = "youtube";
 
                     return instance;
                 },
                 playerOnReady: function(event) {},
                 playerOnStateChange: function(event) {
-                    var target = event.target.a.id.split("-").pop();
-                    var player = rtv.player.players[target];
-
-                    //console.log("player #"+target+" (youtube) state change", event, player);
+                    var index = $(event.target.a).parent().data("player-index");
 
                     if (event.data == YT.PlayerState.ENDED) {
-                        rtv.player.instance.youtube.syncPlayer(player);
+                        rtv.player.players[index].resync();
                     }
                 },
-                syncPlayer: function(player) {
-                    console.log('sync?',player);
-                    var current = rtv.player.getCurrentVideo(player);
+                resync: function() {
+                    var that = this;
+                    var current = that.getCurrentVideo();
 
                     setTimeout(function() {
-                        if (player.instance.getVideoData()['video_id'] == current.qualities[0].src) {
-                            player.instance.seekTo(current.seek_to, true);
-                            player.instance.playVideo();
+                        if (that.instance.getVideoData()['video_id'] == current.qualities[0].src) {
+                            that.instance.seekTo(current.seek_to, true);
+                            that.instance.playVideo();
                         } else {
-                            player.instance.loadVideoById({
+                            that.instance.loadVideoById({
                                 'videoId': current.qualities[0].src,
                                 'startSeconds': current.seek_to
                             });
@@ -204,73 +253,49 @@ var rtv = {
                 }
             },
             html5: {
-                spawn: function(player, target) {
-                    var current = rtv.player.getCurrentVideo(player);
+                init: function(target) {
+                    this.spawn(target);
+                },
+                destroy: function() {
+                    $(this.instance).remove();
+                    delete this.instance;
+                    $("#window-"+this.name).remove();
+                },
+                spawn: function(target) {
+                    var current = this.getCurrentVideo();
                     var that = this;
 
                     var instance = $("<video />", {
                         preload: "none",
                         controls: "",
                         autoplay: "",
-                        src: player.cache.info.url_prefix + current.qualities[0].src
+                        src: this.cache.info.url_prefix + current.qualities[0].src
                     });
                     instance[0].addEventListener('ended', function() {
-                        that.syncPlayer(rtv.player.players[player.index]);
+                        that.resync();
                     }, false);
 
                     $("#"+target).html(instance);
-                    rtv.player.players[player.index].instance = instance[0];
-                    rtv.player.players[player.index].type = "html5";
+                    this.instance = instance[0];
+                    this.type = "html5";
 
-                    this.syncPlayer(rtv.player.players[player.index]);
+                    this.resync();
                 },
-                syncPlayer: function(player) {
-                    var current = rtv.player.getCurrentVideo(player);
+                resync: function() {
+                    var current = this.getCurrentVideo();
+                    var that = this;
 
                     setTimeout(function() {
-                        var src = player.cache.info.url_prefix + current.qualities[0].src;
+                        var src = that.cache.info.url_prefix + current.qualities[0].src;
 
-                        if (src !== player.instance.src) {
-                            player.instance.src = src;
+                        if (src !== that.instance.src) {
+                            that.instance.src = src;
                         }
-                        player.instance.currentTime = current.seek_to;
-                        player.instance.play();
+                        that.instance.currentTime = current.seek_to;
+                        that.instance.play();
                     }, 200);
                 }
             }
-        },
-        getCurrentTime: function(player) {
-            var start_epoch = new Date(player.cache.info.start_epoch_gtm * 1000);
-            var start = Math.round(new Date() / 1000) - Math.round(start_epoch / 1000);
-            var total_duration = player.cache.info.total_duration;
-            var loops = 1;
-
-            while (start >= total_duration) {
-                start -= total_duration;
-                loops++;
-            }
-
-            console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
-                        "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
-
-            return start;
-        },
-        getCurrentVideo: function(player) {
-            var current_total = 0;
-            var current_time = this.getCurrentTime(player);
-            var the_key = {};
-
-            $.each(player.cache.playlist, function (index, key) {
-                if (current_time < current_total + key.duration) {
-                    the_key = key;
-                    the_key.seek_to = current_time - current_total;
-                    return false;
-                } else {
-                    current_total += key.duration;
-                }
-            });
-
-            return the_key;
         }
     },
     menu: {
@@ -297,7 +322,7 @@ var rtv = {
                 {name: "ESA2015 Purple", path: "playlists/esa/2015purple.min.json"}
             ];
 
-            var select = $("<select />", {id: "remote"});
+            var select = $("<select />", {class: "remote"});
             $.each(streams, function (i, stream) {
                 var option  = $("<option />", {
                     value: stream.path,
@@ -310,9 +335,7 @@ var rtv = {
                 option.appendTo(select);
             });
 
-            var head = $("<div />", {id: "head"}).append(select);
-
-            $("body").prepend(head);
+            return $("<div />", {id: "head"}).append(select);
 
             //setTimeout(function() { $("#head").slideUp(); }, 5000);
         }

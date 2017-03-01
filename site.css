@@ -13,10 +13,8 @@ video {
 
 #head {
     /*background-color: rgba(0,0,127,0.55);*/
-    padding: 7px 5px;
+    /*padding: 7px 5px;*/   
     position: fixed;
-    width:100%;
-    opacity: 0.25
 }
 #head:hover {
     opacity: 1;
