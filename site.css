@@ -15,6 +15,7 @@ video {
     /*background-color: rgba(0,0,127,0.55);*/
     /*padding: 7px 5px;*/   
     position: fixed;
+    opacity: 0.2;
 }
 #head:hover {
     opacity: 1;
