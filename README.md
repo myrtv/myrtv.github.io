@@ -29,13 +29,14 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
 
  - The *Planned Features* section below
  - [Submit playlists](https://github.com/RePod/rtv/wiki/Playlist-Format)
- - Correct/improve playlists (notably epoch times, GDQs are missing file sizes)
+ - Correct/improve playlists 
  
- 
- **Supported video providers:**
- 
-  - Direct links (site.com/video.mp4)
-  - YouTube ([c7fa910269a59d15e488d273b57de9dd565a7289](https://github.com/RePod/rtv/commit/c7fa910269a59d15e488d273b57de9dd565a7289))
+
+
+
+#Supported video providers
+ - Direct links (site.com/video.mp4)
+ - YouTube ([c7fa910269a59d15e488d273b57de9dd565a7289](https://github.com/RePod/rtv/commit/c7fa910269a59d15e488d273b57de9dd565a7289))
 
 #Planned Features
  - ~~Playlist switching~~ Temporarily done, want to improve.
