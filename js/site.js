@@ -95,22 +95,29 @@ var rtv = {
                     return the_key;
                 },
                 generatePlaylistFromIndex: function(index) {
+                    var playlist = this.cache.playlist;
                     var select = $("<select />", {class: "guide"});
-                    var current = this.getCurrentVideo();
-                    var time = moment().subtract(current.seek_to, 'seconds');
+                    var time = moment().subtract(this.getCurrentVideo().seek_to, 'seconds');
+                    var timeFormat = 'MM/DD hh:mmA'; //Moment.js time format
 
-                    $.each(this.cache.playlist, function (i, item) {
+                    $.each(playlist, function (i, item) {
                         if (i >= index) {
                             if (i > index) {
                                 time.add(item.duration, 'seconds');
                             }
-                            
+
                             $("<option />", {
-                                text: time.format('MM/DD hh:mmA') + "\t" + item.name,
+                                text: time.format(timeFormat) + "\t" + item.name,
                             }).appendTo(select);
                         }
                     });
-                    
+
+                    //One more item for the playlist's ending time.
+                    time.add(playlist.slice(-1).duration, 'seconds');
+                    $("<option />", {
+                        text: time.format(timeFormat) + "\t" + "End of playlist.",
+                    }).appendTo(select);
+
                     return select;
                 }
             }
@@ -259,17 +266,15 @@ var rtv = {
                     var that = this;
                     var current = that.getCurrentVideo();
 
-                    setTimeout(function() {
-                        if (that.instance.getVideoData()['video_id'] == current.qualities[0].src) {
-                            that.instance.seekTo(current.seek_to, true);
-                            that.instance.playVideo();
-                        } else {
-                            that.instance.loadVideoById({
-                                'videoId': current.qualities[0].src,
-                                'startSeconds': current.seek_to
-                            });
-                        }
-                    }, 200);
+                    if (that.instance.getVideoData()['video_id'] == current.qualities[0].src) {
+                        that.instance.seekTo(current.seek_to, true);
+                        that.instance.playVideo();
+                    } else {
+                        that.instance.loadVideoById({
+                            'videoId': current.qualities[0].src,
+                            'startSeconds': current.seek_to
+                        });
+                    }
                 }
             },
             html5: {
@@ -306,15 +311,13 @@ var rtv = {
                     var current = this.getCurrentVideo();
                     var that = this;
 
-                    setTimeout(function() {
-                        var src = that.cache.info.url_prefix + current.qualities[0].src;
+                    var src = that.cache.info.url_prefix + current.qualities[0].src;
 
-                        if (src !== that.instance.src) {
-                            that.instance.src = src;
-                        }
-                        that.instance.currentTime = current.seek_to;
-                        that.instance.play();
-                    }, 200);
+                    if (src !== that.instance.src) {
+                        that.instance.src = src;
+                    }
+                    that.instance.currentTime = current.seek_to;
+                    that.instance.play();
                 }
             }
         }
