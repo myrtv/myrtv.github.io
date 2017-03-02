@@ -41,6 +41,7 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
 #Planned Features
  - ~~Playlist switching~~ Temporarily done, want to improve.
  - Playlist viewing
+   - There's a current short-term solution to show it's possible.
    - TV guide?
    - Maybe browser desktop notification support
      - [Service workers](https://github.com/w3c/ServiceWorker/blob/master/explainer.md) (background task)
