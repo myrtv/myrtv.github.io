@@ -65,7 +65,9 @@ var rtv = {
                     var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
                     var start = (Math.round(new Date() / 1000) + rtv.offset) - Math.round(start_epoch / 1000);
                     var total_duration = this.cache.info.total_duration;
+                    var loops = Math.ceil(start / total_duration);
 
+                    start %= total_duration; //Muh modulo
 
                     console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
                                 "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
