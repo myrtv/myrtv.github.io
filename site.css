@@ -17,13 +17,12 @@ video {
     /*padding: 7px 5px;*/   
     position: absolute;
     opacity: 0.2;
-    height:20px;
+    height: 20px;
+    z-index: 1;
 }
 #head * { height:100%; }
 
 #head:hover {
     opacity: 1;
 }
-#container {
-    z-index: -1;
-}
+#container {}
