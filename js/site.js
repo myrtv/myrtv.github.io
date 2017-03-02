@@ -93,6 +93,25 @@ var rtv = {
                     });
 
                     return the_key;
+                },
+                generatePlaylistFromIndex: function(index) {
+                    var select = $("<select />", {class: "guide"});
+                    var current = this.getCurrentVideo();
+                    var time = moment().subtract(current.seek_to, 'seconds');
+
+                    $.each(this.cache.playlist, function (i, item) {
+                        if (i >= index) {
+                            if (i > index) {
+                                time.add(item.duration, 'seconds');
+                            }
+                            
+                            $("<option />", {
+                                text: time.format('MM/DD hh:mmA') + "\t" + item.name,
+                            }).appendTo(select);
+                        }
+                    });
+                    
+                    return select;
                 }
             }
         },
@@ -203,6 +222,7 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
+                    $("#head").append(this.generatePlaylistFromIndex(current.index));
                     var that = this;
 
                     var instance = new YT.Player(target, {
@@ -263,6 +283,7 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
+                    $("#head").append(this.generatePlaylistFromIndex(current.index));
                     var that = this;
 
                     var instance = $("<video />", {
