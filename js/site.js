@@ -102,18 +102,15 @@ var rtv = {
 
                     $.each(playlist, function (i, item) {
                         if (i >= index) {
-                            if (i > index) {
-                                time.add(item.duration, 'seconds');
-                            }
-
                             $("<option />", {
                                 text: time.format(timeFormat) + "\t" + item.name,
                             }).appendTo(select);
+
+                            time.add(item.duration, 'seconds');
                         }
                     });
 
                     //One more item for the playlist's ending time.
-                    time.add(playlist.slice(-1)[0].duration, 'seconds');
                     $("<option />", {
                         text: time.format(timeFormat) + "\t" + "End of playlist.",
                     }).appendTo(select);
