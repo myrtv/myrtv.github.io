@@ -445,7 +445,7 @@ var rtv = {
             var startingTime = moment().subtract(current.seek_to, 'seconds'); //Starting time of item.
             var gap = (startingTime.toDate() < halfhour.toDate()) ? 0 : Math.floor((startingTime.toDate() - halfhour.toDate())/1000);
             var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
-            var adjustedDuration = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000);
+            var adjustedDuration = (startingTime.toDate() < halfhour.toDate()) ? Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000) : current.duration;
 
             var cacheWidth = 0;
             $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row); //Add the starting gap element, we can style it if we want.

@@ -70,7 +70,8 @@ video {
 .row.marker .show:last-child, .show.playlistEnd:last-child { border-right:5px solid red; }
 .show.gap {
     visibility:hidden;
-    border:none;
+    border-color: rgba(0,0,0,0);
+    padding:0px;
 }
 /* RTV Guide - Time Markers */
 .channel.marker, .row.marker { height: 25px !important; }
