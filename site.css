@@ -41,7 +41,7 @@ video {
     color: #fff;
     background-color:rgba(0,0,0,0.85);
 }
-#rtvGuideSub { position: relative; overflow-y: hidden; }
+#rtvGuideSub { position: relative; overflow-y: hidden; height: 100%; }
 #rtvGuideSub:hover { overflow-y: auto; }
 #rtvChannels { width: 200px; }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
