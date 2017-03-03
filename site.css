@@ -88,3 +88,4 @@ video {
 .row.marker .show { border-top: none !important; }
 /* RTV Guide - Header */
 .pointer { cursor:pointer; }
+.guideHead span { margin-right:10px; }

@@ -18,39 +18,25 @@ var rtv = {
         this.player.create();
     },
     player: {
-        all: {
-            destroy: function() { rtv.player.destroy.all() },
-            sync: function() {
-                var that = this;
-
-                $.each(rtv.player.players, function (i, player) {
-                    switch (player.type) {
-                        case "youtube":
-                            rtv.player.instance.youtube.syncPlayer(player);
-                            break;
-                        case "html5":
-                        default:
-                            rtv.player.instance.html5.syncPlayer(player);
-                    }
-                });
-            }
-        },
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
-            var list = (path || localStorage['rtv-last'] || 'playlists/initiald.min.json');
+            var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/initiald.min.json');
             var that = this;
 
             this.playlist.generate(list, this.spawn);
         },
         playlist: {
             generate: function(list, callback) {
+                var store = list;
+
                 $.getJSON(list, function (data) {
-                    localStorage['rtv-last'] = list; //Save.
+                    localStorage['rtvLastPlaylist'] = list; //Save.
 
                     //Offline testing and not using a virtual server is weird, don't judge me.
                     var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
 
                     //Determine total length
+                    playlist.info.url = store;
                     playlist.info.total_duration = 0;
                     $.each(playlist.playlist, function (index, key) {
                         playlist.info.total_duration += key.duration;
@@ -352,7 +338,7 @@ var rtv = {
                     value: stream.path,
                     text: stream.name,
                 });
-                if (stream.path == localStorage['rtv-last']) {
+                if (stream.path == localStorage['rtvLastPlaylist']) {
                     option.attr({"selected":""});
                 }
 
@@ -372,6 +358,9 @@ var rtv = {
         open: function() {
             $("#rtvGuide").remove();
             $("body").append(rtv.guide.generate());
+        },
+        close: function() {
+            $("#rtvGuide").remove();
         },
         generate: function() {
             var that = this;
@@ -406,7 +395,13 @@ var rtv = {
         },
         generateHead: function() {
             var head = $("<div />", {class: "guideHead"});
-            $("<span />", {class: "pointer", text: "(X) Close RTV Guide"}).one('click',function() { $("#rtvGuide").remove() }).appendTo(head);
+            $("<span />", {class: "pointer", text: "(X) Close RTV Guide"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
+
+                $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() { 
+                    //rtv.notifications.init();
+                    $("#enableSubs").remove (); 
+                }).appendTo(head);
+            }
 
             return head;
         },
@@ -485,6 +480,80 @@ var rtv = {
             var result = (Math.floor(duration / clampUnit) * halfhourWidth) + Math.round(((duration % clampUnit) / clampUnit) * halfhourWidth);
 
             return result;
+        }
+    },
+    notifications: {
+        //Eventually something with service workers?
+        init: function() {
+            if ('Notification' in window) {
+                Notification.requestPermission();
+            }
+            this.subscriptions.load();
+            //this.subscriptions.subNextInLastPlaylist();
+        },
+        subscriptions: {
+            cache: [],
+            subNextInLastPlaylist: function() {
+                //confirm("Schedule a reminder for this item? (starting, missed, etc.)\n\nRequires authorization and RTV to be open.")
+                var source = rtv.player.players.slice(-1)[0];
+                var current = source.getCurrentVideo();
+                var next = source.cache.playlist[current.index + 1];
+
+                this.add({
+                    title: next.name,
+                    startTime: moment().subtract(current.seek_to, 'seconds').add(current.duration, 'seconds'),
+                    duration: next.duration,
+                    channel: source.cache.info.name,
+                    url: source.cache.info.url  
+                });
+            },
+            load: function() {
+                if (localStorage['rtvSubCache']) {
+                    this.cache = JSON.parse(localStorage['rtvSubCache']);
+                }
+                rtv.notifications.processSubscriptions();
+            },
+            save: function() {
+                //localStorage['rtvSubCache'] = JSON.stringify(this.cache);
+                rtv.notifications.processSubscriptions();
+            },
+            add: function(input) {
+                //input{title: "", startTime: MomentJS{}, duration: 0}
+                this.cache.push(input);
+                this.save();
+            },
+            remove: function(input) {
+                this.save()
+            }
+        },
+        processSubscriptions: function() {
+            var that = this;
+
+            $.each(this.subscriptions.cache, function (index, subscription) {
+                that.push({
+                    title: subscription.channel,
+                    body: subscription.title+" begins "+subscription.startTime.fromNow()+"\nClick here to tune in.",
+                    url: subscription.url
+                });
+            })
+        },
+        push: function(pushed) {
+            var title = (pushed.title || "Default title");
+            var notif = new Notification(
+                title,
+                {
+                    body: pushed.body,
+                    /*icon: "favicon96.png"*/
+                    data: pushed.url
+                }
+            );
+            notif.onclick = function (event) {
+                //alert('chune');
+                console.log();
+                rtv.player.players.slice(-1)[0].destroy();
+                rtv.player.create(event.target.data);
+                rtv.guide.close();
+            }
         }
     }
 }
