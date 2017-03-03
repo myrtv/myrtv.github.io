@@ -365,7 +365,8 @@ var rtv = {
     },
     guide: {
         config: {
-            markerWidth: 100 //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
+            markerWidth: 120, //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
+            readLimit: 0 //How far ahead in the schedule to generate. 0 is to the end. Still consider guide width.
         },
         open: function() {
             $("#rtvGuide").remove();
@@ -374,7 +375,7 @@ var rtv = {
         generate: function() {
             var that = this;
             var guide = $("<div />", {id: "rtvGuide"});       //The final result to spit out.
-            var container = $("<div />", {id: "rtvGuideSub"}); //The final result to spit out.
+            var container = $("<div />", {id: "rtvGuideSub"});//The final result to spit out.
             var channels = $("<div />", {id: "rtvChannels"}); //The channels column. Each row is a channel.
             var shows = $("<div />", {id: "rtvShows"});       //The shows column. Each row is a channel's shows.
 
@@ -419,10 +420,10 @@ var rtv = {
             //halfhour = moment() set to latest half-hour
             var temp = $("<div />", {class: "row marker"});
 
-            for (limit = 0; limit < Math.ceil(width / this.config.markerWidth); limit++) {
+            for (limit = 0; limit < Math.ceil(width / this.config.markerWidth)+1; limit++) {
                 $("<div />", {
                     class: "show",
-                    text: halfhour.format("LT") + ((halfhour.hour() == 0 && halfhour.minute() < 30) ? " ("+halfhour.format("L")+")" : "")
+                    text: halfhour.format("LT") + (((halfhour.hour() == 0 || halfhour.hour() == 12) && halfhour.minute() < 30) ? " ("+halfhour.format("l")+")" : "")
                 })
                 .width(this.config.markerWidth)
                 .appendTo(temp);
@@ -448,12 +449,14 @@ var rtv = {
             var cacheWidth = 0;
             $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row); //Add the starting gap element, we can style it if we want.
             //Instead of arbitrarily stopping at 10 we could also stop around a pre-calculated width.
-            $.each(source.cache.playlist.slice(current.index, current.index+40), function (index, item) {
+            var toIndex = ((this.config.readLimit) ? current.index + 1 + this.config.readLimit : source.cache.playlist.length);
+            $.each(source.cache.playlist.slice(current.index, toIndex), function (index, item) {
                 var width = that.itemWidth((index > 0) ? item.duration : item.duration);
                 cacheWidth += width;
+                var end = (item.index+1 == source.cache.playlist.length) ? " playlistEnd" : "";
 
                 $("<div />", {
-                    class: "show",
+                    class: "show"+end,
                     text: item.name
                 })
                 .width(width)

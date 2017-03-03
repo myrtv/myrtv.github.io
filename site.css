@@ -67,7 +67,7 @@ video {
     text-overflow: ellipsis;
 }
 .show:first-child { border-left:5px solid green; }
-.show:last-child { border-right:5px solid red; }
+.row.marker .show:last-child, .show.playlistEnd:last-child { border-right:5px solid red; }
 .show.gap {
     visibility:hidden;
     border:none;
