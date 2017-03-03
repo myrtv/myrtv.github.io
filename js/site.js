@@ -364,6 +364,9 @@ var rtv = {
         }
     },
     guide: {
+        config: {
+            markerWidth: 300 //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
+        },
         generate: function() {
             var guide = $("<div />", {id: "rtvGuide"});       //The final result to spit out.
             var channels = $("<div />", {id: "rtvChannels"}); //The channels column. Each row is a channel.
@@ -371,7 +374,9 @@ var rtv = {
             var source = rtv.player.players.slice(-1)[0];     //For now, use latest player to populate a single row.
 
             channels.append(this.generateChannel(source));
-            shows.append(this.generateRow(source));
+            var row = this.generateRow(source);
+            shows.append(this.generateMarkers(row.width, row.halfhour));
+            shows.append(row.row);
 
             guide.append(channels);
             guide.append(shows);
@@ -383,6 +388,25 @@ var rtv = {
                 class: "channel",
                 text: source.cache.info.name
             });
+        },
+        generateMarkers: function(width, halfhour) {
+            //Generate time markers.
+            //width = width of previously generated row to generate markers for
+            //halfhour = moment() set to latest half-hour
+            var temp = $("<div />", {class: "row"});
+
+            for (limit = 0; limit < Math.ceil(width / this.config.markerWidth); limit++) {
+                $("<div />", {
+                    class: "show",
+                    text: halfhour.format("LT")
+                })
+                .width(this.config.markerWidth)
+                .appendTo(temp);
+
+                halfhour.add(30, 'minutes');
+            }
+
+            return temp;
         },
         generateRow: function(source) {
             var that = this;
@@ -397,11 +421,12 @@ var rtv = {
             var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
             var adjustedDuration = Math.floor((endingTime.toDate() - moment()) / 1000);
 
-            console.log(gap);
-            //Instead of arbitrarily stopping at 10 we could also stop around a pre-determined width.
-            $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row);
+            var cacheWidth = 0;
+            $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row); //Add the starting gap element, we can style it if we want.
+            //Instead of arbitrarily stopping at 10 we could also stop around a pre-calculated width.
             $.each(source.cache.playlist.slice(current.index, current.index+10), function (index, item) {
                 var width = that.itemWidth((index > 0) ? item.duration : item.duration);
+                cacheWidth += width;
 
                 $("<div />", {
                     class: "show",
@@ -411,11 +436,11 @@ var rtv = {
                 .appendTo(row);
             });
 
-            return row;
+            return {"row": row, "width": cacheWidth, "halfhour": halfhour};
         },
         itemWidth: function (duration) {
             //duration = either time since lead-in to clamp (determined elsewhere) or total duration of an item
-            var halfhourWidth = 300; //Size, in pixels, of each half-hour segment segment.
+            var halfhourWidth = this.config.markerWidth; //Size, in pixels, of each half-hour segment segment.
             var clampUnit = 1800; //Half-hour in seconds.
 
             return (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(halfhourWidth * (duration / clampUnit));
