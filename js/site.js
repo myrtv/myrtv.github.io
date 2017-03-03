@@ -461,7 +461,7 @@ var rtv = {
                 var width = that.itemWidth(duration);
                 cacheWidth += width;
                 var endClass = (item.index+1 == source.cache.playlist.length) ? " playlistEnd" : "";
-                var startClass = (item.index == 0 && item.duration !== adjustedDuration) ? " abruptStart" : "";
+                var startClass = (index == 0 && item.duration !== adjustedDuration) ? " abruptStart" : "";
 
                 $("<div />", {
                     class: "show"+endClass+startClass,
