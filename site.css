@@ -51,3 +51,6 @@ video {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.show.gap {
+    visibility:hidden;
+}

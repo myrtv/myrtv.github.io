@@ -390,13 +390,18 @@ var rtv = {
             var current = source.getCurrentVideo();
             var endingTime = moment().add(current.duration - current.seek_to, 'seconds');
             //Determine nearest half hour
-            var halfhour = moment().seconds(0); halfhour.minutes((halfhour.minutes() >= 30) ? 30 : 0);  //Clamp to latest half-hour.
+            var halfhour = moment().seconds(0); halfhour.minutes((halfhour.minutes() >= 30) ? 30 : 0); //Clamp to latest half-hour.
             var distanceNow = Math.floor((new Date() - halfhour.toDate()) / 1000); //Distance, in seconds, from now to latest half-hour.
-            var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of
+            var startingTime = moment().subtract(current.seek_to, 'seconds'); //Starting time of item.
+            var gap = (startingTime.toDate() < halfhour.toDate()) ? 0 : Math.floor((startingTime.toDate() - halfhour.toDate())/1000);
+            var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
+            var adjustedDuration = Math.floor((endingTime.toDate() - moment()) / 1000);
 
+            console.log(gap);
             //Instead of arbitrarily stopping at 10 we could also stop around a pre-determined width.
+            $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row);
             $.each(source.cache.playlist.slice(current.index, current.index+10), function (index, item) {
-                var width = that.itemWidth((index > 0) ? item.duration : distanceEnd);
+                var width = that.itemWidth((index > 0) ? item.duration : item.duration);
 
                 $("<div />", {
                     class: "show",
@@ -413,7 +418,7 @@ var rtv = {
             var halfhourWidth = 300; //Size, in pixels, of each half-hour segment segment.
             var clampUnit = 1800; //Half-hour in seconds.
 
-            return (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(halfhourWidth * (duration / clampUnit))
+            return (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(halfhourWidth * (duration / clampUnit));
         }
     }
 }
