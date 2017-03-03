@@ -61,6 +61,10 @@ var rtv = {
                 });
             },
             utilities: {
+                genGuide: function() {
+                    $("#rtvGuide").remove();
+                    $("body").append(rtv.guide.generate());
+                },
                 getCurrentTime: function() {
                     var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
                     var start = (Math.round(new Date() / 1000) + rtv.offset) - Math.round(start_epoch / 1000);
@@ -146,6 +150,7 @@ var rtv = {
 
             player.init(name);
             rtv.player.players.push(player);
+            player.genGuide();
 
             return i;
         },
@@ -356,6 +361,59 @@ var rtv = {
             return $("<div />", {id: "head"}).append(select);
 
             //setTimeout(function() { $("#head").slideUp(); }, 5000);
+        }
+    },
+    guide: {
+        generate: function() {
+            var guide = $("<div />", {id: "rtvGuide"});       //The final result to spit out.
+            var channels = $("<div />", {id: "rtvChannels"}); //The channels column. Each row is a channel.
+            var shows = $("<div />", {id: "rtvShows"});       //The shows column. Each row is a channel's shows.
+            var source = rtv.player.players.slice(-1)[0];     //For now, use latest player to populate a single row.
+
+            channels.append(this.generateChannel(source));
+            shows.append(this.generateRow(source));
+
+            guide.append(channels);
+            guide.append(shows);
+
+            return guide;
+        },
+        generateChannel: function (source) {
+            return $("<div />", {
+                class: "channel",
+                text: source.cache.info.name
+            });
+        },
+        generateRow: function(source) {
+            var that = this;
+            var row = $("<div />", {class: "row"});
+            var current = source.getCurrentVideo();
+            var endingTime = moment().add(current.duration - current.seek_to, 'seconds');
+            //Determine nearest half hour
+            var halfhour = moment().seconds(0); halfhour.minutes((halfhour.minutes() >= 30) ? 30 : 0);  //Clamp to latest half-hour.
+            var distanceNow = Math.floor((new Date() - halfhour.toDate()) / 1000); //Distance, in seconds, from now to latest half-hour.
+            var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of
+
+            //Instead of arbitrarily stopping at 10 we could also stop around a pre-determined width.
+            $.each(source.cache.playlist.slice(current.index, current.index+10), function (index, item) {
+                var width = that.itemWidth((index > 0) ? item.duration : distanceEnd);
+
+                $("<div />", {
+                    class: "show",
+                    text: item.name
+                })
+                .width(width)
+                .appendTo(row);
+            });
+
+            return row;
+        },
+        itemWidth: function (duration) {
+            //duration = either time since lead-in to clamp (determined elsewhere) or total duration of an item
+            var halfhourWidth = 300; //Size, in pixels, of each half-hour segment segment.
+            var clampUnit = 1800; //Half-hour in seconds.
+
+            return (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(halfhourWidth * (duration / clampUnit))
         }
     }
 }

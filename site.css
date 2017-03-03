@@ -26,3 +26,28 @@ video {
     opacity: 1;
 }
 #container {}
+
+
+/* RTV Guide */
+#rtvGuide { width: 100%; /*height: 100%;*/ background-color:red; position:relative; }
+#rtvChannels { width: 200px; background-color:green; }
+#rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
+.channel, #rtvShows > .row { height: 50px; }
+#rtvShows {
+    position: absolute;
+    right: 0px;
+    left: 200px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#rtvShows > .row { background-color: yellow; }
+.show {
+    display: inline-block;
+    height: 100%;
+    background-color: blue;
+    box-sizing: border-box;
+    border: 5px inset red;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
