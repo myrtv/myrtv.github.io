@@ -342,6 +342,7 @@ var rtv = {
                 {name: "RPGLB2015", path: "playlists/rpglb/2015.json"},
                 {name: "RPGLB2016", path: "playlists/rpglb/2016.json"},
                 {name: "RPGLB2016TalesOf", path: "playlists/rpglb/2016talesof.json"},
+                {name: "RPGLB2017TalesOf", path: "playlists/rpglb/2017talesof.json"},
                 {name: "ESA2015 Purple", path: "playlists/esa/2015purple.min.json"}
             ];
 

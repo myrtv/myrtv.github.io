@@ -1,0 +1,10 @@
+{
+    "info" : {
+        "name" : "RPG Limit Break - Tales of Marathon 2017",
+        "start_epoch_gtm" : 1488031200,
+        "end_epoch_gtm" : 0,
+        "service" : "youtube"
+    },
+    "playlist":
+    [{"name":"Tales of Marathon 2017: Zestiria (PC) Race by FellVisage and MLSTRM","duration":22009,"qualities":[{"src":"AqP9ZojUfRg"}]},{"name":"Tales of Marathon 2017: Xillia (PS3, Milla's Story) by Freddeh","duration":12531,"qualities":[{"src":"VvtBqSnj2lc"}]},{"name":"Tales of Marathon 2017: Xillia 2 (PS3) by Soulcrusher842","duration":13452,"qualities":[{"src":"mH94kYFPeeM"}]},{"name":"Tales of Marathon 2017: Eternia (PSX) by Closetowar","duration":17766,"qualities":[{"src":"GEgpDQoZsk0"}]},{"name":"Tales of Marathon 2017: Xillia 2 (PS3, NG+) by HolyAarom","duration":6841,"qualities":[{"src":"1gQwxN2W6X0"}]},{"name":"Tales of Marathon 2017: Graces F (NG+) by Etsuna","duration":13019,"qualities":[{"src":"YO4bf3PpXuY"}]},{"name":"Tales of Marathon 2017: Symphonia (NG+) by Jaymota16","duration":23089,"qualities":[{"src":"Vg4VMyOnGaY"}]},{"name":"Tales of Marathon 2017: Berseria (PS4) by bertin","duration":23471,"qualities":[{"src":"IhNOvwJFcAI"}]}]
+}
