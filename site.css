@@ -20,7 +20,8 @@ video {
     height: 20px;
     z-index: 1;
 }
-#head * { height:100%; }
+#head * { height:100%; margin-right:5px;}
+#head .pointer { color:#fff; }
 
 #head:hover {
     opacity: 1;
@@ -30,6 +31,7 @@ video {
 
 /* RTV Guide */
 #rtvGuide {
+    z-index:9001;
     position:fixed;
     top:0px;
     left:0px;

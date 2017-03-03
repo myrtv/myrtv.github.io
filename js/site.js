@@ -61,10 +61,6 @@ var rtv = {
                 });
             },
             utilities: {
-                genGuide: function() {
-                    $("#rtvGuide").remove();
-                    $("body").append(rtv.guide.generate());
-                },
                 getCurrentTime: function() {
                     var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
                     var start = (Math.round(new Date() / 1000) + rtv.offset) - Math.round(start_epoch / 1000);
@@ -150,7 +146,7 @@ var rtv = {
 
             player.init(name);
             rtv.player.players.push(player);
-            player.genGuide();
+            rtv.guide.open();
 
             return i;
         },
@@ -228,7 +224,9 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
-                    $("#head").append(this.generatePlaylistFromIndex(current.index));
+                    $("#head").append(
+                        $("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); })
+                    );
                     var that = this;
 
                     var instance = new YT.Player(target, {
@@ -287,7 +285,9 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
-                    $("#head").append(this.generatePlaylistFromIndex(current.index));
+                    $("#head").append(
+                        $("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); })
+                    );
                     var that = this;
 
                     var instance = $("<video />", {
@@ -366,6 +366,10 @@ var rtv = {
     guide: {
         config: {
             markerWidth: 100 //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
+        },
+        open: function() {
+            $("#rtvGuide").remove();
+            $("body").append(rtv.guide.generate());
         },
         generate: function() {
             var that = this;
