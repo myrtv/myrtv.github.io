@@ -30,9 +30,6 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
  - The *Planned Features* section below
  - [Submit playlists](https://github.com/myrtv/myrtv.github.io/wiki/Playlist-Format)
  - Correct/improve playlists 
- 
-
-
 
 #Supported video providers
  - Direct links (site.com/video.mp4)
@@ -41,11 +38,13 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
 #Planned Features
  - ~~Playlist switching~~ Temporarily done, want to improve.
  - Playlist viewing
-   - There's a current short-term solution to show it's possible.
-   - TV guide?
+   - ~~There's a current short-term solution to show it's possible.~~
+   - TV guide? ***We're getting there!***
    - Maybe browser desktop notification support
      - [Service workers](https://github.com/w3c/ServiceWorker/blob/master/explainer.md) (background task)
      - Receive run alerts. "first time only", "every time"?
+ - Playlist shuffling (but keep it synced for all clients!)
+   - Generate a one-time unique seed (probably in runtime) to use as the basis of shuffling.
  - Custom playlist URLs
    - Current sloppy implementation kinda does this, but won't stick.
  - Picture in Picture
