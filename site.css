@@ -14,7 +14,7 @@ video {
 
 #head {
     /*background-color: rgba(0,0,127,0.55);*/
-    /*padding: 7px 5px;*/   
+    /*padding: 7px 5px;*/
     position: absolute;
     opacity: 0.2;
     height: 20px;
@@ -37,9 +37,10 @@ video {
     bottom:0px;
     padding:2%;
     color: #fff;
-    background-color:rgba(0,0,0,0.4);
+    background-color:rgba(0,0,0,0.85);
 }
-#rtvGuideSub { position: relative; }
+#rtvGuideSub { position: relative; overflow-y: hidden; }
+#rtvGuideSub:hover { overflow-y: auto; }
 #rtvChannels { width: 200px; }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
 .channel, #rtvShows > .row { height: 50px; }
@@ -47,28 +48,30 @@ video {
     position: absolute;
     right: 0px;
     left: 200px;
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
 }
+#rtvShows:hover { overflow-x: auto; }
 #rtvShows > .row { }
 .show {
     display: inline-block;
     height: 100%;
-    /*background-color: blue;*/
     box-sizing: border-box;
-    border-left:1px solid rgba(255,255,255,0.3);
-    border-bottom:1px solid rgba(255,255,255,0.3);
-    white-space: normal;
-    text-overflow: ellipsis;
+    border:1px solid rgba(255,255,255,0.3);
     overflow: hidden;
     padding: 1px 2px;
+    white-space: normal;
+    word-break: break-all;
+    text-overflow: ellipsis;
 }
+.show:first-child { border-left:5px solid green; }
+.show:last-child { border-right:5px solid red; }
 .show.gap {
     visibility:hidden;
     border:none;
 }
 /* RTV Guide - Time Markers */
 .channel.marker, .row.marker { height: 25px !important; }
-.row.marker .show { }
+.row.marker .show { border-top: none !important; }
 /* RTV Guide - Header */
-.guideHead .pointer { cursor:pointer; }
+.pointer { cursor:pointer; }

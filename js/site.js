@@ -365,34 +365,42 @@ var rtv = {
     },
     guide: {
         config: {
-            markerWidth: 300 //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
+            markerWidth: 100 //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
         },
         generate: function() {
+            var that = this;
             var guide = $("<div />", {id: "rtvGuide"});       //The final result to spit out.
             var container = $("<div />", {id: "rtvGuideSub"}); //The final result to spit out.
             var channels = $("<div />", {id: "rtvChannels"}); //The channels column. Each row is a channel.
             var shows = $("<div />", {id: "rtvShows"});       //The shows column. Each row is a channel's shows.
-            var source = rtv.player.players.slice(-1)[0];     //For now, use latest player to populate a single row.
 
             guide.append(this.generateHead());
-            
-            channels.append($("<div />", {class: "channel marker"}));
-            channels.append(this.generateChannel(source));
-            var row = this.generateRow(source);
-            shows.append(this.generateMarkers(row.width, row.halfhour));
-            shows.append(row.row);
+
+            var width = 0;
+            var halfhour;
+
+            $.each(rtv.player.players, function (index, source) {
+                channels.append(that.generateChannel(source));
+                var row = that.generateRow(source);
+                shows.append(row.row);
+
+                if (row.width > width) { width = row.width; }
+                halfhour = row.halfhour;
+            });
+
+            channels.prepend($("<div />", {class: "channel marker"}));
+            shows.prepend(this.generateMarkers(width, halfhour));
 
             container.append(channels);
             container.append(shows);
             guide.append(container);
-            
 
             return guide;
         },
         generateHead: function() {
             var head = $("<div />", {class: "guideHead"});
             $("<span />", {class: "pointer", text: "(X) Close RTV Guide"}).one('click',function() { $("#rtvGuide").remove() }).appendTo(head);
-            
+
             return head;
         },
         generateChannel: function (source) {
