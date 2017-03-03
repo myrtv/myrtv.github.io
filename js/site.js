@@ -395,6 +395,7 @@ var rtv = {
             });
 
             channels.prepend($("<div />", {class: "channel marker"}));
+            shows.append(this.generateLiner(halfhour));
             shows.prepend(this.generateMarkers(width, halfhour));
 
             container.append(channels);
@@ -434,6 +435,10 @@ var rtv = {
 
             return temp;
         },
+        generateLiner: function(halfhour) {
+            var offset = this.itemWidth(Math.floor(new Date() - halfhour.toDate()) / 1000);
+            return $("<div />", {class: "sparksLinerHigh"}).css({left: offset+"px"});
+        },
         generateRow: function(source) {
             var that = this;
             var row = $("<div />", {class: "row"});
@@ -456,9 +461,10 @@ var rtv = {
                 var width = that.itemWidth(duration);
                 cacheWidth += width;
                 var endClass = (item.index+1 == source.cache.playlist.length) ? " playlistEnd" : "";
+                var startClass = (item.index == 0 && item.duration !== adjustedDuration) ? " abruptStart" : "";
 
                 $("<div />", {
-                    class: "show"+endClass,
+                    class: "show"+endClass+startClass,
                     text: item.name,
                     title: item.name+
                     //"\nDuration: "+(duration / 60)+"m"+

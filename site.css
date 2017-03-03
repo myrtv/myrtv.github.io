@@ -55,6 +55,14 @@ video {
 }
 #rtvShows:hover { overflow-x: auto; }
 #rtvShows > .row { }
+#rtvShows > .sparksLinerHigh {
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    background: rgba(0,255,0,0.2);
+    height: 100%;
+    z-index: -1;
+}
 .show {
     display: inline-block;
     height: 100%;
@@ -68,6 +76,7 @@ video {
 }
 /*.show:first-child { border-left:5px solid green; }*/
 .row.marker .show:last-child, .show.playlistEnd:last-child { border-right:5px solid red; }
+.show.abruptStart { border-left-style: dashed; }
 .show.gap {
     visibility:hidden;
     border-color: rgba(0,0,0,0);
