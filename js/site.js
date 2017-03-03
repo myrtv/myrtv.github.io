@@ -441,10 +441,10 @@ var rtv = {
             var endingTime = moment().add(current.duration - current.seek_to, 'seconds');
             //Determine nearest half hour
             var halfhour = moment().seconds(0); halfhour.minutes((halfhour.minutes() >= 30) ? 30 : 0); //Clamp to latest half-hour.
-            var distanceNow = Math.floor((new Date() - halfhour.toDate()) / 1000); //Distance, in seconds, from now to latest half-hour.
+            var distanceNow = Math.round((new Date() - halfhour.toDate()) / 1000); //Distance, in seconds, from now to latest half-hour.
             var startingTime = moment().subtract(current.seek_to, 'seconds'); //Starting time of item.
-            var gap = (startingTime.toDate() < halfhour.toDate()) ? 0 : Math.floor((startingTime.toDate() - halfhour.toDate())/1000);
-            var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
+            var gap = (startingTime.toDate() < halfhour.toDate()) ? 0 : Math.round((startingTime.toDate() - halfhour.toDate())/1000);
+            var distanceEnd = Math.round((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
             var adjustedDuration = (startingTime.toDate() < halfhour.toDate()) ? distanceEnd : current.duration;
 
             var cacheWidth = 0;
@@ -476,7 +476,7 @@ var rtv = {
             //duration = either time since lead-in to clamp (determined elsewhere) or total duration of an item
             var halfhourWidth = this.config.markerWidth; //Size, in pixels, of each half-hour segment segment.
             var clampUnit = 1800; //Half-hour in seconds.
-            var result = (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(((duration % clampUnit) / clampUnit) * halfhourWidth);
+            var result = (Math.floor(duration / clampUnit) * halfhourWidth) + Math.round(((duration % clampUnit) / clampUnit) * halfhourWidth);
 
             return result;
         }
