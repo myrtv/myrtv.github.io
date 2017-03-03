@@ -424,9 +424,9 @@ var rtv = {
             for (limit = 0; limit < Math.ceil(width / this.config.markerWidth)+1; limit++) {
                 $("<div />", {
                     class: "show",
-                    text: halfhour.format("LT") + (((halfhour.hour() == 0 || halfhour.hour() == 12) && halfhour.minute() < 30) ? " ("+halfhour.format("l")+")" : "")
+                    text: halfhour.format("LT") + (((halfhour.hour() == 0 /*|| halfhour.hour() == 12*/) && halfhour.minute() < 30) ? " ("+halfhour.format("l")+")" : "")
                 })
-                .width(this.config.markerWidth)
+                .css({"width": this.config.markerWidth, "maxWidth": this.config.markerWidth})
                 .appendTo(temp);
 
                 halfhour.add(30, 'minutes');
@@ -445,22 +445,28 @@ var rtv = {
             var startingTime = moment().subtract(current.seek_to, 'seconds'); //Starting time of item.
             var gap = (startingTime.toDate() < halfhour.toDate()) ? 0 : Math.floor((startingTime.toDate() - halfhour.toDate())/1000);
             var distanceEnd = Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000); //Distance, in seconds, from latest half-hour to end of item.
-            var adjustedDuration = (startingTime.toDate() < halfhour.toDate()) ? Math.floor((endingTime.toDate() - halfhour.toDate()) / 1000) : current.duration;
+            var adjustedDuration = (startingTime.toDate() < halfhour.toDate()) ? distanceEnd : current.duration;
 
             var cacheWidth = 0;
             $("<div />", {class: "show gap"}).width(this.itemWidth(gap)).appendTo(row); //Add the starting gap element, we can style it if we want.
             //Instead of arbitrarily stopping at 10 we could also stop around a pre-calculated width.
             var toIndex = ((this.config.readLimit) ? current.index + 1 + this.config.readLimit : source.cache.playlist.length);
             $.each(source.cache.playlist.slice(current.index, toIndex), function (index, item) {
-                var width = that.itemWidth((index > 0) ? item.duration : adjustedDuration);
+                var duration = (index > 0) ? item.duration : adjustedDuration;
+                var width = that.itemWidth(duration);
                 cacheWidth += width;
-                var end = (item.index+1 == source.cache.playlist.length) ? " playlistEnd" : "";
+                var endClass = (item.index+1 == source.cache.playlist.length) ? " playlistEnd" : "";
 
                 $("<div />", {
-                    class: "show"+end,
-                    text: item.name
+                    class: "show"+endClass,
+                    text: item.name,
+                    title: item.name+
+                    //"\nDuration: "+(duration / 60)+"m"+
+                    "\n"+((moment().toDate() > startingTime.toDate())?"Started ":"Starts ")+moment().to(startingTime)+
+                    "\nStart: "+startingTime.format("LLLL")+
+                    "\nStop: "+startingTime.add(item.duration, 'seconds').format("LLLL")
                 })
-                .width(width)
+                .css({"width": width, "maxWidth": width})
                 .appendTo(row);
             });
 
@@ -470,7 +476,7 @@ var rtv = {
             //duration = either time since lead-in to clamp (determined elsewhere) or total duration of an item
             var halfhourWidth = this.config.markerWidth; //Size, in pixels, of each half-hour segment segment.
             var clampUnit = 1800; //Half-hour in seconds.
-            var result = Math.floor(duration / clampUnit) * halfhourWidth + Math.floor(((duration % clampUnit) / clampUnit) * halfhourWidth);
+            var result = (Math.floor(duration / clampUnit) * halfhourWidth) + Math.floor(((duration % clampUnit) / clampUnit) * halfhourWidth);
 
             return result;
         }
