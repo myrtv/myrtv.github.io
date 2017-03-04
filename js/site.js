@@ -3,18 +3,48 @@ var rtv = {
     preinit: function() {
         var that = this;
 
-        $(document).on('change', '.remote', function() {
-            var next = this.value;
-            rtv.player.players[$(this).parent().parent().data("player-index")].destroy();
-            rtv.player.create(next);
-        })
-
-        $("body").append($("<div />", {id: 'container'}));
+        $("body").append($("<div />", {id: 'container'}).append(this.menu.spawn()));
+        this.config.init();
         this.init();
     },
+    config: {
+        init: function() {
+            this.load();
+            if (!this.cache.playlists) { this.cache.playlists = this.defaultPlaylists; }
+            this.save();
+        },
+        cache: {},
+        load: function() {
+            if (localStorage['rtvConfig']) {
+                this.cache = JSON.parse(localStorage['rtvConfig']);
+            }
+        },
+        save: function() {
+            localStorage['rtvConfig'] = JSON.stringify(this.cache);
+        },
+        defaultPlaylists: [
+            "playlists/initiald.min.json",
+            "playlists/gdq/agdq2011.min.json",
+            "playlists/gdq/agdq2012.min.json",
+            "playlists/gdq/sgdq2012.min.json",
+            "playlists/gdq/agdq2013.min.json",
+            "playlists/gdq/sgdq2013.min.json",
+            "playlists/gdq/agdq2014.min.json",
+            "playlists/gdq/sgdq2014.min.json",
+            "playlists/gdq/agdq2015.min.json",
+            "playlists/gdq/sgdq2015.min.json",
+            "playlists/gdq/agdq2016.min.json",
+            "playlists/gdq/sgdq2016.min.json",
+            "playlists/gdq/agdq2017raw.min.json",
+            "playlists/gdq/allgdq.min.json",
+            "playlists/rpglb/2015.json",
+            "playlists/rpglb/2016.json",
+            "playlists/rpglb/2016talesof.json",
+            "playlists/rpglb/2017talesof.json",
+            "playlists/esa/2015purple.min.json"
+        ]
+    },
     init: function(path) {
-        var that = this;
-
         this.player.create();
     },
     player: {
@@ -23,14 +53,22 @@ var rtv = {
             var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/initiald.min.json');
             var that = this;
 
-            this.playlist.generate(list, this.spawn);
+            $.each(rtv.config.cache.playlists, function (index, item) {
+                var cb = (item == list) ? function() { localStorage['rtvLastPlaylist'] = list; that.spawn(item) } : false;
+                that.playlist.generate(item, cb);
+            });
         },
+        cached_playlists: {},
         playlist: {
             generate: function(list, callback) {
                 var store = list;
 
+                if (rtv.player.cached_playlists[store] && callback) {
+                    callback();
+                }
+
                 $.getJSON(list, function (data) {
-                    localStorage['rtvLastPlaylist'] = list; //Save.
+                    //localStorage['rtvLastPlaylist'] = list; //Save.
 
                     //Offline testing and not using a virtual server is weird, don't judge me.
                     var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
@@ -43,7 +81,11 @@ var rtv = {
                         playlist.playlist[index].index = index;
                     });
 
-                    callback(playlist);
+                    rtv.player.cached_playlists[store] = playlist;
+
+                    if (callback) {
+                        callback();
+                    }
                 });
             },
             utilities: {
@@ -55,8 +97,8 @@ var rtv = {
 
                     start %= total_duration; //Muh modulo
 
-                    console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
-                                "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
+                    //console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
+                    //          "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
 
                     return start;
                 },
@@ -102,7 +144,10 @@ var rtv = {
                 }
             }
         },
-        spawn: function(playlist) {
+        spawn: function(path) {
+            if (!path && !this.cached_playlists[path]) { return false ; }
+
+            var playlist = this.cached_playlists[path];
             var that = rtv.player;
             var i = that.players.length;
             var name = "player-"+i;
@@ -120,7 +165,7 @@ var rtv = {
 
 
             //Create parent container (especially for YouTube, but we'll need it later anyway even for HTML5)
-            $("<div />", {id: "window-"+name}).data({"player-index": i}).append(rtv.menu.spawn()).append($("<div />", {id: name})).appendTo("#container");
+            $("<div />", {id: "window-"+name}).data({"player-index": i}).append($("<div />", {id: name})).appendTo("#container");
 
             switch (playlist.info.service) {
                 case "youtube":
@@ -132,7 +177,6 @@ var rtv = {
 
             player.init(name);
             rtv.player.players.push(player);
-            rtv.guide.open();
 
             return i;
         },
@@ -210,9 +254,6 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
-                    $("#head").append(
-                        $("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); })
-                    );
                     var that = this;
 
                     var instance = new YT.Player(target, {
@@ -271,9 +312,6 @@ var rtv = {
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
-                    $("#head").append(
-                        $("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); })
-                    );
                     var that = this;
 
                     var instance = $("<video />", {
@@ -309,45 +347,10 @@ var rtv = {
     },
     menu: {
         spawn: function() {
-            //Eventually pipe in a "directory list" then defer population.
-            var streams = [
-                {name: "InitialD 1/2/4", path: "playlists/initiald.min.json"},
-                {name: "AGDQ2011", path: "playlists/gdq/agdq2011.min.json"},
-                {name: "AGDQ2012", path: "playlists/gdq/agdq2012.min.json"},
-                {name: "SGDQ2012", path: "playlists/gdq/sgdq2012.min.json"},
-                {name: "AGDQ2013", path: "playlists/gdq/agdq2013.min.json"},
-                {name: "SGDQ2013", path: "playlists/gdq/sgdq2013.min.json"},
-                {name: "AGDQ2014", path: "playlists/gdq/agdq2014.min.json"},
-                {name: "SGDQ2014", path: "playlists/gdq/sgdq2014.min.json"},
-                {name: "AGDQ2015", path: "playlists/gdq/agdq2015.min.json"},
-                {name: "SGDQ2015", path: "playlists/gdq/sgdq2015.min.json"},
-                {name: "AGDQ2016", path: "playlists/gdq/agdq2016.min.json"},
-                {name: "SGDQ2016", path: "playlists/gdq/sgdq2016.min.json"},
-                {name: "AGDQ2017 (Raw)", path: "playlists/gdq/agdq2017raw.min.json"},
-                {name: "AllGDQ", path: "playlists/gdq/allgdq.min.json"},
-                {name: "RPGLB2015", path: "playlists/rpglb/2015.json"},
-                {name: "RPGLB2016", path: "playlists/rpglb/2016.json"},
-                {name: "RPGLB2016TalesOf", path: "playlists/rpglb/2016talesof.json"},
-                {name: "RPGLB2017TalesOf", path: "playlists/rpglb/2017talesof.json"},
-                {name: "ESA2015 Purple", path: "playlists/esa/2015purple.min.json"}
-            ];
+            var head = $("<div />", {id: "head"});
+            head.append($("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); }));
 
-            var select = $("<select />", {class: "remote"});
-            $.each(streams, function (i, stream) {
-                var option  = $("<option />", {
-                    value: stream.path,
-                    text: stream.name,
-                });
-                if (stream.path == localStorage['rtvLastPlaylist']) {
-                    option.attr({"selected":""});
-                }
-
-                option.appendTo(select);
-            });
-
-            return $("<div />", {id: "head"}).append(select);
-
-            //setTimeout(function() { $("#head").slideUp(); }, 5000);
+            return head;
         }
     },
     guide: {
@@ -374,7 +377,9 @@ var rtv = {
             var width = 0;
             var halfhour;
 
-            $.each(rtv.player.players, function (index, source) {
+            $.each(rtv.player.cached_playlists, function (index, list) {
+                var source = $.extend({}, {cache: list}, rtv.player.playlist.utilities);
+
                 channels.append(that.generateChannel(source));
                 var row = that.generateRow(source);
                 shows.append(row.row);
@@ -397,19 +402,29 @@ var rtv = {
             var head = $("<div />", {class: "guideHead"});
             $("<span />", {class: "pointer", text: "(X) Close RTV Guide"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
 
-                $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() { 
+            if (0 && Notification.permission !== "granted") {
+                $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() {
                     //rtv.notifications.init();
-                    $("#enableSubs").remove (); 
+                    $("#enableSubs").remove ();
                 }).appendTo(head);
             }
 
             return head;
         },
         generateChannel: function (source) {
-            return $("<div />", {
-                class: "channel",
+            //console.log(arguments.callee.caller);
+            var channel = $("<div />", {
+                class: "channel pointer",
                 text: source.cache.info.name
             });
+
+            channel.click(function(e) {
+                rtv.player.players.slice(-1)[0].destroy();
+                rtv.player.spawn(source.cache.info.url);
+                rtv.guide.close();
+            });
+
+            return channel;
         },
         generateMarkers: function(width, halfhour) {
             //Generate time markers.
@@ -504,7 +519,7 @@ var rtv = {
                     startTime: moment().subtract(current.seek_to, 'seconds').add(current.duration, 'seconds'),
                     duration: next.duration,
                     channel: source.cache.info.name,
-                    url: source.cache.info.url  
+                    url: source.cache.info.url
                 });
             },
             load: function() {
@@ -551,7 +566,7 @@ var rtv = {
                 //alert('chune');
                 console.log();
                 rtv.player.players.slice(-1)[0].destroy();
-                rtv.player.create(event.target.data);
+                rtv.player.spawn(event.target.data);
                 rtv.guide.close();
             }
         }
