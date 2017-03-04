@@ -43,9 +43,12 @@ video {
 }
 #rtvGuideSub { position: relative; overflow-y: hidden; height: 100%; }
 #rtvGuideSub:hover { overflow-y: auto; }
-#rtvChannels { width: 200px; }
+#rtvChannels { width: 200px; padding:3px; }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
 .channel, #rtvShows > .row { height: 50px; }
+.currentStream {
+    background: linear-gradient(to right, rgba(63,63,63,0.5), rgba(0,0,0,0) 50%);
+}
 #rtvShows {
     position: absolute;
     right: 0px;
