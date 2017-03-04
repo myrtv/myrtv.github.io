@@ -147,6 +147,7 @@ var rtv = {
         spawn: function(path) {
             if (!path && !this.cached_playlists[path]) { return false ; }
 
+            localStorage['rtvLastPlaylist'] = path;
             var playlist = this.cached_playlists[path];
             var that = rtv.player;
             var i = that.players.length;
