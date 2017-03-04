@@ -50,7 +50,7 @@ var rtv = {
     player: {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
-            var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/initiald.min.json');
+            var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/gdq/allgdq.min.json');
             var that = this;
 
             $.each(rtv.config.cache.playlists, function (index, item) {
