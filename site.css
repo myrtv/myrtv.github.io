@@ -46,6 +46,9 @@ video {
 #rtvChannels { width: 200px; padding:3px; }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
 .channel, #rtvShows > .row { height: 50px; }
+.channel:hover {
+    background: linear-gradient(to right, rgba(127,127,127,0.8), rgba(0,0,0,0) 50%);
+}
 .currentStream {
     background: linear-gradient(to right, rgba(63,63,63,0.5), rgba(0,0,0,0) 50%);
 }
