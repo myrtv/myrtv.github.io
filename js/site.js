@@ -24,6 +24,7 @@ var rtv = {
         },
         defaultPlaylists: [
             "playlists/initiald.min.json",
+            "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/gdq/agdq2011.min.json",
             "playlists/gdq/agdq2012.min.json",
