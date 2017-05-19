@@ -41,8 +41,8 @@ video {
     color: #fff;
     background-color:rgba(0,0,0,0.85);
 }
-#rtvGuideSub { position: relative; overflow-y: hidden; height: 100%; }
-#rtvGuideSub:hover { overflow-y: auto; }
+#rtvGuideSub { position: relative; overflow-y: auto; height: 100%; }
+/*#rtvGuideSub:hover { overflow-y: auto; }*/
 #rtvChannels { width: 200px; padding:3px; }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
 .channel, #rtvShows > .row { height: 50px; }
@@ -56,10 +56,10 @@ video {
     position: absolute;
     right: 0px;
     left: 200px;
-    overflow-x: hidden;
+    overflow-x: auto;
     white-space: nowrap;
 }
-#rtvShows:hover { overflow-x: auto; }
+/*#rtvShows:hover { overflow-x: auto; }*/
 #rtvShows > .row { }
 #rtvShows > .sparksLinerHigh {
     position: absolute;
