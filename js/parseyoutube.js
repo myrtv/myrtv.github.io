@@ -1,4 +1,4 @@
-//Protip, discard unsorted playlists. Never again.
+//Parsing a playlist. Must load all items manually.
 
 playlist = [];
 
