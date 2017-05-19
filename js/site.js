@@ -9,9 +9,9 @@ var rtv = {
     },
     config: {
         init: function() {
-            this.load();
+            //this.load(); //Deal with this later. Populating "new" playlists is tedious when cached.
             if (!this.cache.playlists) { this.cache.playlists = this.defaultPlaylists; }
-            this.save();
+            //this.save();
         },
         cache: {},
         load: function() {
@@ -24,6 +24,7 @@ var rtv = {
         },
         defaultPlaylists: [
             "playlists/initiald.min.json",
+            "playlists/ethoplaysminecraft.min.json",
             "playlists/gdq/agdq2011.min.json",
             "playlists/gdq/agdq2012.min.json",
             "playlists/gdq/sgdq2012.min.json",
