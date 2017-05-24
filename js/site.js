@@ -41,6 +41,7 @@ var rtv = {
             "playlists/gdq/allgdq.min.json",
             "playlists/rpglb/2015.json",
             "playlists/rpglb/2016.json",
+            "playlists/rpglb/2017.json",
             "playlists/rpglb/2016talesof.json",
             "playlists/rpglb/2017talesof.json",
             "playlists/esa/2015purple.min.json"
