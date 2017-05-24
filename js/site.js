@@ -381,8 +381,8 @@ var rtv = {
             var width = 0;
             var halfhour;
 
-            $.each(rtv.player.cached_playlists, function (index, list) {
-                var source = $.extend({}, {cache: list}, rtv.player.playlist.utilities);
+            $.each(Object.keys(rtv.player.cached_playlists).sort(), function (index, list) {
+                var source = $.extend({}, {cache: rtv.player.cached_playlists[list]}, rtv.player.playlist.utilities);
 
                 channels.append(that.generateChannel(source));
                 var row = that.generateRow(source);
