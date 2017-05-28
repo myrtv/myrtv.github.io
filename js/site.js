@@ -95,7 +95,7 @@ var rtv = {
             utilities: {
                 getCurrentTime: function() {
                     var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
-                    var start = (Math.round(new Date() / 1000) + rtv.offset) - Math.round(start_epoch / 1000);
+                    var start = (Math.floor(new Date() / 1000) + rtv.offset) - Math.floor(start_epoch / 1000);
                     var total_duration = this.cache.info.total_duration;
                     var loops = Math.ceil(start / total_duration);
 
@@ -283,10 +283,16 @@ var rtv = {
 
                     return instance;
                 },
-                playerOnReady: function(event) {},
+                playerOnReady: function(event) {
+                    //var index = $(event.target.a).parent().data("player-index");
+                },
                 playerOnStateChange: function(event) {
                     var index = $(event.target.a).parent().data("player-index");
 
+                    if (!rtv.player.players[index].resynced && event.data == YT.PlayerState.PLAYING) {
+                        rtv.player.players[index].resynced = true;
+                        rtv.player.players[index].resync();
+                    }
                     if (event.data == YT.PlayerState.ENDED) {
                         rtv.player.players[index].resync();
                     }
