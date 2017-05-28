@@ -26,6 +26,7 @@ var rtv = {
             "playlists/initiald.min.json",
             "playlists/linustechtips.min.json",
             "playlists/ethoslab.min.json",
+            "playlists/pannenkoek2012.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/gdq/agdq2011.min.json",
             "playlists/gdq/agdq2012.min.json",
