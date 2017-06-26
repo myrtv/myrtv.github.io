@@ -9,9 +9,9 @@ var rtv = {
     },
     config: {
         init: function() {
-            //this.load(); //Deal with this later. Populating "new" playlists is tedious when cached.
+            this.load(); //Deal with this later. Populating "new" playlists is tedious when cached.
             if (!this.cache.playlists) { this.cache.playlists = this.defaultPlaylists; }
-            //this.save();
+            this.save();
         },
         cache: {},
         load: function() {
@@ -58,7 +58,8 @@ var rtv = {
             var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/gdq/allgdq.min.json');
             var that = this;
 
-            $.each(rtv.config.cache.playlists, function (index, item) {
+            //rtv.config.cache.playlists for user-selected, eventually.
+            $.each(rtv.config.defaultPlaylists, function (index, item) {
                 var cb = (item == list) ? function() { localStorage['rtvLastPlaylist'] = list; that.spawn(item) } : false;
                 that.playlist.generate(item, cb);
             });
@@ -370,6 +371,15 @@ var rtv = {
             markerWidth: 120, //Width of time markers (9:00pm, 9:30pm, etc.) in pixels
             readLimit: 0 //How far ahead in the schedule to generate. 0 is to the end. Still consider guide width.
         },
+        channels: {
+            generateInner: function() {
+                var inner = $("<table />", {class: "customizeChannels"});
+                //Generate first row (labels)
+                //Generate selects row
+                //Generate buttons
+                return inner;
+            }
+        },
         open: function() {
             $("#rtvGuide").remove();
             $("body").append(rtv.guide.generate());
@@ -412,7 +422,13 @@ var rtv = {
         },
         generateHead: function() {
             var head = $("<div />", {class: "guideHead"});
-            $("<span />", {class: "pointer", text: "(X) Close RTV Guide"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
+            $("<span />", {class: "pointer", text: "[Close RTV Guide]"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
+            $("<span />", {class: "pointer", text: "[Resync Player]"}).one('click',function() { 
+                $("[id^=window-player]").each(function() {
+                    rtv.player.players[$(this).data()["player-index"]].resync();
+                });
+            }).appendTo(head);
+            //$("<span />", {class: "pointer", text: "[Configure Channels]"}).one('click',function() {             }).appendTo(head);
 
             if (0 && Notification.permission !== "granted") {
                 $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() {
