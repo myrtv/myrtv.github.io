@@ -46,7 +46,6 @@ var rtv = {
         },
         defaultPlaylists: [
             "playlists/anime/initiald.min.json",
-            "playlists/anime/steinsgate.min.json",
             "playlists/gdq/agdq2013.min.json",
             "playlists/gdq/sgdq2013.min.json",
             "playlists/gdq/agdq2014.min.json",
@@ -65,9 +64,7 @@ var rtv = {
         ],
         extraPlaylists: [
             "playlists/anime/casshernsins.min.json",
-            "playlists/anime/ergoproxy.min.json",
             "playlists/anime/samuraichamploo.min.json",
-            "playlists/anime/lain.min.json",
             "playlists/anime/souleater.min.json",
             "playlists/anime/trigun.min.json",
             "playlists/gdq/allgdq.min.json",
