@@ -10,7 +10,10 @@ var rtv = {
     config: {
         init: function() {
             this.load();
-            if (!this.cache.playlists) { this.cache.playlists = this.defaultPlaylists; }
+            if (!this.cache.playlists || this.cache.playlists.length == 0) {
+                console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
+                this.cache.playlists = this.defaultPlaylists;
+            }
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
             this.save();
         },
