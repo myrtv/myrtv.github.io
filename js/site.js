@@ -553,7 +553,7 @@ var rtv = {
         },
         generateChannel: function (source) {
             //console.log(arguments.callee.caller);
-            var currentStream = ((rtv.player.players.slice(-1)[0].cache.info.url == source.cache.info.url) ? " currentStream" : "");
+            var currentStream = ((rtv.player.players.length > 0 && rtv.player.players.slice(-1)[0].cache.info.url == source.cache.info.url) ? " currentStream" : "");
             var channel = $("<div />", {
                 class: "channel pointer"+currentStream,
                 text: source.cache.info.name
