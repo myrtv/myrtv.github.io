@@ -434,7 +434,7 @@ var rtv = {
                             lastGone = "<hr><p><strong>Note:</strong> Your last viewed channel is not in <strong>Your Channels</strong> and has been reset.<br>Upon reload, a random channel will be selected.</p>";
                         }
 
-                        var msg = "<div title='Select RTV Channels - Saved'><p><strong>Your Channels</strong> has been saved, please reload RTV to reflect any changes.</p>"+lastGone+"<hr><textarea rows='5' style='width:100%'>"+JSON.stringify(yours)+"</textarea></div>"
+                        var msg = "<div title='Select RTV Channels - Saved'><p><strong>Your Channels</strong> has been saved, please reload RTV to reflect any changes.</p>"+lastGone+"</div>"
                         var saveDialog = $(msg).dialog({
                             modal: true,
                             width: "auto",
