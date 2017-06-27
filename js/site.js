@@ -9,8 +9,9 @@ var rtv = {
     },
     config: {
         init: function() {
-            this.load(); //Deal with this later. Populating "new" playlists is tedious when cached.
+            this.load();
             if (!this.cache.playlists) { this.cache.playlists = this.defaultPlaylists; }
+            this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
             this.save();
         },
         cache: {},
@@ -24,13 +25,6 @@ var rtv = {
         },
         defaultPlaylists: [
             "playlists/initiald.min.json",
-            "playlists/linustechtips.min.json",
-            "playlists/ethoslab.min.json",
-            "playlists/pannenkoek2012.min.json",
-            "playlists/ethoplaysminecraft.min.json",
-            "playlists/gdq/agdq2011.min.json",
-            "playlists/gdq/agdq2012.min.json",
-            "playlists/gdq/sgdq2012.min.json",
             "playlists/gdq/agdq2013.min.json",
             "playlists/gdq/sgdq2013.min.json",
             "playlists/gdq/agdq2014.min.json",
@@ -40,26 +34,34 @@ var rtv = {
             "playlists/gdq/agdq2016.min.json",
             "playlists/gdq/sgdq2016.min.json",
             "playlists/gdq/agdq2017raw.min.json",
-            "playlists/gdq/allgdq.min.json",
             "playlists/rpglb/2015.json",
             "playlists/rpglb/2016.json",
             "playlists/rpglb/2017.json",
             "playlists/rpglb/2016talesof.json",
             "playlists/rpglb/2017talesof.json",
             "playlists/esa/2015purple.min.json"
+        ],
+        extraPlaylists: [
+            "playlists/gdq/allgdq.min.json",
+            "playlists/gdq/agdq2011.min.json",
+            "playlists/gdq/agdq2012.min.json",
+            "playlists/gdq/sgdq2012.min.json",
+            "playlists/ethoslab.min.json",
+            "playlists/ethoplaysminecraft.min.json",
+            "playlists/linustechtips.min.json",
+            "playlists/pannenkoek2012.min.json",
         ]
     },
     init: function(path) {
-        this.player.create();
+        this.player.create(path);
     },
     player: {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
-            var list = (path || localStorage['rtvLastPlaylist'] || 'playlists/gdq/allgdq.min.json');
+            var list = (path || localStorage['rtvLastPlaylist'] || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]);
             var that = this;
 
-            //rtv.config.cache.playlists for user-selected, eventually.
-            $.each(rtv.config.defaultPlaylists, function (index, item) {
+            $.each(rtv.config.cache.playlists, function (index, item) {
                 var cb = (item == list) ? function() { localStorage['rtvLastPlaylist'] = list; that.spawn(item) } : false;
                 that.playlist.generate(item, cb);
             });
@@ -101,7 +103,7 @@ var rtv = {
                     var total_duration = this.cache.info.total_duration;
                     var loops = Math.ceil(start / total_duration);
 
-                    start %= total_duration; //Muh modulo
+                    start %= total_duration;
 
                     //console.log("Loop "+loops+" ("+total_duration+"secs/loop), beginning "+start_epoch.toString()+".\n"+
                     //          "Our current progress through it is "+Math.round(start/total_duration * 100)+"%.");
@@ -372,12 +374,119 @@ var rtv = {
             readLimit: 0 //How far ahead in the schedule to generate. 0 is to the end. Still consider guide width.
         },
         channels: {
-            generateInner: function() {
-                var inner = $("<table />", {class: "customizeChannels"});
-                //Generate first row (labels)
-                //Generate selects row
+            open: function() {
+                var test = "<div id='customizeChannels' title='Configure RTV Channels'><form>"+this.generateTable()[0].outerHTML+"</form></div>";
+
+                dialog = $(test).dialog({
+                    autoOpen: true,
+                    height: "auto",
+                    width: "auto",
+                    modal: true,
+                    buttons: {
+                        "Save": save,
+                        //"Default": function() { },
+                        Cancel: function() {
+                          dialog.dialog("close");
+                        }
+                    },
+                    close: function() {
+                        //$("<div title='Configure RTV Channels'><p>Please reload RTV to reflect any changes.</p></div>").dialog({modal: true, width: "auto"});
+                    }
+                });
+
+                function save(exit) {
+                    var yours = [];
+                    $("select#chanYours option").each(function () {
+                        yours.push($(this).val());
+                    });
+
+                    if (yours.length > 0) {
+                        rtv.config.cache.playlists = yours;
+                        rtv.config.save();
+
+                        var lastGone = "";
+                        if ($.inArray(localStorage.rtvLastPlaylist, yours) == -1) {
+                            localStorage.removeItem("rtvLastPlaylist");
+                            lastGone = "<hr><p><strong>Note:</strong> Your last viewed channel is not in <strong>Your Channels</strong> and has been reset.<br>Upon reload, a random channel will be selected.</p>";
+                        }
+
+                        var msg = "<div title='Configure RTV Channels - Saved'><p><strong>Your Channels</strong> has been saved, please reload RTV to reflect any changes.</p>"+lastGone+"</div>"
+                                                
+                        saveDialog = $(msg).dialog({
+                            modal: true,
+                            width: "auto",
+                            buttons: {
+                                "Reload now": function() { location.reload(); },
+                                Cancel: function() { saveDialog.dialog("close"); }
+                            }
+                        });
+                    } else {
+                        $("<div title='Configure RTV Channels - Error'><p><strong>Your Channels</strong> must have at least one channel.</p></div>").dialog({modal: true, width: "auto"});
+                    }
+
+                    rtv.guide.open();
+
+                    //if (exit) { dialog.dialog("close") };
+                }
+
+                dialog.find("button").button().click(function(event) {
+                    event.preventDefault();
+                    switch ($(this).attr("id")) {
+                        case "availMoveAll":
+                            $("select#chanAvail option").each(function(i,v) {
+                                $("select#chanYours").append(this);
+                            });
+                            break;
+                        case "availMoveSel":
+                            $("select#chanAvail option:selected").each(function(i,v) {
+                                $("select#chanYours").append(this);
+                            });
+                            break;
+                        case "yoursMoveAll":
+                            $("select#chanYours option").each(function(i,v) {
+                                $("select#chanAvail").append(this);
+                            });
+                            break;
+                        case "yoursMoveSel":
+                            $("select#chanYours option:selected").each(function(i,v) {
+                                $("select#chanAvail").append(this);
+                            });
+                            break;
+                    }
+                    $("#customizeChannels select option:selected").removeAttr("selected");
+                });
+            },
+            generateTable: function() {
+                //Wake me up.
+                var out = $("<div />").append("<p>Channels under <strong>Your Channels</strong> will be displayed in the guide.</p>");
+
+                var table = $("<table />", {id: "customizeChannels", class: "customizeChannels", style: "background-color:white"});
+                table.append("<tr class='header'><td>Available Channels</td><td>Your Channels</td></tr>");
+
+                //Generate Your Channels first
+                var yourChannels = $("<select />", {id: 'chanYours', 'multiple': true, size: 6});
+                for (i=0;i<rtv.config.cache.playlists.length;i++) {
+                    var item = rtv.config.cache.playlists[i];
+                    $("<option />", {value: item, text: item}).appendTo(yourChannels);
+                }
+                //Generate Available Channels
+                var availChannels = $("<select />", {id: 'chanAvail', 'multiple': true, size: 6});
+                for (i=0;i<rtv.config.defaultPlaylists.length;i++) {
+                    var item = rtv.config.defaultPlaylists[i];
+                    if ($.inArray(item, rtv.config.cache.playlists) == -1) {
+                        $("<option />", {value: item, text: item}).appendTo(availChannels);
+                    }
+                }
+                table.append("<tr><td>"+availChannels[0].outerHTML+"</td><td>"+yourChannels[0].outerHTML+"</td></tr>");
                 //Generate buttons
-                return inner;
+                table.append("<tr><td style='text-align:right'><button id='availMoveAll'>All &gt;</button><button id='availMoveSel'>Selected &gt;</button></td><td style='text-align:left'><button id='yoursMoveSel'>&lt; Selected</button><button id='yoursMoveAll'>&lt; All</button></td></tr>");
+                table.append("</table>");
+
+                //Generate output
+                out.append(table);
+                //out.append("<p><strong>WARNING</strong> Closing the window or cancelling without saving will not retain custom playlists.</p>");
+
+                return out;
             }
         },
         open: function() {
@@ -423,12 +532,12 @@ var rtv = {
         generateHead: function() {
             var head = $("<div />", {class: "guideHead"});
             $("<span />", {class: "pointer", text: "[Close RTV Guide]"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
-            $("<span />", {class: "pointer", text: "[Resync Player]"}).one('click',function() { 
+            $("<span />", {class: "pointer", text: "[Resync Player]"}).on('click',function() {
                 $("[id^=window-player]").each(function() {
                     rtv.player.players[$(this).data()["player-index"]].resync();
                 });
             }).appendTo(head);
-            //$("<span />", {class: "pointer", text: "[Configure Channels]"}).one('click',function() {             }).appendTo(head);
+            $("<span />", {class: "pointer", text: "[Configure Channels]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
 
             if (0 && Notification.permission !== "granted") {
                 $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() {
