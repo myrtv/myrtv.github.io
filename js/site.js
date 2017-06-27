@@ -454,22 +454,22 @@ var rtv = {
                     switch ($(this).attr("id")) {
                         case "availMoveAll":
                             $("select#chanAvail option").each(function(i,v) {
-                                $("select#chanYours").append(this);
+                                $("select#chanYours").append($(this).clone()); $(this).remove();
                             });
                             break;
                         case "availMoveSel":
                             $("select#chanAvail option:selected").each(function(i,v) {
-                                $("select#chanYours").append(this);
+                                $("select#chanYours").append($(this).clone()); $(this).remove();
                             });
                             break;
                         case "yoursMoveAll":
                             $("select#chanYours option").each(function(i,v) {
-                                $("select#chanAvail").append(this);
+                                $("select#chanAvail").append($(this).clone()); $(this).remove();
                             });
                             break;
                         case "yoursMoveSel":
                             $("select#chanYours option:selected").each(function(i,v) {
-                                $("select#chanAvail").append(this);
+                                $("select#chanAvail").append($(this).clone()); $(this).remove();
                             });
                             break;
                     }
