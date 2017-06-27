@@ -64,6 +64,7 @@ var rtv = {
         ],
         extraPlaylists: [
             "playlists/anime/casshernsins.min.json",
+            "playlists/anime/flcl.min.json",
             "playlists/anime/samuraichamploo.min.json",
             "playlists/anime/souleater.min.json",
             "playlists/anime/trigun.min.json",
