@@ -113,3 +113,15 @@ video {
     max-width:100%;
     height:150px;
 }
+
+table#customsManager {
+    width: 100%;
+}
+#customsManager .customsSelect {
+    width:15%;
+}
+
+#customsManager select, #customsManager textarea {
+    width: 100%;
+    height:100%;
+}

@@ -7,6 +7,23 @@ var rtv = {
         this.config.init();
         this.init();
     },
+    about: function() {
+        var about = "<div title='About RTV'><a href='https://github.com/myrtv/myrtv.github.io' target='_blank'>GitHub Repository</a> (submit bugs/requests here)<br><br>Made with jQuery and jQuery UI.</div>";
+
+        $(about).dialog({
+            autoOpen: true,
+            height: "auto",
+            width: "auto",
+            modal: true,
+            buttons: {},
+            open: function(event, ui){
+                $(this).parent().find('.ui-dialog-title').prepend("<img src='favicon.png' style='display:inline-block'/> ");
+            },
+            close: function() {}
+        });
+
+        $(about).find("button").button();
+    },
     config: {
         init: function() {
             this.load();
@@ -18,9 +35,10 @@ var rtv = {
             this.save();
         },
         cache: {},
+        config: {},
         load: function() {
             if (localStorage['rtvConfig']) {
-                this.cache = JSON.parse(localStorage['rtvConfig']);
+                this.cache = $.extend(this.cache,JSON.parse(localStorage['rtvConfig']));
             }
         },
         save: function() {
@@ -378,26 +396,29 @@ var rtv = {
         },
         channels: {
             open: function() {
-                var test = "<div id='customizeChannels' title='Configure RTV Channels'><form>"+this.generateTable()[0].outerHTML+"</form></div>";
+                var that = this;
+                var test = "<div id='customizeChannels' title='Select RTV Channels'><form>"+this.generateTable()[0].outerHTML+"</form></div>";
 
-                dialog = $(test).dialog({
+                var channelDialog = $(test).dialog({
                     autoOpen: true,
                     height: "auto",
                     width: "auto",
                     modal: true,
                     buttons: {
                         "Save": save,
+                        //"Manage Customs": function() { that.customs.open() },
                         //"Default": function() { },
                         Cancel: function() {
-                          dialog.dialog("close");
+                          channelDialog.dialog("close");
                         }
                     },
                     close: function() {
-                        //$("<div title='Configure RTV Channels'><p>Please reload RTV to reflect any changes.</p></div>").dialog({modal: true, width: "auto"});
+                        //$("<div title='Select RTV Channels'><p>Please reload RTV to reflect any changes.</p></div>").dialog({modal: true, width: "auto"});
                     }
                 });
 
                 function save(exit) {
+                    console.log('save called')
                     var yours = [];
                     $("select#chanYours option").each(function () {
                         yours.push($(this).val());
@@ -413,9 +434,8 @@ var rtv = {
                             lastGone = "<hr><p><strong>Note:</strong> Your last viewed channel is not in <strong>Your Channels</strong> and has been reset.<br>Upon reload, a random channel will be selected.</p>";
                         }
 
-                        var msg = "<div title='Configure RTV Channels - Saved'><p><strong>Your Channels</strong> has been saved, please reload RTV to reflect any changes.</p>"+lastGone+"</div>"
-                                                
-                        saveDialog = $(msg).dialog({
+                        var msg = "<div title='Select RTV Channels - Saved'><p><strong>Your Channels</strong> has been saved, please reload RTV to reflect any changes.</p>"+lastGone+"<hr><textarea rows='5' style='width:100%'>"+JSON.stringify(yours)+"</textarea></div>"
+                        var saveDialog = $(msg).dialog({
                             modal: true,
                             width: "auto",
                             buttons: {
@@ -424,15 +444,12 @@ var rtv = {
                             }
                         });
                     } else {
-                        $("<div title='Configure RTV Channels - Error'><p><strong>Your Channels</strong> must have at least one channel.</p></div>").dialog({modal: true, width: "auto"});
+                        $("<div title='Select RTV Channels - Error'><p><strong>Your Channels</strong> must have at least one channel.</p></div>").dialog({modal: true, width: "auto"});
                     }
-
-                    rtv.guide.open();
-
                     //if (exit) { dialog.dialog("close") };
                 }
 
-                dialog.find("button").button().click(function(event) {
+                channelDialog.find("button").button().click(function(event) {
                     event.preventDefault();
                     switch ($(this).attr("id")) {
                         case "availMoveAll":
@@ -465,19 +482,20 @@ var rtv = {
 
                 var table = $("<table />", {id: "customizeChannels", class: "customizeChannels", style: "background-color:white"});
                 table.append("<tr class='header'><td>Available Channels</td><td>Your Channels</td></tr>");
+                var regex = /(^playlists\/|(\.(min|json))+$)/ig //Clean up playlists names in the manager
 
                 //Generate Your Channels first
                 var yourChannels = $("<select />", {id: 'chanYours', 'multiple': true, size: 6});
                 for (i=0;i<rtv.config.cache.playlists.length;i++) {
                     var item = rtv.config.cache.playlists[i];
-                    $("<option />", {value: item, text: item}).appendTo(yourChannels);
+                    $("<option />", {value: item, text: item.replace(regex,"")}).appendTo(yourChannels);
                 }
                 //Generate Available Channels
                 var availChannels = $("<select />", {id: 'chanAvail', 'multiple': true, size: 6});
                 for (i=0;i<rtv.config.defaultPlaylists.length;i++) {
                     var item = rtv.config.defaultPlaylists[i];
                     if ($.inArray(item, rtv.config.cache.playlists) == -1) {
-                        $("<option />", {value: item, text: item}).appendTo(availChannels);
+                        $("<option />", {value: item, text: item.replace(regex,"")}).appendTo(availChannels);
                     }
                 }
                 table.append("<tr><td>"+availChannels[0].outerHTML+"</td><td>"+yourChannels[0].outerHTML+"</td></tr>");
@@ -487,7 +505,6 @@ var rtv = {
 
                 //Generate output
                 out.append(table);
-                //out.append("<p><strong>WARNING</strong> Closing the window or cancelling without saving will not retain custom playlists.</p>");
 
                 return out;
             }
@@ -540,7 +557,9 @@ var rtv = {
                     rtv.player.players[$(this).data()["player-index"]].resync();
                 });
             }).appendTo(head);
-            $("<span />", {class: "pointer", text: "[Configure Channels]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
+            //$("<span />", {class: "pointer", text: "[Configure RTV]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
+            $("<span />", {class: "pointer", text: "[Select Channels]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
+            $("<span />", {class: "pointer", text: "[About RTV]"}).on('click',function() { rtv.about(); }).appendTo(head);
 
             if (0 && Notification.permission !== "granted") {
                 $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() {
