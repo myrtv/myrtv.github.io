@@ -11,7 +11,7 @@ Need help picking one?
  - For experts and bulk playlist generation.
    - If you don't understand the following, this is not for you.
  - Runs in a CLI/shell/terminal/command prompt/etc.
-   - Windows users will need [MinGW](http://mingw.org/)
+   - Windows users will need at *best* [MinGW](http://mingw.org/), Windows 10's Ubuntu subsystem is untested.
    - Requires: `curl` (`wget` would probably be fine), `grep`, `sed`, `wc`
  - Mark executable then `./youtube-playlists.sh https://www.youtube.com/playlist?list=STUFF`
  - Will generate the playlist based off the provided URL and save it to a file.
