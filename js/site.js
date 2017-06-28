@@ -11,7 +11,7 @@ var rtv = {
         var about = '<div title="About RTV">'+
                     '<a href="https://github.com/myrtv/myrtv.github.io" target="_blank">GitHub Repository</a> (submit bugs/requests here)'+
                     '<br><br>Made with jQuery and jQuery UI.'+
-                    '<hr><a href=\'javascript:R=document.getElementsByClassName("pl-video"),T=document.getElementsByClassName("pl-header-title")[0].innerText,V={info:{name:T,start_epoch_gtm:0,service:"youtube"},playlist:[]};for(i=0;i<R.length;i++){a=R[i].getElementsByClassName("timestamp")[0].innerText.split(":");V.playlist.push({name:R[i].dataset.title,duration:+a.pop()+(a.pop()*60)+(a[0]?a.pop()*3600:0),qualities:[{src:R[i].dataset.videoId}]})};prompt(T,JSON.stringify(V));void(0)\'>YouTube to RTV Playlist Converter</a><br><small>Add as bookmark and activate on YouTube playlist pages.</small></div>';
+                    '<hr><a href=\'javascript:R=document.getElementsByClassName("pl-video"),T=document.getElementsByClassName("pl-header-title")[0].innerText,V={info:{name:T,service:"youtube"},playlist:[]};for(i=0;i<R.length;i++){a=R[i].getElementsByClassName("timestamp")[0].innerText.split(":");V.playlist.push({name:R[i].dataset.title,duration:+a.pop()+(a.pop()*60)+(a[0]?a.pop()*3600:0),qualities:[{src:R[i].dataset.videoId}]})};prompt(T,JSON.stringify(V));void(0)\'>YouTube to RTV Playlist Converter</a><br><small>Add as bookmark and activate on YouTube playlist pages.</small></div>';
 
         $(about).dialog({
             autoOpen: true,
@@ -127,7 +127,7 @@ var rtv = {
             },
             utilities: {
                 getCurrentTime: function() {
-                    var start_epoch = new Date(this.cache.info.start_epoch_gtm * 1000);
+                    var start_epoch = new Date((this.cache.info.start_epoch_gtm || 0) * 1000);
                     var start = (Math.floor(new Date() / 1000) + rtv.offset) - Math.floor(start_epoch / 1000);
                     var total_duration = this.cache.info.total_duration;
                     var loops = Math.ceil(start / total_duration);
