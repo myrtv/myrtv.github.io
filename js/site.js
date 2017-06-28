@@ -45,6 +45,7 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         defaultPlaylists: [
+            "playlists/anime/flcl.min.json",
             "playlists/anime/initiald.min.json",
             "playlists/gdq/agdq2013.min.json",
             "playlists/gdq/sgdq2013.min.json",
@@ -55,16 +56,12 @@ var rtv = {
             "playlists/gdq/agdq2016.min.json",
             "playlists/gdq/sgdq2016.min.json",
             "playlists/gdq/agdq2017raw.min.json",
-            "playlists/rpglb/2015.json",
-            "playlists/rpglb/2016.json",
             "playlists/rpglb/2017.json",
-            "playlists/rpglb/2016talesof.json",
             "playlists/rpglb/2017talesof.json",
             "playlists/esa/2015purple.min.json"
         ],
         extraPlaylists: [
             "playlists/anime/casshernsins.min.json",
-            "playlists/anime/flcl.min.json",
             "playlists/anime/samuraichamploo.min.json",
             "playlists/anime/souleater.min.json",
             "playlists/anime/trigun.min.json",
@@ -76,6 +73,9 @@ var rtv = {
             "playlists/ethoplaysminecraft.min.json",
             "playlists/linustechtips.min.json",
             "playlists/pannenkoek2012.min.json",
+            "playlists/rpglb/2015.json",
+            "playlists/rpglb/2016.json",
+            "playlists/rpglb/2016talesof.json"
         ]
     },
     init: function(path) {
