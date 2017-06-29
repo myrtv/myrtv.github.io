@@ -553,28 +553,22 @@ var rtv = {
                     $("#customizeChannels select option:selected").removeAttr("selected");
                 });
             },
+            cleanupRegex: /(^playlists\/|(\.(min|json))+$)/ig,
             generateTable: function() {
                 //Wake me up.
                 var out = $("<div />").append("<p>Channels under <strong>Your Channels</strong> will be displayed in the guide.</p>");
 
                 var table = $("<table />", {id: "customizeChannels", class: "customizeChannels", style: "background-color:white"});
                 table.append("<tr class='header'><td>Available Channels</td><td>Your Channels</td></tr>");
-                var regex = /(^playlists\/|(\.(min|json))+$)/ig //Clean up playlists names in the manager
 
                 //Generate Your Channels first
                 var yourChannels = $("<select />", {id: 'chanYours', 'multiple': true, size: 6});
                 for (i=0;i<rtv.config.cache.playlists.length;i++) {
                     var item = rtv.config.cache.playlists[i];
-                    $("<option />", {value: item, text: item.replace(regex,"")}).appendTo(yourChannels);
+                    $("<option />", {value: item, text: item.replace(this.cleanupRegex,"")}).appendTo(yourChannels);
                 }
                 //Generate Available Channels
-                var availChannels = $("<select />", {id: 'chanAvail', 'multiple': true, size: 6});
-                for (i=0;i<rtv.config.defaultPlaylists.length;i++) {
-                    var item = rtv.config.defaultPlaylists[i];
-                    if ($.inArray(item, rtv.config.cache.playlists) == -1) {
-                        $("<option />", {value: item, text: item.replace(regex,"")}).appendTo(availChannels);
-                    }
-                }
+                var availChannels = this.availChannels();
                 table.append("<tr><td>"+availChannels[0].outerHTML+"</td><td>"+yourChannels[0].outerHTML+"</td></tr>");
                 //Generate buttons
                 table.append("<tr><td style='text-align:right'><button id='availMoveAll'>All &gt;</button><button id='availMoveSel'>Selected &gt;</button></td><td style='text-align:left'><button id='yoursMoveSel'>&lt; Selected</button><button id='yoursMoveAll'>&lt; All</button></td></tr>");
@@ -584,6 +578,18 @@ var rtv = {
                 out.append(table);
 
                 return out;
+            },
+            availChannels: function(needle) {
+                var avail = $("<select />", {id: 'chanAvail', 'multiple': true, size: 6});
+                
+                for (i=0;i<rtv.config.defaultPlaylists.length;i++) {
+                    var item = rtv.config.defaultPlaylists[i];
+                    if ($.inArray(item, rtv.config.cache.playlists) == -1) {
+                        $("<option />", {value: item, text: item.replace(this.cleanupRegex,"")}).appendTo(avail);
+                    }
+                }
+                
+                return avail;
             }
         },
         open: function() {
@@ -628,15 +634,14 @@ var rtv = {
         },
         generateHead: function() {
             var head = $("<div />", {class: "guideHead"});
-            $("<span />", {class: "pointer", text: "[Close RTV Guide]"}).one('click',function() { rtv.guide.close(); }).appendTo(head);
-            $("<span />", {class: "pointer", text: "[Resync Player]"}).on('click',function() {
-                $("[id^=window-player]").each(function() {
-                    rtv.player.players[$(this).data()["player-index"]].resync();
-                });
-            }).appendTo(head);
-            //$("<span />", {class: "pointer", text: "[Configure RTV]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
-            $("<span />", {class: "pointer", text: "[Select Channels]"}).on('click',function() { rtv.guide.channels.open(); }).appendTo(head);
-            $("<span />", {class: "pointer", text: "[About RTV]"}).on('click',function() { rtv.about(); }).appendTo(head);
+            $.each([
+                ["Close RTV Guide", function() { rtv.guide.close(); }],
+                ["Resync Player", function() {$("[id^=window-player]").each(function() {rtv.player.players[$(this).data()["player-index"]].resync();});}],
+                ["Select Channels", function() { rtv.guide.channels.open(); }],
+                ["About RTV", function() { rtv.about(); }]
+            ], function(i,v) {
+                $("<span />", {class: "pointer", text: v[0]}).on('click', v[1]).appendTo(head);
+            });
 
             if (0 && Notification.permission !== "granted") {
                 $("<span />", {id: "enableSubs", class: "pointer", text: "(Enable Subscriptions)"}).one('click',function() {

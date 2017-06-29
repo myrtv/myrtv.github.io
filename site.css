@@ -107,7 +107,7 @@ video {
 #customizeChannels td {
     vertical-align:top;
 }
-#customizeChannels select {
+#customizeChannels select#chanAvail, #customizeChannels select#chanYours {
     width:100%;
     min-width:20%;
     max-width:100%;
