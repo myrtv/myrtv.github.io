@@ -10,7 +10,12 @@
 #In this case, load all the items manually, save the page, then pipe it into here. (need to switch from curl)
 
 PAGE=$(curl $1) #Optionally have this pull in file contents instead.
-PLTITLE=$(echo "$PAGE" | grep -Po '<title>.*?</title>' | sed -re 's/(<\/?title>)//g' -e 's/ - YouTube$//ig') #Not future proof.
+PLTITLE=$(echo "$PAGE" | grep -Po '(?<=<title>).*?(?= - YouTube</title>)') #Not future proof.
+OUTNAME="$(echo $PLTITLE | sed -e 's/\s/_/g' -e 's/[^[:alnum:]_-]//g').min.json"
+
+#Skip if exists, for performance.
+[ -f $OUTNAME ] && echo "$PLTITLE already exists, skipping..." && exit
+
 PAGE="$(echo "$PAGE" | echo "$(grep -Po '(data-(title|video-id)="(.*?)"|class=\"timestamp\".*<\/div>)')" | sed -e 's/"$//g')"
 #data-title and data-video-id are used later to determine their ordering, timestamp is formatted immediately below.
 PAGE="$(echo "$PAGE" | sed -re 's/class=\"timestamp\".*>([0-9:]+).*<\/div>/\1/g')"
@@ -70,7 +75,6 @@ done
 
 #We're done!
 OUTJSON="{\"info\":{\"name\":\"$PLTITLE\",\"start_epoch_gtm\":0,\"end_epoch_gtm\":0,\"service\":\"youtube\"},\"playlist\": [$PLAYLIST]}"
-OUTNAME="$(echo $PLTITLE | sed -e 's/\s/_/g' -e 's/[^[:alnum:]_-]//g').min.json"
 echo $OUTJSON > $OUTNAME #I don't trust myself to write a file.
 echo
 echo "Playlist saved to \"$OUTNAME\""
