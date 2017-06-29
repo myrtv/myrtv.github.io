@@ -98,7 +98,6 @@ var rtv = {
             "playlists/anime/jinkiextend.min.json",
             "playlists/anime/jyu-oh-sei.min.json",
             "playlists/anime/kazenostigma.min.json",
-            "playlists/anime/lain.min.json",
             "playlists/anime/lastexile.min.json",
             "playlists/anime/linebarrelsofiron.min.json",
             "playlists/anime/mongolianchopsquad.min.json",
