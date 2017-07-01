@@ -18,7 +18,9 @@ var rtv = {
             height: "auto",
             width: "auto",
             modal: true,
-            buttons: {},
+            buttons: {
+                "Clear Local Storage": function() { localStorage.clear(); location.reload(); },
+            },
             open: function(event, ui){
                 $(this).parent().find('.ui-dialog-title').prepend("<img src='favicon.png' style='display:inline-block'/> ");
             },
@@ -61,18 +63,18 @@ var rtv = {
         defaultPlaylists: [
             "playlists/anime/flcl.min.json",
             "playlists/anime/initiald.min.json",
-            "playlists/gdq/agdq2013.min.json",
-            "playlists/gdq/sgdq2013.min.json",
-            "playlists/gdq/agdq2014.min.json",
-            "playlists/gdq/sgdq2014.min.json",
-            "playlists/gdq/agdq2015.min.json",
-            "playlists/gdq/sgdq2015.min.json",
-            "playlists/gdq/agdq2016.min.json",
-            "playlists/gdq/sgdq2016.min.json",
-            "playlists/gdq/agdq2017raw.min.json",
-            "playlists/rpglb/2017.json",
-            "playlists/rpglb/2017talesof.json",
-            "playlists/esa/2015purple.min.json"
+            "playlists/speedrun/gdq/agdq2013.min.json",
+            "playlists/speedrun/gdq/sgdq2013.min.json",
+            "playlists/speedrun/gdq/agdq2014.min.json",
+            "playlists/speedrun/gdq/sgdq2014.min.json",
+            "playlists/speedrun/gdq/agdq2015.min.json",
+            "playlists/speedrun/gdq/sgdq2015.min.json",
+            "playlists/speedrun/gdq/agdq2016.min.json",
+            "playlists/speedrun/gdq/sgdq2016.min.json",
+            "playlists/speedrun/gdq/agdq2017raw.min.json",
+            "playlists/speedrun/rpglb/2017.json",
+            "playlists/speedrun/rpglb/2017talesof.json",
+            "playlists/speedrun/esa/2015purple.min.json"
         ],
         extraPlaylists: [
             "playlists/anime/aquarion.min.json",
@@ -147,17 +149,17 @@ var rtv = {
             "playlists/anime/witchblade.min.json",
             "playlists/anime/x.min.json",
             "playlists/anime/xxxholic.min.json",
-            "playlists/gdq/allgdq.min.json",
-            "playlists/gdq/agdq2011.min.json",
-            "playlists/gdq/agdq2012.min.json",
-            "playlists/gdq/sgdq2012.min.json",
+            "playlists/speedrun/gdq/allgdq.min.json",
+            "playlists/speedrun/gdq/agdq2011.min.json",
+            "playlists/speedrun/gdq/agdq2012.min.json",
+            "playlists/speedrun/gdq/sgdq2012.min.json",
+            "playlists/speedrun/rpglb/2015.json",
+            "playlists/speedrun/rpglb/2016.json",
+            "playlists/speedrun/rpglb/2016talesof.json",
             "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/linustechtips.min.json",
-            "playlists/pannenkoek2012.min.json",
-            "playlists/rpglb/2015.json",
-            "playlists/rpglb/2016.json",
-            "playlists/rpglb/2016talesof.json"
+            "playlists/pannenkoek2012.min.json"
         ]
     },
     init: function(path) {
@@ -167,7 +169,7 @@ var rtv = {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
             var last = localStorage['rtvLastPlaylist']
-            if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = 0; }
+            if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = false; }
             var list = (path || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
                 that = this;
 
