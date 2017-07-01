@@ -60,6 +60,7 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         defaultPlaylists: [
+            "playlists/anime/animeshuffletest.min.json",
             "playlists/anime/flcl.min.json",
             "playlists/anime/initiald.min.json",
             "playlists/speedrun/gdq/agdq2013.min.json",
@@ -76,7 +77,6 @@ var rtv = {
             "playlists/speedrun/esa/2015purple.min.json"
         ],
         extraPlaylists: [
-            "playlists/anime/animeshuffletest.min.json",
             "playlists/anime/aquarion.min.json",
             "playlists/anime/ariathescarletammo.min.json",
             "playlists/anime/bakaandtestsummonthebeasts.min.json",
