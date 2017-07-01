@@ -10,8 +10,7 @@ var rtv = {
     about: function() {
         var about = '<div title="About RTV">'+
                     '<a href="https://github.com/myrtv/myrtv.github.io" target="_blank">GitHub Repository</a> (submit bugs/requests here)'+
-                    '<br><br>Made with jQuery and jQuery UI.'+
-                    '<hr><a href=\'javascript:R=document.getElementsByClassName("pl-video"),T=document.getElementsByClassName("pl-header-title")[0].innerText,V={info:{name:T,service:"youtube"},playlist:[]};for(i=0;i<R.length;i++){a=R[i].getElementsByClassName("timestamp")[0].innerText.split(":");V.playlist.push({name:R[i].dataset.title,duration:+a.pop()+(a.pop()*60)+(a[0]?a.pop()*3600:0),qualities:[{src:R[i].dataset.videoId}]})};prompt(T,JSON.stringify(V));void(0)\'>YouTube to RTV Playlist Converter</a><br><small>Add as bookmark and activate on YouTube playlist pages.</small></div>';
+                    '<br><br>Made with jQuery, jQuery UI, and seedrandom.js (if available)</div>';
 
         $(about).dialog({
             autoOpen: true,
@@ -77,6 +76,7 @@ var rtv = {
             "playlists/speedrun/esa/2015purple.min.json"
         ],
         extraPlaylists: [
+            "playlists/anime/_opsshuffletest.min.json",
             "playlists/anime/aquarion.min.json",
             "playlists/anime/ariathescarletammo.min.json",
             "playlists/anime/bakaandtestsummonthebeasts.min.json",
@@ -196,13 +196,11 @@ var rtv = {
                     $.getJSON(list, function (data) {
                         var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
                         rtv.player.cached_playlists[store] = that.generateStore(store,playlist);
-
                         if (callback) { callback(); }
                     });
                 }
             },
             generateStore: function(store,playlist) {
-                //Determine total length
                 playlist.info.url = store;
                 playlist.info.total_duration = 0;
                 $.each(playlist.playlist, function (index, key) {
@@ -210,14 +208,33 @@ var rtv = {
                     playlist.playlist[index].index = index;
                 });
 
+                if (playlist.info.shuffle == true) {
+                    if (typeof Math.seedrandom == "function") {
+                        var start_epoch = new Date((playlist.info.start_epoch_gtm || 0) * 1000),
+                            start = (Math.floor(new Date() / 1000)) - Math.floor(start_epoch / 1000),
+                            total_duration = playlist.info.total_duration,
+                            loops = Math.ceil(start / total_duration);
+
+                        Math.seedrandom(loops);
+                        var t = [];
+                        while (playlist.playlist.length) {
+                            t.push(playlist.playlist.splice(playlist.playlist.length * Math.random() | 0, 1)[0]);
+                        }
+
+                        playlist.playlist = t;
+                    } else {
+                        console.warn(store, "seedrandom is not available, cannot shuffle.")
+                    }
+                }
+
                 return playlist
             },
             utilities: {
                 getCurrentTime: function() {
-                    var start_epoch = new Date((this.cache.info.start_epoch_gtm || 0) * 1000);
-                    var start = (Math.floor(new Date() / 1000) + rtv.offset) - Math.floor(start_epoch / 1000);
-                    var total_duration = this.cache.info.total_duration;
-                    var loops = Math.ceil(start / total_duration);
+                    var start_epoch = new Date((this.cache.info.start_epoch_gtm || 0) * 1000),
+                        start = (Math.floor(new Date() / 1000)) - Math.floor(start_epoch / 1000),
+                        total_duration = this.cache.info.total_duration,
+                        loops = Math.ceil(start / total_duration);
 
                     start %= total_duration;
 
@@ -516,10 +533,11 @@ var rtv = {
                     }
                 })
 
-                function save(exit) {
+                function save() {
                     var yours = [];
+
                     $("select#chanYours option").each(function () {
-                        if ($inArray($(this).val(),yours) == -1) {
+                        if ($.inArray($(this).val(),yours) == -1) {
                             yours.push($(this).val());
                         }
                     });
@@ -546,7 +564,6 @@ var rtv = {
                     } else {
                         $("<div title='Select RTV Channels - Error'><p><strong>Your Channels</strong> must have at least one channel.</p></div>").dialog({modal: true, width: "auto"});
                     }
-                    //if (exit) { dialog.dialog("close") };
                 }
 
                 channelDialog.find("button").button().click(function(event) {
