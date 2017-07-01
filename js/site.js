@@ -32,16 +32,19 @@ var rtv = {
             var that = this;
 
             this.load();
+
             if (!this.cache.playlists || this.cache.playlists.length == 0) {
                 console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
                 this.cache.playlists = this.defaultPlaylists;
             }
+
             //Instate custom playlists
             if (localStorage.rtvCustomPlaylists && localStorage.rtvCustomPlaylists.length > 0) {
                 $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
                     rtv.player.playlist.generate({name:"custom"+i,list:v});
                 })
             }
+
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
             this.save();
         },
@@ -169,7 +172,10 @@ var rtv = {
                 that = this;
 
             $.each(rtv.config.cache.playlists, function (index, item) {
-                var cb = (item == list) ? function() { localStorage['rtvLastPlaylist'] = list; that.spawn(item) } : false;
+                var cb = (item == list) ? function() {
+                    localStorage['rtvLastPlaylist'] = list;
+                    that.spawn(item)
+                } : false;
                 that.playlist.generate(item, cb);
             });
         },
@@ -511,7 +517,9 @@ var rtv = {
                 function save(exit) {
                     var yours = [];
                     $("select#chanYours option").each(function () {
-                        yours.push($(this).val());
+                        if ($inArray($(this).val(),yours) == -1) {
+                            yours.push($(this).val());
+                        }
                     });
 
                     if (yours.length > 0) {
@@ -615,6 +623,7 @@ var rtv = {
                         width: "auto",
                         modal: true,
                         buttons: {
+                            "Help": function() { window.open('https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels', '_blank'); },
                             "Save": that.save,
                             Cancel: function() { managerDialog.dialog("close"); }
                         }
