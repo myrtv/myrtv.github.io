@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-#Convert YouTube playlists to RTV playlists.
+#Convert YouTube playlists to RTV playlists: https://github.com/myrtv/myrtv.github.io/
 #depends: curl (wget would probably be fine), grep, sed, wc
-#Probably a fine example of the worst possible usage of grep and sed.
 #Developed on MinGW, but should be fine elsewhere. WINDOWS USERS GET MINGW: http://mingw.org
 
 #./youtube-playlists.sh https://www.youtube.com/playlist?list=ID
@@ -17,14 +16,17 @@ PLTITLE=$(echo "$PAGE" | grep -Po '(?<=<title>).*?(?= - YouTube</title>)') #Not 
 OUTNAME="$(echo "$PLTITLE" | sed -e 's/\s/_/g' -e 's/[^[:alnum:]_-]//g').min.json"
 
 #Skip if exists, for performance.
-[ -f "$OUTNAME" ] && echo -e "\n$PLTITLE ($OUTNAME) already exists, skipping..." && exit
+[ -f "$OUTNAME" ] && echo "
+$PLTITLE ($OUTNAME) already exists, skipping." && exit
 
 PAGE="$(echo "$PAGE" | grep -Po '(data-(title|video-id)="(.*?)"|class=\"timestamp\".*<\/div>)' | sed -e 's/"$//g')"
 #data-title and data-video-id are used later to determine their ordering, timestamp is formatted immediately below.
 PAGE="$(echo "$PAGE" | sed -re 's/class=\"timestamp\".*>([0-9:]+).*<\/div>/\1/g')"
 LINES=$(echo "$PAGE" | wc -l)
 
-echo -e "\nPlaylist: $PLTITLE ($OUTNAME)\n"
+echo "
+Playlist: $PLTITLE ($OUTNAME)
+"
 
 PLAYLIST=""
 for ((i=1;i<$LINES;i+=3));
@@ -75,4 +77,5 @@ done
 #We're done!
 OUTJSON="{\"info\":{\"name\":\"$PLTITLE\",\"start_epoch_gtm\":0,\"end_epoch_gtm\":0,\"service\":\"youtube\"},\"playlist\": [$PLAYLIST]}"
 echo $OUTJSON > $OUTNAME #I don't trust myself to write a file.
-echo -e "\nPlaylist saved to \"$OUTNAME\""
+echo "
+Playlist saved to \"$OUTNAME\""
