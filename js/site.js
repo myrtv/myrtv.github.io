@@ -205,7 +205,6 @@ var rtv = {
                 playlist.info.total_duration = 0;
                 $.each(playlist.playlist, function (index, key) {
                     playlist.info.total_duration += key.duration;
-                    playlist.playlist[index].index = index;
                 });
 
                 if (playlist.info.shuffle == true) {
@@ -215,10 +214,11 @@ var rtv = {
                             total_duration = playlist.info.total_duration,
                             loops = Math.ceil(start / total_duration);
 
-                        Math.seedrandom(loops);
                         var t = [];
                         while (playlist.playlist.length) {
-                            t.push(playlist.playlist.splice(playlist.playlist.length * Math.random() | 0, 1)[0]);
+                            Math.seedrandom(loops);
+                            var i = playlist.playlist.splice(playlist.playlist.length * Math.random() | 0, 1)[0]
+                            t.push(i);
                         }
 
                         playlist.playlist = t;
@@ -226,6 +226,11 @@ var rtv = {
                         console.warn(store, "seedrandom is not available, cannot shuffle.")
                     }
                 }
+
+                //Don't like this here, but there's seemingly no better place to re-index especially after shuffle.
+                $.each(playlist.playlist, function (index, key) {
+                    playlist.playlist[index].index = index;
+                });
 
                 return playlist
             },
@@ -704,7 +709,7 @@ var rtv = {
             }
         },
         open: function() {
-            $("#rtvGuide").remove();
+            this.close();
             $("body").append(rtv.guide.generate());
         },
         close: function() {
