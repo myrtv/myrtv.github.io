@@ -29,10 +29,18 @@ var rtv = {
     },
     config: {
         init: function() {
+            var that = this;
+
             this.load();
             if (!this.cache.playlists || this.cache.playlists.length == 0) {
                 console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
                 this.cache.playlists = this.defaultPlaylists;
+            }
+            //Instate custom playlists
+            if (localStorage.rtvCustomPlaylists && localStorage.rtvCustomPlaylists.length > 0) {
+                $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
+                    rtv.player.playlist.generate({name:"custom"+i,list:v});
+                })
             }
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
             this.save();
@@ -155,8 +163,10 @@ var rtv = {
     player: {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         create: function(path) {
-            var list = (path || localStorage['rtvLastPlaylist'] || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]);
-            var that = this;
+            var last = localStorage['rtvLastPlaylist']
+            if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = 0; }
+            var list = (path || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
+                that = this;
 
             $.each(rtv.config.cache.playlists, function (index, item) {
                 var cb = (item == list) ? function() { localStorage['rtvLastPlaylist'] = list; that.spawn(item) } : false;
@@ -166,32 +176,33 @@ var rtv = {
         cached_playlists: {},
         playlist: {
             generate: function(list, callback) {
-                var store = list;
+                var store = list,
+                    that = this;
 
-                if (rtv.player.cached_playlists[store] && callback) {
-                    callback();
-                }
+                if (rtv.player.cached_playlists[store] && callback) { callback(); }
 
-                $.getJSON(list, function (data) {
-                    //localStorage['rtvLastPlaylist'] = list; //Save.
+                if (typeof list == "object") {
+                    rtv.player.cached_playlists[list.name] = that.generateStore(list.name,list.list);
+                    if (callback) { callback(); }
+                } else {
+                    $.getJSON(list, function (data) {
+                        var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
+                        rtv.player.cached_playlists[store] = that.generateStore(store,playlist);
 
-                    //Offline testing and not using a virtual server is weird, don't judge me.
-                    var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
-
-                    //Determine total length
-                    playlist.info.url = store;
-                    playlist.info.total_duration = 0;
-                    $.each(playlist.playlist, function (index, key) {
-                        playlist.info.total_duration += key.duration;
-                        playlist.playlist[index].index = index;
+                        if (callback) { callback(); }
                     });
-
-                    rtv.player.cached_playlists[store] = playlist;
-
-                    if (callback) {
-                        callback();
-                    }
+                }
+            },
+            generateStore: function(store,playlist) {
+                //Determine total length
+                playlist.info.url = store;
+                playlist.info.total_duration = 0;
+                $.each(playlist.playlist, function (index, key) {
+                    playlist.info.total_duration += key.duration;
+                    playlist.playlist[index].index = index;
                 });
+
+                return playlist
             },
             utilities: {
                 getCurrentTime: function() {
@@ -480,10 +491,14 @@ var rtv = {
                     height: "auto",
                     width: "auto",
                     modal: true,
+                    dialogClass: 'dialog-customizePlaylists',
                     buttons: {
+                        "test": {
+                            text: "Custom Channels",
+                            "class": "customPlaylists",
+                            click: function() { that.custom.open() }
+                        },
                         "Save": save,
-                        //"Manage Customs": function() { that.customs.open() },
-                        //"Default": function() { },
                         Cancel: function() {
                           channelDialog.dialog("close");
                         }
@@ -491,10 +506,9 @@ var rtv = {
                     close: function() {
                         //$("<div title='Select RTV Channels'><p>Please reload RTV to reflect any changes.</p></div>").dialog({modal: true, width: "auto"});
                     }
-                });
+                })
 
                 function save(exit) {
-                    console.log('save called')
                     var yours = [];
                     $("select#chanYours option").each(function () {
                         yours.push($(this).val());
@@ -555,7 +569,7 @@ var rtv = {
             cleanupRegex: /(^playlists\/|(\.(min|json))+$)/ig,
             generateTable: function() {
                 //Wake me up.
-                var out = $("<div />").append("<p>Channels under <strong>Your Channels</strong> will be displayed in the guide.</p>");
+                var out = $("<div />").append("<p>Channels under <strong>Your Channels</strong> will be displayed in the guide.<br><strong>Custom Channels</strong> are modified by clicking the button below.</p>");
 
                 var table = $("<table />", {id: "customizeChannels", class: "customizeChannels", style: "background-color:white"});
                 table.append("<tr class='header'><td>Available Channels</td><td>Your Channels</td></tr>");
@@ -580,15 +594,85 @@ var rtv = {
             },
             availChannels: function(needle) {
                 var avail = $("<select />", {id: 'chanAvail', 'multiple': true, size: 6});
-                
+
                 for (i=0;i<rtv.config.defaultPlaylists.length;i++) {
                     var item = rtv.config.defaultPlaylists[i];
                     if ($.inArray(item, rtv.config.cache.playlists) == -1) {
                         $("<option />", {value: item, text: item.replace(this.cleanupRegex,"")}).appendTo(avail);
                     }
                 }
-                
+
                 return avail;
+            },
+            custom: {
+                open: function() {
+                    var that = this,
+                        manager = "<div title='Custom Channel'><p>Enter each custom channel in its own text box.</p>"+this.load()+"</div>"
+
+                    var managerDialog = $(manager).dialog({
+                        autoOpen: true,
+                        height: "auto",
+                        width: "auto",
+                        modal: true,
+                        buttons: {
+                            "Save": that.save,
+                            Cancel: function() { managerDialog.dialog("close"); }
+                        }
+                    }).attr("id", "customPlaylistsManager");
+                },
+                save: function() {
+                    //All non-empty inputs pushed to array, then JSON.stringify to save.
+                    var t = [],
+                        that = this;
+
+                    $("#customPlaylistsManager input").each(function(i,v) {
+                        if (v.value !== "") {
+                            try {
+                                var a = JSON.parse(v.value)
+                                if (a.info && a.info.name && a.playlist.length > 0) {
+                                    t.push(a);
+                                } else {
+                                    rtv.guide.channels.custom.edialog(i,"No info.name or empty playlist.","Ensure it was entered correctly.");
+                                }
+                            } catch(e) {
+                                rtv.guide.channels.custom.edialog(i,e,"Ensure it was entered correctly.");
+                            }
+                        }
+                    });
+
+                    localStorage.rtvCustomPlaylists = JSON.stringify(t);
+
+                    var dlg = $("<div title='Custom Channels - Saved'><p><strong>Custom Channels</strong> has been saved, please reload RTV to reflect any changes.</p></div>").dialog({
+                        modal: true,
+                        width: "auto",
+                        buttons: {
+                            "Reload now": function() { location.reload(); },
+                            Cancel: function() { dlg.dialog("close"); }
+                        }
+                    });
+                },
+                edialog: function(i,error,follow) {
+                    $('<div title="Issue parsing input #'+(i+1)+'"><p class="depress">'+error+'</p>'+follow+'</div>').dialog({width:"auto",modal:1})
+                },
+                load: function() {
+                    function genInput(line) {
+                        return $('<input />', {
+                            placeholder: "Paste playlist here...",
+                            style: "width:100%",
+                            value: line
+                        })[0].outerHTML
+                    }
+
+                    var out = genInput("");
+
+                    if (localStorage.rtvCustomPlaylists) {
+                        $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
+                            out = genInput(JSON.stringify(v))+out;
+                        })
+                    }
+
+                    return out
+                }
             }
         },
         open: function() {

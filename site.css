@@ -114,6 +114,15 @@ video {
     height:150px;
 }
 
+.dialog-customizePlaylists .ui-dialog-buttonset {
+    width:100%;
+    text-align:right;
+}
+
+.dialog-customizePlaylists .ui-dialog-buttonset button.customPlaylists {
+    float:left;
+}
+
 table#customsManager {
     width: 100%;
 }
@@ -124,4 +133,12 @@ table#customsManager {
 #customsManager select, #customsManager textarea {
     width: 100%;
     height:100%;
+}
+
+p.depress {
+    background-color:#dedede;
+    border-radius:4px;
+    margin:initial 0px;
+    padding:5px;
+    font-size:small;
 }
