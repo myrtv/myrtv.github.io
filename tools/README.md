@@ -5,7 +5,7 @@ Need help picking one?
  - Visit the actual playlist page on YouTube. (`https://www.youtube.com/playlist?list=STUFF`)
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
    - For YouTube playlists with more than 100 items.
- - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
+ - Open your browser's console (Firefox: `Ctrl+Shift+K`, Chrome: `Ctrl+Shift+J`), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
    - If the result is cut off in the text box, it is also available from the console.
    - If obtained from the console **do not copy** the start and end double-quotes: `"`, your copy should start and end with `{ }`.
@@ -15,7 +15,7 @@ Need help picking one?
  - Visit the desired Videos tab on YouTube. (`https://www.youtube.com/user/USERNAME/videos`)
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
    - For YouTube channels with more than 30 videos.
- - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
+ - Open your browser's console (Firefox: `Ctrl+Shift+K`, Chrome: `Ctrl+Shift+J`), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
    - The end result is flipped, so the oldest/last video is the first in the generated playlist.
    - If the result is cut off in the text box, it is also available from the console.
