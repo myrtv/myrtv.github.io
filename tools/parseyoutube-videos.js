@@ -1,17 +1,2 @@
-//Parsing the "Videos" tab. Must load all items manually.
-
-playlist = [];
-
-$(".yt-shelf-grid-item").each(function (index, item) {
-  var a = $(item).find(".video-time").text().split(':');
-  playlist.push({
-    "name": $(item).find(".yt-lockup-title a").text(),
-    "duration": (+a[a.length-1])+(+a[a.length-2]*60)+((a.length==3)?(+a[a.length-3]*3600):0), //Why
-    "qualities": [{
-    "src": $(item).find(".yt-lockup").data("context-item-id")
-  }]
-  })
-})
-playlist.reverse(); //Flip the playlist, so the newest upload is last and vice-versa.
-
-prompt('', JSON.stringify(playlist));
+//JS YT Videos tab -> RTV playlist converter
+R=document.getElementsByClassName('yt-shelf-grid-item'),T=document.getElementsByClassName('qualified-channel-title-text')[0].innerText,V={info:{name:T,service:'youtube'},playlist:[]};for(i=0;i<R.length;i++){a=R[i].getElementsByClassName('video-time')[0].innerText.split(':');V.playlist.push({name:R[i].getElementsByClassName('yt-uix-tile-link')[0].title,duration:+a.pop()+(a.pop()*60)+(a[0]?a.pop()*3600:0),qualities:[{src:R[i].getElementsByClassName('yt-lockup-video')[0].dataset.contextItemId}]})}V.playlist.reverse();Q=JSON.stringify(V);console.log(Q);prompt(T,Q);void(0)
