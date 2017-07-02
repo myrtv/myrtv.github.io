@@ -27,7 +27,7 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
 
 ### Supported video providers
  - Direct links (site.com/video.mp4)
- - YouTube ([c7fa910269a59d15e488d273b57de9dd565a7289](https://github.com/myrtv/myrtv.github.io/commit/c7fa910269a59d15e488d273b57de9dd565a7289))
+ - [YouTube](https://github.com/myrtv/myrtv.github.io/wiki/YouTube-Playlists)
 
 ### Planned Features
  - ~~Playlist switching~~ *Done, the channel select window!*
