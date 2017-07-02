@@ -5,9 +5,7 @@ A pseudo-live TV implementation to save bandwidth but still function normally.
 
 ----
 
-#### What does pseudo-live TV mean?
-*Fake*-live TV. It just keeps on going.
-
+#### What does that even mean?
 When you *tune in* to RTV it obtains a playlist, which has a defined starting point in history (yesterday, 10 years ago, whatever). It proceeds to determine, had that same playlist been repeating since it started, what is currently *on* right now.
 
 ----
