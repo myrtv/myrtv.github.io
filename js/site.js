@@ -214,14 +214,17 @@ var rtv = {
                             total_duration = playlist.info.total_duration,
                             loops = Math.ceil(start / total_duration);
 
-                        var t = [];
-                        while (playlist.playlist.length) {
-                            Math.seedrandom(loops);
-                            var i = playlist.playlist.splice(playlist.playlist.length * Math.random() | 0, 1)[0]
-                            t.push(i);
-                        }
+                        //In-place shuffle: https://bost.ocks.org/mike/shuffle/
+                        var m = playlist.playlist.length, t, i;
+                        Math.seedrandom(loops);
+                        while (m) {
+                            var r = Math.random();
+                            i = Math.floor(r * m--);
 
-                        playlist.playlist = t;
+                            t = playlist.playlist[m];
+                            playlist.playlist[m] = playlist.playlist[i];
+                            playlist.playlist[i] = t;
+                        }
                     } else {
                         console.warn(store, "seedrandom is not available, cannot shuffle.")
                     }
