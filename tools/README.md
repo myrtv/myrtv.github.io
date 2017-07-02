@@ -8,7 +8,7 @@ Need help picking one?
  - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
    - If the result is cut off in the text box, it is also available from the console.
-   - If obtained from the console do not copy the start and end double-quotes: `"`, your copy should start and end with `{ }`.
+   - If obtained from the console **do not copy** the start and end double-quotes: `"`, your copy should start and end with `{ }`.
  
  ## [youtube-parse-videos.js](youtube-parse-videos.js)
  - Same as above, but parses the Videos tab of a channel instead of a specific YouTube playlist.
@@ -19,7 +19,7 @@ Need help picking one?
  - A window will pop up, the textbox contains the playlist.
    - The end result is flipped, so the oldest/last video is the first in the generated playlist.
    - If the result is cut off in the text box, it is also available from the console.
-   - If obtained from the console do not copy the start and end double-quotes: `"`, your copy should start and end with `{ }`.
+   - If obtained from the console **do not copy** the start and end double-quotes: `"`, your copy should start and end with `{ }`.
 
 ## [youtube-playlists.sh](youtube-playlists.sh)
  - For experts and bulk playlist generation.
