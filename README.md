@@ -36,7 +36,7 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
      - [Service workers](https://github.com/w3c/ServiceWorker/blob/master/explainer.md) (background task)
      - Receive run alerts. "first time only", "every time"?
  - ~~Playlist shuffling~~ *Done, seedrandom and Fisher Yates shuffle!*
- - ~~Custom playlist URLs~~ *Done (not URLs), the channel select window!*
+ - ~~Custom playlist URLs~~ *[Done (not URLs), the channel select window!](https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels)*
  - Picture in Picture
    - Getting there, jQuery UI dialogs help a ton.
  - Quality selector
