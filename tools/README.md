@@ -7,15 +7,17 @@ Need help picking one?
    - For YouTube playlists with more than 100 items.
  - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
+   - If the result is cut off in the text box, it is also available from the console.
  
  ## [youtube-parse-videos.js](youtube-parse-videos.js)
  - Same as above, but parses the Videos tab of a channel instead of a specific YouTube playlist.
  - Visit the desired Videos tab on YouTube. (`https://www.youtube.com/user/USERNAME/videos`)
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
    - For YouTube channels with more than 30 videos.
- - The end result is flipped, so the oldest/last video is the first in the generated playlist.
  - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
+   - The end result is flipped, so the oldest/last video is the first in the generated playlist.
+   - If the result is cut off in the text box, it is also available from the console.
 
 ## [youtube-playlists.sh](youtube-playlists.sh)
  - For experts and bulk playlist generation.
