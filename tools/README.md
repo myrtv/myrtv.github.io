@@ -1,9 +1,19 @@
 Need help picking one?
 
-## [parseyoutube.js](parseyoutube.js)
+## [youtube-parse.js](youtube-parse.js)
  - Easiest, one playlist at a time.
  - Visit the actual playlist page on YouTube. (`https://www.youtube.com/playlist?list=STUFF`)
- - If there are more than 100 items, make sure you can see them all.
+ - Load all desired videos to grab by clicking *[Load more]* at the bottom.
+   - For YouTube playlists with more than 100 items.
+ - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
+ - A window will pop up, the textbox contains the playlist.
+ 
+ ## [youtube-parse-videos.js](youtube-parse-videos.js)
+ - Same as above, but parses the Videos tab of a channel instead of a specific YouTube playlist.
+ - Visit the desired Videos tab on YouTube. (`https://www.youtube.com/user/USERNAME/videos`)
+ - Load all desired videos to grab by clicking *[Load more]* at the bottom.
+   - For YouTube channels with more than 30 videos.
+ - The end result is flipped, so the oldest/last video is the first in the generated playlist.
  - Open your browser's console (Firefox: Ctrl+Shift+K, Chrome: Ctrl:Shift+J), paste the contents, and submit.
  - A window will pop up, the textbox contains the playlist.
 
@@ -19,15 +29,10 @@ Need help picking one?
    - Quick and easy solution would be a watch folder.
  
 ## The rest
- - [parseyoutube-videos.js](parseyoutube-videos.js)
-   - Parses the Videos tab of a channel instead of a playlist to generate a playlist.
-   - Requires jQuery. Will eventually be deleted in favor of a jQuery-free version.
+
  - Scraping Archive.org's GDQ collections (the file names changed yearly)
    - All these require jQuery available, too lazy to convert to vanilla JavaScript
-   - [parsearchive_2011.js](parsearchive_2011.js)
-   - [parsearchive_2012.js](parsearchive_2012.js)
-   - [parsearchive_2013.js](parsearchive_2013.js)
-   - [parsearchive_2014+.js](parsearchive_2014+.js)
- - [parseyoutube-oldjquery.js](parseyoutube-oldjquery.js)
-   - Same as [parseyoutube.js](parseyoutube.js) but requires jQuery and is outdated.
-   - Eventually this will be deleted.
+   - [archive-parse-2011.js](archive-parse-2011.js)
+   - [archive-parse-2012.js](archive-parse-2012.js)
+   - [archive-parse-2013.js](archive-parse-2013.js)
+   - [archive-parse-2014+.js](archive-parse-2014+.js)
