@@ -248,11 +248,11 @@ var rtv = {
                 });
 
                 //Chat
-                var channelName = "rtv-" + store.replace(/(^playlists\/|\.min\.json$)/g, "").replace(/[\W]/g, "-"),
+                var channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").replace(/[\W]/g, "-"),
                     channelLen = 50,
                     D = new Date(),
                     suffix = "_" + D.getFullYear() + D.getMonth(),
-                    channelName = channelName.substring(0,(channelLen - suffix.length)) + suffix,
+                    channelName = "rtv-" + btoa(channelName.substring(0,(channelLen - suffix.length)) + suffix).replace(/[\W]/g, "").substring(0,Math.floor(channelLen/4)),
                     nick = "&nick=Kappa....",
                     channels = "&channels="+channelName,
                     config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
