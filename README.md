@@ -45,7 +45,10 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
  
 ### Unplanned Features
  - Chat (*actually live real time chat*, not chat replay)
+   - ***If you have ideas/solutions, contact me!***
+   - Should be as hassle-free as possible, safe, and not involve me moderating/managing it.
    - Maybe, using a javascript client and IRC or a customizable iframe. But don't hold your breath.
+   - Let users customize their chat client? i.e. specify iframe URL ready to go
    
 ---
 
