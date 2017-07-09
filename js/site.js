@@ -217,11 +217,13 @@ var rtv = {
                     playlist.info.total_duration += key.duration;
                 });
 
+                var loops;
+
                 if (playlist.info.shuffle == true) {
                     if (typeof Math.seedrandom == "function") {
                         var start_epoch = new Date((playlist.info.start_epoch_gtm || 0) * 1000),
                             start = (Math.floor(new Date() / 1000)) - Math.floor(start_epoch / 1000),
-                            total_duration = playlist.info.total_duration,
+                            total_duration = playlist.info.total_duration;
                             loops = Math.ceil(start / total_duration);
 
                         //In-place shuffle: https://bost.ocks.org/mike/shuffle/
@@ -244,6 +246,17 @@ var rtv = {
                 $.each(playlist.playlist, function (index, key) {
                     playlist.playlist[index].index = index;
                 });
+
+                //Chat
+                var channelName = "rtv-" + store.replace(/(^playlists\/|\.min\.json$)/g, "").replace(/[\W]/g, "-"),
+                    channelLen = 50,
+                    D = new Date(),
+                    suffix = "_" + D.getFullYear() + D.getMonth(),
+                    channelName = channelName.substring(0,(channelLen - suffix.length)) + suffix,
+                    nick = "&nick=Kappa....",
+                    channels = "&channels="+channelName,
+                    config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
+                playlist.info.chat = "https://qchat.rizon.net/?"+nick+channels+config
 
                 return playlist
             },
@@ -337,6 +350,9 @@ var rtv = {
 
             player.init(name);
             rtv.player.players.push(player);
+            
+            //TO-DO: Make configurable
+            $("#container").append('<div id="chat"><iframe src="'+player.cache.info.chat +'"></iframe></div>')
 
             return i;
         },
@@ -345,7 +361,7 @@ var rtv = {
                 var that = this;
 
                 $.each(rtv.player.players, function (i, player) {
-                    that.player(player);
+                    that.player(i);
                 });
             },
             player: function(player) {
@@ -369,6 +385,9 @@ var rtv = {
                 //Cannot splice, other indexes are changed.
                 //Delete, null, undef index or equivalent (preserves index)
                 //If we utilize the players list in a batch we'll need to acknowledge the empty slots
+                
+                //Remove chat
+                $("#container > #chat").remove()
             },
             youtube: function(player) {
                 player.instance.destroy();
@@ -790,7 +809,7 @@ var rtv = {
             });
 
             channel.click(function(e) {
-                rtv.player.players.slice(-1)[0].destroy();
+                rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
                 rtv.player.spawn(source.cache.info.url);
                 rtv.guide.close();
             });
@@ -935,7 +954,6 @@ var rtv = {
             );
             notif.onclick = function (event) {
                 //alert('chune');
-                console.log();
                 rtv.player.players.slice(-1)[0].destroy();
                 rtv.player.spawn(event.target.data);
                 rtv.guide.close();
