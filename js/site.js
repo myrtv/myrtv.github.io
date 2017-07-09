@@ -60,7 +60,6 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         defaultPlaylists: [
-            "playlists/anime/animeshuffletest.min.json",
             "playlists/anime/flcl.min.json",
             "playlists/anime/initiald.min.json",
             "playlists/speedrun/gdq/agdq2013.min.json",
@@ -75,9 +74,11 @@ var rtv = {
             "playlists/speedrun/rpglb/2017.json",
             "playlists/speedrun/rpglb/2017talesof.json",
             "playlists/speedrun/esa/2015purple.min.json",
-            "playlists/speedrun/speedgaming/snessuperstars2017.min.json"
+            "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
+            "playlists/speedrun/pokemon/psr2016.min.json"
         ],
         extraPlaylists: [
+            "playlists/anime/animeshuffletest.min.json",
             "playlists/anime/aquarion.min.json",
             "playlists/anime/ariathescarletammo.min.json",
             "playlists/anime/bakaandtestsummonthebeasts.min.json",
@@ -159,6 +160,7 @@ var rtv = {
             "playlists/speedrun/rpglb/2016talesof.json",
             "playlists/speedrun/speedgaming/snessuperstars2016.min.json",
             "playlists/speedrun/speedgaming/lttprandomizer2017.min.json",
+            "playlists/speedrun/pokemon/psr2015.min.json",
             "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/linustechtips.min.json",
@@ -196,10 +198,15 @@ var rtv = {
                     rtv.player.cached_playlists[list.name] = that.generateStore(list.name,list.list);
                     if (callback) { callback(); }
                 } else {
-                    $.getJSON(list, function (data) {
-                        var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
-                        rtv.player.cached_playlists[store] = that.generateStore(store,playlist);
-                        if (callback) { callback(); }
+                    $.ajax({
+                        dataType: "json",
+                        url: list,
+                        beforeSend: function(jqXHR) { jqXHR.overrideMimeType('text/html;charset=iso-8859-1'); },
+                        success: function (data) {
+                            var playlist = (data.playlist) ? data : JSON.parse(data.responseText);
+                            rtv.player.cached_playlists[store] = that.generateStore(store,playlist);
+                            if (callback) { callback(); }
+                        }
                     });
                 }
             },
