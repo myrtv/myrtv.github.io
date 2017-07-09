@@ -74,7 +74,8 @@ var rtv = {
             "playlists/speedrun/gdq/agdq2017raw.min.json",
             "playlists/speedrun/rpglb/2017.json",
             "playlists/speedrun/rpglb/2017talesof.json",
-            "playlists/speedrun/esa/2015purple.min.json"
+            "playlists/speedrun/esa/2015purple.min.json",
+            "playlists/speedrun/speedgaming/snessuperstars2017.min.json"
         ],
         extraPlaylists: [
             "playlists/anime/aquarion.min.json",
@@ -156,6 +157,8 @@ var rtv = {
             "playlists/speedrun/rpglb/2015.json",
             "playlists/speedrun/rpglb/2016.json",
             "playlists/speedrun/rpglb/2016talesof.json",
+            "playlists/speedrun/speedgaming/snessuperstars2016.min.json",
+            "playlists/speedrun/speedgaming/lttprandomizer2017.min.json",
             "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/linustechtips.min.json",
