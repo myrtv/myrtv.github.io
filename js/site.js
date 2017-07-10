@@ -217,22 +217,19 @@ var rtv = {
                     playlist.info.total_duration += key.duration;
                 });
 
-                var loops;
+                var start_epoch = new Date((playlist.info.start_epoch_gtm || 0) * 1000),
+                    start = (Math.floor(new Date() / 1000)) - Math.floor(start_epoch / 1000),
+                    total_duration = playlist.info.total_duration,
+                    loops = Math.ceil(start / total_duration);
 
                 if (playlist.info.shuffle == true) {
                     if (typeof Math.seedrandom == "function") {
-                        var start_epoch = new Date((playlist.info.start_epoch_gtm || 0) * 1000),
-                            start = (Math.floor(new Date() / 1000)) - Math.floor(start_epoch / 1000),
-                            total_duration = playlist.info.total_duration;
-                            loops = Math.ceil(start / total_duration);
-
                         //In-place shuffle: https://bost.ocks.org/mike/shuffle/
                         var m = playlist.playlist.length, t, i;
                         Math.seedrandom(loops);
                         while (m) {
                             var r = Math.random();
                             i = Math.floor(r * m--);
-
                             t = playlist.playlist[m];
                             playlist.playlist[m] = playlist.playlist[i];
                             playlist.playlist[i] = t;
@@ -248,11 +245,11 @@ var rtv = {
                 });
 
                 //Chat
-                var channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").replace(/[\W]/g, "-"),
+                var channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").split("/").pop().replace(/[\W]/g, "-"),
                     channelLen = 50,
                     D = new Date(),
-                    suffix = "_" + D.getFullYear() + D.getMonth(),
-                    channelName = "rtv-" + btoa(channelName.substring(0,(channelLen - suffix.length)) + suffix).replace(/[\W]/g, "").substring(0,6).toLowerCase(), //Math.floor(channelLen/4)
+                    suffix = loops + D.getFullYear() + D.getMonth();
+                    channelName = btoa(channelName + suffix).replace(/[\W]/g, "").toLowerCase().substring(0, channelLen),
                     nick = "&nick=Kappa....",
                     channels = "&channels="+channelName,
                     config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
@@ -350,7 +347,7 @@ var rtv = {
 
             player.init(name);
             rtv.player.players.push(player);
-            
+
             //TO-DO: Make configurable
             $("#container").append('<div id="chat"><iframe src="'+player.cache.info.chat +'"></iframe></div>')
 
@@ -385,7 +382,7 @@ var rtv = {
                 //Cannot splice, other indexes are changed.
                 //Delete, null, undef index or equivalent (preserves index)
                 //If we utilize the players list in a batch we'll need to acknowledge the empty slots
-                
+
                 //Remove chat
                 $("#container > #chat").remove()
             },
