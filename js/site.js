@@ -252,7 +252,7 @@ var rtv = {
                     channelLen = 50,
                     D = new Date(),
                     suffix = "_" + D.getFullYear() + D.getMonth(),
-                    channelName = "rtv-" + btoa(channelName.substring(0,(channelLen - suffix.length)) + suffix).replace(/[\W]/g, "").substring(0,Math.floor(channelLen/4)),
+                    channelName = "rtv-" + btoa(channelName.substring(0,(channelLen - suffix.length)) + suffix).replace(/[\W]/g, "").substring(0,6).toLowerCase(), //Math.floor(channelLen/4)
                     nick = "&nick=Kappa....",
                     channels = "&channels="+channelName,
                     config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
