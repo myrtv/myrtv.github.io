@@ -76,7 +76,8 @@ var rtv = {
             "playlists/speedrun/rpglb/2017talesof.json",
             "playlists/speedrun/esa/2015purple.min.json",
             "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
-            "playlists/speedrun/pokemon/psr2016.min.json"
+            "playlists/speedrun/pokemon/psr2016.min.json",
+            "playlists/speedrun/werster.min.json"
         ],
         extraPlaylists: [
             "playlists/anime/animeshuffletest.min.json",
