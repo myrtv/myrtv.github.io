@@ -10,7 +10,7 @@ var rtv = {
     about: function() {
         var about = '<div title="About RTV">'+
                     '<a href="https://github.com/myrtv/myrtv.github.io" target="_blank">GitHub Repository</a> (submit bugs/requests here)'+
-                    '<br><br>Made with jQuery, jQuery UI, and seedrandom.js (if available)</div>';
+                    '<br><br>Made with jQuery, jQuery UI, Moment.js, and seedrandom.js (if available)</div>';
 
         $(about).dialog({
             autoOpen: true,
