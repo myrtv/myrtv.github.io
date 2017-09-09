@@ -65,14 +65,14 @@ video {
 }
 #rtvGuideSub { position: relative; overflow-y: auto; height: 100%; }
 /*#rtvGuideSub:hover { overflow-y: auto; }*/
-#rtvChannels { width: 200px; padding:3px; }
+#rtvChannels { width: 200px; /*padding:3px;*/ }
 #rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
 .channel, #rtvShows > .row { height: 50px; }
 .channel:hover:not(:first-child) {
-    background: linear-gradient(to right, rgba(127,127,127,0.8), rgba(0,0,0,0) 50%);
+    background: rgba(255,255,255,0.3)
 }
 .currentStream {
-    background: linear-gradient(to right, rgba(63,63,63,0.5), rgba(0,0,0,0) 50%);
+    background: rgba(255,255,255,0.2)
 }
 #rtvShows {
     position: absolute;
@@ -116,13 +116,17 @@ video {
 .row.marker .show { border-top: none !important; }
 /* RTV Guide - Header */
 .pointer { cursor:pointer; }
+.guideHead {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
+}
 .guideHead span {
     display: inline-block;
     padding: 6px 10px;
-    border-right: 1px solid white;
+    border-right: 1px solid rgba(255,255,255,0.3);
 }
 .guideHead span:hover {
-    
+    background-color: rgba(255,255,255,0.3);
 }
 
 /* RTV Guide - Channel Customizer */
