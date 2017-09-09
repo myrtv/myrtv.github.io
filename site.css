@@ -12,7 +12,6 @@ video {
     display:flex;
     width:100%;
     height:100%;
-    
 }
 
 #container > *[id^=window-player] {
@@ -24,7 +23,7 @@ video {
 
 #container > #chat {
     order: 2;
-    /*flex: 1;*/  
+    /*flex: 1;*/
 }
 #container > #chat iframe {
     height: 100%;
@@ -87,7 +86,7 @@ video {
     position: absolute;
     top: 0px;
     width: 2px;
-    background: rgba(0,255,0,0.2);
+    background: rgba(0,255,0,0.3);
     height: 100%;
     z-index: -1;
 }
@@ -103,7 +102,7 @@ video {
     text-overflow: ellipsis;
 }
 /*.show:first-child { border-left:5px solid green; }*/
-.row.marker .show:last-child, .show.playlistEnd:last-child { border-right:5px solid red; }
+.row.marker .show:last-child, .show.playlistEnd:last-child { border-right:3px solid red; }
 .show.abruptStart { border-left-style: dashed; }
 .show.gap {
     visibility:hidden;
