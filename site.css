@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     background-color: black;
-    height:100%;
+    height: 100%;
 }
 video {
     width: 100%;
@@ -9,18 +9,16 @@ video {
 }
 
 #container {
-    display:flex;
-    width:100%;
-    height:100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
-
 #container > *[id^=window-player] {
     order: 1;
-    display:inline-block;
+    display: inline-block;
     flex: 1 1; /* grow + shrink */
-    height:100%;
+    height: 100%;
 }
-
 #container > #chat {
     order: 2;
     /*flex: 1;*/
@@ -29,45 +27,37 @@ video {
     height: 100%;
     border: none;
 }
-
-#head {
-    /*background-color: rgba(0,0,127,0.55);*/
-    /*padding: 7px 5px;*/
+#openGuide {
     position: absolute;
-    opacity: 0.6;
     height: 20px;
     z-index: 1;
+    color: rgba(255,255,255,0.3);
 }
-#head * { height:100%; margin-right:5px;}
-#head .pointer { color:#fff; }
-
-#head:hover {
-    opacity: 1;
+#openGuide: hover {
+    color: rgba(255,255,255,0.8);
 }
-#container {}
-
 
 /* RTV Guide */
 #rtvGuide {
-    z-index:1;
-    position:fixed;
-    top:0px;
-    left:0px;
-    right:0px;
-    bottom:0px;
-    /*padding:2%;*/
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /*padding: 2%;*/
     color: #fff;
-    background-color:rgba(0,0,0,0.85);
-    display:flex;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 #rtvGuideSub { position: relative; overflow-y: auto; height: 100%; }
-/*#rtvGuideSub:hover { overflow-y: auto; }*/
-#rtvChannels { width: 200px; /*padding:3px;*/ }
-#rtvChannels, #rtvShows { display:inline-block; vertical-align:top; }
+/*#rtvGuideSub: hover { overflow-y: auto; }*/
+#rtvChannels { width: 200px; /*padding: 3px;*/ }
+#rtvChannels, #rtvShows { display: inline-block; vertical-align: top; }
 .channel, #rtvShows > .row { height: 50px; }
-.channel:hover:not(:first-child) {
+.channel: hover: not(: first-child) {
     background: rgba(255,255,255,0.3)
 }
 .currentStream {
@@ -80,7 +70,7 @@ video {
     overflow-x: auto;
     white-space: nowrap;
 }
-/*#rtvShows:hover { overflow-x: auto; }*/
+/*#rtvShows: hover { overflow-x: auto; }*/
 #rtvShows > .row { }
 #rtvShows > .sparksLinerHigh {
     position: absolute;
@@ -94,27 +84,27 @@ video {
     display: inline-block;
     height: 100%;
     box-sizing: border-box;
-    border:1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
     overflow: hidden;
     padding: 1px 2px;
     white-space: normal;
     word-break: break-all;
     text-overflow: ellipsis;
 }
-/*.show:first-child { border-left:5px solid green; }*/
-.row.marker .show:last-child, .show.playlistEnd:last-child { border-right:3px solid red; }
+/*.show: first-child { border-left: 5px solid green; }*/
+.row.marker .show: last-child, .show.playlistEnd: last-child { border-right: 3px solid red; }
 .show.abruptStart { border-left-style: dashed; }
 .show.gap {
-    visibility:hidden;
+    visibility: hidden;
     border-color: rgba(0,0,0,0);
-    padding:0px;
-    border:0px;
+    padding: 0px;
+    border: 0px;
 }
 /* RTV Guide - Time Markers */
 .channel.marker, .row.marker { height: 25px !important; }
 .row.marker .show { border-top: none !important; }
 /* RTV Guide - Header */
-.pointer { cursor:pointer; }
+.pointer { cursor: pointer; }
 .guideHead {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     background-color: rgba(255,255,255,0.1);
@@ -124,52 +114,52 @@ video {
     padding: 6px 10px;
     border-right: 1px solid rgba(255,255,255,0.3);
 }
-.guideHead span:hover {
+.guideHead span: hover {
     background-color: rgba(255,255,255,0.3);
 }
 
 /* RTV Guide - Channel Customizer */
-#customizeChannels { width:100%; }
-#customizeChannels table { width:100%; }
+#customizeChannels { width: 100%; }
+#customizeChannels table { width: 100%; }
 #customizeChannels tr.header {
     text-align: center;
     font-weight: bold;
 }
 #customizeChannels td {
-    vertical-align:top;
+    vertical-align: top;
 }
 #customizeChannels select#chanAvail, #customizeChannels select#chanYours {
-    width:100%;
-    min-width:20%;
-    max-width:100%;
-    height:150px;
+    width: 100%;
+    min-width: 20%;
+    max-width: 100%;
+    height: 150px;
 }
 
 .dialog-customizePlaylists .ui-dialog-buttonset {
-    width:100%;
-    text-align:right;
+    width: 100%;
+    text-align: right;
 }
 
 .dialog-customizePlaylists .ui-dialog-buttonset button.customPlaylists {
-    float:left;
+    float: left;
 }
 
 table#customsManager {
     width: 100%;
 }
 #customsManager .customsSelect {
-    width:15%;
+    width: 15%;
 }
 
 #customsManager select, #customsManager textarea {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 p.depress {
-    background-color:#dedede;
-    border-radius:4px;
-    margin:initial 0px;
-    padding:5px;
-    font-size:small;
+    background-color: #dedede;
+    border-radius: 4px;
+    margin: initial 0px;
+    padding: 5px;
+    font-size: small;
 }

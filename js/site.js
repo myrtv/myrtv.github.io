@@ -532,10 +532,7 @@ var rtv = {
     },
     menu: {
         spawn: function() {
-            var head = $("<div />", {id: "head"});
-            head.append($("<span />", {text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); }));
-
-            return head;
+            return $("<div />", {id: "openGuide", text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); });
         }
     },
     guide: {
