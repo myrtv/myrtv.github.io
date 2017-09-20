@@ -740,6 +740,15 @@ var rtv = {
         open: function() {
             this.close();
             $("body").append(rtv.guide.generate());
+            $("#rtvGuide").on("click", ".show", function() {
+                $("<div />", {html: this.title.replace(/\n/g,'<br>')}).dialog({
+                    autoOpen: true,
+                    height: "auto",
+                    width: "auto",
+                    modal: true,
+                    close: function() {}
+                });
+            });
         },
         close: function() {
             $("#rtvGuide").remove();
@@ -864,7 +873,7 @@ var rtv = {
                     class: "show"+endClass+startClass,
                     text: item.name,
                     title: item.name+
-                    //"\nDuration: "+(duration / 60)+"m"+
+                    "\nDuration: "+moment.utc(item.duration * 1000).format("H:mm:ss")+
                     "\n"+((moment().toDate() > startingTime.toDate())?"Started ":"Starts ")+moment().to(startingTime)+
                     "\nStart: "+startingTime.format("LLLL")+
                     "\nStop: "+startingTime.add(item.duration, 'seconds').format("LLLL")
