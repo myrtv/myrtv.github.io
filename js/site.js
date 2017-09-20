@@ -178,8 +178,15 @@ var rtv = {
         create: function(path) {
             var last = localStorage['rtvLastPlaylist']
             if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = false; }
+
+            //URL hash
             var hash = location.hash.substring(1);
-            var hash2 = (hash.length > 0) ? rtv.config.cache.playlists.find(function(e) { return (e.indexOf(hash) >= 0) }) : false;
+            var target = rtv.config.defaultPlaylists; //TO-DO, make configurable: user's playlists: rtv.config.cache.playlists
+            var hash2 = (hash.length > 0) ? target.find(function(e) { return (e.indexOf(hash) >= 0) }) : false;
+            if (hash2 !== false && !rtv.config.cache.playlists[hash2]) {
+                rtv.config.cache.playlists.push(hash2);
+            }
+
             var list = (path || hash2 || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
                 that = this;
             location.hash = '';
