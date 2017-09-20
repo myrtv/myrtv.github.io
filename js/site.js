@@ -178,8 +178,11 @@ var rtv = {
         create: function(path) {
             var last = localStorage['rtvLastPlaylist']
             if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = false; }
-            var list = (path || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
+            var hash = location.hash.substring(1);
+            var hash2 = (hash.length > 0) ? rtv.config.cache.playlists.find(function(e) { return (e.indexOf(hash) >= 0) }) : false;
+            var list = (path || hash2 || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
                 that = this;
+            location.hash = '';
 
             $.each(rtv.config.cache.playlists, function (index, item) {
                 var cb = (item == list) ? function() {
