@@ -352,7 +352,7 @@ var rtv = {
             rtv.player.players.push(player);
 
             //TO-DO: Make configurable
-            //$("#container").append('<div id="chat"><iframe src="'+player.cache.info.chat +'"></iframe></div>')
+            $("#container").append('<div id="chat"><iframe src="'+player.cache.info.chat +'"></iframe></div>')
 
             return i;
         },

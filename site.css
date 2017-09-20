@@ -13,6 +13,20 @@ video {
     width: 100%;
     height: 100%;
 }
+
+/*Easiest mobile support of my life*/
+@media screen and (orientation : portrait) {
+    #container {
+        flex-direction: column; 
+    }
+    #container > *[id^=window-player] { 
+        flex: 0 0 33% !important;
+    }
+    #container > * {
+        flex: 1 1;
+    }
+}
+
 #container > *[id^=window-player] {
     order: 1;
     display: inline-block;
@@ -25,6 +39,7 @@ video {
 }
 #container > #chat iframe {
     height: 100%;
+    width: 100%;
     border: none;
 }
 #openGuide {
