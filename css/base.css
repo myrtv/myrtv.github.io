@@ -34,7 +34,7 @@ video {
     z-index: 1;
     color: rgba(255,255,255,0.3);
 }
-#openGuide: hover {
+#openGuide:hover {
     color: rgba(255,255,255,0.8);
 }
 
@@ -54,11 +54,11 @@ video {
     justify-content: flex-start;
 }
 #rtvGuideSub { position: relative; overflow-y: auto; height: 100%; }
-/*#rtvGuideSub: hover { overflow-y: auto; }*/
+/*#rtvGuideSub:hover { overflow-y: auto; }*/
 #rtvChannels { width: 200px; /*padding: 3px;*/ }
 #rtvChannels, #rtvShows { display: inline-block; vertical-align: top; }
 .channel, #rtvShows > .row { height: 50px; }
-.channel: hover: not(: first-child) {
+.channel:hover: not(: first-child) {
     background: rgba(255,255,255,0.3)
 }
 .currentStream {
@@ -71,7 +71,7 @@ video {
     overflow-x: auto;
     white-space: nowrap;
 }
-/*#rtvShows: hover { overflow-x: auto; }*/
+/*#rtvShows:hover { overflow-x: auto; }*/
 #rtvShows > .row { }
 #rtvShows > .sparksLinerHigh {
     position: absolute;
@@ -115,7 +115,7 @@ video {
     padding: 6px 10px;
     border-right: 1px solid rgba(255,255,255,0.3);
 }
-.guideHead span: hover {
+.guideHead span:hover {
     background-color: rgba(255,255,255,0.3);
 }
 
