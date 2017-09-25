@@ -58,7 +58,7 @@ video {
 #rtvChannels { width: 200px; /*padding: 3px;*/ }
 #rtvChannels, #rtvShows { display: inline-block; vertical-align: top; }
 .channel, #rtvShows > .row { height: 50px; }
-.channel:hover: not(: first-child) {
+.channel:hover:not(:first-child) {
     background: rgba(255,255,255,0.3)
 }
 .currentStream {
