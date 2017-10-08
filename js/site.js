@@ -184,8 +184,8 @@ var rtv = {
             //URL hash
             var hash = location.hash.substring(1);
             var target = rtv.config.defaultPlaylists; //TO-DO, make configurable: user's playlists: rtv.config.cache.playlists
-            var hash2 = (hash.length > 0) ? target.find(function(e) { return (e.toLowerCase().indexOf(hash.toLowerCase()) >= 0) }) : false;
-            if (hash2 !== false && rtv.config.cache.playlists.indexOf(hash2) < 0) {
+            var hash2 = (hash.length > 0) ? target.find(function(e) { return (e.toLowerCase().indexOf(hash.toLowerCase()) >= 0) }) : undefined;
+            if (hash2 !== undefined && rtv.config.cache.playlists.indexOf(hash2) < 0) {
                 rtv.config.cache.playlists.push(hash2);
             }
 
