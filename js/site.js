@@ -78,8 +78,8 @@ var rtv = {
             "playlists/speedrun/esa/2015purple.min.json",
             "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
             "playlists/speedrun/pokemon/psr2016.min.json",
-            "playlists/speedrun/werster.min.json",
-            "playlists/pbsideachannel.min.json"
+            "playlists/pbsideachannel.min.json",
+            "playlists/joyofpainting.min.json"
         ],
         extraPlaylists: [
             "playlists/anime/animeshuffletest.min.json",
@@ -166,6 +166,7 @@ var rtv = {
             "playlists/speedrun/speedgaming/snessuperstars2016.min.json",
             "playlists/speedrun/speedgaming/lttprandomizer2017.min.json",
             "playlists/speedrun/pokemon/psr2015.min.json",
+            "playlists/speedrun/werster.min.json",
             "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
             "playlists/linustechtips.min.json",
