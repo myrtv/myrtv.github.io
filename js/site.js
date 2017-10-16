@@ -367,10 +367,7 @@ var rtv = {
             rtv.player.players.push(player);
 
             //TO-DO: Make configurable
-            $("#container").append('<div id="chat"><div id="closechat">&gt;</div><iframe src="'+player.cache.info.chat +'"></iframe></div>')
-            $("#closechat").click(function() {
-                $("#chat").toggleClass('closed')
-            });
+            $("#container").append('<div id="chat"><iframe src="'+player.cache.info.chat +'"></iframe></div>')
 
             return i;
         },
@@ -550,7 +547,28 @@ var rtv = {
     },
     menu: {
         spawn: function() {
-            return $("<div />", {id: "openGuide", text: "Open RTV Guide", class: "pointer"}).click(function() { rtv.guide.open(); });
+            var menu = $("<div id='menu'/>");
+            //{id: "openGuide", text: "Open RTV Guide", class: "pointer"}).click(function() { ;
+
+            $("<i />", {class: "fa fa-th-list", title: "Open RTV Guide"}).click(function() { rtv.guide.open(); }).appendTo(menu);
+            $("<i />", {class: "fa fa-comments", title: "Toggle chat"}).click(function() { $("#chat").toggleClass("closed") }).appendTo(menu);
+            $("<i />", {class: "fa fa-window-restore", title: "Inline popout"}).click(function() {
+                $("[id^=window-player]").dialog({
+                    close: function() {
+                        $("[id^=window-player]")
+                        .removeClass("ui-dialog-content ui-widget-content")
+                        .css({width:'','min-width':'','max-width':'',height:'','min-height':'','max-height':''})
+                        .appendTo("#container");
+                        $(this).dialog('destroy');
+                    }
+                });
+            }).appendTo(menu);
+
+            menu.tooltip({
+                position: { my: "left center", at: "right+10% center", collision: "fit"}
+            })
+
+            return menu;
         }
     },
     guide: {
