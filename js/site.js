@@ -301,8 +301,7 @@ var rtv = {
                 //Chat
                 //channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").split("/").pop().replace(/[\W]/g, "-"),
                 var channelLen = 50,
-                    D = new Date(),
-                    channelName = "rtv"+(loops % D.getDate())+rtv.player.findNeedle(playlist).substring(0, channelLen),
+                    channelName = "rtv"+(loops % 9999)+rtv.player.findNeedle(playlist).substring(0, channelLen),
                     nick = "&nick=Kappa....",
                     channels = "&channels="+channelName,
                     config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
