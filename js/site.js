@@ -572,7 +572,11 @@ var rtv = {
             }).appendTo(menu);
 
             $("<hr>").appendTo(menu)
-
+            $("<i />", {class: "fa fa-close", title: "Auto-hide sidebar"}).click(function() {
+                $("#menu").toggleClass("autohide");
+                $(this).toggleClass("fa-check fa-close");
+            }).appendTo(menu);
+            $("<hr>").appendTo(menu)
             $("<div />", {id: 'recents'}).appendTo(menu);
 
             menu.tooltip({

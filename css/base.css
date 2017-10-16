@@ -14,11 +14,19 @@ video {
 }
 #container > #menu {
     order: 0;
-    display: inline-block;
     flex: 0 1 48px;
     color: white;
     background-color: #26272c;
+    overflow: hidden;
+    transition: flex-basis 0.5s;  
 }
+#menu.autohide {
+    flex-basis: 5px !important;
+}
+#menu.autohide:hover {
+    flex-basis: 48px !important;
+}
+
 #menu i {
     font-size: 2em;
     margin: 5px 3px;
@@ -41,7 +49,7 @@ video {
     order: 2;
     flex: 0 1 300px;
     position: relative;
-    transition: flex-basis 1s, opacity 0.5s;
+    transition: flex-basis 1s;
 }
 #container > #chat.closed {
     flex-basis: 0px;
