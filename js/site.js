@@ -611,7 +611,9 @@ var rtv = {
 
                 var href = location.href+needle;
                 //<a target='_blank' href='"+href+"'>"+href+"</a>
-                var t = "<div title='Share "+item.info.name+"'><input value='"+href+"' /></div>"
+                var input = $("<input value='"+href+"' />").focus(function() { $(this).select(); });
+                var t = $("<div title='Share "+item.info.name+"' />").append(input);
+                
 
                 $(t).dialog({
                     autoOpen: true,

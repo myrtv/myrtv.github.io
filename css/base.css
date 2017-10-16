@@ -208,4 +208,8 @@ p.depress {
     padding: 10px;
     font-size: 1.2em;
     text-align: center;
+    transition: background-color 0.5s;
+}
+.dialog-shareChannel input:hover {
+    background-color: #eaeaea;
 }
