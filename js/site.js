@@ -72,10 +72,10 @@ var rtv = {
             "playlists/speedrun/gdq/sgdq2016.min.json",
             "playlists/speedrun/gdq/agdq2017.min.json",
             "playlists/speedrun/gdq/sgdq2017.min.json",
-            "playlists/speedrun/rpglb/2017.json",
-            "playlists/speedrun/rpglb/2017talesof.json",
-            "playlists/speedrun/nasa/2017.min.json",
-            "playlists/speedrun/esa/2015purple.min.json",
+            "playlists/speedrun/rpglb/rpglb2017.json",
+            "playlists/speedrun/rpglb/rpglb2017talesof.json",
+            "playlists/speedrun/nasa/nasa2017.min.json",
+            "playlists/speedrun/esa/esa2015purple.min.json",
             "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
             "playlists/speedrun/pokemon/psr2016.min.json",
             "playlists/pbsideachannel.min.json",
@@ -159,10 +159,10 @@ var rtv = {
             "playlists/speedrun/gdq/agdq2011.min.json",
             "playlists/speedrun/gdq/agdq2012.min.json",
             "playlists/speedrun/gdq/sgdq2012.min.json",
-            "playlists/speedrun/nasa/2016.min.json",
-            "playlists/speedrun/rpglb/2015.json",
-            "playlists/speedrun/rpglb/2016.json",
-            "playlists/speedrun/rpglb/2016talesof.json",
+            "playlists/speedrun/nasa/nasa2016.min.json",
+            "playlists/speedrun/rpglb/rpglb2015.json",
+            "playlists/speedrun/rpglb/rpglb2016.json",
+            "playlists/speedrun/rpglb/rpglb2016talesof.json",
             "playlists/speedrun/speedgaming/snessuperstars2016.min.json",
             "playlists/speedrun/speedgaming/lttprandomizer2017.min.json",
             "playlists/speedrun/pokemon/psr2015.min.json",
@@ -180,6 +180,42 @@ var rtv = {
     },
     player: {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
+        findNeedle: function(item) {
+            var originalUrl = item.info.url
+            var url = originalUrl.replace(/(\.(min|json))+$/ig,"")
+            var candidates = rtv.config.defaultPlaylists;
+            var backstep = -1;
+            var needle = ""
+            var expand = false;
+
+            while (candidates.length !== 1) {
+                var newCandidates = []
+                needle = url.split("/").splice(backstep).join("/").toLowerCase();
+
+                candidates.find(function(e) {
+                    if (e.toLowerCase().indexOf(needle) >= 0) {
+                        newCandidates.push(e)
+                    }
+                });
+
+                if (backstep < -10 && newCandidates.length == candidates.length) {
+                    console.error("stalemate",needle)
+                    break;
+                }
+
+                if (expand == false && newCandidates.length == 2) {
+                    console.warn("collision? expanding needle",newCandidates)
+                    expand = true;
+                    backstep = -1;
+                    url = originalUrl;
+                } else {
+                    candidates = newCandidates;
+                    backstep--;
+                }
+            }
+            
+            return needle;
+        },
         create: function(path) {
             var last = localStorage['rtvLastPlaylist']
             if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = false; }
@@ -263,11 +299,10 @@ var rtv = {
                 });
 
                 //Chat
-                var channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").split("/").pop().replace(/[\W]/g, "-"),
-                    channelLen = 50,
+                //channelName = store.replace(/(^playlists\/|(\.min)?\.json$)/g, "").split("/").pop().replace(/[\W]/g, "-"),
+                var channelLen = 50,
                     D = new Date(),
-                    suffix = loops + D.getFullYear() + D.getMonth();
-                    channelName = btoa(channelName + suffix).replace(/[\W]/g, "").toLowerCase().substring(0, channelLen),
+                    channelName = "rtv"+(loops % D.getDate())+rtv.player.findNeedle(playlist).substring(0, channelLen),
                     nick = "&nick=Kappa....",
                     channels = "&channels="+channelName,
                     config = "&prompt=1&uio=MTY9dHJ1ZSYzPWZhbHNlJjk9dHJ1ZSYxMD10cnVlJjExPTIxNSYxMz1mYWxzZSYxND1mYWxzZQ9e";
@@ -576,38 +611,7 @@ var rtv = {
             }).appendTo(menu);
             $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
                 var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
-                var originalUrl = item.info.url
-                var url = originalUrl.replace(/(\.(min|json))+$/ig,"")
-                var candidates = rtv.config.defaultPlaylists;
-                var backstep = -1;
-                var needle = ""
-                var expand = false;
-
-                while (candidates.length !== 1) {
-                    var newCandidates = []
-                    needle = url.split("/").splice(backstep).join("/").toLowerCase();
-
-                    candidates.find(function(e) {
-                        if (e.toLowerCase().indexOf(needle) >= 0) {
-                            newCandidates.push(e)
-                        }
-                    });
-
-                    if (backstep < -10 && newCandidates.length == candidates.length) {
-                        console.error("stalemate",needle)
-                        break;
-                    }
-
-                    if (expand == false && newCandidates.length == 2) {
-                        console.warn("collision? expanding needle",newCandidates)
-                        expand = true;
-                        backstep = -1;
-                        url = originalUrl;
-                    } else {
-                        candidates = newCandidates;
-                        backstep--;
-                    }
-                }
+                var needle = rtv.player.findNeedle(item);
 
                 var href = location.href;
                 href += (href.substr(-1)=='#'?'':'#')+needle;
