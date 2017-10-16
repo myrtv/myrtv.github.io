@@ -611,7 +611,7 @@ var rtv = {
 
                 var href = location.href+needle;
                 //<a target='_blank' href='"+href+"'>"+href+"</a>
-                var input = $("<input value='"+href+"' />").focus(function() { $(this).select(); });
+                var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
                 var t = $("<div title='Share "+item.info.name+"' />").append(input);
                 
 
