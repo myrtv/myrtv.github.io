@@ -223,14 +223,13 @@ var rtv = {
             //URL hash
             var hash = location.hash.substring(1);
             var target = rtv.config.defaultPlaylists; //TO-DO, make configurable: user's playlists: rtv.config.cache.playlists
-            var hash2 = (hash.length > 0) ? target.find(function(e) { return (e.toLowerCase().indexOf(hash.toLowerCase()) >= 0) }) : undefined;
-            if (hash2 !== undefined && rtv.config.cache.playlists.indexOf(hash2) < 0) {
-                rtv.config.cache.playlists.push(hash2);
+            hash = (hash.length > 0) ? target.find(function(e) { return (e.toLowerCase().indexOf(hash.toLowerCase()) >= 0) }) : false;
+            if (hash && rtv.config.cache.playlists.indexOf(hash) < 0) {
+                rtv.config.cache.playlists.push(hash);
             }
 
-            var list = (path || hash2 || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
-                that = this;
-            location.hash = '';
+            var list = (path || hash || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
+                that = this;            
 
             $.each(rtv.config.cache.playlists, function (index, item) {
                 var cb = (item == list) ? function() {
@@ -370,6 +369,7 @@ var rtv = {
 
             localStorage['rtvLastPlaylist'] = path;
             var playlist = this.cached_playlists[path];
+            location.hash = this.findNeedle(playlist);
             var that = rtv.player;
             var i = that.players.length;
             var name = "player-"+i;
