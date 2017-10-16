@@ -609,11 +609,11 @@ var rtv = {
                     }
                 }
 
-                var href = location.href+needle;
+                var href = location.href;
+                href += (href.substr(-1)=='#'?'':'#')+needle;
                 //<a target='_blank' href='"+href+"'>"+href+"</a>
                 var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
                 var t = $("<div title='Share "+item.info.name+"' />").append(input);
-                
 
                 $(t).dialog({
                     autoOpen: true,
