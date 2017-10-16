@@ -340,6 +340,13 @@ var rtv = {
             var i = that.players.length;
             var name = "player-"+i;
 
+            $("<i />", {class: "fa fa-repeat", title: playlist.info.name}).data({"url":playlist.info.url}).click(function() {
+                //Duped from guide
+                rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
+                rtv.player.spawn(playlist.info.url);
+                //rtv.guide.close();
+            }).prependTo("#recents");
+
             //Initialize the new player
             var player = {
                 "index": i,
@@ -563,6 +570,10 @@ var rtv = {
                     }
                 });
             }).appendTo(menu);
+
+            $("<hr>").appendTo(menu)
+
+            $("<div />", {id: 'recents'}).appendTo(menu);
 
             menu.tooltip({
                 position: { my: "left center", at: "right+10% center", collision: "fit"}
