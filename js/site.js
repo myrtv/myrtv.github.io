@@ -755,15 +755,6 @@ var rtv = {
         open: function() {
             this.close();
             $("body").append(rtv.guide.generate());
-            $("#rtvGuide").on("click", ".show", function() {
-                $("<div />", {html: this.title.replace(/\n/g,'<br>')}).dialog({
-                    autoOpen: true,
-                    height: "auto",
-                    width: "auto",
-                    modal: true,
-                    close: function() {}
-                });
-            });
         },
         close: function() {
             $("#rtvGuide").remove();
@@ -798,6 +789,16 @@ var rtv = {
             container.append(channels);
             container.append(shows);
             guide.append(container);
+
+            $(guide).on("click", ".show", function() {
+                $("<div />", {html: this.title.replace(/\n/g,'<br>')}).dialog({
+                    autoOpen: true,
+                    height: "auto",
+                    width: "auto",
+                    modal: true,
+                    close: function() {}
+                });
+            });
 
             return guide;
         },
