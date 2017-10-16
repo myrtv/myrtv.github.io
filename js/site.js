@@ -613,7 +613,7 @@ var rtv = {
                 var needle = rtv.player.findNeedle(item);
 
                 var href = location.href;
-                href += (href.substr(-1)=='#'?'':'#')+needle;
+                //href += (href.substr(-1)=='#'?'':'#')+needle;
                 //<a target='_blank' href='"+href+"'>"+href+"</a>
                 var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
                 var t = $("<div title='Share "+item.info.name+"' />").append(input);
