@@ -18,7 +18,7 @@ video {
     color: white;
     background-color: #26272c;
     overflow: hidden;
-    transition: flex-basis 0.5s;  
+    transition: flex-basis 0.5s;
 }
 #menu.autohide {
     flex-basis: 5px !important;
@@ -199,13 +199,15 @@ p.depress {
 /* Share */
 .dialog-shareChannel .ui-dialog-content {
     display: flex !important;
-    align-items: center;    
+    align-items: center;
+    flex-direction: column;
 }
 .dialog-shareChannel input {
     width: 400px;
     border-radius: 4px;
     border-style: solid;
     padding: 10px;
+    margin: 1.5em 0em;
     font-size: 1.2em;
     text-align: center;
     transition: background-color 0.5s;

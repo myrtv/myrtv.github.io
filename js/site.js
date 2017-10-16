@@ -614,6 +614,8 @@ var rtv = {
                 //<a target='_blank' href='"+href+"'>"+href+"</a>
                 var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
                 var t = $("<div title='Share "+item.info.name+"' />").append(input);
+                var msg = escape("Let's watch "+item.info.name+" together! "+href);
+                $(t).append("<a target='_blank' href='http://twitter.com/home?status="+msg+"'><i class='fa fa-twitter'></i> Tweet</a>")
 
                 $(t).dialog({
                     autoOpen: true,
