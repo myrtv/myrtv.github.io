@@ -558,7 +558,7 @@ var rtv = {
             //{id: "openGuide", text: "Open RTV Guide", class: "pointer"}).click(function() { ;
 
             $("<i />", {class: "fa fa-th-list", title: "Open RTV Guide"}).click(function() { rtv.guide.open(); }).appendTo(menu);
-            $("<i />", {class: "fa fa-refresh", title: "Resync Players"}).click(function() { 
+            $("<i />", {class: "fa fa-refresh", title: "Resync Players"}).click(function() {
                 //Stolen from guide
                 $("[id^=window-player]").each(function() {rtv.player.players[$(this).data()["player-index"]].resync();});
             }).appendTo(menu);
@@ -573,6 +573,56 @@ var rtv = {
                         $(this).dialog('destroy');
                     }
                 });
+            }).appendTo(menu);
+            $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
+                var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
+                var originalUrl = item.info.url
+                var url = originalUrl.replace(/(\.(min|json))+$/ig,"")
+                var candidates = rtv.config.defaultPlaylists;
+                var backstep = -1;
+                var needle = ""
+                var expand = false;
+
+                while (candidates.length !== 1) {
+                    var newCandidates = []
+                    needle = url.split("/").splice(backstep).join("/").toLowerCase();
+
+                    candidates.find(function(e) {
+                        if (e.toLowerCase().indexOf(needle) >= 0) {
+                            newCandidates.push(e)
+                        }
+                    });
+
+                    if (backstep < -10 && newCandidates.length == candidates.length) {
+                        console.error("stalemate",needle)
+                        break;
+                    }
+
+                    if (expand == false && newCandidates.length == 2) {
+                        console.warn("collision? expanding needle",newCandidates)
+                        expand = true;
+                        backstep = -1;
+                        url = originalUrl;
+                    } else {
+                        candidates = newCandidates;
+                        backstep--;
+                    }
+                }
+
+                var href = location.href+needle;
+                //<a target='_blank' href='"+href+"'>"+href+"</a>
+                var t = "<div title='Share "+item.info.name+"'><input value='"+href+"' /></div>"
+
+                $(t).dialog({
+                    autoOpen: true,
+                    height: "auto",
+                    width: "auto",
+                    modal: true,
+                    dialogClass: 'dialog-shareChannel',
+                    close: function() {
+                        $(this).dialog('destroy')
+                    }
+                })
             }).appendTo(menu);
 
             $("<hr>").appendTo(menu)

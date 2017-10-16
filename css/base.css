@@ -195,3 +195,17 @@ p.depress {
     padding: 5px;
     font-size: small;
 }
+
+/* Share */
+.dialog-shareChannel .ui-dialog-content {
+    display: flex !important;
+    align-items: center;    
+}
+.dialog-shareChannel input {
+    width: 400px;
+    border-radius: 4px;
+    border-style: solid;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
