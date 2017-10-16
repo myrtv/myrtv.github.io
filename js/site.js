@@ -558,6 +558,10 @@ var rtv = {
             //{id: "openGuide", text: "Open RTV Guide", class: "pointer"}).click(function() { ;
 
             $("<i />", {class: "fa fa-th-list", title: "Open RTV Guide"}).click(function() { rtv.guide.open(); }).appendTo(menu);
+            $("<i />", {class: "fa fa-refresh", title: "Resync Players"}).click(function() { 
+                //Stolen from guide
+                $("[id^=window-player]").each(function() {rtv.player.players[$(this).data()["player-index"]].resync();});
+            }).appendTo(menu);
             $("<i />", {class: "fa fa-comments", title: "Toggle chat"}).click(function() { $("#chat").toggleClass("closed") }).appendTo(menu);
             $("<i />", {class: "fa fa-window-restore", title: "Inline popout"}).click(function() {
                 $("[id^=window-player]").dialog({
