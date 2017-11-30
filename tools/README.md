@@ -1,6 +1,8 @@
+These may or may not be randomly broke because YouTube changes their design every 5 seconds. The most recently updated one has the best chance of success.
+
 Need help picking one?
 
-### [youtube-parse.js](youtube-parse.js)
+### [youtube-parse.js](youtube-parse.js) (usually kept up to date)
  - Easiest, one playlist at a time.
  - Visit the actual playlist page on YouTube. (`https://www.youtube.com/playlist?list=STUFF`)
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
