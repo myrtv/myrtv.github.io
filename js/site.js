@@ -172,7 +172,8 @@ var rtv = {
             "playlists/linustechtips.min.json",
             "playlists/pannenkoek2012.min.json",
             "playlists/redlettermedia.min.json",
-            "playlists/rwby.min.json"
+            "playlists/rwby.min.json",
+            "playlists/tpp-red.min.json",
         ]
     },
     init: function(path) {
