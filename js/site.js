@@ -871,10 +871,18 @@ var rtv = {
 
             $.each(Object.keys(rtv.player.cached_playlists).sort(), function (index, list) {
                 var source = $.extend({}, {cache: rtv.player.cached_playlists[list]}, rtv.player.playlist.utilities);
-
-                channels.append(that.generateChannel(source));
+                var active = (rtv.player.players.length > 0 && rtv.player.players.slice(-1)[0].cache.info.url == source.cache.info.url)
+                
+                var channel = that.generateChannel(source);
                 var row = that.generateRow(source);
-                shows.append(row.row);
+                
+                if (active) { //Show active channel first in list. Alternative: Flexbox order sort to top with CSS.
+                    channels.prepend(channel);
+                    shows.prepend(row.row);
+                } else {
+                    channels.append(channel);
+                    shows.append(row.row);
+                }
 
                 if (row.width > width) { width = row.width; }
                 halfhour = row.halfhour;
