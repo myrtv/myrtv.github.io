@@ -559,8 +559,12 @@ var rtv = {
                     var instance = $("<video />", {
                         preload: "none",
                         controls: "",
-                        autoplay: "",
-                        src: this.cache.info.url_prefix + current.qualities[0].src
+                        autoplay: ""/*,
+                        src: this.cache.info.url_prefix + current.qualities[0].src*/
+                    });
+                    instance.append($("<source />"), {
+                        src: (this.cache.info.url_prefix || "") + current.qualities[0].src,
+                        type: "video/mp4"
                     });
                     instance[0].addEventListener('ended', function() {
                         that.resync();
