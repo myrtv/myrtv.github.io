@@ -836,7 +836,10 @@ var rtv = {
                     if (t.length > 0) {
                         rtv.config.customs();
                         //$(".ui-dialog-content").dialog("close");
-
+                        if (t.length == 1) {
+                            rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
+                            rtv.player.spawn("custom0");
+                        }
                         rtv.guide.open();
                     } else {
                         var dlg = $("<div title='Custom Channels - Saved'><p><strong>Custom Channels</strong> has been saved, please reload RTV to reflect any changes.</p></div>").dialog({
