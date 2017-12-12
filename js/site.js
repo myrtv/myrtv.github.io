@@ -34,20 +34,31 @@ var rtv = {
 
             this.load();
 
+            this.local();
+            this.customs();
+
+            this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
+            this.save();
+        },
+        local: function() {
             if (!this.cache.playlists || this.cache.playlists.length == 0) {
                 console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
                 this.cache.playlists = this.defaultPlaylists;
             }
-
+        },
+        customs: function() {
             //Instate custom playlists
+            for (i in rtv.player.cached_playlists) {
+                if (/^custom\d+$/.test(i)) {
+                    delete rtv.player.cached_playlists[i]
+                }
+            }
+
             if (localStorage.rtvCustomPlaylists && localStorage.rtvCustomPlaylists.length > 0) {
                 $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
                     rtv.player.playlist.generate({name:"custom"+i,list:v});
                 })
             }
-
-            this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
-            this.save();
         },
         cache: {},
         config: {},
@@ -201,6 +212,7 @@ var rtv = {
 
                 if (backstep < -10 && newCandidates.length == candidates.length) {
                     console.error("stalemate",needle)
+                    return needle;
                     break;
                 }
 
@@ -214,7 +226,7 @@ var rtv = {
                     backstep--;
                 }
             }
-            
+
             return needle;
         },
         create: function(path) {
@@ -230,7 +242,7 @@ var rtv = {
             }
 
             var list = (path || hash || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
-                that = this;            
+                that = this;
 
             $.each(rtv.config.cache.playlists, function (index, item) {
                 var cb = (item == list) ? function() {
@@ -821,14 +833,21 @@ var rtv = {
 
                     localStorage.rtvCustomPlaylists = JSON.stringify(t);
 
-                    var dlg = $("<div title='Custom Channels - Saved'><p><strong>Custom Channels</strong> has been saved, please reload RTV to reflect any changes.</p></div>").dialog({
-                        modal: true,
-                        width: "auto",
-                        buttons: {
-                            "Reload now": function() { location.reload(); },
-                            Cancel: function() { dlg.dialog("close"); }
-                        }
-                    });
+                    if (t.length > 0) {
+                        rtv.config.customs();
+                        //$(".ui-dialog-content").dialog("close");
+
+                        rtv.guide.open();
+                    } else {
+                        var dlg = $("<div title='Custom Channels - Saved'><p><strong>Custom Channels</strong> has been saved, please reload RTV to reflect any changes.</p></div>").dialog({
+                            modal: true,
+                            width: "auto",
+                            buttons: {
+                                "Reload now": function() { location.reload(); },
+                                Cancel: function() { dlg.dialog("close"); }
+                            }
+                        });
+                    }
                 },
                 edialog: function(i,error,follow) {
                     $('<div title="Issue parsing input #'+(i+1)+'"><p class="depress">'+error+'</p>'+follow+'</div>').dialog({width:"auto",modal:1})
@@ -876,10 +895,10 @@ var rtv = {
             $.each(Object.keys(rtv.player.cached_playlists).sort(), function (index, list) {
                 var source = $.extend({}, {cache: rtv.player.cached_playlists[list]}, rtv.player.playlist.utilities);
                 var active = (rtv.player.players.length > 0 && rtv.player.players.slice(-1)[0].cache.info.url == source.cache.info.url)
-                
+
                 var channel = that.generateChannel(source);
                 var row = that.generateRow(source);
-                
+
                 if (active) { //Show active channel first in list. Alternative: Flexbox order sort to top with CSS.
                     channels.prepend(channel);
                     shows.prepend(row.row);
