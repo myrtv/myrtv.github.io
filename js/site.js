@@ -655,8 +655,6 @@ var rtv = {
         share: function() {
             return $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
                 var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
-                var needle = rtv.player.findNeedle(item);
-
 
                 if (/^custom\d+$/.test(item.info.url)) {
                     var p = Object.assign({}, item);
@@ -689,6 +687,7 @@ var rtv = {
                         }
                     });
                 } else {
+                    var needle = rtv.player.findNeedle(item);
                     var href = location.href;
                     //href += (href.substr(-1)=='#'?'':'#')+needle;
                     //<a target='_blank' href='"+href+"'>"+href+"</a>
@@ -842,7 +841,7 @@ var rtv = {
                 return avail;
             },
             custom: {
-                open: function() {
+                open: function( ) {
                     var that = this,
                         manager = "<div title='Custom Channels'><p>Enter each custom channel in its own text box.</p>"+this.load()+"</div>"
 
