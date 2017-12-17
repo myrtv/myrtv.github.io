@@ -5,6 +5,15 @@ var rtv = {
 
         $("body").append($("<div />", {id: 'container'}).append(this.menu.spawn()));
         this.config.init();
+
+        switch (location.hash.substring(1)) {
+            case "?custom":
+                rtv.guide.channels.custom.open(true);
+                break;
+            default:
+                break;
+        }
+
         this.init();
     },
     about: function() {
@@ -35,7 +44,7 @@ var rtv = {
             this.load();
 
             this.local();
-            this.cache.customs = this.customs();
+            this.customs();
 
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
 
@@ -63,6 +72,8 @@ var rtv = {
                     temp.push("custom"+i);
                 })
             }
+
+            this.cache.customs = temp;
 
             return temp;
         },
@@ -664,9 +675,13 @@ var rtv = {
                     for (i in p.playlist) {
                         delete p.playlist[i].index;
                     }
+                    var href = location.href.split("#")[0]+"#?custom";
+                    var shurl = $("<a>", {target: "_blank", href: href, text: (href || "Share this URL")});
 
                     var t = $("<div title='Share "+item.info.name+"' />")
-                    .append("This is a custom channel, and thus requires manually sharing it.<br>The custom channel is in the textarea below.")
+                    .append("<p style='text-align:left'>This custom channel is not hosted on this site and must be manually shared.<br><br>" +
+                        "<strong>Step 1:</strong> Share "+shurl[0].outerHTML+" <br><strong>Step 2:</strong> Share the custom channel contents, below:</p>"
+                    )
                     .append($("<textarea>", {id: "shareCustom", text: JSON.stringify(p), readonly: "readonly"}).focus(function() { $(this).select(); }));
 
                     $(t).dialog({
@@ -679,11 +694,11 @@ var rtv = {
                             $(this).dialog('destroy')
                         },
                         buttons: {
-                            "test": {
+                            /*"test": {
                                 text: "Modify Custom Channels",
                                 "class": "customPlaylists",
                                 click: function() { rtv.guide.channels.custom.open() }
-                            }
+                            }*/
                         }
                     });
                 } else {
@@ -841,9 +856,10 @@ var rtv = {
                 return avail;
             },
             custom: {
-                open: function( ) {
-                    var that = this,
-                        manager = "<div title='Custom Channels'><p>Enter each custom channel in its own text box.</p>"+this.load()+"</div>"
+                open: function(share) {
+                    var that = this;
+                    var body = (!share) ? "Enter each custom channel in its own text box." : "Did someone share a custom channel with you?<br>Please paste it below and click \"Save\" to use it.";
+                    var manager = "<div title='Custom Channels'><p>"+body+"</p>"+this.load()+"</div>"
 
                     var managerDialog = $(manager).dialog({
                         autoOpen: true,
@@ -852,12 +868,13 @@ var rtv = {
                         modal: true,
                         buttons: {
                             "Help": function() { window.open('https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels', '_blank'); },
-                            "Save": that.save,
+                            "Save": function() { that.save(share) },
                             Cancel: function() { managerDialog.dialog("close"); }
                         }
                     }).attr("id", "customPlaylistsManager");
                 },
-                save: function() {
+                save: function(share) {
+                    console.log(share);
                     //All non-empty inputs pushed to array, then JSON.stringify to save.
                     var t = [],
                         that = this;
@@ -880,13 +897,18 @@ var rtv = {
                     localStorage.rtvCustomPlaylists = JSON.stringify(t);
 
                     if (t.length > 0) {
-                        rtv.config.local();
+                        rtv.config.customs();
                         //$(".ui-dialog-content").dialog("close");
                         if (t.length == 1) {
                             rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
                             rtv.player.spawn("custom0");
                         }
-                        rtv.guide.open();
+
+                        if (!share) {
+                            rtv.guide.open();
+                        } else {
+                            $("#customPlaylistsManager").dialog("close");
+                        }
                     } else {
                         var dlg = $("<div title='Custom Channels - Saved'><p><strong>Custom Channels</strong> has been saved, please reload RTV to reflect any changes.</p></div>").dialog({
                             modal: true,
@@ -907,7 +929,7 @@ var rtv = {
                             placeholder: "Paste playlist here...",
                             style: "width:100%",
                             value: line
-                        })[0].outerHTML
+                        })[0].outerHTML;
                     }
 
                     var out = genInput("");
@@ -918,7 +940,7 @@ var rtv = {
                         })
                     }
 
-                    return out
+                    return out;
                 }
             }
         },
