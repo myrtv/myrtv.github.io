@@ -602,7 +602,7 @@ var rtv = {
                     var current = this.getCurrentVideo();
                     var that = this;
 
-                    var src = that.cache.info.url_prefix + current.qualities[0].src;
+                    var src = (that.cache.info.url_prefix || "") + current.qualities[0].src;
 
                     if (src !== that.instance.src) {
                         that.instance.src = src;
