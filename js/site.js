@@ -661,6 +661,7 @@ var rtv = {
                 if (/^custom\d+$/.test(item.info.url)) {
                     var p = Object.assign({}, item);
                     delete p.info.chat;
+                    delete p.info.url;
                     delete p.info.total_duration;
                     for (i in p.playlist) {
                         delete p.playlist[i].index;
