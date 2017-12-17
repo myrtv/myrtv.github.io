@@ -35,9 +35,10 @@ var rtv = {
             this.load();
 
             this.local();
-            this.customs();
+            this.cache.customs = this.customs();
 
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
+
             this.save();
         },
         local: function() {
@@ -47,6 +48,8 @@ var rtv = {
             }
         },
         customs: function() {
+            var temp = [];
+
             //Instate custom playlists
             for (i in rtv.player.cached_playlists) {
                 if (/^custom\d+$/.test(i)) {
@@ -57,8 +60,11 @@ var rtv = {
             if (localStorage.rtvCustomPlaylists && localStorage.rtvCustomPlaylists.length > 0) {
                 $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
                     rtv.player.playlist.generate({name:"custom"+i,list:v});
+                    temp.push("custom"+i);
                 })
             }
+
+            return temp;
         },
         cache: {},
         config: {},
@@ -193,8 +199,8 @@ var rtv = {
     player: {
         players: [], //{name: "player-0", type: "html5", instance{}, cache[]}
         findNeedle: function(item) {
-            var originalUrl = item.info.url
-            var url = originalUrl.replace(/(\.(min|json))+$/ig,"")
+            var originalUrl = item.info.url;
+            var url = originalUrl.replace(/(\.(min|json))+$/ig,"");
             var candidates = rtv.config.defaultPlaylists;
             var backstep = -1;
             var needle = ""
@@ -211,7 +217,7 @@ var rtv = {
                 });
 
                 if (backstep < -10 && newCandidates.length == candidates.length) {
-                    console.error("stalemate",needle)
+                    console.warn("stalemate",needle)
                     return needle;
                     break;
                 }
@@ -230,8 +236,12 @@ var rtv = {
             return needle;
         },
         create: function(path) {
-            var last = localStorage['rtvLastPlaylist']
-            if ($.inArray(last,rtv.config.cache.playlists) == -1) { console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.'); last = false; }
+            var last = localStorage['rtvLastPlaylist'];
+
+            if ($.inArray(last,rtv.config.cache.playlists) == -1 && $.inArray(last,rtv.config.cache.customs) == -1) {
+                console.warn('Last playlist, "'+last+'", is not in config cache. Ignoring.');
+                last = false;
+            }
 
             //URL hash
             var hash = location.hash.substring(1);
@@ -244,7 +254,7 @@ var rtv = {
             var list = (path || hash || last || rtv.config.cache.playlists[Math.floor((Math.random()*rtv.config.cache.playlists.length))]),
                 that = this;
 
-            $.each(rtv.config.cache.playlists, function (index, item) {
+            $.each(rtv.config.cache.playlists.concat(rtv.config.cache.customs), function (index, item) {
                 var cb = (item == list) ? function() {
                     localStorage['rtvLastPlaylist'] = list;
                     that.spawn(item)
@@ -625,29 +635,8 @@ var rtv = {
                     }
                 });
             }).appendTo(menu);
-            $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
-                var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
-                var needle = rtv.player.findNeedle(item);
 
-                var href = location.href;
-                //href += (href.substr(-1)=='#'?'':'#')+needle;
-                //<a target='_blank' href='"+href+"'>"+href+"</a>
-                var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
-                var t = $("<div title='Share "+item.info.name+"' />").append(input);
-                var msg = escape("Let's watch "+item.info.name+" together! "+href);
-                $(t).append("<a target='_blank' href='http://twitter.com/home?status="+msg+"'><i class='fa fa-twitter'></i> Tweet</a>")
-
-                $(t).dialog({
-                    autoOpen: true,
-                    height: "auto",
-                    width: "auto",
-                    modal: true,
-                    dialogClass: 'dialog-shareChannel',
-                    close: function() {
-                        $(this).dialog('destroy')
-                    }
-                })
-            }).appendTo(menu);
+            this.share().appendTo(menu);
 
             $("<hr>").appendTo(menu)
             $("<i />", {class: "fa fa-close", title: "Auto-hide sidebar"}).click(function() {
@@ -662,6 +651,63 @@ var rtv = {
             })
 
             return menu;
+        },
+        share: function() {
+            return $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
+                var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
+                var needle = rtv.player.findNeedle(item);
+
+
+                if (/^custom\d+$/.test(item.info.url)) {
+                    var p = Object.assign({}, item);
+                    delete p.info.chat;
+                    delete p.info.total_duration;
+                    for (i in p.playlist) {
+                        delete p.playlist[i].index;
+                    }
+
+                    var t = $("<div title='"+item.info.name+"' />")
+                    .append("This is a custom channel, and thus requires manually sharing it.<br>The custom channel is in the textarea below.")
+                    .append($("<textarea>", {id: "shareCustom", text: JSON.stringify(p), readonly: "readonly"}).focus(function() { $(this).select(); }));
+
+                    $(t).dialog({
+                        autoOpen: true,
+                        height: "auto",
+                        width: "auto",
+                        modal: true,
+                        dialogClass: 'dialog-shareChannel',
+                        close: function() {
+                            $(this).dialog('destroy')
+                        },
+                        buttons: {
+                            "test": {
+                                text: "Modify Custom Channels",
+                                "class": "customPlaylists",
+                                click: function() { rtv.guide.channels.custom.open() }
+                            }
+                        }
+                    });
+                } else {
+                    var href = location.href;
+                    //href += (href.substr(-1)=='#'?'':'#')+needle;
+                    //<a target='_blank' href='"+href+"'>"+href+"</a>
+                    var input = $("<input readonly value='"+href+"' />").focus(function() { $(this).select(); });
+                    var t = $("<div title='Share "+item.info.name+"' />").append(input);
+                    var msg = escape("Let's watch "+item.info.name+" together! "+href);
+                    $(t).append("<a target='_blank' href='http://twitter.com/home?status="+msg+"'><i class='fa fa-twitter'></i> Tweet</a>")
+
+                    $(t).dialog({
+                        autoOpen: true,
+                        height: "auto",
+                        width: "auto",
+                        modal: true,
+                        dialogClass: 'dialog-shareChannel',
+                        close: function() {
+                            $(this).dialog('destroy')
+                        }
+                    })
+                }
+            })
         }
     },
     guide: {
@@ -797,7 +843,7 @@ var rtv = {
             custom: {
                 open: function() {
                     var that = this,
-                        manager = "<div title='Custom Channel'><p>Enter each custom channel in its own text box.</p>"+this.load()+"</div>"
+                        manager = "<div title='Custom Channels'><p>Enter each custom channel in its own text box.</p>"+this.load()+"</div>"
 
                     var managerDialog = $(manager).dialog({
                         autoOpen: true,
@@ -834,7 +880,7 @@ var rtv = {
                     localStorage.rtvCustomPlaylists = JSON.stringify(t);
 
                     if (t.length > 0) {
-                        rtv.config.customs();
+                        rtv.config.local();
                         //$(".ui-dialog-content").dialog("close");
                         if (t.length == 1) {
                             rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
