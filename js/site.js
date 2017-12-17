@@ -667,7 +667,7 @@ var rtv = {
                         delete p.playlist[i].index;
                     }
 
-                    var t = $("<div title='"+item.info.name+"' />")
+                    var t = $("<div title='Share "+item.info.name+"' />")
                     .append("This is a custom channel, and thus requires manually sharing it.<br>The custom channel is in the textarea below.")
                     .append($("<textarea>", {id: "shareCustom", text: JSON.stringify(p), readonly: "readonly"}).focus(function() { $(this).select(); }));
 
