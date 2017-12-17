@@ -668,7 +668,7 @@ var rtv = {
                 var item = rtv.player.players[$("[id^=window-player]").eq(0).data()["player-index"]].cache;
 
                 if (/^custom\d+$/.test(item.info.url)) {
-                    var p = Object.assign({}, item);
+                    var p = JSON.parse(JSON.stringify(item));
                     delete p.info.chat;
                     delete p.info.url;
                     delete p.info.total_duration;
