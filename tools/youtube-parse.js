@@ -2,7 +2,7 @@
 R = document.getElementsByTagName("ytd-playlist-video-renderer"), T = document.getElementsByClassName("title")[0].innerText, V = {
     info: {
         name: T,
-        service: "youtube"
+        player: "youtube"
     },
     playlist: []
 };
@@ -10,7 +10,7 @@ for (i = 0; i < R.length; i++) {
     V.playlist.push({
         name: R[i].__data__.data.title.simpleText,
         duration: parseInt(R[i].__data__.data.lengthSeconds),
-        qualities: [{ src: R[i].__data__.data.videoId }]
+        src: R[i].__data__.data.videoId
     })
 };
 Q = JSON.stringify(V);
