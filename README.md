@@ -13,7 +13,7 @@ When you *tune in* to RTV it obtains a playlist, which has a defined starting po
 RTV provides a *ton* of channels, probably not as diverse as all would like. To alleviate that, [Custom Channels](https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels) are supported.
 
 #### But wait, won't this use a ton of bandwidth?
-**Nope!** Only if *you* let it. It's a sort of but not really hybrid streaming, you download only what you will see but RTV steers you to what the synced video should be.
+**No!** Only if *you* let it. It's a sort of but not really hybrid streaming, you download only what you will see (and some buffer) but RTV controls the player to what the synced video should be, skipping what has already "played" entirely.
 
 To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality) is 41.4GB total on [Internet Archive](https://archive.org/). However, unless you leave the stream running 24/7 you should never come near that amount within a given loop of it (which is 156 hours).
 
