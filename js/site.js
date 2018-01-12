@@ -197,9 +197,7 @@ var rtv = {
             "playlists/speedrun/werster.min.json",
             "playlists/ethoslab.min.json",
             "playlists/ethoplaysminecraft.min.json",
-            "playlists/linustechtips.min.json",
             "playlists/pannenkoek2012.min.json",
-            "playlists/redlettermedia.min.json",
             "playlists/rwby.min.json",
             "playlists/tpp-red.min.json",
         ]
