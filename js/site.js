@@ -373,6 +373,17 @@ var rtv = {
 
                     return the_key;
                 },
+                getCurrentPlayer: function() {
+                    return (this.getCurrentVideo().player || this.cache.info.player || "html5")
+                },
+                getNextVideo: function() {
+                    var n = this.getCurrentVideo().index + 1;
+                    return this.cache.playlist[n==this.cache.playlist.length ? 0 : n]
+                },
+                getNextPlayer: function() {
+                    console.log("NV:",this.getNextVideo());
+                    return (this.getNextVideo().player || this.cache.info.player || "html5")
+                },
                 generatePlaylistFromIndex: function(index) {
                     var playlist = this.cache.playlist;
                     var select = $("<select />", {class: "guide"});
@@ -395,6 +406,13 @@ var rtv = {
                     }).appendTo(select);
 
                     return select;
+                },
+                swapInstance: function (to) {
+                    console.log("need to switch from",this.type,"to",this.getCurrentPlayer())
+                    this.destroy(true);
+                    $.extend(this, rtv.player.instance[this.getCurrentPlayer()])
+                    this.done = false;
+                    this.init(this.name);
                 }
             }
         },
@@ -426,16 +444,21 @@ var rtv = {
                 console.log('it\'s a mystery');
             }
 
-
             //Create parent container (especially for YouTube, but we'll need it later anyway even for HTML5)
             $("<div />", {id: "window-"+name}).data({"player-index": i}).append($("<div />", {id: name})).appendTo("#container");
 
-            switch (playlist.info.service) {
+            //Determine current player instance
+            $.extend(player, that.playlist.utilities)
+
+            switch ((player.getCurrentVideo().player || player.cache.info.player || "html5")) {
                 case "youtube":
-                    $.extend(player, that.playlist.utilities, that.instance.youtube);
+                    $.extend(player, that.instance.youtube);
                     break;
+                case "html5":
+                case "h5":
+                case "":
                 default:
-                    $.extend(player, that.playlist.utilities, that.instance.html5);
+                    $.extend(player, that.instance.html5);
             }
 
             player.init(name);
@@ -489,9 +512,9 @@ var rtv = {
         instance: {
             youtube: {
                 done: false,
-                destroy: function() {
+                destroy: function(keepWindow) {
                     this.instance.destroy();
-                    $("#window-"+this.name).remove();
+                    !keepWindow && $("#window-"+this.name).remove();
                 },
                 spawnQueue: [], //See below, might not need this in the long run but trying to be safe
                 init: function(target) {
@@ -535,7 +558,7 @@ var rtv = {
                             'modestbranding': 1,
                             'showinfo': 1
                         },
-                        videoId: current.qualities[0].src,
+                        videoId: current.src,
                         events: {
                             'onReady': that.playerOnReady,
                             'onStateChange': that.playerOnStateChange
@@ -558,19 +581,25 @@ var rtv = {
                         rtv.player.players[index].resync();
                     }
                     if (event.data == YT.PlayerState.ENDED) {
-                        rtv.player.players[index].resync();
+                        rtv.player.players[index].resync(YT.PlayerState.ENDED);
                     }
                 },
-                resync: function() {
+                resync: function(reason) {
                     var that = this;
                     var current = that.getCurrentVideo();
 
-                    if (that.instance.getVideoData()['video_id'] == current.qualities[0].src) {
+                    if (reason == YT.PlayerState.ENDED && this.getCurrentPlayer() !== this.type) {
+                        this.resynced = false;
+                        this.swapInstance();
+                        return 0;
+                    }
+
+                    if (that.instance.getVideoData()['video_id'] == current.src) {
                         that.instance.seekTo(current.seek_to, true);
                         that.instance.playVideo();
                     } else {
                         that.instance.loadVideoById({
-                            'videoId': current.qualities[0].src,
+                            'videoId': current.src,
                             'startSeconds': current.seek_to
                         });
                     }
@@ -580,10 +609,10 @@ var rtv = {
                 init: function(target) {
                     this.spawn(target);
                 },
-                destroy: function() {
+                destroy: function(keepWindow) {
                     $(this.instance).remove();
                     delete this.instance;
-                    $("#window-"+this.name).remove();
+                    !keepWindow && $("#window-"+this.name).remove();
                 },
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
@@ -596,11 +625,11 @@ var rtv = {
                         src: this.cache.info.url_prefix + current.qualities[0].src*/
                     });
                     instance.append($("<source />"), {
-                        src: (this.cache.info.url_prefix || "") + current.qualities[0].src,
+                        src: (this.cache.info.url_prefix || "") + current.src,
                         type: "video/mp4"
                     });
                     instance[0].addEventListener('ended', function() {
-                        that.resync();
+                        that.resync("ended");
                     }, false);
 
                     $("#"+target).html(instance);
@@ -609,11 +638,16 @@ var rtv = {
 
                     this.resync();
                 },
-                resync: function() {
+                resync: function(reason) {
                     var current = this.getCurrentVideo();
                     var that = this;
 
-                    var src = (that.cache.info.url_prefix || "") + current.qualities[0].src;
+                    if (reason == "ended" && this.getCurrentPlayer() !== this.type) {
+                        this.swapInstance();
+                        return 0;
+                    }
+
+                    var src = (that.cache.info.url_prefix || "") + current.src;
 
                     if (src !== that.instance.src) {
                         that.instance.src = src;
