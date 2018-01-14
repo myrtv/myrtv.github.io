@@ -362,6 +362,9 @@ var rtv = {
                     $.each(this.cache.playlist, function (index, key) {
                         if (current_time < current_total + key.duration) {
                             the_key = key;
+                            if (!the_key.src) { //Temp until converted
+                                the_key.src = key.qualities[0].src
+                            }
                             the_key.seek_to = current_time - current_total;
                             return false;
                         } else {
