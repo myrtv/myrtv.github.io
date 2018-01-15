@@ -100,6 +100,7 @@ var rtv = {
             "playlists/speedrun/gdq/sgdq2016.min.json",
             "playlists/speedrun/gdq/agdq2017.min.json",
             "playlists/speedrun/gdq/sgdq2017.min.json",
+            "playlists/speedrun/gdq/agdq2018.min.json",
             "playlists/speedrun/rpglb/rpglb2017.json",
             "playlists/speedrun/rpglb/rpglb2017talesof.json",
             "playlists/speedrun/nasa/nasa2017.min.json",
