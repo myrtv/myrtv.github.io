@@ -433,7 +433,7 @@ var rtv = {
                 rtv.player.destroy.player($("#container > [id^=window-player-]").data("player-index"));
                 rtv.player.spawn(playlist.info.url);
                 //rtv.guide.close();
-            }).prependTo("#recents");
+            })//.prependTo("#recents"); //TO-DO: ALSO PERFECT.
 
             //Initialize the new player
             var player = {
@@ -681,7 +681,7 @@ var rtv = {
                         $(this).dialog('destroy');
                     }
                 });
-            }).appendTo(menu);
+            })//.appendTo(menu); //TO-DO: PERFECT.
 
             this.share().appendTo(menu);
 
