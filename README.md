@@ -8,14 +8,15 @@ A pseudo-live TV implementation to save bandwidth but still function normally.
 #### What does that even mean?
 When you *tune in* to RTV it obtains a playlist, which has a defined starting point in history (yesterday, 10 years ago, whatever). It proceeds to determine, had that same playlist been repeating since it started, what is currently *on* right now.
 
+#### Won't this use a ton of bandwidth?
+**No!** Only if *you* let it. You only watch what is currently playing and the provider of the video is only active when there is at least one viewer so both sides benefit from only transferring what they must but maintaining sync while "offline".
+
+### Why not use something like a website that syncs YouTube videos, or a YouTube playlist?    
+This is unmanaged and "continually broadcasts", even when there's nobody left to watch. It does not require someone to make a room, load up some videos, or even interact with it to maintain a sync each time somebody feels like watching. The stream is always available where it's expected to be.
+
 ----
 
 RTV provides a *ton* of channels, probably not as diverse as all would like. To alleviate that, [Custom Channels](https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels) are supported.
-
-#### But wait, won't this use a ton of bandwidth?
-**No!** Only if *you* let it. It's a sort of but not really hybrid streaming, you download only what you will see (and some buffer) but RTV controls the player to what the synced video should be, skipping what has already "played" entirely.
-
-To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality) is 41.4GB total on [Internet Archive](https://archive.org/). However, unless you leave the stream running 24/7 you should never come near that amount within a given loop of it (which is 156 hours).
 
 ### How you can help RTV
 
@@ -46,9 +47,3 @@ To give some numbers, *Awesome Games Done Quick 2013* in 512kbps (lowest quality
    - IRC. Powered, but not endorsed, by Rizon.
  
 ### Unplanned Features
-
-   
----
-
-**Why not just use something like a website that syncs YouTube videos, or... a YouTube playlist?**    
-This is unmanaged and "continually broadcasts" no matter what. It just goes, configuration-free. Anybody can stop by and watch the same thing, and when there's nobody left it'll still be where it needs to be on return. It's accomplishes this with a defined starting point to ensure everyone can sync up, at any time, without a *server* managing.
