@@ -11,8 +11,11 @@ When you *tune in* to RTV it obtains a playlist, which has a defined starting po
 #### Won't this use a ton of bandwidth?
 **No!** Only if *you* let it. You only watch what is currently playing and the provider of the video is only active when there is at least one viewer so both sides benefit from only transferring what they must but maintaining sync while "offline".
 
-### Why not use something like a website that syncs YouTube videos, or a YouTube playlist?    
+#### Why not use something like a website that syncs YouTube videos, or a YouTube playlist?    
 This is unmanaged and "continually broadcasts", even when there's nobody left to watch. It does not require someone to make a room, load up some videos, or even interact with it to maintain a sync each time somebody feels like watching. The stream is always available where it's expected to be.
+
+#### Why are all these answers mostly the same?
+Because it's that simple. There are only a few instances of smoke and mirrors to maintain the sync, most of the experience comes from the variety of channels and the intricate guide. It's a direct competitor to YouTube syncing sites, but also itself is a unique feature over them. It also works locally/self-hosted if you want to roll your own.
 
 ----
 
@@ -29,6 +32,7 @@ RTV provides a *ton* of channels, probably not as diverse as all would like. To 
  - [YouTube](https://github.com/myrtv/myrtv.github.io/wiki/YouTube-Playlists)
 
 ### Planned Features
+ - Search
  - ~~Playlist switching~~ *Done, the channel select window!*
  - ~~Playlist viewing~~ *Done, the guide!* 
    - Maybe browser desktop notification support
