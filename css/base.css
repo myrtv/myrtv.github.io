@@ -2,6 +2,7 @@ body {
     margin: 0px;
     background-color: black;
     height: 100%;
+    color: white;
 }
 video {
     width: 100%;
