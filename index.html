@@ -10,7 +10,10 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
         <script src="js/site.js"></script>
         <script>
-            window['ga-disable-UA-58660703-2'] = !((localStorage.NSAme == 1) || false);
+            //Mini privacy policy: this just sends your pageview info (browser, device, referrer, vague location, etc.) for stat tracking.
+            //The main RTV code does not send any additional information, such as the channels you watch or for how long.
+            //NSA free example: window['ga-disable-UA-58660703-2'] = true
+            //NoScript and possibly most Privacy/AdBlockers will block Google Analytics by default, so I'd expect most users will have to opt-in via those.
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
             ga('create', 'UA-58660703-2', 'auto');
             ga('set', 'anonymizeIp', true);
@@ -32,5 +35,10 @@
 		<!-- <meta property="og:site_name" content="RTV"> -->
 		<meta property="og:image" content="//myrtv.github.io/favicon-big.png">
     </head>
-    <body></body>
+    <body>
+        <noscript>
+        Javascript is required to use this site! 99% of its functionality requires it and there's not much in the way of an alternative.<br>
+        The source is <a href="https://github.com/myrtv/myrtv.github.io">available on GitHub</a> and 1:1 reflects anything that would appear on this site, live.
+        </noscript>
+    </body>
 </html>
