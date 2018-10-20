@@ -1,0 +1,31 @@
+body {
+    background-color:#fff;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#container .row { flex-grow: 1;}
+#row2 { display: flex }
+#insert {
+    flex-grow: 0 !important;
+    width: 100%;
+    padding:10px 8px;
+    position: sticky;
+    background-color: #fff;
+    top: 0px;
+    border-bottom: 2px solid black;
+}
+#insert * { font-size:1.2em; }
+#insert input { min-width: 400px; }
+#left {
+    flex: 0 1 270px;
+}
+#left #video-test {
+    max-width: 270px;
+}
+#right {
+    flex: 1 1;
+    display:inline-block;    
+}
