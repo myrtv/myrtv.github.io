@@ -20,7 +20,7 @@ config = { //Sample config for Crunchyroll
     buttonTarget: "#header_userpanel_beta ul",
     playerDetect: "#vilos-player",
     playerInstance: window["VILOS_PLAYERJS"],
-    JSON: "https://myrtv.github.io/rtvportable/playlists/"+location.pathname.split("/")[1]+".json",
+    JSON: ("https://myrtv.github.io/rtvportable/playlists/"+location.pathname.split("/")[1]+".json").replace("-","%2d"),
     list: []
 }
 
