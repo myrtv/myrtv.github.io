@@ -27,7 +27,7 @@
 config = { //Sample config for Crunchyroll
     buttonTarget: "#header_userpanel_beta ul",
     playerDetect: "#vilos-player",
-    playerInstance: window["VILOS_PLAYERJS"],
+    playerInstance: "VILOS_PLAYERJS",
     JSON: ("https://myrtv.github.io/rtvportable/playlists/crunchyroll/"+location.pathname.split("/")[1]+".min.json").replace("-","%2D"),
     list: []
 }
@@ -74,8 +74,7 @@ rtvp = {
             }
             //return;
         }
-        
-        this.video.instance = config.playerInstance;
+
         rtvp.playlist.totalDur = rtvp.playlist.list.reduce((a,b)=>a+b.duration,0);
 
         $("<a/>", {
@@ -117,6 +116,7 @@ rtvp = {
         var wait = setInterval(function() {
             if ($(config.playerDetect).length) {
                 clearInterval(wait);
+                rtvp.video.instance = window[config.playerInstance];
                 rtvp.bind();
                 rtvp.run();
             }
