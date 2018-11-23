@@ -115,7 +115,7 @@ rtvp = {
 
         //Wait for player
         var wait = setInterval(function() {
-            if (config.playerDetect) {
+            if ($(config.playerDetect).length) {
                 clearInterval(wait);
                 rtvp.bind();
                 rtvp.run();
