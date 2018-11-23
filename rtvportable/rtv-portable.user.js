@@ -1,7 +1,15 @@
+// ==UserScript==
+// @author	RePod
+// @name	RTV Portable - Crunchyroll version
+// @version	1.0
+// @include	/https://www.crunchyroll.com/*/
+// @grant	none
+// ==/UserScript==
+
 /*
 
     A crude, portable version of RTV intended to be used on websites that either expose a controllable player or player API.
-    Hopefully with jQuery available. Generating playlists is your problem.
+    Hopefully with jQuery available. Generating playlists is your problem. Run with a userscript extension for easiest results.
     
     Playlist format should be: (duration in seconds, floored preffered)
     {"list": [
