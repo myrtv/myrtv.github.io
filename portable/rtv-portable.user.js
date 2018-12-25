@@ -76,6 +76,7 @@ rtvp = {
                 
                 if (alt.length > 0) {
                     localStorage.rtvpAltURL = alt;
+                    location.reload();
                 } else {
                     localStorage.removeItem("rtvpAltURL");
                 }
