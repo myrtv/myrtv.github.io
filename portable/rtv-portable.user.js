@@ -62,37 +62,60 @@ rtvp = {
             rtvp.sync()
         });
     },
-    preinit: function() {
-        if (this.playlist.list.length == 0) {
-            if (config.list && config.list.length > 0) {
-                rtvp.playlist.list = config.list;
-            } else {
-                $.getJSON(config.JSON).then(function(a) {
-                    rtvp.playlist.list = a.list;
-                    rtvp.preinit();
-                })
-            }
-            //return;
-        }
-
-        rtvp.playlist.totalDur = rtvp.playlist.list.reduce((a,b)=>a+b.duration,0);
-
-        $("<a/>", {
+    tvbutton: function() {
+        //For styling purposes.
+        return $("<a/>", {
             id: "launchTV",
             text: "TV",
             title: this.generateTitle()
         })
         .css("cursor","pointer")
-        .click(()=>{ rtvp.sync(); })
-        .appendTo($(config.buttonTarget))
+        .click((a)=>{
+            if (a.ctrlKey && a.altKey) {
+                var alt = prompt("Enter alternative playlist URL:\nCurrent below, empty to unset.", (localStorage.rtvpAltURL || config.JSON));
+                
+                if (alt.length > 0) {
+                    localStorage.rtvpAltURL = alt;
+                } else {
+                    localStorage.removeItem("rtvpAltURL");
+                }
+                
+                return;
+            }
+            
+            rtvp.sync();
+        })
+    },
+    preinit: function() {
+        if (this.playlist.list.length == 0) {
+            if (config.list && config.list.length > 0) {
+                rtvp.playlist.list = config.list;
+            } else {
+                var target = (localStorage.rtvpAltURL || config.JSON);
+                $.getJSON(target).then(function(a) {
+                    rtvp.playlist.list = a.list;
+                    rtvp.preinit();
+                })
+                .fail(function(a) {
+                    localStorage.removeItem("rtvpAltURL");
+                    prompt("Playlist loading failed.\nIf it was an alternative URL it is now shown below and will be unset.\nFor other problems, contact whoever you got the script/URL from.",target);
+                    location.reload();
+                })
+            }
+            return;
+        }
+
+        rtvp.playlist.totalDur = rtvp.playlist.list.reduce((a,b)=>a+b.duration,0);
+        
+        this.tvbutton().prependTo($(config.buttonTarget))
 
         //Automatically init if we're also auto-navigating.
         if (localStorage.rtvpmove) { rtvp.init(); }
     },
     generateTitle: function() {
         var ep = this.currentEp();
-        var title = `\t\tNow\t\t${ep.item.name}`;
         var len = this.playlist.list.length;
+        var title = `Ctrl Alt Click to set custom playlist URL.\n\n#${ep.index+1}/${len}\tNow\t\t${ep.item.name}`;
 
         for (var i=1,t=10;i<t;i++) {
             if (this.playlist.list[ep.index+i] == undefined) { break }
@@ -116,7 +139,7 @@ rtvp = {
         var wait = setInterval(function() {
             if ($(config.playerDetect).length) {
                 clearInterval(wait);
-                rtvp.video.instance = window[config.playerInstance];
+                rtvp.video.instance = (typeof config.playerInstance == "object") ? config.playerInstance : window[config.playerInstance];
                 rtvp.bind();
                 rtvp.run();
             }
