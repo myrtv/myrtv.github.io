@@ -106,6 +106,7 @@ var rtv = {
             "playlists/speedrun/nasa/nasa2017.min.json",
             "playlists/speedrun/esa/esa2015purple.min.json",
             "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
+            "playlists/speedrun/speedgaming/reallyreallylongathon2.min.json",
             "playlists/speedrun/pokemon/psr2016.min.json",
             "playlists/pbsideachannel.min.json",
             "playlists/joyofpainting.min.json"
