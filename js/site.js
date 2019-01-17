@@ -88,7 +88,6 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         defaultPlaylists: [
-            "playlists/anime/flcl.min.json",
             "playlists/anime/initiald.min.json",
             "playlists/speedrun/gdq/agdq2013.min.json",
             "playlists/speedrun/gdq/sgdq2013.min.json",
