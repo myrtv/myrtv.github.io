@@ -1,8 +1,6 @@
-These may or may not be randomly broke because YouTube changes their design every 5 seconds. The most recently updated one has the best chance of success.
+If something is broken move down the list. If they're all broken notify me.
 
-Need help picking one?
-
-### [youtube-parse.js](youtube-parse.js) (usually kept up to date)
+### [youtube-parse.js](youtube-parse.js)
  - Easiest, one playlist at a time.
  - Visit the actual playlist page on YouTube. (`https://www.youtube.com/playlist?list=STUFF`)
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
@@ -22,31 +20,12 @@ Need help picking one?
    - The end result is flipped, so the oldest/last video is the first in the generated playlist.
    - If the result is cut off in the text box, it is also available from the console.
    - If obtained from the console **do not copy** the start and end double-quotes: `"`, your copy should start and end with `{ }`.
-
-### [youtube-parse-videos-legacy.js](youtube-parse-legacy.js)
- - Same as above, but for the previous YouTube site design.
-
-### [youtube-playlists.sh](youtube-playlists.sh)
- - For experts and bulk playlist generation.
-   - If you don't understand the following, this is not for you.
- - Runs in a CLI/shell/terminal/command prompt/etc.
-   - Windows users will need at *best* [MinGW](http://mingw.org/), Windows 10's Ubuntu subsystem is untested.
-   - Requires: `curl` (`wget` would probably be fine), `grep`, `sed`, `wc`
- - Mark executable then `./youtube-playlists.sh https://www.youtube.com/playlist?list=STUFF`
- - Will generate the playlist based off the provided URL and save it to a file.
- - Has a hard-limit of 100 playlist items, unless the actual page is saved manually with all items then fed in.
-   - Quick and easy solution would be a watch folder.
-
-```
-curl https://raw.githubusercontent.com/myrtv/myrtv.github.io/master/tools/youtube-playlists.sh -o youtube-playlists.sh
-chmod +x ./youtube-playlists.sh && ./youtube-playlists.sh https://www.youtube.com/playlist?list=STUFF
-```
-
-### The rest
-
- - Scraping Archive.org's GDQ collections (the file names changed yearly)
-   - All these require jQuery available, too lazy to convert to vanilla JavaScript
-   - [archive-parse-2011.js](archive-parse-2011.js)
-   - [archive-parse-2012.js](archive-parse-2012.js)
-   - [archive-parse-2013.js](archive-parse-2013.js)
-   - [archive-parse-2014+.js](archive-parse-2014+.js)
+   
+### [youtubedl-parse.sh](youtubedl-parse.sh) (most reliable)
+ - Best chance that it still works, but familiarity with shell recommended.
+ - Requires bash, youtube-dl, and jq installed.
+ - At the time of writing it's a relatively new script. Not a lot of features.
+ - Slow and steady because I'm tired of caring about design changes.
+    - I was and am well aware of the pitfalls of the above.
+   
+There's some other stuff in the *deprecated* folder, but...
