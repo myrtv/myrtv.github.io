@@ -576,10 +576,10 @@ var rtv = {
                     return instance;
                 },
                 playerOnReady: function(event) {
-                    //var index = $(event.target.a).parent().data("player-index");
+                    //var index = /*COPY FROM BELOW*/
                 },
                 playerOnStateChange: function(event) {
-                    var index = $(event.target.a).parent().data("player-index");
+                    var index = $("#"+$(event.target.l).attr("id")).parent().data("player-index");
 
                     if (typeof rtv.player.players[index].resynced === 'undefined' && event.data == YT.PlayerState.PLAYING) {
                         rtv.player.players[index].resynced = true;
