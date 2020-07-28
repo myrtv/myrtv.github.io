@@ -581,7 +581,7 @@ var rtv = {
                 playerOnStateChange: function(event) {
                     var index = $(event.target.a).parent().data("player-index");
 
-                    if (!rtv.player.players[index].resynced && event.data == YT.PlayerState.PLAYING) {
+                    if (typeof rtv.player.players[index].resynced === 'undefined' && event.data == YT.PlayerState.PLAYING) {
                         rtv.player.players[index].resynced = true;
                         rtv.player.players[index].resync();
                     }
