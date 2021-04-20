@@ -566,7 +566,7 @@ var rtv = {
                         videoId: current.src,
                         events: {
                             'onReady': that.playerOnReady,
-                            'onStateChange': that.playerOnStateChange
+                            'onStateChange': (event) => that.playerOnStateChange(target, event)
                         }
                     });
 
@@ -578,8 +578,8 @@ var rtv = {
                 playerOnReady: function(event) {
                     //var index = /*COPY FROM BELOW*/
                 },
-                playerOnStateChange: function(event) {
-                    var index = $("#"+$(event.target.l).attr("id")).parent().data("player-index");
+                playerOnStateChange: function(target, event) {
+                    var index = $("#"+target).parent().data("player-index");
 
                     if (typeof rtv.player.players[index].resynced === 'undefined' && event.data == YT.PlayerState.PLAYING) {
                         rtv.player.players[index].resynced = true;
