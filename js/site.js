@@ -617,6 +617,9 @@ var rtv = {
                             'startSeconds': current.seek_to
                         });
                     }
+                },
+                pause: function() {
+                    this.instance.pauseVideo()
                 }
             },
             dailymotion: {
@@ -630,9 +633,6 @@ var rtv = {
                         this.loadAPI().then(() => {
                             that.spawn(target);
                         })
-                        /*this.spawnQueue.push(function() {
-                            
-                        });*/
                     } else {
                         this.spawn(target);
                     }
@@ -643,12 +643,10 @@ var rtv = {
                     tag.src = "https://api.dmcdn.net/all.js";
                     var firstScriptTag = document.getElementsByTagName('script')[0];
                     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                    
+
                     return new Promise(success => tag.onload = success)
                 },
-                destroy: function(keepWindow) {
-                    
-                },
+                destroy: function(keepWindow) {},
                 spawn: function(target) {
                     var current = this.getCurrentVideo();
                     var that = this;
@@ -692,6 +690,9 @@ var rtv = {
                     } else {
                         that.instance.load(current.src); // No seek?
                     }
+                },
+                pause: function() {
+                    this.instance.pause()
                 }
             },
             html5: {
@@ -743,6 +744,9 @@ var rtv = {
                     }
                     that.instance.currentTime = current.seek_to;
                     that.instance.play();
+                },
+                pause: function() {
+                    this.instance.pause()
                 }
             }
         }
@@ -778,6 +782,15 @@ var rtv = {
                 $(this).toggleClass("fa-check fa-close");
             }).appendTo(menu);
             $("<hr>").appendTo(menu)
+            $("<i />", {class: "fa fa-expand", title: "Toggle Fullscreen"}).click(function() {
+                if (document.fullscreenElement == null) {
+                    $("body")[0].requestFullscreen()
+                } else {
+                    document.exitFullscreen()
+                }
+                $(this).toggleClass("fa-expand fa-compress");
+            }).appendTo(menu);
+            $("<i />", {class: "fa fa-bed", title: "Sleep Timer"}).click(() => this.sleep()).appendTo(menu);
             $("<div />", {id: 'recents'}).appendTo(menu);
 
             menu.tooltip({
@@ -785,6 +798,49 @@ var rtv = {
             })
 
             return menu;
+        },
+        sleepTimer: 0,
+        sleepEnd: "",
+        sleep: function() {
+            var that = this;
+            var status = (this.sleepTimer == 0) ? "Sleep timer disabled." : `Sleep timer set for ${this.sleepEnd}`
+            var about = `<div title="Sleep Timer" style="text-align:center">
+                    Enter a duration in hours to automatically stop playback or set to 0 to disable.<br><br>
+                    <input type="number" id="sleep" name="" min="0" step="0.5" value="0" style="text-align:center"><br>
+                    <br>
+                    ${status}
+                    </div>`;
+
+            $(about).dialog({
+                id: "sleepDialog",
+                autoOpen: true,
+                height: "auto",
+                width: "auto",
+                modal: true,
+                buttons: {
+                    "Apply": function() {
+                        var value = (parseFloat($("input#sleep")[0].value) || 0) * 3600000
+                        that.sleepEnd = moment().add(value).format('hh:mmA')
+
+                        if (value > 0) {
+                            that.sleepTimer = setTimeout(() => {
+                                rtv.player.players.forEach(player =>
+                                    player.pause()
+                                )
+                            }, value)
+                        } else {
+                            clearTimeout(that.sleepTimer)
+                            that.sleepTimer = 0
+                        }
+
+                        $(this).dialog('destroy')
+                        that.sleep()
+                    },
+                },
+                close: function() {}
+            });
+
+            $(about).find("button").button();
         },
         share: function() {
             return $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
