@@ -790,7 +790,7 @@ var rtv = {
                 }
                 $(this).toggleClass("fa-expand fa-compress");
             }).appendTo(menu);
-            $("<i />", {class: "fa fa-bed", title: "Sleep Timer"}).click(() => this.sleep()).appendTo(menu);
+            $("<i />", {class: "fa fa-bed", title: "Sleep Timer"}).click(() => this.sleep.dialog()).appendTo(menu);
             $("<div />", {id: 'recents'}).appendTo(menu);
 
             menu.tooltip({
@@ -799,48 +799,56 @@ var rtv = {
 
             return menu;
         },
-        sleepTimer: 0,
-        sleepEnd: "",
-        sleep: function() {
-            var that = this;
-            var status = (this.sleepTimer == 0) ? "Sleep timer disabled." : `Sleep timer set for ${this.sleepEnd}`
-            var about = `<div title="Sleep Timer" style="text-align:center">
-                    Enter a duration in hours to automatically stop playback or set to 0 to disable.<br><br>
-                    <input type="number" class="sleep" name="" min="0" step="0.5" value="0" style="text-align:center"><br>
-                    <br>
-                    ${status}
-                    </div>`;
+        sleep: {
+            timer: 0,
+            end: "",
+            last: 0,
+            dialog: function() {
+                var that = this;
+                var about = `<div title="Sleep Timer" style="text-align:center"></div>`
 
-            $(about).dialog({
-                id: "sleepDialog",
-                autoOpen: true,
-                height: "auto",
-                width: "auto",
-                modal: true,
-                buttons: {
-                    "Apply": function() {
-                        var value = (parseFloat($("input.sleep")[0].value) || 0) * 3600000
-                        that.sleepEnd = moment().add(value).format('hh:mmA')
+                $(this.contents()).dialog({
+                    id: "sleepDialog",
+                    autoOpen: true,
+                    height: "auto",
+                    width: "auto",
+                    modal: true,
+                    buttons: {
+                        "Apply": function() {
+                            that.last = (parseFloat($("input.sleep")[0].value) || 0)
+                            var value = that.last * 3600000
+                            that.end = moment().add(value).format('hh:mmA')
 
-                        if (value > 0) {
-                            that.sleepTimer = setTimeout(() => {
-                                rtv.player.players.forEach(player =>
-                                    player.pause()
-                                )
-                            }, value)
-                        } else {
-                            clearTimeout(that.sleepTimer)
-                            that.sleepTimer = 0
-                        }
+                            clearTimeout(that.timer)
+                            that.timer = 0
 
-                        $(this).dialog('destroy')
-                        that.sleep()
-                    },
-                },
-                close: function() {}
-            });
+                            if (value > 0) {
+                                that.timer = setTimeout(() => {
+                                    rtv.player.players.forEach(player => {
+                                        player.pause()
+                                        that.timer = 0
+                                    })
+                                }, value)
+                            }
 
-            $(about).find("button").button();
+                            $(this).html(that.contents())
+                        },
+                    }
+                });
+
+                $(about).find("button").button();
+            },
+            contents: function() {
+                var status = (this.timer == 0) ? "Sleep timer disabled." : `Sleep timer set for ${this.end}`
+                var content = `<div title="Sleep Timer" style="text-align:center">
+                        Enter a duration in hours to automatically stop playback<br>Set to 0 to disable.<br><br>
+                        <input type="number" class="sleep" name="" min="0" step="0.5" value="${this.last}" style="text-align:center"><br>
+                        <br>
+                        ${status}
+                        </div>`;
+
+                return content
+            }
         },
         share: function() {
             return $("<i />", {class: "fa fa-paper-plane", title: "Share this channel"}).click(function() {
