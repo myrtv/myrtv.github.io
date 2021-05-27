@@ -459,6 +459,9 @@ var rtv = {
                 case "youtube":
                     $.extend(player, that.instance.youtube);
                     break;
+                case "dailymotion":
+                    $.extend(player, that.instance.dailymotion);
+                    break;
                 case "html5":
                 case "h5":
                 case "":
@@ -493,6 +496,9 @@ var rtv = {
                     case "youtube":
                         this.youtube(player);
                         break;
+                    case "dailymotion":
+                        this.dailymotion(player);
+                        break;
                     case "html5":
                     default:
                         this.html5();
@@ -509,6 +515,9 @@ var rtv = {
             },
             youtube: function(player) {
                 player.instance.destroy();
+            },
+            dailymotion: function(player) {
+                player.instance.destroy(player.name)
             },
             html5: function() {
 
@@ -607,6 +616,81 @@ var rtv = {
                             'videoId': current.src,
                             'startSeconds': current.seek_to
                         });
+                    }
+                }
+            },
+            dailymotion: {
+                spawnQueue: [],
+                init: function(target) {
+                    if (this.done == true) return;
+                    var that = this;
+                    //this.done = 1;
+
+                    if (typeof DM == "undefined") {
+                        this.loadAPI().then(() => {
+                            that.spawn(target);
+                        })
+                        /*this.spawnQueue.push(function() {
+                            
+                        });*/
+                    } else {
+                        this.spawn(target);
+                    }
+                },
+                loadAPI: function(success) {
+                    // https://developer.dailymotion.com/player/#embed-sdk-js-best-practices
+                    var tag = document.createElement('script');
+                    tag.src = "https://api.dmcdn.net/all.js";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    
+                    return new Promise(success => tag.onload = success)
+                },
+                destroy: function(keepWindow) {
+                    
+                },
+                spawn: function(target) {
+                    var current = this.getCurrentVideo();
+                    var that = this;
+
+                    var instance = new DM.player(target, {
+                        height: '100%',
+                        width: '100%',
+                        video: current.src,
+                        params: {
+                            'autoplay': true,
+                            'start': current.seek_to
+                        }
+                        /*events: {
+                            'onReady': that.playerOnReady,
+                            'onStateChange': (event) => that.playerOnStateChange(target, event)
+                        }*/
+                    });
+                    // Carefully crafted events.
+                    //instance.addEventListener('apiready', () => this.instance.play())
+                    //instance.addEventListener('video_start', () => this.resync())
+                    instance.addEventListener('video_end', () => this.resync("ended"))
+
+                    this.instance = instance;
+                    this.type = "dailymotion";
+
+                    return instance;
+                },
+                resync: function(reason) {
+                    var that = this;
+                    var current = that.getCurrentVideo();
+
+                    if (reason == "ended" && this.getCurrentPlayer() !== this.type) {
+                        this.resynced = false;
+                        this.swapInstance();
+                        return 0;
+                    }
+
+                    if (that.instance.video.videoId == current.src) {
+                        that.instance.seek(current.seek_to, true);
+                        that.instance.play();
+                    } else {
+                        that.instance.load(current.src); // No seek?
                     }
                 }
             },
