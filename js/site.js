@@ -806,7 +806,7 @@ var rtv = {
             var status = (this.sleepTimer == 0) ? "Sleep timer disabled." : `Sleep timer set for ${this.sleepEnd}`
             var about = `<div title="Sleep Timer" style="text-align:center">
                     Enter a duration in hours to automatically stop playback or set to 0 to disable.<br><br>
-                    <input type="number" id="sleep" name="" min="0" step="0.5" value="0" style="text-align:center"><br>
+                    <input type="number" class="sleep" name="" min="0" step="0.5" value="0" style="text-align:center"><br>
                     <br>
                     ${status}
                     </div>`;
@@ -819,7 +819,7 @@ var rtv = {
                 modal: true,
                 buttons: {
                     "Apply": function() {
-                        var value = (parseFloat($("input#sleep")[0].value) || 0) * 3600000
+                        var value = (parseFloat($("input.sleep")[0].value) || 0) * 3600000
                         that.sleepEnd = moment().add(value).format('hh:mmA')
 
                         if (value > 0) {
