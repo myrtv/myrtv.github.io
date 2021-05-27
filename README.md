@@ -30,6 +30,7 @@ RTV provides a *ton* of channels, probably not as diverse as all would like. To 
 ### Supported video providers
  - Direct links (site.com/video.mp4)
  - [YouTube](https://github.com/myrtv/myrtv.github.io/wiki/YouTube-Playlists)
+ - Dailymotion (same as YouTube)
 
 ### Planned Features
  - Search
