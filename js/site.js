@@ -818,7 +818,7 @@ var rtv = {
                     modal: true,
                     buttons: {
                         "Apply": function() {
-                            that.last = (parseFloat($("input.sleep").value) || 0)
+                            that.last = (parseFloat($("input.sleep")[0].value) || 0)
                             var value = that.last * 3600000
                             that.end = moment().add(value).format('hh:mmA')
 
