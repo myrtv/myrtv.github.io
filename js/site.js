@@ -805,7 +805,7 @@ var rtv = {
         sleep: {
             timer: 0,
             end: "",
-            last: 0,
+            last: 1,
             dialog: function() {
                 var that = this;
                 var about = `<div title="Sleep Timer" style="text-align:center"></div>`
@@ -847,7 +847,7 @@ var rtv = {
             contents: function() {
                 var status = (this.timer == 0) ? "Sleep timer disabled." : `Sleep timer set for ${this.end}`
                 var content = `<div title="Sleep Timer" style="text-align:center">
-                        Enter a duration in hours to automatically stop playback<br>Set to 0 to disable.<br><br>
+                        Enter a duration in hours to automatically stop playback.<br>Set to 0 to disable.<br><br>
                         <input type="number" class="sleep" name="" min="0" step="0.5" value="${this.last}" style="text-align:center"><br>
                         <br>
                         ${status}
