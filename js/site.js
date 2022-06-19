@@ -827,6 +827,7 @@ var rtv = {
 
                             if (value > 0) {
                                 that.timer = setTimeout(() => {
+                                    document.exitFullscreen()
                                     rtv.player.players.forEach(player => {
                                         player.pause()
                                         that.timer = 0
