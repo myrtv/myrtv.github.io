@@ -828,10 +828,12 @@ var rtv = {
                             if (value > 0) {
                                 that.timer = setTimeout(() => {
                                     document.exitFullscreen()
-                                    rtv.player.players.forEach(player => {
-                                        player.pause()
-                                        that.timer = 0
-                                    })
+                                    rtv.player.players
+                                        .filter(player => player !== null)
+                                        .forEach(player => {
+                                            player.pause()
+                                            that.timer = 0
+                                        })
                                 }, value)
                             }
 
