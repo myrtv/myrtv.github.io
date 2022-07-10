@@ -739,7 +739,7 @@ var rtv = {
 
                     var src = (that.cache.info.url_prefix || "") + current.src;
 
-                    if (src !== that.instance.src) {
+                    if (decodeURI(src) !== decodeURI(that.instance.src)) {
                         that.instance.src = src;
                     }
                     that.instance.currentTime = current.seek_to;
