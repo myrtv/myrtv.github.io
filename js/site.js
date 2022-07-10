@@ -1064,6 +1064,10 @@ var rtv = {
                         modal: true,
                         buttons: {
                             "Help": function() { window.open('https://github.com/myrtv/myrtv.github.io/wiki/Custom-Channels', '_blank'); },
+                            "upload": {
+                                text: "Open",
+                                click: function() { that.upload() }
+                            },
                             "Save": function() { that.save(share) },
                             Cancel: function() { managerDialog.dialog("close"); }
                         }
@@ -1076,17 +1080,8 @@ var rtv = {
                         that = this;
 
                     $("#customPlaylistsManager input").each(function(i,v) {
-                        if (v.value !== "") {
-                            try {
-                                var a = JSON.parse(v.value)
-                                if (a.info && a.info.name && a.playlist.length > 0) {
-                                    t.push(a);
-                                } else {
-                                    rtv.guide.channels.custom.edialog(i,"No info.name or empty playlist.","Ensure it was entered correctly.");
-                                }
-                            } catch(e) {
-                                rtv.guide.channels.custom.edialog(i,e,"Ensure it was entered correctly.");
-                            }
+                        if (v.value !== "" && that.test(v.value)) {
+                            t.push(JSON.parse(v.value));
                         }
                     });
 
@@ -1116,27 +1111,53 @@ var rtv = {
                         });
                     }
                 },
+                test: function(list) {
+                    try {
+                        var a = JSON.parse(list)
+                        if (a.info && a.info.name && a.playlist.length > 0) {
+                            return true
+                        } else {
+                            rtv.guide.channels.custom.edialog(i,"No info.name or empty playlist.","Ensure it was entered correctly.");
+                            return false
+                        }
+                    } catch(e) {
+                        rtv.guide.channels.custom.edialog(i,e,"Ensure it was entered correctly.");
+                        return false
+                    }
+                },
                 edialog: function(i,error,follow) {
                     $('<div title="Issue parsing input #'+(i+1)+'"><p class="depress">'+error+'</p>'+follow+'</div>').dialog({width:"auto",modal:1})
                 },
-                load: function() {
-                    function genInput(line) {
-                        return $('<input />', {
+                genInput: function(line) {
+                    return $('<input />', {
                             placeholder: "Paste playlist here...",
                             style: "width:100%",
                             value: line
                         })[0].outerHTML;
-                    }
-
-                    var out = genInput("");
+                },
+                load: function() {
+                    var that = this
+                    var out = that.genInput("");
 
                     if (localStorage.rtvCustomPlaylists) {
                         $.each(JSON.parse(localStorage.rtvCustomPlaylists), function(i,v) {
-                            out = genInput(JSON.stringify(v))+out;
+                            out = that.genInput(JSON.stringify(v))+out;
                         })
                     }
 
                     return out;
+                },
+                upload: function() {
+                    var that = this
+                    var fileInput = $("<input>", {type: "file", accept: ".txt,.json"})
+                                    .change(function(ev) {
+                                        var read = new FileReader();
+                                        read.onload = function(){
+                                            $("#customPlaylistsManager").append(that.genInput(read.result))
+                                        }
+                                        read.readAsText(ev.currentTarget.files[0]);
+                                    }).click()
+                    return fileInput
                 }
             }
         },
