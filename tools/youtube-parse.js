@@ -1,5 +1,5 @@
 // JS YT->RTV playlist converter
-V = {
+V = JSON.stringify({
     info: {
         name: document.querySelector("ytd-playlist-header-renderer #text").textContent,
         player: "youtube"
@@ -11,6 +11,8 @@ V = {
             src: item.__data.data.videoId
         })
     )
-};
-// JSON.stringify(V) to minify
-copy(V)
+});
+
+console.log(playlist)
+copy(playlist)
+prompt("",playlist)
