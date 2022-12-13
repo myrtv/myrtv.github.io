@@ -6,9 +6,7 @@ If something is broken move down the list. If they're all broken notify me.
  - Load all desired videos to grab by clicking *[Load more]* at the bottom.
    - For YouTube playlists with more than 100 items.
  - Open your browser's console (Firefox: `Ctrl+Shift+K`, Chrome: `Ctrl+Shift+J`), paste the contents, and submit.
- - A window will pop up, the textbox contains the playlist.
-   - If the result is cut off in the text box, it is also available from the console.
-   - If obtained from the console **do not copy** the start and end double-quotes: `"`, your copy should start and end with `{ }`.
+ - The converted playlist will be copied to your clipboard.
 
 ### [youtube-parse-videos.js](youtube-parse-videos.js)
  - Same as above, but parses the Videos tab of a channel instead of a specific YouTube playlist.
