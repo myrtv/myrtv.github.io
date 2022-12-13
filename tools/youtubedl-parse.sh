@@ -7,30 +7,36 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
-#TO-DO: dynamic filenames
-YTDL_TEMP=rtv-temp.json
-RTV_OUT=rtv-new.json 
+echo 1/3 Time varies on provider but YT is fast. Ignore any errors that may pop up.
 
-rm $YTDL_TEMP
+case $1 in
+    *dailymotion.com*)
+        echo -e 'Dailymotion: Welcome to the \e[3mslow zone\e[0m.'
+        YTDL_FLAGS="--simulate -J"
+        JQ_FORMAT='{info: {name: .id, dm_playlist_id: .id, player: "dailymotion"}, playlist: [ .entries[] | {name: .title, duration: .duration, src: .id} ]}'
+        ;;
+    *)
+        # For the minimum playlist spec, --flat-playlist gets everything needed (name, duration, ID) and is fast.
+        echo -e 'Assuming YouTube/generic. \e[3mLudicrous speed\e[0m.'
+        YTDL_FLAGS="--simulate --flat-playlist -J"
+        JQ_FORMAT='{info: {name: .title, yt_playlist_id: .id, player: "youtube"}, playlist: [ .entries[] | {name: .title, duration: .duration, src: .id} ]}'
+        ;;
+esac
 
-#I wish there was a faster way than dumping EVERYTHING (a lot useful, but equally useless) but still being in an accessible format.
-#Originally the title, id, and duration were obtained individually and read back in groups of 3 lines at a time. Ouch.
-echo 1/3 This may take a while based on playlist length. Ignore any errors that may pop up.
-youtube-dl --ignore-errors --skip-download -j $1 > $YTDL_TEMP
+YTDL_TEMP=$(youtube-dl --ignore-errors $YTDL_FLAGS $1)
+echo Length: ${#YTDL_TEMP} 
 
 #TO-DO: Probably verify we got something.
 
-#Read first line and initialize.
+#Initialize.
 echo 2/3 Building playlist.
-PLAYLIST=$(echo $(head -n1 $YTDL_TEMP) | jq '{info: {name: .playlist_title, yt_playlist_id: .playlist_id, player: "youtube"}, playlist: []}')
-
-#What can't jq do
-while read -r line; do
-    INFO=$(echo "$line" | jq -c '{name: .fulltitle, duration: .duration, src: .display_id}')
-    PLAYLIST=$(echo "$PLAYLIST" | jq -c --argjson i "$INFO" '.playlist += [$i]' )
-done < $YTDL_TEMP
+PLAYLIST=$(
+  jq -c "$JQ_FORMAT" \
+  <<< "$YTDL_TEMP"
+)
+TITLE=$(jq .id <<< "$YTDL_TEMP" | sed -E 's/\W/_/g')
+RTV_OUT="rtv-${TITLE}.json"
 
 echo 3/3 Writing output to $RTV_OUT
-echo "$PLAYLIST" > $RTV_OUT
-
-rm $YTDL_TEMP
+echo "$PLAYLIST" > "$RTV_OUT"
+echo "$RTV_OUT"
