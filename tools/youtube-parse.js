@@ -1,19 +1,16 @@
-//JS YT->RTV playlist converter (new layout)
-R = document.getElementsByTagName("ytd-playlist-video-renderer"), T = document.getElementsByClassName("title")[0].innerText, V = {
+// JS YT->RTV playlist converter
+V = {
     info: {
-        name: T,
+        name: document.querySelector("ytd-playlist-header-renderer #text").textContent,
         player: "youtube"
     },
-    playlist: []
+    playlist: [...document.getElementsByTagName("ytd-playlist-video-renderer")].map(item =>
+        ({
+            name: item.__data.data.title.runs[0].text,
+            duration: parseInt(item.__data.data.lengthSeconds),
+            src: item.__data.data.videoId
+        })
+    )
 };
-for (i = 0; i < R.length; i++) {
-    V.playlist.push({
-        name: R[i].__data__.data.title.simpleText,
-        duration: parseInt(R[i].__data__.data.lengthSeconds),
-        src: R[i].__data__.data.videoId
-    })
-};
-Q = JSON.stringify(V);
-console.log(Q);
-prompt(T, Q);
-void(0)
+// JSON.stringify(V) to minify
+copy(V)
