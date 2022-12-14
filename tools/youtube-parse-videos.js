@@ -1,2 +1,19 @@
-//JS YT Videos tab -> RTV playlist converter (Modern site design)
-R=document.getElementsByTagName('ytd-grid-video-renderer'),T=document.getElementById('channel-title').innerText,V={info:{name:T,service:'youtube'},playlist:[]};for(i=0;i<R.length;i++){a=R[i].getElementsByClassName('ytd-thumbnail')[0].innerText.split(':');V.playlist.push({name:R[i].getElementsByTagName('a')[1].title,duration:+a.pop()+(a.pop()*60)+(a[0]?a.pop()*3600:0),qualities:[{src:R[i].getElementsByTagName('a')[0].href.match(/\?v=(.*)/)[1]}]})}V.playlist.reverse();Q=JSON.stringify(V);console.log(Q);prompt(T,Q);void(0)
+// JS YT loaded channel -> RTV playlist converter
+playlist = JSON.stringify({
+    info: {
+        name: document.querySelector("#channel-header .ytd-channel-name").innerText,
+        player: "youtube"
+    },
+    playlist: [...document.querySelectorAll("ytd-rich-item-renderer")]
+        .reverse() // So the first item is the latest in the playlist.
+        .map(item => item.__data.data.content.videoRenderer).map(item => ({
+            name: item.title.runs[0].text,
+            src: item.videoId,
+            // Does not suport videos over 24 hours. Damn!
+            duration: item.lengthText.simpleText.split(":").reverse().map(n => parseInt(n)).reduce((acc,cur,i) => acc+cur*60**i)
+        }))
+});
+
+console.log(playlist)
+copy(playlist)
+prompt("",playlist)
