@@ -1,5 +1,5 @@
 // JS YT->RTV playlist converter
-V = JSON.stringify({
+playlist = JSON.stringify({
     info: {
         name: document.querySelector("ytd-playlist-header-renderer #text").textContent,
         player: "youtube"
