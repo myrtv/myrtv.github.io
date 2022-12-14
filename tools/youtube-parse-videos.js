@@ -10,7 +10,7 @@ playlist = JSON.stringify({
             name: item.title.runs[0].text,
             src: item.videoId,
             // Does not suport videos over 24 hours. Damn!
-            duration: item.lengthText.simpleText.split(":").reverse().map(n => parseInt(n)).reduce((acc,cur,i) => acc+cur*60**i)
+            duration: item.lengthText.simpleText.split(":").reverse().reduce((acc,cur,i) => +acc+cur*60**i)
         }))
 });
 
