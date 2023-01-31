@@ -721,6 +721,14 @@ var rtv = {
                     instance[0].addEventListener('ended', function() {
                         that.resync("ended");
                     }, false);
+                    // Scroll volume
+                    instance[0].addEventListener('wheel', e =>
+                        e.target.volume = e.deltaY < 0 ?
+                        Math.min(1,e.target.volume+0.1) :
+                        Math.max(0,e.target.volume-0.1)
+                    )
+                    // Middle-click mute
+                    instance[0].addEventListener('auxclick', e => e.target.muted ^= (e.which == 2) )
 
                     $("#"+target).html(instance);
                     this.instance = instance[0];
