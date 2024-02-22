@@ -6,9 +6,9 @@ playlist = JSON.stringify({
     },
     playlist: [...document.getElementsByTagName("ytd-playlist-video-renderer")].map(item =>
         ({
-            name: item.__data.data.title.runs[0].text,
-            duration: parseInt(item.__data.data.lengthSeconds),
-            src: item.__data.data.videoId
+            name: item.inst.__data.data.title.runs[0].text,
+            duration: parseInt(item.inst.__data.data.lengthSeconds),
+            src: item.inst.__data.data.videoId
         })
     )
 });
