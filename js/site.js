@@ -186,11 +186,14 @@ var rtv = {
                     that.spawn(item)
                 } : false;
 
-                var repo = item.split(":");
-                if (rtv.config.repoCache.hasOwnProperty(repo[0])) {
-                    item = /^\w+:/.test(repo[repo.length-1]) ? repo[repo.length-1] : rtv.config.repoCache[repo[0]].prefix + repo.pop()
+                var [id, ...path] = item.split(":")
+                var path = path.join(":");
+
+                if (rtv.config.repoCache.hasOwnProperty(id)) {
+                    item = /^\w{1,6}:/.test(path) ? path : rtv.config.repoCache[id].prefix + path
                 } else {
-                    console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
+                    console.error(`Unable to find repo ${id} for ${path}`)
+                    return
                 }
 
                 that.playlist.generate(item, cb);
