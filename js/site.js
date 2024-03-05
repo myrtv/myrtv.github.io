@@ -97,8 +97,8 @@ var rtv = {
             for (repo of list) {
                 try {
                     var data = await fetch(repo, {headers: {"Content-Type": "application/json"}}).then(r=>r.json())
-                    data.path = new URL(repo, document.baseURI).href;
-                    data.path = data.path.substr(0, data.path.lastIndexOf('/')+1);
+                    data.self = new URL(repo, document.baseURI).href;
+                    data.prefix = data.self.substr(0, data.self.lastIndexOf('/')+1);
 
                     this.repoCache[data.id] = data;
 
@@ -189,7 +189,6 @@ var rtv = {
             generate: function(list, callback) {
                 var store = list,
                     that = this;
-                    list = rtv.config.repoCache[list.split(":")[0]].path + list.split(":").pop()
 
                 if (rtv.player.cached_playlists[store] && callback) { callback(); }
 
@@ -197,6 +196,8 @@ var rtv = {
                     rtv.player.cached_playlists[list.name] = that.generateStore(list.name,list.list);
                     if (callback) { callback(); }
                 } else {
+                    list = rtv.config.repoCache[list.split(":")[0]].prefix + list.split(":").pop()
+
                     $.ajax({
                         dataType: "json",
                         url: list,
