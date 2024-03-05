@@ -188,7 +188,7 @@ var rtv = {
 
                 var repo = item.split(":");
                 if (rtv.config.repoCache.hasOwnProperty(repo[0])) {
-                    item = rtv.config.repoCache[repo[0]].prefix + repo.pop()
+                    item = /^\w+:/.test(repo[repo.length-1]) ? repo[repo.length-1] : rtv.config.repoCache[repo[0]].prefix + repo.pop()
                 } else {
                     console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
                 }
@@ -873,7 +873,7 @@ var rtv = {
                             click: function() { that.custom.open() }
                         },
                         "custrepo": {
-                            text: "Custom Repositories",
+                            text: "Channel Repositories",
                             "class": "customPlaylists",
                             click: function() {
                                 // TO-DO: Dialog
