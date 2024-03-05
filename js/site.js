@@ -98,7 +98,7 @@ var rtv = {
             for (repo of list) {
                 try {
                     console.log(`Loading ${repo}`)
-                    var data = await $.ajax({url:repo}).then(j=>JSON.parse(j));
+                    var data = await $.ajax({dataType:"json", url: repo}).then(j => typeof j === "object" ? j : JSON.parse(j));
 
                     data.self = new URL(repo, document.baseURI).href;
                     data.prefix = data.self.substr(0, data.self.lastIndexOf('/')+1);
