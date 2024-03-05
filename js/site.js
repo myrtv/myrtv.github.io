@@ -98,7 +98,8 @@ var rtv = {
             for (repo of list) {
                 try {
                     console.log(`Loading ${repo}`)
-                    var data = await fetch(repo, {headers: {"Content-Type": "application/json"}}).then(r=>r.json())
+                    var data = await $.ajax({url:repo}).then(j=>JSON.parse(j));
+
                     data.self = new URL(repo, document.baseURI).href;
                     data.prefix = data.self.substr(0, data.self.lastIndexOf('/')+1);
                     data.local = new URL(repo, document.baseURI).origin == new URL(document.baseURI).origin;
@@ -878,7 +879,7 @@ var rtv = {
                                 // TO-DO: Dialog
                                 var repos = prompt('Comma-separated list of repo URLs:', rtv.config.cache.repos)
                                 rtv.config.cache.repos = repos.split(",");
-                                
+
                                 rtv.config.save();
                                 location.reload();
                             }
