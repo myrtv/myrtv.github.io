@@ -44,9 +44,9 @@ var rtv = {
 
             this.load();
 
-            await this.repos();
             this.local();
             this.customs();
+            await this.repos();
 
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
 
@@ -92,10 +92,12 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         repos: async function() {
-            var list = ["./playlists/repo.json"];
+            var list = (this.cache.repos || ["./playlists/repo.json"]);
+            this.cache.repos = list;
 
             for (repo of list) {
                 try {
+                    console.log(`Loading ${repo}`)
                     var data = await fetch(repo, {headers: {"Content-Type": "application/json"}}).then(r=>r.json())
                     data.self = new URL(repo, document.baseURI).href;
                     data.prefix = data.self.substr(0, data.self.lastIndexOf('/')+1);
@@ -178,19 +180,18 @@ var rtv = {
                 that = this;
 
             $.each(rtv.config.cache.playlists.concat(rtv.config.cache.customs), function (index, item) {
-                var repo = item.split(":");
-
-                if (!rtv.config.repoCache.hasOwnProperty(repo[0])) {
-                    console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
-                    return
-                }
-
                 var cb = (item == list) ? function() {
                     localStorage['rtvLastPlaylist'] = list;
                     that.spawn(item)
                 } : false;
 
-                item = rtv.config.repoCache[repo[0]].prefix + repo.pop()
+                var repo = item.split(":");
+                if (rtv.config.repoCache.hasOwnProperty(repo[0])) {
+                    item = rtv.config.repoCache[repo[0]].prefix + repo.pop()
+                } else {
+                    console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
+                }
+
                 that.playlist.generate(item, cb);
             });
         },
@@ -869,6 +870,18 @@ var rtv = {
                             text: "Custom Channels",
                             "class": "customPlaylists",
                             click: function() { that.custom.open() }
+                        },
+                        "custrepo": {
+                            text: "Custom Repositories",
+                            "class": "customPlaylists",
+                            click: function() {
+                                // TO-DO: Dialog
+                                var repos = prompt('Comma-separated list of repo URLs:', rtv.config.cache.repos)
+                                rtv.config.cache.repos = repos.split(",");
+                                
+                                rtv.config.save();
+                                location.reload();
+                            }
                         },
                         "Save": save,
                         Cancel: function() {
