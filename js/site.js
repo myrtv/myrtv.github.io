@@ -177,10 +177,19 @@ var rtv = {
                 that = this;
 
             $.each(rtv.config.cache.playlists.concat(rtv.config.cache.customs), function (index, item) {
+                var repo = item.split(":");
+
+                if (!rtv.config.repoCache.hasOwnProperty(repo[0])) {
+                    console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
+                    return
+                }
+
                 var cb = (item == list) ? function() {
                     localStorage['rtvLastPlaylist'] = list;
                     that.spawn(item)
                 } : false;
+
+                item = rtv.config.repoCache[repo[0]].prefix + repo.pop()
                 that.playlist.generate(item, cb);
             });
         },
@@ -196,8 +205,6 @@ var rtv = {
                     rtv.player.cached_playlists[list.name] = that.generateStore(list.name,list.list);
                     if (callback) { callback(); }
                 } else {
-                    list = rtv.config.repoCache[list.split(":")[0]].prefix + list.split(":").pop()
-
                     $.ajax({
                         dataType: "json",
                         url: list,
