@@ -44,10 +44,10 @@ var rtv = {
 
             this.load();
 
+            await this.repos();
             this.local();
             this.customs();
 
-            await this.repos();
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
 
             this.save();
@@ -55,6 +55,7 @@ var rtv = {
         local: function() {
             if (!this.cache.playlists || this.cache.playlists.length == 0) {
                 console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
+
                 this.cache.playlists = this.defaultPlaylists;
             }
         },
@@ -80,6 +81,7 @@ var rtv = {
             return temp;
         },
         cache: {},
+        repoCache: {},
         config: {},
         load: function() {
             if (localStorage['rtvConfig']) {
@@ -90,11 +92,18 @@ var rtv = {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
         repos: async function() {
-            var list = ["./repo.json"];
+            var list = ["./playlists/repo.json"];
 
             for (repo of list) {
                 try {
                     var data = await fetch(repo, {headers: {"Content-Type": "application/json"}}).then(r=>r.json())
+                    data.path = new URL(repo, document.baseURI).href;
+                    data.path = data.path.substr(0, data.path.lastIndexOf('/')+1);
+
+                    this.repoCache[data.id] = data;
+
+                    data.defaultPlaylists = data.defaultPlaylists.map(i=>`${data.id}:${i}`)
+                    data.extraPlaylists = data.extraPlaylists.map(i=>`${data.id}:${i}`)
 
                     $.extend(this.defaultPlaylists, data.defaultPlaylists)
                     $.extend(this.extraPlaylists, data.extraPlaylists)
@@ -180,6 +189,7 @@ var rtv = {
             generate: function(list, callback) {
                 var store = list,
                     that = this;
+                    list = rtv.config.repoCache[list.split(":")[0]].path + list.split(":").pop()
 
                 if (rtv.player.cached_playlists[store] && callback) { callback(); }
 
@@ -1086,7 +1096,7 @@ var rtv = {
             guide.append(this.generateHead());
 
             var width = 0;
-            var halfhour;
+            var halfhour = moment();
 
             $.each(Object.keys(rtv.player.cached_playlists).sort(), function (index, list) {
                 var source = $.extend({}, {cache: rtv.player.cached_playlists[list]}, rtv.player.playlist.utilities);
