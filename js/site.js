@@ -1,11 +1,10 @@
 var rtv = {
     offset: 0, //Global sync offset. Tempted to make per-player offsets.
-    preinit: async function() {
+    preinit: function() {
         var that = this;
 
         $("body").append($("<div />", {id: 'container'}).append(this.menu.spawn()));
-
-        await this.config.init();
+        this.config.init();
 
         switch (location.hash.substring(1)) {
             case "?custom":
@@ -39,14 +38,13 @@ var rtv = {
         $(about).find("button").button();
     },
     config: {
-        init: async function() {
+        init: function() {
             var that = this;
 
             this.load();
 
             this.local();
             this.customs();
-            await this.repos();
 
             this.defaultPlaylists = this.defaultPlaylists.concat(this.extraPlaylists).sort();
 
@@ -55,7 +53,6 @@ var rtv = {
         local: function() {
             if (!this.cache.playlists || this.cache.playlists.length == 0) {
                 console.warn('Loaded config.cache.playlists did not exist or was empty, setting default.');
-
                 this.cache.playlists = this.defaultPlaylists;
             }
         },
@@ -81,7 +78,6 @@ var rtv = {
             return temp;
         },
         cache: {},
-        repoCache: {},
         config: {},
         load: function() {
             if (localStorage['rtvConfig']) {
@@ -91,32 +87,124 @@ var rtv = {
         save: function() {
             localStorage['rtvConfig'] = JSON.stringify(this.cache);
         },
-        repos: async function() {
-            var list = (this.cache.repos || ["./playlists/repo.json"]);
-            this.cache.repos = list;
-
-            for (repo of list) {
-                try {
-                    console.log(`Loading ${repo}`)
-                    var data = await fetch(repo, {headers: {"Content-Type": "application/json"}}).then(r=>r.json())
-                    data.self = new URL(repo, document.baseURI).href;
-                    data.prefix = data.self.substr(0, data.self.lastIndexOf('/')+1);
-                    data.local = new URL(repo, document.baseURI).origin == new URL(document.baseURI).origin;
-
-                    this.repoCache[data.id] = data;
-
-                    data.defaultPlaylists = data.defaultPlaylists.map(i=>`${data.id}:${i}`)
-                    data.extraPlaylists = data.extraPlaylists.map(i=>`${data.id}:${i}`)
-
-                    $.extend(this.defaultPlaylists, data.defaultPlaylists)
-                    $.extend(this.extraPlaylists, data.extraPlaylists)
-                } catch (e) {
-                    console.error(`Could not load ${repo}`, e)
-                }
-            }
-        },
-        defaultPlaylists: [],
-        extraPlaylists: []
+        defaultPlaylists: [
+            "playlists/anime/initiald.min.json",
+            "playlists/speedrun/gdq/agdq2013.min.json",
+            "playlists/speedrun/gdq/sgdq2013.min.json",
+            "playlists/speedrun/gdq/agdq2014.min.json",
+            "playlists/speedrun/gdq/sgdq2014.min.json",
+            "playlists/speedrun/gdq/agdq2015.min.json",
+            "playlists/speedrun/gdq/sgdq2015.min.json",
+            "playlists/speedrun/gdq/agdq2016.min.json",
+            "playlists/speedrun/gdq/sgdq2016.min.json",
+            "playlists/speedrun/gdq/agdq2017.min.json",
+            "playlists/speedrun/gdq/sgdq2017.min.json",
+            "playlists/speedrun/gdq/agdq2018.min.json",
+            "playlists/speedrun/gdq/sgdq2018.min.json",
+            "playlists/speedrun/gdq/agdq2019.min.json",
+            "playlists/speedrun/rpglb/rpglb2018.json",
+            "playlists/speedrun/nasa/nasa2017.min.json",
+            "playlists/speedrun/esa/esa2015purple.min.json",
+            "playlists/speedrun/speedgaming/snessuperstars2017.min.json",
+            "playlists/speedrun/speedgaming/reallyreallylongathon2.min.json",
+            "playlists/speedrun/pokemon/psr2016.min.json",
+            "playlists/pbsideachannel.min.json",
+            "playlists/joyofpainting.min.json"
+        ],
+        extraPlaylists: [
+            "playlists/anime/animeshuffletest.min.json",
+            "playlists/anime/aquarion.min.json",
+            "playlists/anime/ariathescarletammo.min.json",
+            "playlists/anime/bakaandtestsummonthebeasts.min.json",
+            "playlists/anime/baldrforceexe.min.json",
+            "playlists/anime/bambooblade.min.json",
+            "playlists/anime/bigwindup.min.json",
+            "playlists/anime/birdythemightydecode.min.json",
+            "playlists/anime/blackbloodbrothers.min.json",
+            "playlists/anime/blessingofthecampanella.min.json",
+            "playlists/anime/casshernsins.min.json",
+            "playlists/anime/c-control.min.json",
+            "playlists/anime/chobits.min.json",
+            "playlists/anime/chromeshelledregios.min.json",
+            "playlists/anime/corpseprincess.min.json",
+            "playlists/anime/danceinthevampirebund.min.json",
+            "playlists/anime/desertpunk.min.json",
+            "playlists/anime/devilmaycry.min.json",
+            "playlists/anime/dragonauttheresonance.min.json",
+            "playlists/anime/elcazadordelabruja.min.json",
+            "playlists/anime/excelsaga.min.json",
+            "playlists/anime/fractale.min.json",
+            "playlists/anime/freezing.min.json",
+            "playlists/anime/fullmetalpanic.min.json",
+            "playlists/anime/gadguard.min.json",
+            "playlists/anime/ga-rei-zero.min.json",
+            "playlists/anime/gungrave.min.json",
+            "playlists/anime/gunslingergirlilteatrino.min.json",
+            "playlists/anime/gunxsword.min.json",
+            "playlists/anime/heroicage.min.json",
+            "playlists/anime/herotales.min.json",
+            "playlists/anime/hetaliaaxispowers.min.json",
+            "playlists/anime/jinkiextend.min.json",
+            "playlists/anime/jyu-oh-sei.min.json",
+            "playlists/anime/kazenostigma.min.json",
+            "playlists/anime/lastexile.min.json",
+            "playlists/anime/linebarrelsofiron.min.json",
+            "playlists/anime/mongolianchopsquad.min.json",
+            "playlists/anime/murderprincess.min.json",
+            "playlists/anime/mushi-shi.min.json",
+            "playlists/anime/nabarinoou.min.json",
+            "playlists/anime/negima.min.json",
+            "playlists/anime/noir.min.json",
+            "playlists/anime/ohedorocket.min.json",
+            "playlists/anime/ouranhighschoolhostclub.min.json",
+            "playlists/anime/phantomrequiemforthephantom.min.json",
+            "playlists/anime/projectblueearthsos.min.json",
+            "playlists/anime/rideback.min.json",
+            "playlists/anime/romeoxjuliet.min.json",
+            "playlists/anime/rumblinghearts.min.json",
+            "playlists/anime/samuraichamploo.min.json",
+            "playlists/anime/sandsofdestruction.min.json",
+            "playlists/anime/schoolrumble.min.json",
+            "playlists/anime/sekirei.min.json",
+            "playlists/anime/sengokubasara.min.json",
+            "playlists/anime/shiguruideathfrenzy.min.json",
+            "playlists/anime/shuffle.min.json",
+            "playlists/anime/slayers.min.json",
+            "playlists/anime/souleater.min.json",
+            "playlists/anime/spiceandwolf.min.json",
+            "playlists/anime/strainstrategicarmoredinfantry.min.json",
+            "playlists/anime/strikewitches.min.json",
+            "playlists/anime/thecountofmontecristogankutsuou.min.json",
+            "playlists/anime/thesacredblacksmith.min.json",
+            "playlists/anime/towerofdruaga.min.json",
+            "playlists/anime/trigun.min.json",
+            "playlists/anime/trinityblood.min.json",
+            "playlists/anime/tsubasatokyorevelations.min.json",
+            "playlists/anime/vandread.min.json",
+            "playlists/anime/wewithoutwings--undertheinnocentsky.min.json",
+            "playlists/anime/witchblade.min.json",
+            "playlists/anime/x.min.json",
+            "playlists/anime/xxxholic.min.json",
+            "playlists/speedrun/gdq/allgdq.min.json",
+            "playlists/speedrun/gdq/agdq2011.min.json",
+            "playlists/speedrun/gdq/agdq2012.min.json",
+            "playlists/speedrun/gdq/sgdq2012.min.json",
+            "playlists/speedrun/nasa/nasa2016.min.json",
+            "playlists/speedrun/rpglb/rpglb2015.json",
+            "playlists/speedrun/rpglb/rpglb2016.json",
+            "playlists/speedrun/rpglb/rpglb2017.json",
+            "playlists/speedrun/rpglb/rpglb2016talesof.json",
+            "playlists/speedrun/rpglb/rpglb2017talesof.json",
+            "playlists/speedrun/speedgaming/snessuperstars2016.min.json",
+            "playlists/speedrun/speedgaming/lttprandomizer2017.min.json",
+            "playlists/speedrun/pokemon/psr2015.min.json",
+            "playlists/speedrun/werster.min.json",
+            "playlists/ethoslab.min.json",
+            "playlists/ethoplaysminecraft.min.json",
+            "playlists/pannenkoek2012.min.json",
+            "playlists/rwby.min.json",
+            "playlists/tpp-red.min.json",
+        ]
     },
     init: function(path) {
         this.player.create(path);
@@ -184,14 +272,6 @@ var rtv = {
                     localStorage['rtvLastPlaylist'] = list;
                     that.spawn(item)
                 } : false;
-
-                var repo = item.split(":");
-                if (rtv.config.repoCache.hasOwnProperty(repo[0])) {
-                    item = rtv.config.repoCache[repo[0]].prefix + repo.pop()
-                } else {
-                    console.error(`Unable to find repo ${repo[0]} for ${repo.pop()}`)
-                }
-
                 that.playlist.generate(item, cb);
             });
         },
@@ -871,18 +951,6 @@ var rtv = {
                             "class": "customPlaylists",
                             click: function() { that.custom.open() }
                         },
-                        "custrepo": {
-                            text: "Custom Repositories",
-                            "class": "customPlaylists",
-                            click: function() {
-                                // TO-DO: Dialog
-                                var repos = prompt('Comma-separated list of repo URLs:', rtv.config.cache.repos)
-                                rtv.config.cache.repos = repos.split(",");
-                                
-                                rtv.config.save();
-                                location.reload();
-                            }
-                        },
                         "Save": save,
                         Cancel: function() {
                           channelDialog.dialog("close");
@@ -1118,7 +1186,7 @@ var rtv = {
             guide.append(this.generateHead());
 
             var width = 0;
-            var halfhour = moment();
+            var halfhour;
 
             $.each(Object.keys(rtv.player.cached_playlists).sort(), function (index, list) {
                 var source = $.extend({}, {cache: rtv.player.cached_playlists[list]}, rtv.player.playlist.utilities);
