@@ -6,9 +6,9 @@ var players = {
         }
     },
     youtube: {
-        lastIndex: -1,
+        lastIndex: -2,
         spawn: function(src, target){
-            this.lastIndex = -1;
+            this.lastIndex = -2;
             
             try {
                 players.instance.destroy();
@@ -18,15 +18,16 @@ var players = {
             var playerVars = {
                 'autoplay': 0,
                 'rel': 0,
-                'start': 0
+                'start': 0,
+				'mute': 1
             }
             
             if (/youtube\.com\/.*?(?:list=)(\w+)/.test(src)) { /* Playlist */
                 playerVars.listType = "playlist"
                 playerVars.list = src.match(/youtube\.com\/.*?(?:list=)(\w+)/).pop();
-                src = null;
+                src = '';
             } else {
-                videoId = src.match(/youtu(be|.be)?(\.com)?\/(?:watch\?v=)?(\w+)/);
+                videoId = src.match(/youtu(be|.be)?(\.com)?\/(?:watch\?v=)?([a-zA-Z0-9_-]+)/);
                 
                 if (videoId !== null && videoId.length > 1) {
                     src = videoId.pop();
@@ -41,7 +42,12 @@ var players = {
                         players.instance.playVideo();
                     },
                     'onStateChange': function(a){
-                        if (a.data !== -1 || players.youtube.lastIndex == players.instance.getPlaylistIndex()) return;
+                        if (a.data !== 1) return;
+						
+						if (players.youtube.lastIndex == players.instance.getPlaylistIndex()) {
+							players.instance.stopVideo();
+							return;
+						}
                         
                         players.youtube.lastIndex = players.instance.getPlaylistIndex();
 

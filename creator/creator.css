@@ -20,10 +20,11 @@ body {
 #insert * { font-size:1.2em; }
 #insert input { min-width: 400px; }
 #left {
-    flex: 0 1 270px;
+    flex: 0 1 50vw;
 }
 #left #video-test {
-    max-width: 270px;
+    width: 50vw;
+	height: 75vh;
 }
 #right {
     flex: 1 1;
